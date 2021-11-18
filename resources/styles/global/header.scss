@@ -1,0 +1,205 @@
+@import "././resources/styles/global/_variables";
+
+.header {
+  background-color: $color-gray-900;
+  font-family: $font-family-primary;
+
+  a {
+    text-align: center;
+    text-decoration: none;
+  }
+
+  button {
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+  }
+
+  &-top {
+    height: 88px;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .button {
+      height: 88px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-gray-800;
+      font-weight: normal;
+      font-size: 17px;
+      line-height: 21px;
+      color: $color-white;
+
+      &.active {
+        background-color: $color-gray-600;
+      }
+
+      @media (pointer: coarse) {
+        &:active {
+          background-color: $color-gray-700;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: $color-gray-700;
+        }
+      }
+
+      &.hamburger {
+        width: 105px;
+      }
+
+      &.cart {
+        width: 122px;
+      }
+
+      &.application {
+        width: 220px;
+        height: 52px;
+        margin: 0 10px 0 16px;
+      }
+    }
+
+    .logo {
+      display: flex;
+      margin-left: 34px;
+      margin-right: auto;
+      color: $color-black;
+    }
+
+    .link {
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 21px;
+      color: $color-gray-800;
+
+      &.phone {
+        margin: 0 22px;
+
+        span {
+          margin-left: 6px;
+        }
+
+        @media (pointer: coarse) {
+          &:active {
+            color: $color-red-700;
+          }
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            color: $color-red-700;
+          }
+        }
+      }
+
+      &.lang {
+        width: 88px;
+        height: 40px;
+        margin: 0 18px;
+
+        span {
+          margin-right: 8px;
+          text-transform: uppercase;
+        }
+
+        &.active svg {
+          transform: rotateX(180deg);
+        }
+
+        @media (pointer: coarse) {
+          &:active span {
+            color: $color-red-700;
+          }
+        }
+
+        @media (hover: hover) {
+          &:hover span {
+            color: $color-red-700;
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 114px 0 138px;
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 42px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 29px;
+        color: $color-gray-200;
+
+        &:not(:first-child) {
+          margin-left: 45px;
+        }
+
+        @media (pointer: coarse) {
+          &:active {
+            color: $color-white;
+          }
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: $color-gray-200;
+
+      @media (pointer: coarse) {
+        &:active {
+          color: $color-white;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: $color-white;
+        }
+      }
+
+      .svg-left {
+        margin-bottom: 2px;
+      }
+
+      .svg-right {
+        margin-top: 6px;
+        margin-left: 8px;
+      }
+    }
+  }
+}

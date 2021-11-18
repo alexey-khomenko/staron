@@ -12,7 +12,7 @@
     "watch-poll": "npx mix watch -- --watch-options-poll=1000",
     "compress": "bread-compressor -s docs/**/*.*",
     "hot": "npx mix watch --hot",
-    "prod": "npx mix --production && npm run compress"
+    "prod": "npx mix --production"
   },
   "author": "",
   "license": "MIT",
@@ -23,11 +23,8 @@
     "browser-sync-webpack-plugin": "^2.3.0",
     "copy-webpack-plugin": "^9.0.1",
     "cross-env": "^7.0.3",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-webpack-plugin": "^2.4.2",
     "install": "^0.13.0",
     "laravel-mix": "^6.0.27",
-    "laravel-mix-imagemin": "^1.0.3",
     "laravel-mix-pug-recursive": "^0.3.4",
     "lodash": "^4.17.21",
     "npm": "^7.20.2",
@@ -35,8 +32,6 @@
     "pug": "^3.0.2",
     "resolve-url-loader": "^4.0.0",
     "sass": "^1.36.0",
-    "sass-loader": "^12.1.0",
-    "tailwindcss": "^2.2.7",
-    "vue-template-compiler": "^2.6.14"
+    "sass-loader": "^12.1.0"
   }
 }

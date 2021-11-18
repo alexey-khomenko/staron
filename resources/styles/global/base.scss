@@ -1,12 +1,46 @@
+@import "././resources/styles/global/_variables";
+
+* {
+  box-sizing: border-box;
+}
+
 label, input, textarea, button, select, a, summary {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a:focus, button:focus, input:focus {
-    outline: none !important;
+  outline: none !important;
 }
 
 button::-moz-focus-inner {
-    outline: none !important;
-    border: 0 !important;
+  outline: none !important;
+  border: 0 !important;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  max-width: $container-xl;
+
+  @media (max-width: $media-grid-lg) {
+    max-width: $container-lg;
+  }
+
+  @media (max-width: $media-grid-md) {
+    max-width: $container-md;
+  }
+
+
+  @media (max-width: $media-grid-sm) {
+    max-width: $container-sm;
+  }
 }

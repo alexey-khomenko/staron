@@ -1,3 +1,27 @@
-:root {
-    --container-width: 1536px;
-}
+$container-xl: 1440px;
+$container-lg: 1280px;
+$container-md: 768px;
+$container-sm: 360px;
+
+$media-grid-lg: 1438.98px;
+$media-grid-md: 1278.98px;
+$media-grid-sm: 766.98px;
+
+$color-black: #000000;
+$color-gray-900: #27272B;
+$color-gray-800: #313138;
+$color-gray-700: #4A4A51;
+$color-gray-600: #636368;
+$color-gray-500: #7C7C81;
+$color-gray-400: #959598;
+$color-gray-300: #AEAEB1;
+$color-gray-200: #C7C7C8;
+$color-gray-100: #E0E0E1;
+$color-gray-050: #F8F8F8;
+$color-white: #FFFFFF;
+
+$color-red-700: #DD2929;
+$color-red-500: #E55858;
+$color-red-300: #ED8585;
+
+$font-family-primary: "Proxima Nova", sans-serif;
