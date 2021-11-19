@@ -4,6 +4,10 @@
   background-color: $color-gray-900;
   font-family: $font-family-primary;
 
+  @media (max-width: $media-grid-sm) {
+    display: none;
+  }
+
   a {
     text-align: center;
     text-decoration: none;
@@ -19,13 +23,11 @@
 
   &-top {
     height: 88px;
-    background-color: $color-white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 
     .button {
-      height: 88px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,11 +54,19 @@
       }
 
       &.hamburger {
-        width: 105px;
+        flex-basis: 105px;
+        flex-shrink: 1;
+        flex-grow: 1;
+
+        @media (max-width: $media-grid-lg) {
+          flex-basis: 94px;
+        }
       }
 
       &.cart {
-        width: 122px;
+        flex-basis: 122px;
+        flex-shrink: 1;
+        flex-grow: 1;
       }
 
       &.application {
@@ -64,13 +74,6 @@
         height: 52px;
         margin: 0 10px 0 16px;
       }
-    }
-
-    .logo {
-      display: flex;
-      margin-left: 34px;
-      margin-right: auto;
-      color: $color-black;
     }
 
     .link {
@@ -89,6 +92,10 @@
 
         span {
           margin-left: 6px;
+
+          @media (max-width: $media-grid-md) {
+            display: none;
+          }
         }
 
         @media (pointer: coarse) {
@@ -131,6 +138,34 @@
         }
       }
     }
+
+    .logo {
+      display: flex;
+      margin-left: 34px;
+      margin-right: auto;
+      color: $color-black;
+
+      @media (max-width: $media-grid-lg) {
+        margin-left: 30px;
+      }
+    }
+
+    .center {
+      width: 1213px;
+      flex-shrink: 0;
+      background-color: $color-white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: $media-grid-lg) {
+        width: 1064px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        width: 656px;
+      }
+    }
   }
 
   &-bottom {
@@ -138,7 +173,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 114px 0 138px;
 
     nav {
       display: flex;

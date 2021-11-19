@@ -24,23 +24,47 @@ button::-moz-focus-inner {
   align-items: stretch;
 }
 
+.main {
+  min-height: 2px;
+}
+
 .container {
   display: block;
   width: 100%;
   margin: auto;
   position: relative;
-  max-width: $container-xl;
 
-  @media (max-width: $media-grid-lg) {
-    max-width: $container-lg;
+  &-fixed {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: $container-fixed-xl;
+
+    @media (max-width: $media-grid-lg) {
+      max-width: $container-fixed-lg;
+    }
+
+    @media (max-width: $media-grid-md) {
+      max-width: $container-fixed-md;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      max-width: $container-fixed-sm;
+    }
   }
 
-  @media (max-width: $media-grid-md) {
-    max-width: $container-md;
-  }
+  &-fluid {
+    max-width: $container-fluid-xl;
 
+    @media (max-width: $media-grid-lg) {
+      max-width: $container-fluid-lg;
+    }
 
-  @media (max-width: $media-grid-sm) {
-    max-width: $container-sm;
+    @media (max-width: $media-grid-md) {
+      max-width: $container-fluid-md;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      max-width: $container-fluid-sm;
+    }
   }
 }

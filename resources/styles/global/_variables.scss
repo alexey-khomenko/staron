@@ -1,11 +1,16 @@
-$container-xl: 1440px;
-$container-lg: 1280px;
-$container-md: 768px;
-$container-sm: 360px;
+$container-fluid-xl: 1440px;
+$container-fluid-lg: 1280px;
+$container-fluid-md: 768px;
+$container-fluid-sm: 360px;
 
-$media-grid-lg: 1438.98px;
-$media-grid-md: 1278.98px;
-$media-grid-sm: 766.98px;
+$container-fixed-xl: 1180px;
+$container-fixed-lg: 1050px;
+$container-fixed-md: 720px;
+$container-fixed-sm: 340px;
+
+$media-grid-lg: 1422.98px;
+$media-grid-md: 1262.98px;
+$media-grid-sm: 750.98px;
 
 $color-black: #000000;
 $color-gray-900: #27272B;
@@ -24,4 +29,4 @@ $color-red-700: #DD2929;
 $color-red-500: #E55858;
 $color-red-300: #ED8585;
 
-$font-family-primary: "Proxima Nova", sans-serif;
+$font-family-primary: "Jost", sans-serif;

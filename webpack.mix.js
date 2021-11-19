@@ -6,7 +6,7 @@ mix
   .setResourceRoot('../')
   .copyDirectory('resources/images/*.*', 'docs/images')
   .copyDirectory('resources/favicons/*.*', 'docs/favicons')
-  .js('resources/scripts/app.js', 'js/scripts.js')
+  .copyDirectory('resources/scripts/**/*.*', 'docs/js')
   .sass('resources/styles/app.scss', 'css/styles.css')
   .pug('resources/views/pages/*.pug', 'docs', {
     excludePath: 'resources/views/pages',
