@@ -237,4 +237,23 @@
       width: 248px;
     }
   }
+
+  .lang-wrapper {
+    position: relative;
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background-color: indianred;
+      z-index: 1;
+      display: none;
+    }
+
+    &.active .dropdown {
+      display: block;
+    }
+  }
 }

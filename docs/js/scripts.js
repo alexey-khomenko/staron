@@ -24,4 +24,19 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('open modal application');
   });
 
+  // todo data-selector
+  document.querySelector('.lang-wrapper').addEventListener('pointerenter', function () {
+    document.querySelector('.lang-wrapper').classList.add('active');
+
+    console.log('open dropdown');
+  });
+
+  document.addEventListener('pointerover', function (e) {
+    if (e.target.closest('.lang-wrapper')) return true;
+
+    document.querySelector('.lang-wrapper').classList.remove('active');
+
+    console.log('close dropdown');
+  });
+
 });
