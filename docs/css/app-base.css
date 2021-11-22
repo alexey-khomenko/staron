@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+label, input, textarea, button, select, a, summary {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus, button:focus, input:focus {
+  outline: none !important;
+}
+
+button::-moz-focus-inner {
+  outline: none !important;
+  border: 0 !important;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+.main {
+  min-height: 2px;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+.container-fixed {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1180px;
+}
+@media (max-width: 1422.98px) {
+  .container-fixed {
+    max-width: 1050px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .container-fixed {
+    max-width: 720px;
+  }
+}
+@media (max-width: 750.98px) {
+  .container-fixed {
+    max-width: 340px;
+  }
+}
+.container-fluid {
+  max-width: 1440px;
+}
+@media (max-width: 1422.98px) {
+  .container-fluid {
+    max-width: 1280px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .container-fluid {
+    max-width: 768px;
+  }
+}
+@media (max-width: 750.98px) {
+  .container-fluid {
+    max-width: 360px;
+  }
+}

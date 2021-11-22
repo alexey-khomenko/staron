@@ -1,0 +1,20 @@
+.header {
+  background-color: #27272B;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+}
+@media (max-width: 750.98px) {
+  .header {
+    display: none;
+  }
+}
+.header a {
+  text-align: center;
+  text-decoration: none;
+}
+.header button {
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+}

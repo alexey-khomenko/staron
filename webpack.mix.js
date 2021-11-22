@@ -5,9 +5,9 @@ mix
   .setPublicPath('docs')
   .setResourceRoot('../')
   .copyDirectory('resources/images/*.*', 'docs/images')
+  .copyDirectory('resources/fonts/*.*', 'docs/fonts')
   .copyDirectory('resources/favicons/*.*', 'docs/favicons')
   .copyDirectory('resources/scripts/**/*.*', 'docs/js')
-  .sass('resources/styles/app.scss', 'css/styles.css')
   .pug('resources/views/pages/*.pug', 'docs', {
     excludePath: 'resources/views/pages',
     pug: {
@@ -15,6 +15,30 @@ mix
     },
   })
 ;
+
+const styles = [
+  {path: 'layouts', file: 'app-base'},
+  {path: 'layouts', file: 'app-fonts'},
+  {path: 'layouts', file: 'app-normalize'},
+
+  {path: 'layout', file: 'footer'},
+  {path: 'layout', file: 'footer-left'},
+  {path: 'layout', file: 'footer-center'},
+  {path: 'layout', file: 'footer-right'},
+
+  {path: 'layout', file: 'header'},
+  {path: 'layout', file: 'header-top'},
+  {path: 'layout', file: 'header-bottom'},
+
+  {path: 'layout', file: 'main'},
+
+  // {path: '', file: ''},
+  // {path: '', file: ''},
+];
+
+for (let style of styles) {
+  mix.sass(`resources/styles/${style.path}/${style.file}.scss`, `css/${style.file}.css`);
+}
 
 if (!mix.inProduction()) {
   mix

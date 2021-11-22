@@ -1,2 +1,6 @@
 /.idea/*
 /node_modules/*
+
+/resources/fonts/*.woff
+/resources/fonts/*.woff2
+/docs/fonts/*

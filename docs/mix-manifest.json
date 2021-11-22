@@ -1,5 +1,15 @@
 {
-    "/css/styles.css": "/css/styles.css",
+    "/css/footer-center.css": "/css/footer-center.css",
+    "/css/footer-left.css": "/css/footer-left.css",
+    "/css/footer.css": "/css/footer.css",
+    "/css/app-normalize.css": "/css/app-normalize.css",
+    "/css/app-fonts.css": "/css/app-fonts.css",
+    "/css/app-base.css": "/css/app-base.css",
+    "/css/main.css": "/css/main.css",
+    "/css/header-bottom.css": "/css/header-bottom.css",
+    "/css/header-top.css": "/css/header-top.css",
+    "/css/header.css": "/css/header.css",
+    "/css/footer-right.css": "/css/footer-right.css",
     "/js/scripts.js": "/js/scripts.js",
     "/index.html": "/index.html"
 }

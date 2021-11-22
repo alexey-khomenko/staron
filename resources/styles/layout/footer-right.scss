@@ -1,0 +1,87 @@
+@import "././resources/styles/__/variables";
+
+.footer-part.right {
+  order: 3;
+  flex-basis: 50%;
+  flex-grow: 1;
+  align-items: flex-end;
+  text-align: right;
+
+  @media (max-width: $media-grid-md) {
+    order: 2;
+    padding: 30px 0;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    padding: 0 0 42px;
+    align-items: flex-start;
+  }
+
+  .button {
+    width: 220px;
+    height: 48px;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-gray-800;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: $color-white;
+
+    @media (max-width: $media-grid-sm) {
+      width: 168px;
+      margin-bottom: 12px;
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        background-color: $color-gray-700;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-gray-700;
+      }
+    }
+  }
+
+  .link {
+    margin-top: 24px;
+    margin-left: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: $color-gray-200;
+
+    @media (max-width: $media-grid-lg) {
+      margin-top: 10px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-left: 0;
+      margin-top: 8px;
+      line-height: 26px;
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        color: $color-white;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}

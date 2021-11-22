@@ -6,14 +6,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/app-normalize.css">
+    <link rel="stylesheet" href="css/app-fonts.css">
+    <link rel="stylesheet" href="css/app-base.css">
     <title>Index page
     </title>
   </head>
   <body>
     <div class="wrapper">
+      <link rel="stylesheet" href="css/header.css">
       <header class="header">
         <div class="container container-fluid">
+          <link rel="stylesheet" href="css/header-top.css">
           <div class="header-top">
             <button class="button hamburger" type="button" data-selector="hamburger">
               <svg width="24" height="10" viewBox="0 0 24 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +65,9 @@
           </div>
         </div>
         <div class="container container-fixed">
+          <link rel="stylesheet" href="css/header-bottom.css">
           <div class="header-bottom">
-            <nav><a href="#{link.url}"><span>Продукция</span></a><a href="#{link.url}"><span>Где купить</span></a><a href="#{link.url}"><span>Обучение</span></a><a href="#{link.url}"><span>О компании</span></a>
+            <nav><a href="index.html"><span>Продукция</span></a><a href="index.html"><span>Где купить</span></a><a href="index.html"><span>Обучение</span></a><a href="index.html"><span>О компании</span></a>
             </nav><a class="logo" href="index.html">
               <svg class="svg-left" width="86" height="40" viewBox="0 0 86 40" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.0906 34.8409C12.8527 34.6046 12.531 34.4719 12.1956 34.4719C11.8603 34.4719 11.5385 34.6046 11.3006 34.8409C10.9706 35.1709 10.9406 35.5209 10.9406 36.6009C10.9406 37.6809 10.9406 38.0409 11.3006 38.3709C11.5365 38.6073 11.8566 38.7404 12.1906 38.7409C12.4583 38.7424 12.7187 38.6544 12.9306 38.4909L12.2706 37.8409L12.6106 37.5109L13.2406 38.1409C13.4447 37.6549 13.5171 37.1238 13.4506 36.6009C13.4506 35.5209 13.4506 35.1709 13.0906 34.8409ZM13.8806 39.4509L13.3106 38.8709C12.9483 39.1325 12.5057 39.2588 12.0598 39.2277C11.614 39.1966 11.1932 39.0102 10.8706 38.7009C10.3906 38.2109 10.3906 37.7009 10.3906 36.6009C10.3906 35.5009 10.3906 35.0009 10.8706 34.5109C11.2253 34.1658 11.7007 33.9727 12.1956 33.9727C12.6905 33.9727 13.1659 34.1658 13.5206 34.5109C14.0006 35.0009 14.0006 35.5109 14.0006 36.6009C14.0006 37.6909 14.0006 38.1009 13.6506 38.5409L14.2106 39.1109L13.8806 39.4509Z" fill="currentColor"></path>
@@ -91,10 +96,13 @@
           </div>
         </div>
       </header>
+      <link rel="stylesheet" href="css/main.css">
       <main class="main">
       </main>
+      <link rel="stylesheet" href="css/footer.css">
       <footer class="footer">
         <div class="container container-fixed">
+          <link rel="stylesheet" href="css/footer-left.css">
           <div class="footer-part left"><a class="link top" href="tel:+74952236440">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.42465 7.91267C9.49398 8.94112 9.66732 9.94645 9.94465 10.9056L8.55798 12.2922C8.08421 10.9056 7.78376 9.43801 7.67976 7.91267H9.42465ZM20.8184 21.8025C21.8006 22.0798 22.806 22.2531 23.8229 22.3224V24.0442C22.2975 23.9402 20.83 23.6398 19.4318 23.1776L20.8184 21.8025ZM10.534 5.60156H6.48954C5.85398 5.60156 5.33398 6.12156 5.33398 6.75712C5.33398 17.6078 14.1278 26.4016 24.9784 26.4016C25.614 26.4016 26.134 25.8816 26.134 25.246V21.2131C26.134 20.5776 25.614 20.0576 24.9784 20.0576C23.5455 20.0576 22.1473 19.8265 20.8531 19.3989C20.7375 19.3527 20.6104 19.3411 20.4949 19.3411C20.1944 19.3411 19.9055 19.4567 19.6744 19.6762L17.1322 22.2184C13.862 20.5429 11.1811 17.8736 9.5171 14.6033L12.0593 12.0611C12.3829 11.7376 12.4753 11.2869 12.3482 10.8825C11.9207 9.58823 11.6895 8.20156 11.6895 6.75712C11.6895 6.12156 11.1695 5.60156 10.534 5.60156Z" fill="currentColor"></path>
@@ -110,6 +118,7 @@
                 <div>г. Домодедово мкр. Северный,</div>
                 <div>ул. Логистическая 8</div>
               </div></a></div>
+          <link rel="stylesheet" href="css/footer-center.css">
           <div class="footer-part center">
             <div class="social"><a href="index.html" target="_blank">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,6 +161,7 @@
                 <path d="M112.855 6.76396H111.709V8.33075H112.855C112.968 8.34535 113.082 8.336 113.19 8.30332C113.299 8.27063 113.399 8.21537 113.484 8.14121C113.569 8.06706 113.637 7.97573 113.684 7.87332C113.731 7.77091 113.755 7.65978 113.755 7.54735C113.755 7.43493 113.731 7.3238 113.684 7.22139C113.637 7.11898 113.569 7.02765 113.484 6.95349C113.399 6.87934 113.299 6.82408 113.19 6.79139C113.082 6.75871 112.968 6.74935 112.855 6.76396ZM113.719 10.6207L112.748 8.73249H111.709V10.6207H111.25V6.34883H112.896C113.061 6.33343 113.227 6.35315 113.383 6.40667C113.539 6.46018 113.682 6.54626 113.803 6.65913C113.923 6.77199 114.017 6.90903 114.079 7.06107C114.142 7.21311 114.171 7.37663 114.164 7.54066C114.178 7.81245 114.091 8.07982 113.919 8.29209C113.748 8.50435 113.504 8.64676 113.233 8.69231L114.259 10.6207H113.719Z" fill="currentColor"></path>
               </svg></a><span class="copy">Staron 2021 &copy;</span>
           </div>
+          <link rel="stylesheet" href="css/footer-right.css">
           <div class="footer-part right">
             <button class="button" type="button" data-selector="application"><span>Оставить заявку</span></button><a class="link" href="index.html">Политика конфиденциальности</a><a class="link" href="index.html">Политика обработки персональных данных</a>
           </div>

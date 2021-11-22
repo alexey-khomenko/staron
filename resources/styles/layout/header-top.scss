@@ -1,0 +1,220 @@
+@import "././resources/styles/__/variables";
+
+.header-top {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  @media (max-width: $media-grid-md) {
+    height: 56px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-gray-800;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: $color-white;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &.active {
+      background-color: $color-gray-600;
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        background-color: $color-gray-700;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-gray-700;
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      @media (max-width: $media-grid-md) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &.hamburger {
+      flex-basis: 105px;
+      flex-shrink: 1;
+      flex-grow: 1;
+
+      @media (max-width: $media-grid-lg) {
+        flex-basis: 94px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        flex-basis: 56px;
+      }
+    }
+
+    &.cart {
+      flex-basis: 122px;
+      flex-shrink: 1;
+      flex-grow: 1;
+
+      @media (max-width: $media-grid-md) {
+        flex-basis: 56px;
+      }
+    }
+
+    &.application {
+      width: 220px;
+      height: 52px;
+      margin: 0 10px 0 16px;
+
+      @media (max-width: $media-grid-md) {
+        width: 145px;
+        height: 36px;
+        margin: 0 2px 0 10px;
+      }
+    }
+  }
+
+  .link {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    color: $color-gray-800;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    &.phone {
+      margin: 0 22px;
+
+      @media (max-width: $media-grid-md) {
+        margin: 0 10px;
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+
+        @media (max-width: $media-grid-md) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      span {
+        margin-left: 6px;
+
+        @media (max-width: $media-grid-md) {
+          display: none;
+        }
+      }
+
+      @media (pointer: coarse) {
+        &:active {
+          color: $color-red-700;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: $color-red-700;
+        }
+      }
+    }
+
+    &.lang {
+      width: 88px;
+      height: 40px;
+      margin: 0 18px;
+
+      @media (max-width: $media-grid-md) {
+        width: 48px;
+        height: 20px;
+        margin: 0 20px;
+      }
+
+      span {
+        margin-right: 8px;
+        text-transform: uppercase;
+      }
+
+      &.active svg {
+        transform: rotateX(180deg);
+      }
+
+      @media (pointer: coarse) {
+        &:active span {
+          color: $color-red-700;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover span {
+          color: $color-red-700;
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    margin-left: 34px;
+    margin-right: auto;
+    color: $color-black;
+
+    @media (max-width: $media-grid-lg) {
+      margin-left: 30px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-left: 19px;
+    }
+
+    svg {
+      height: 40px;
+      width: auto;
+
+      @media (max-width: $media-grid-md) {
+        height: 24px;
+      }
+    }
+  }
+
+  .center {
+    width: 1213px;
+    flex-shrink: 0;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $media-grid-lg) {
+      width: 1064px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      width: 656px;
+    }
+  }
+}

@@ -22,10 +22,11 @@
         },
     };
 
+link(rel="stylesheet", href="css/header-bottom.css")
 div(class="header-bottom")
     nav
         each link in links
-            a(href="#{link.url}")
+            a(href=`${link.url}`)
                 span
                     | #{link.title}
     a(href="index.html", class="logo")
