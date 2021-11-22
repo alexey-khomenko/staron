@@ -9,14 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('click', function (e) {
-    const lang = e.target.closest('[data-selector="lang"]');
-
-    if (!lang) return true;
-
-    lang.classList.toggle('active');
-  });
-
-  document.addEventListener('click', function (e) {
     const application = e.target.closest('[data-selector="application"]');
 
     if (!application) return true;
@@ -24,19 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('open modal application');
   });
 
-  // todo data-selector
-  document.querySelector('.lang-wrapper').addEventListener('pointerenter', function () {
-    document.querySelector('.lang-wrapper').classList.add('active');
-
-    console.log('open dropdown');
+  document.querySelector('[data-selector="lang"]').addEventListener('pointerenter', function () {
+    document.querySelector('[data-selector="lang"]').classList.add('active');
   });
 
   document.addEventListener('pointerover', function (e) {
-    if (e.target.closest('.lang-wrapper')) return true;
+    if (e.target.closest('[data-selector="lang"]')) return true;
 
-    document.querySelector('.lang-wrapper').classList.remove('active');
-
-    console.log('close dropdown');
+    document.querySelector('[data-selector="lang"]').classList.remove('active');
   });
 
 });

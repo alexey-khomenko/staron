@@ -154,25 +154,15 @@
     &.lang {
       width: 88px;
       height: 40px;
-      margin: 0 18px;
 
       @media (max-width: $media-grid-md) {
         width: 48px;
         height: 20px;
-        margin: 0 20px;
-      }
-
-      @media (max-width: $media-grid-sm) {
-        display: none;
       }
 
       span {
         margin-right: 8px;
         text-transform: uppercase;
-      }
-
-      &.active svg {
-        transform: rotateX(180deg);
       }
 
       @media (pointer: coarse) {
@@ -240,20 +230,37 @@
 
   .lang-wrapper {
     position: relative;
+    margin: 0 18px;
 
-    .dropdown {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      height: 200px;
-      background-color: indianred;
-      z-index: 1;
+    @media (max-width: $media-grid-md) {
+      margin: 0 20px;
+    }
+
+    @media (max-width: $media-grid-sm) {
       display: none;
     }
 
-    &.active .dropdown {
+    &.active .dropdown.lang {
       display: block;
+    }
+
+    &.active .link.lang svg {
+      transform: rotateX(180deg);
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    z-index: 1;
+    display: none;
+
+    &.lang {
+      top: 100%;
+      left: 50%;
+      width: 160px;
+      height: 160px;
+      background-color: indianred;
+      transform: translateX(-50%);
     }
   }
 }
