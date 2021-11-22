@@ -2,11 +2,6 @@
   background-color: #27272B;
   font-family: "Proxima Nova", "Jost", sans-serif;
 }
-@media (max-width: 750.98px) {
-  .header {
-    display: none;
-  }
-}
 .header a {
   text-align: center;
   text-decoration: none;

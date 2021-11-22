@@ -86,6 +86,10 @@
         height: 36px;
         margin: 0 2px 0 10px;
       }
+
+      @media (max-width: $media-grid-sm) {
+        display: none;
+      }
     }
   }
 
@@ -110,6 +114,10 @@
 
       @media (max-width: $media-grid-md) {
         margin: 0 10px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        margin: 0 16px;
       }
 
       svg {
@@ -154,6 +162,10 @@
         margin: 0 20px;
       }
 
+      @media (max-width: $media-grid-sm) {
+        display: none;
+      }
+
       span {
         margin-right: 8px;
         text-transform: uppercase;
@@ -191,6 +203,10 @@
       margin-left: 19px;
     }
 
+    @media (max-width: $media-grid-sm) {
+      margin-left: 17px;
+    }
+
     svg {
       height: 40px;
       width: auto;
@@ -215,6 +231,10 @@
 
     @media (max-width: $media-grid-md) {
       width: 656px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      width: 248px;
     }
   }
 }

@@ -14,6 +14,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    max-width: 100%;
+    overflow: auto;
 
     a {
       display: flex;
@@ -25,6 +27,7 @@
       font-size: 17px;
       line-height: 29px;
       color: $color-gray-200;
+      white-space: nowrap;
 
       &:not(:first-child) {
         margin-left: 45px;
@@ -39,6 +42,18 @@
 
         &:not(:first-child) {
           margin-left: 25px;
+        }
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 12px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:not(:first-child) {
+          margin-left: 23px;
         }
       }
 

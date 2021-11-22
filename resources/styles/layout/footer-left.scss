@@ -23,6 +23,10 @@
     font-style: normal;
     color: $color-gray-200;
 
+    @media (max-width: $media-grid-sm) {
+      margin-right: 0;
+    }
+
     @media (pointer: coarse) {
       &:active {
         color: $color-white;

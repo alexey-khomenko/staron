@@ -23,6 +23,11 @@
   font-style: normal;
   color: #C7C7C8;
 }
+@media (max-width: 750.98px) {
+  .footer-part.left .link {
+    margin-right: 0;
+  }
+}
 @media (pointer: coarse) {
   .footer-part.left .link:active {
     color: #FFFFFF;

@@ -13,6 +13,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  max-width: 100%;
+  overflow: auto;
 }
 .header-bottom nav a {
   display: flex;
@@ -24,6 +26,7 @@
   font-size: 17px;
   line-height: 29px;
   color: #C7C7C8;
+  white-space: nowrap;
 }
 .header-bottom nav a:not(:first-child) {
   margin-left: 45px;
@@ -37,6 +40,17 @@
   }
   .header-bottom nav a:not(:first-child) {
     margin-left: 25px;
+  }
+}
+@media (max-width: 750.98px) {
+  .header-bottom nav a {
+    font-size: 12px;
+  }
+  .header-bottom nav a:first-child {
+    margin-left: 0;
+  }
+  .header-bottom nav a:not(:first-child) {
+    margin-left: 23px;
   }
 }
 @media (pointer: coarse) {
