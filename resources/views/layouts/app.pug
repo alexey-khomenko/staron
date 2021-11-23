@@ -12,9 +12,10 @@ html(lang="ru")
         link(rel="stylesheet", href="css/app-base.css")
         title
             block title
-    body
-        div(class="wrapper")
+    body(class="body")
+        div(class="page-wrapper")
             include ../layout/header
             include ../layout/main
             include ../layout/footer
+            include ../layout/modal
         script(src="js/scripts.js", defer='defer')

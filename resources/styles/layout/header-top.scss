@@ -1,5 +1,7 @@
 @import "././resources/styles/__/variables";
 
+$dropdown-lang-arrow-size: 9px;
+
 .header-top {
   height: 88px;
   display: flex;
@@ -11,6 +13,7 @@
   }
 
   .button {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,6 +97,7 @@
   }
 
   .link {
+    cursor: pointer;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -107,6 +111,18 @@
     @media (max-width: $media-grid-md) {
       font-size: 15px;
       line-height: 18px;
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        color: $color-red-700;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-red-700;
+      }
     }
 
     &.phone {
@@ -137,18 +153,6 @@
           display: none;
         }
       }
-
-      @media (pointer: coarse) {
-        &:active {
-          color: $color-red-700;
-        }
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          color: $color-red-700;
-        }
-      }
     }
 
     &.lang {
@@ -166,14 +170,14 @@
       }
 
       @media (pointer: coarse) {
-        &:active span {
-          color: $color-red-700;
+        &:active svg {
+          color: $color-gray-800;
         }
       }
 
       @media (hover: hover) {
-        &:hover span {
-          color: $color-red-700;
+        &:hover svg {
+          color: $color-gray-800;
         }
       }
     }
@@ -228,7 +232,7 @@
     }
   }
 
-  .lang-wrapper {
+  .details {
     position: relative;
     margin: 0 18px;
 
@@ -240,27 +244,89 @@
       display: none;
     }
 
-    &.active .dropdown.lang {
-      display: block;
-    }
+    &[open] .link.lang {
+      color: $color-red-700;
 
-    &.active .link.lang svg {
-      transform: rotateX(180deg);
+      svg {
+        color: $color-gray-800;
+        transform: rotateX(180deg);
+      }
     }
   }
 
-  .dropdown {
+  .dropdown-outer {
     position: absolute;
     z-index: 1;
-    display: none;
 
     &.lang {
+      padding-top: 9px;
       top: 100%;
       left: 50%;
-      width: 160px;
-      height: 160px;
-      background-color: indianred;
       transform: translateX(-50%);
+    }
+  }
+
+  .dropdown-inner {
+    position: relative;
+
+    &.lang {
+      width: 94px;
+      padding: 8px 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: $font-family-primary;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 21px;
+      text-transform: uppercase;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      background-color: $color-white;
+
+      &::after, &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: ($dropdown-lang-arrow-size * -1);
+        background-color: $color-white;
+        left: 39px;
+        width: ($dropdown-lang-arrow-size * 2);
+        height: ($dropdown-lang-arrow-size * 2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        z-index: 1;
+        box-shadow: none;
+      }
+
+      span, a {
+        margin: 4px;
+      }
+
+      span {
+        color: $color-red-700;
+      }
+
+      a {
+        color: $color-gray-500;
+
+        @media (pointer: coarse) {
+          &:active {
+            color: $color-gray-900;
+          }
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            color: $color-gray-900;
+          }
+        }
+      }
     }
   }
 }

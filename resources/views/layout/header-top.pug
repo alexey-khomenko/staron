@@ -31,7 +31,9 @@ div(class="header-top")
                 path(d="M112.855 6.76396H111.709V8.33075H112.855C112.968 8.34535 113.082 8.336 113.19 8.30332C113.299 8.27063 113.399 8.21537 113.484 8.14121C113.569 8.06706 113.637 7.97573 113.684 7.87332C113.731 7.77091 113.755 7.65978 113.755 7.54735C113.755 7.43493 113.731 7.3238 113.684 7.22139C113.637 7.11898 113.569 7.02765 113.484 6.95349C113.399 6.87934 113.299 6.82408 113.19 6.79139C113.082 6.75871 112.968 6.74935 112.855 6.76396ZM113.719 10.6207L112.748 8.73249H111.709V10.6207H111.25V6.34883H112.896C113.061 6.33343 113.227 6.35315 113.383 6.40667C113.539 6.46018 113.682 6.54626 113.803 6.65913C113.923 6.77199 114.017 6.90903 114.079 7.06107C114.142 7.21311 114.171 7.37663 114.164 7.54066C114.178 7.81245 114.091 8.07982 113.919 8.29209C113.748 8.50435 113.504 8.64676 113.233 8.69231L114.259 10.6207H113.719Z", fill="currentColor")
 
 
-
+        button(type="button", class="link search")
+            svg(width="32", height="32", viewBox="0 0 32 32", fill="none", xmlns="http://www.w3.org/2000/svg")
+                path(d="M20.8448 19.1095H19.9319L19.6084 18.7975C20.7408 17.4802 21.4226 15.77 21.4226 13.9095C21.4226 9.7611 18.0599 6.39844 13.9115 6.39844C9.76306 6.39844 6.40039 9.7611 6.40039 13.9095C6.40039 18.058 9.76306 21.4207 13.9115 21.4207C15.7719 21.4207 17.4822 20.7389 18.7995 19.6064L19.1115 19.93V20.8429L24.8893 26.6091L26.6111 24.8873L20.8448 19.1095ZM13.9115 19.1095C11.0342 19.1095 8.7115 16.7869 8.7115 13.9095C8.7115 11.0322 11.0342 8.70955 13.9115 8.70955C16.7888 8.70955 19.1115 11.0322 19.1115 13.9095C19.1115 16.7869 16.7888 19.1095 13.9115 19.1095Z", fill="currentColor")
 
 
         a(href="tel:+74952236440", class="link phone")
@@ -40,17 +42,24 @@ div(class="header-top")
             span
                 | +7 495 223 64 40
 
-        button(type="button", class="button application", data-selector="application")
+        button(type="button", class="button application")
             span
                 | Оставить заявку
 
-        div(class="lang-wrapper", data-selector="lang")
-            button(type="button", class="link lang")
+        details(class="details", data-selector="lang")
+            summary(class="link lang")
                 span
                     | Рус
                 svg(width="14", height="9", viewBox="0 0 14 9", fill="none", xmlns="http://www.w3.org/2000/svg")
                     path(d="M11.8994 1.94922L6.94967 6.89897L1.99992 1.94922", stroke="currentColor", stroke-width="2", stroke-linecap="square")
-            div(class="dropdown lang")
+            div(class="dropdown-outer lang")
+                nav(class="dropdown-inner lang")
+                    span
+                        | Рус
+                    a(href="index.html")
+                        | Eng
+                    a(href="index.html")
+                        | Ger
 
     a(href="cart.html", class="button cart")
         svg(width="24", height="24", viewBox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")

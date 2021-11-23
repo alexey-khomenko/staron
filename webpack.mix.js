@@ -30,9 +30,11 @@ const styles = [
   {path: 'layout', file: 'header-top'},
   {path: 'layout', file: 'header-bottom'},
 
+  {path: 'layout', file: 'modal'},
+  {path: 'layout', file: 'modal-application'},
+
   {path: 'layout', file: 'main'},
 
-  // {path: '', file: ''},
   // {path: '', file: ''},
 ];
 

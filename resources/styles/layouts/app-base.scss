@@ -17,6 +17,12 @@ button::-moz-focus-inner {
   border: 0 !important;
 }
 
+.body {
+  &.closed {
+    overflow: hidden;
+  }
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
