@@ -1,6 +1,7 @@
-link(rel="stylesheet", href="css/header-top.css")
+link(rel="stylesheet", href="css/layout/header-top.css")
+script(src="js/layout/header-top.js")
 div(class="header-top")
-    button(type="button", class="button hamburger", data-selector="hamburger")
+    button(type="button", class="button hamburger")
         svg(width="24", height="10", viewBox="0 0 24 10", fill="none", xmlns="http://www.w3.org/2000/svg")
             rect(width="24", height="2", fill="currentColor")
             rect(y="8", width="12", height="2", fill="currentColor")
@@ -46,7 +47,7 @@ div(class="header-top")
             span
                 | Оставить заявку
 
-        details(class="details", data-selector="lang")
+        details(class="details lang")
             summary(class="link lang")
                 span
                     | Рус

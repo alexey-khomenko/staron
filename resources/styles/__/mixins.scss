@@ -1,0 +1,29 @@
+@import "././resources/styles/__/variables";
+
+@mixin button {
+  border-radius: 0;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-gray-800;
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: $color-white;
+  text-align: center;
+
+  @media (pointer: coarse) {
+    &:active {
+      background-color: $color-gray-700;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color-gray-700;
+    }
+  }
+}

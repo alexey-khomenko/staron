@@ -6,7 +6,10 @@
   right: 0;
   bottom: 0;
   z-index: 10;
-  background-color: rgba(0,0,0, 0.7);
+
+
+  background-color: rgba(141, 141, 141, 0.8);
+  backdrop-filter: blur(10px);
 
   &.opened {
     display: flex;

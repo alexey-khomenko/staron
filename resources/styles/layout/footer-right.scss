@@ -1,4 +1,5 @@
 @import "././resources/styles/__/variables";
+@import "././resources/styles/__/mixins";
 
 .footer-part.right {
   order: 3;
@@ -18,33 +19,15 @@
   }
 
   .button {
+    @include button;
+
     width: 220px;
     height: 48px;
     margin-bottom: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-gray-800;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 21px;
-    color: $color-white;
 
     @media (max-width: $media-grid-sm) {
       width: 168px;
       margin-bottom: 12px;
-    }
-
-    @media (pointer: coarse) {
-      &:active {
-        background-color: $color-gray-700;
-      }
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: $color-gray-700;
-      }
     }
   }
 

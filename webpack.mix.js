@@ -7,7 +7,6 @@ mix
   .copyDirectory('resources/images/*.*', 'docs/images')
   .copyDirectory('resources/fonts/*.*', 'docs/fonts')
   .copyDirectory('resources/favicons/*.*', 'docs/favicons')
-  .copyDirectory('resources/scripts/**/*.*', 'docs/js')
   .pug('resources/views/pages/*.pug', 'docs', {
     excludePath: 'resources/views/pages',
     pug: {
@@ -17,29 +16,39 @@ mix
 ;
 
 const styles = [
-  {path: 'layouts', file: 'app-base'},
-  {path: 'layouts', file: 'app-fonts'},
-  {path: 'layouts', file: 'app-normalize'},
+  'layouts/app-base',
+  'layouts/app-fonts',
+  'layouts/app-normalize',
 
-  {path: 'layout', file: 'footer'},
-  {path: 'layout', file: 'footer-left'},
-  {path: 'layout', file: 'footer-center'},
-  {path: 'layout', file: 'footer-right'},
+  'layout/footer',
+  'layout/footer-left',
+  'layout/footer-center',
+  'layout/footer-right',
 
-  {path: 'layout', file: 'header'},
-  {path: 'layout', file: 'header-top'},
-  {path: 'layout', file: 'header-bottom'},
+  'layout/header',
+  'layout/header-top',
+  'layout/header-bottom',
 
-  {path: 'layout', file: 'modal'},
-  {path: 'layout', file: 'modal-application'},
+  'layout/modal',
+  'layout/modal-application',
 
-  {path: 'layout', file: 'main'},
-
-  // {path: '', file: ''},
+  'layout/main',
 ];
 
 for (let style of styles) {
-  mix.sass(`resources/styles/${style.path}/${style.file}.scss`, `css/${style.file}.css`);
+  mix.sass(`resources/styles/${style}.scss`, `css/${style}.css`);
+}
+
+const scripts = [
+  'layouts/script',
+
+  'layout/header-top',
+  'layout/modal',
+  'layout/modal-application',
+];
+
+for (let script of scripts) {
+  mix.copy(`resources/scripts/${script}.js`, `docs/js/${script}.js`);
 }
 
 if (!mix.inProduction()) {

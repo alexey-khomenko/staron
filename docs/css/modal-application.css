@@ -1,9 +1,0 @@
-.modal-popup.application {
-  display: none;
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-}
-.modal-popup.application.opened {
-  display: block;
-}
