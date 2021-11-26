@@ -13,6 +13,7 @@
     "/css/layout/header.css": "/css/layout/header.css",
     "/css/layout/footer-right.css": "/css/layout/footer-right.css",
     "/index.html": "/index.html",
+    "/js/layouts/inputmask.min.js": "/js/layouts/inputmask.min.js",
     "/js/layouts/script.js": "/js/layouts/script.js",
     "/js/layout/header-top.js": "/js/layout/header-top.js",
     "/js/layout/modal.js": "/js/layout/modal.js",

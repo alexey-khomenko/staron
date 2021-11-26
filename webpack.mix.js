@@ -40,6 +40,7 @@ for (let style of styles) {
 }
 
 const scripts = [
+  'layouts/inputmask.min',
   'layouts/script',
 
   'layout/header-top',

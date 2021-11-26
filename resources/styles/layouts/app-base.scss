@@ -1,6 +1,6 @@
 @import "././resources/styles/__/variables";
 
-* {
+*, *::after, *::before {
   box-sizing: border-box;
 }
 

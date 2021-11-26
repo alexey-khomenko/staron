@@ -75,17 +75,23 @@
   flex-basis: 46%;
   margin-right: 36px;
 }
+@media (max-width: 1262.98px) {
+  .modal-popup.application .left {
+    margin-right: 24px;
+  }
+}
 @media (max-width: 750.98px) {
   .modal-popup.application .left {
     margin-right: 0;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
   }
 }
 .modal-popup.application .right {
   flex-basis: 54%;
+  margin-top: 5px;
 }
 .modal-popup.application .h5 {
-  margin: 7px 0 48px;
+  margin: 0 0 48px;
   font-family: "Proxima Nova", "Jost", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -93,6 +99,259 @@
   line-height: 30px;
   letter-spacing: 0.02em;
   color: #000000;
+}
+.modal-popup.application .row label {
+  margin-bottom: 6px;
+  display: block;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #27272B;
+}
+.modal-popup.application .row input, .modal-popup.application .row textarea {
+  padding: 0 0 14px;
+  display: block;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #000000;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+  letter-spacing: 0.02em;
+}
+.modal-popup.application .row input.error, .modal-popup.application .row textarea.error {
+  border-bottom-color: #DD2929;
+}
+.modal-popup.application .row input::-moz-placeholder, .modal-popup.application .row textarea::-moz-placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: #7C7C81;
+}
+.modal-popup.application .row input:-ms-input-placeholder, .modal-popup.application .row textarea:-ms-input-placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: #7C7C81;
+}
+.modal-popup.application .row input::placeholder, .modal-popup.application .row textarea::placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: #7C7C81;
+}
+@media (pointer: coarse) {
+  .modal-popup.application .row input:active::-moz-placeholder, .modal-popup.application .row textarea:active::-moz-placeholder {
+    color: #27272B;
+  }
+  .modal-popup.application .row input:active:-ms-input-placeholder, .modal-popup.application .row textarea:active:-ms-input-placeholder {
+    color: #27272B;
+  }
+  .modal-popup.application .row input:active::placeholder, .modal-popup.application .row textarea:active::placeholder {
+    color: #27272B;
+  }
+}
+@media (hover: hover) {
+  .modal-popup.application .row input:hover::-moz-placeholder, .modal-popup.application .row textarea:hover::-moz-placeholder {
+    color: #27272B;
+  }
+  .modal-popup.application .row input:hover:-ms-input-placeholder, .modal-popup.application .row textarea:hover:-ms-input-placeholder {
+    color: #27272B;
+  }
+  .modal-popup.application .row input:hover::placeholder, .modal-popup.application .row textarea:hover::placeholder {
+    color: #27272B;
+  }
+}
+.modal-popup.application .row textarea {
+  height: 223px;
+  resize: none;
+}
+.modal-popup.application .row textarea:focus {
+  outline: none;
+}
+.modal-popup.application .row-left {
+  margin-bottom: 22px;
+}
+.modal-popup.application .row-right {
+  margin-bottom: 56px;
+}
+.modal-popup.application .h6 {
+  margin: 40px 0 0;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 34px;
+  color: #000000;
+}
+.modal-popup.application .checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal-popup.application input[type=checkbox] {
+  display: none;
+}
+.modal-popup.application input[type=checkbox]:checked + .checkbox::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  width: 9px;
+  height: 6px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  transform: rotate(-48deg);
+}
+.modal-popup.application .checkbox {
+  position: relative;
+}
+.modal-popup.application .checkbox::after {
+  border-color: #DD2929;
+}
+@media (pointer: coarse) {
+  .modal-popup.application .checkbox:active::after {
+    border-color: #ED8585;
+  }
+}
+@media (hover: hover) {
+  .modal-popup.application .checkbox:hover::after {
+    border-color: #ED8585;
+  }
+}
+.modal-popup.application .checkbox::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid #636368;
+}
+.modal-popup.application .checkbox label {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 36px;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  color: #000000;
+}
+.modal-popup.application .checkbox-left {
+  margin-top: 14px;
+}
+.modal-popup.application .checkbox-left::before {
+  top: 6px;
+}
+.modal-popup.application .checkbox-left::after {
+  top: 11px;
+}
+.modal-popup.application .checkbox-left label {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 30px;
+}
+.modal-popup.application .checkbox-right {
+  margin-bottom: 32px;
+}
+.modal-popup.application .checkbox-right::before {
+  top: 4px;
+}
+.modal-popup.application .checkbox-right::after {
+  top: 9px;
+}
+.modal-popup.application .checkbox-right label {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+}
+.modal-popup.application .checkbox-right a {
+  color: #DD2929;
+  text-decoration: underline;
+}
+@media (pointer: coarse) {
+  .modal-popup.application .checkbox-right a:active {
+    color: #ED8585;
+  }
+}
+@media (hover: hover) {
+  .modal-popup.application .checkbox-right a:hover {
+    color: #ED8585;
+  }
+}
+.modal-popup.application .select {
+  position: relative;
+  margin-bottom: 30px;
+}
+.modal-popup.application .select input[readonly] {
+  cursor: pointer;
+  padding-right: 32px;
+}
+.modal-popup.application .select svg {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: block;
+  color: #313138;
+}
+.modal-popup.application .select.active input[readonly] {
+  color: #DD2929;
+}
+.modal-popup.application .select.active svg {
+  transform: rotateX(180deg);
+}
+.modal-popup.application .select.active .options {
+  display: flex;
+}
+.modal-popup.application .options {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  background: #FFFFFF;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.12);
+}
+.modal-popup.application .option {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.modal-popup.application .option:not(:first-child) {
+  margin-top: 10px;
+}
+@media (pointer: coarse) {
+  .modal-popup.application .option:not(.active):active {
+    color: #7C7C81;
+  }
+}
+@media (hover: hover) {
+  .modal-popup.application .option:not(.active):hover {
+    color: #7C7C81;
+  }
+}
+.modal-popup.application .option.active {
+  cursor: default;
+  border-bottom: 1px solid #DD2929;
 }
 .modal-popup.application .button.submit {
   border-radius: 0;
