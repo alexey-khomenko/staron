@@ -289,6 +289,10 @@
   position: relative;
   margin-bottom: 30px;
 }
+.modal-popup.application .select summary {
+  position: relative;
+  display: block;
+}
 .modal-popup.application .select input[readonly] {
   cursor: pointer;
   padding-right: 32px;
@@ -300,17 +304,14 @@
   display: block;
   color: #313138;
 }
-.modal-popup.application .select.active input[readonly] {
+.modal-popup.application .select[open] input[readonly] {
   color: #DD2929;
 }
-.modal-popup.application .select.active svg {
+.modal-popup.application .select[open] svg {
   transform: rotateX(180deg);
 }
-.modal-popup.application .select.active .options {
-  display: flex;
-}
 .modal-popup.application .options {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   z-index: 1;
