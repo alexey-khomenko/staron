@@ -310,6 +310,11 @@
     position: relative;
     margin-bottom: 30px;
 
+    summary {
+      position: relative;
+      display: block;
+    }
+
     input[readonly] {
       cursor: pointer;
       padding-right: 32px;
@@ -324,7 +329,7 @@
     }
   }
 
-  .select.active {
+  .select[open] {
     input[readonly] {
       color: $color-red-700;
     }
@@ -332,14 +337,10 @@
     svg {
       transform: rotateX(180deg);
     }
-
-    .options {
-      display: flex;
-    }
   }
 
   .options {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     z-index: 1;

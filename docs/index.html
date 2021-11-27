@@ -230,18 +230,20 @@
               </div>
             </section>
             <section class="right">
-              <div class="row select">
-                <input id="application-country" readonly="readonly" name="country" type="text" placeholder="Выберите вашу страну из списка*" value="">
-                <input id="application-country-id" name="country-id" type="hidden" value="">
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.59 0.589844L6 5.16984L1.41 0.589844L0 1.99984L6 7.99984L12 1.99984L10.59 0.589844Z" fill="currentColor"></path>
-                </svg>
+              <details class="row select">
+                <summary>
+                  <input id="application-country" readonly="readonly" name="country" type="text" placeholder="Выберите вашу страну из списка*" value="">
+                  <input id="application-country-id" name="country-id" type="hidden" value="">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.59 0.589844L6 5.16984L1.41 0.589844L0 1.99984L6 7.99984L12 1.99984L10.59 0.589844Z" fill="currentColor"></path>
+                  </svg>
+                </summary>
                 <div class="options">
                   <div class="option" data-value="ru-id"><span>Россия</span></div>
                   <div class="option" data-value="rb-id"><span>Белоруссия</span></div>
                   <div class="option" data-value="kz-id"><span>Казахстан</span></div>
                 </div>
-              </div>
+              </details>
               <div class="row row-right">
                 <label for="application-message">Сообщение</label>
                 <textarea id="application-message" name="email" placeholder="Опишите интересующий вас вопрос или материалы, наличие которых вас интересует."></textarea>

@@ -9,6 +9,7 @@ window.openModal = function (name) {
   body.style.paddingRight = Math.round(widthOuter - widthInner) + 'px';
 
   modal.classList.add('opened');
+  backdrop.style.paddingRight = Math.round(widthOuter - widthInner) + 'px';
   backdrop.classList.add('opened');
 };
 
@@ -22,6 +23,7 @@ window.closeModal = function () {
 
   modal.classList.remove('opened');
   backdrop.classList.remove('opened');
+  backdrop.style.paddingRight = '0';
 };
 
 document.addEventListener('DOMContentLoaded', function () {
