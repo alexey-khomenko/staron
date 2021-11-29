@@ -8,6 +8,10 @@
     "/css/layout/main.css": "/css/layout/main.css",
     "/css/layout/modal-application.css": "/css/layout/modal-application.css",
     "/css/layout/modal.css": "/css/layout/modal.css",
+    "/css/layout/header-large_menu-foot.css": "/css/layout/header-large_menu-foot.css",
+    "/css/layout/header-large_menu-tablet.css": "/css/layout/header-large_menu-tablet.css",
+    "/css/layout/header-large_menu-head.css": "/css/layout/header-large_menu-head.css",
+    "/css/layout/header-large_menu.css": "/css/layout/header-large_menu.css",
     "/css/layout/header-bottom.css": "/css/layout/header-bottom.css",
     "/css/layout/header-top.css": "/css/layout/header-top.css",
     "/css/layout/header.css": "/css/layout/header.css",
@@ -16,6 +20,9 @@
     "/js/layouts/inputmask.min.js": "/js/layouts/inputmask.min.js",
     "/js/layouts/script.js": "/js/layouts/script.js",
     "/js/layout/header-top.js": "/js/layout/header-top.js",
+    "/js/layout/header-large_menu.js": "/js/layout/header-large_menu.js",
+    "/js/layout/header-large_menu-head.js": "/js/layout/header-large_menu-head.js",
+    "/js/layout/header-large_menu-tablet.js": "/js/layout/header-large_menu-tablet.js",
     "/js/layout/modal.js": "/js/layout/modal.js",
     "/js/layout/modal-application.js": "/js/layout/modal-application.js"
 }

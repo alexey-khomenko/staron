@@ -1,0 +1,99 @@
+@import "././resources/styles/__/variables";
+
+.header-large_menu-foot {
+  display: none;
+
+  @media (max-width: $media-grid-md) {
+    display: block;
+  }
+}
+
+.header-large_menu-foot-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 48px;
+
+  @media (max-width: $media-grid-sm) {
+    justify-content: flex-start;
+    margin-bottom: 22px;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-gray-200;
+
+    @media (pointer: coarse) {
+      &:active {
+        color: $color-white;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  .l {
+    font-family: $font-family-1;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+  }
+
+  .c {
+    margin-left: 18px;
+    width: 86px;
+    height: 40px;
+  }
+
+  .r {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.header-large_menu-foot-bottom {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (max-width: $media-grid-sm) {
+    flex-direction: column;
+  }
+
+  a {
+    font-family: $font-family-1;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: $color-gray-200;
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 8px;
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        color: $color-white;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}

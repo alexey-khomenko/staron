@@ -28,6 +28,10 @@ const styles = [
   'layout/header',
   'layout/header-top',
   'layout/header-bottom',
+  'layout/header-large_menu',
+  'layout/header-large_menu-head',
+  'layout/header-large_menu-tablet',
+  'layout/header-large_menu-foot',
 
   'layout/modal',
   'layout/modal-application',
@@ -44,6 +48,9 @@ const scripts = [
   'layouts/script',
 
   'layout/header-top',
+  'layout/header-large_menu',
+  'layout/header-large_menu-head',
+  'layout/header-large_menu-tablet',
   'layout/modal',
   'layout/modal-application',
 ];
@@ -53,12 +60,10 @@ for (let script of scripts) {
 }
 
 if (!mix.inProduction()) {
-  mix
-    .browserSync({
-      server: './docs',
-      files: [
-        'resources/**/*.*',
-      ],
-    })
-  ;
+  mix.browserSync({
+    server: './docs',
+    files: [
+      'resources/**/*.*',
+    ],
+  });
 }

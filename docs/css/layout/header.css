@@ -1,6 +1,7 @@
 .header {
   background-color: #27272B;
   font-family: "Proxima Nova", "Jost", sans-serif;
+  position: relative;
 }
 .header a {
   text-align: center;

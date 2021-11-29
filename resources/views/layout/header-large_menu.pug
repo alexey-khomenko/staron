@@ -1,0 +1,12 @@
+link(rel="stylesheet", href="css/layout/header-large_menu.css")
+script(src="js/layout/header-large_menu.js")
+div(class="header-large_menu hidden")
+    div(class="container container-fixed")
+        include header-large_menu-head
+        include header-large_menu-tablet
+
+        nav(class="header-large_menu-body")
+            | ...
+
+    div(class="container container-fixed")
+        include header-large_menu-foot

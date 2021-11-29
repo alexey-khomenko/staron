@@ -8,11 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.openModal('application');
   });
 
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.modal-popup .button.close')) return true;
-
-    window.closeModal();
-  });
 
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.form.application .select summary input[readonly]')) return true;
@@ -41,20 +36,97 @@ document.addEventListener('DOMContentLoaded', function () {
     option.classList.add('active');
     select.open = false;
 
-    document.querySelector('#application-country').value = option.querySelector('span').textContent;
-    document.querySelector('#application-country-id').value = option.dataset.value;
+    const country = document.querySelector('#application-country');
+    const countryId = document.querySelector('#application-country-id');
+
+    country.classList.remove('error');
+    country.value = option.querySelector('span').textContent;
+    countryId.value = option.dataset.value;
   });
 
-  document.addEventListener('submit', function (e) {
+
+  document.addEventListener('submit', async function (e) {
     if (!e.target.closest('.form.application')) return true;
 
     e.preventDefault();
 
-    console.log('.form.application submit');
+    const nameEl = document.querySelector('#application-name');
+    const telEl = document.querySelector('#application-tel');
+    const emailEl = document.querySelector('#application-email');
+    const wantEl = document.querySelectorAll('.form.application .checkboxes input:checked');
+    const countryEl = document.querySelector('#application-country');
+    const messageEl = document.querySelector('#application-message');
 
-    const tel = document.querySelector('#application-tel').inputmask.unmaskedvalue();
+    const name = nameEl.value.trim();
+    const tel = telEl.inputmask.unmaskedvalue();
+    const email = emailEl.value.trim();
 
-    console.log(tel);
+    const country = document.querySelector('#application-country-id').value.trim();
+    const message = messageEl.value.trim();
+
+    if (!document.querySelector('#application-agree:checked')) return true;
+
+    let error = false;
+
+    if (3 > name.length) {
+      nameEl.classList.add('error');
+      error = true;
+    }
+
+    if (10 !== tel.length) {
+      telEl.classList.add('error');
+      error = true;
+    }
+
+    const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!pattern.test(email)) {
+      emailEl.classList.add('error');
+      error = true;
+    }
+
+    if (1 > country.length) {
+      countryEl.classList.add('error');
+      error = true;
+    }
+
+    const want = [];
+
+    for (let el of wantEl) {
+      want.push(el.value.trim());
+    }
+
+    if (error) return true;
+
+    const data = new FormData();
+    data.set('name', name);
+    data.set('tel', tel);
+    data.set('email', email);
+    data.set('want', JSON.stringify(want));
+    data.set('country', country);
+    data.set('message', message);
+    const response = await fetch('/ajax/application_ajax.php', {method: 'POST', body: data});
+
+    let results = {
+      status: '+',
+      demo: '+',
+    };
+
+    if (response.status === 200) {
+      results = await response.json();
+    }
+
+    console.log(results);
+  });
+
+  document.addEventListener('focusin', function (e) {
+    const name = e.target.closest('#application-name');
+    if (name) name.classList.remove('error');
+
+    const tel = e.target.closest('#application-tel');
+    if (tel) tel.classList.remove('error');
+
+    const email = e.target.closest('#application-email');
+    if (email) email.classList.remove('error');
   });
 
 });

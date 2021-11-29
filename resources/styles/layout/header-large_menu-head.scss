@@ -1,0 +1,56 @@
+@import "././resources/styles/__/variables";
+
+.header-large_menu-head {
+  display: none;
+  margin-top: 24px;
+  margin-bottom: 26px;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media (max-width: $media-grid-md) {
+    display: flex;
+  }
+}
+
+.header-large_menu-logo {
+  width: 116px;
+  height: 40px;
+  margin-right: auto;
+  color: $color-gray-200;
+
+  @media (pointer: coarse) {
+    &:active {
+      color: $color-white;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: $color-white;
+    }
+  }
+}
+
+.header-large_menu-lang {
+
+}
+
+.header-large_menu-close {
+  width: 24px;
+  height: 24px;
+  margin-left: 30px;
+  background: none;
+  color: $color-gray-200;
+
+  @media (pointer: coarse) {
+    &:active {
+      color: $color-white;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

@@ -19,14 +19,18 @@ button {
   cursor: pointer;
 }
 
-.body.closed {
+svg {
+  display: block;
+}
+
+body.body.closed {
   overflow: hidden;
 }
 
 .container {
   display: block;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   position: relative;
 }
 .container-fixed {
@@ -73,4 +77,8 @@ button {
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
+}
+
+.hidden {
+  display: none !important;
 }

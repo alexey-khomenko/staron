@@ -1,0 +1,53 @@
+@import "././resources/styles/__/variables";
+
+.header-large_menu-tablet {
+  display: none;
+
+  @media (max-width: $media-grid-md) {
+    display: block;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 26px;
+
+    @media (max-width: $media-grid-sm) {
+      flex-direction: column;
+      margin-bottom: 12px;
+    }
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-gray-200;
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 12px;
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        color: $color-white;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-white;
+      }
+    }
+
+    span {
+      margin-left: 10px;
+    }
+  }
+}

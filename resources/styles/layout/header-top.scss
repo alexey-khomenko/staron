@@ -105,8 +105,12 @@ $dropdown-lang-arrow-size: 9px;
       }
     }
 
+    &.search {
+      margin-right: 11px;
+    }
+
     &.phone {
-      margin: 0 22px;
+      margin: 0 22px 0 11px;
 
       @media (max-width: $media-grid-md) {
         margin: 0 10px;
@@ -307,6 +311,44 @@ $dropdown-lang-arrow-size: 9px;
           }
         }
       }
+    }
+  }
+
+  .form.search {
+    position: relative;
+    display: block;
+    width: 448px;
+
+    @media (max-width: $media-grid-lg) {
+      width: 304px;
+    }
+
+    input[type=search] {
+      height: 52px;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 42px;
+      border: 1px solid $color-gray-800;
+      border-radius: 2px;
+      font-family: $font-family-1;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 15px;
+      line-height: 22px;
+      color: $color-gray-800;
+
+      &::placeholder {
+        opacity: 1;
+        font-weight: 400;
+        color: $color-gray-300;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 11px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
