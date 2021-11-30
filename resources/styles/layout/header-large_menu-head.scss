@@ -1,4 +1,5 @@
 @import "././resources/styles/__/variables";
+@import "././resources/styles/__/mixins";
 
 .header-large_menu-head {
   display: none;
@@ -33,6 +34,23 @@
 
 .header-large_menu-lang {
 
+  .link {
+    @include link;
+
+    color: $color-gray-200;
+
+    @media (pointer: coarse) {
+      &:active {
+        color: $color-white;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
 }
 
 .header-large_menu-close {

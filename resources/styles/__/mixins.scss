@@ -27,3 +27,21 @@
     }
   }
 }
+
+@mixin link {
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+
+
+  @media (max-width: $media-grid-md) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

@@ -28,6 +28,35 @@
   }
 }
 
+.header-large_menu-lang .link {
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #C7C7C8;
+}
+@media (max-width: 1262.98px) {
+  .header-large_menu-lang .link {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+@media (pointer: coarse) {
+  .header-large_menu-lang .link:active {
+    color: #FFFFFF;
+  }
+}
+@media (hover: hover) {
+  .header-large_menu-lang .link:hover {
+    color: #FFFFFF;
+  }
+}
+
 .header-large_menu-close {
   width: 24px;
   height: 24px;

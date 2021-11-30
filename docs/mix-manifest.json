@@ -8,6 +8,7 @@
     "/css/layout/main.css": "/css/layout/main.css",
     "/css/layout/modal-application.css": "/css/layout/modal-application.css",
     "/css/layout/modal.css": "/css/layout/modal.css",
+    "/css/layout/header--lang.css": "/css/layout/header--lang.css",
     "/css/layout/header-large_menu-foot.css": "/css/layout/header-large_menu-foot.css",
     "/css/layout/header-large_menu-tablet.css": "/css/layout/header-large_menu-tablet.css",
     "/css/layout/header-large_menu-head.css": "/css/layout/header-large_menu-head.css",
@@ -23,6 +24,7 @@
     "/js/layout/header-large_menu.js": "/js/layout/header-large_menu.js",
     "/js/layout/header-large_menu-head.js": "/js/layout/header-large_menu-head.js",
     "/js/layout/header-large_menu-tablet.js": "/js/layout/header-large_menu-tablet.js",
+    "/js/layout/header--lang.js": "/js/layout/header--lang.js",
     "/js/layout/modal.js": "/js/layout/modal.js",
     "/js/layout/modal-application.js": "/js/layout/modal-application.js"
 }

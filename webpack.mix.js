@@ -32,6 +32,7 @@ const styles = [
   'layout/header-large_menu-head',
   'layout/header-large_menu-tablet',
   'layout/header-large_menu-foot',
+  'layout/header--lang',
 
   'layout/modal',
   'layout/modal-application',
@@ -51,6 +52,8 @@ const scripts = [
   'layout/header-large_menu',
   'layout/header-large_menu-head',
   'layout/header-large_menu-tablet',
+  'layout/header--lang',
+
   'layout/modal',
   'layout/modal-application',
 ];

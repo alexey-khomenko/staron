@@ -1,0 +1,136 @@
+@import "././resources/styles/__/variables";
+@import "././resources/styles/__/mixins";
+
+$dropdown-lang-arrow-size: 9px;
+
+.link.lang {
+  width: 88px;
+  height: 40px;
+
+  @media (max-width: $media-grid-md) {
+    width: 48px;
+    height: 20px;
+  }
+
+  span {
+    margin-right: 8px;
+    text-transform: uppercase;
+  }
+
+  @media (pointer: coarse) {
+    &:active svg {
+      color: $color-gray-800;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover svg {
+      color: $color-gray-800;
+    }
+  }
+}
+
+.details {
+  position: relative;
+  margin: 0 18px;
+
+  @media (max-width: $media-grid-md) {
+    margin: 0 20px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    // todo
+
+    display: none;
+  }
+
+  &[open] .link.lang {
+    // todo
+    color: $color-red-700;
+
+    svg {
+      color: $color-gray-800;
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+.dropdown-outer {
+  position: absolute;
+  z-index: 1;
+
+  &.lang {
+    padding-top: 9px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: $media-grid-md) {
+      padding-top: 15px;
+    }
+  }
+}
+
+.dropdown-inner {
+  position: relative;
+
+  &.lang {
+    width: 94px;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: $color-white;
+
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: ($dropdown-lang-arrow-size * -1);
+      background-color: $color-white;
+      left: 39px;
+      width: ($dropdown-lang-arrow-size * 2);
+      height: ($dropdown-lang-arrow-size * 2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      z-index: 1;
+      box-shadow: none;
+    }
+
+    span, a {
+      margin: 4px;
+    }
+
+    span {
+      color: $color-red-700;
+    }
+
+    a {
+      color: $color-gray-500;
+
+      @media (pointer: coarse) {
+        &:active {
+          color: $color-gray-900;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: $color-gray-900;
+        }
+      }
+    }
+  }
+}
