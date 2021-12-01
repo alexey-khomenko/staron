@@ -1,0 +1,50 @@
+@import "././resources/styles/__/variables";
+
+.breadcrumbs {
+  margin: 60px 0 18px;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: $font-family-1;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+
+    a {
+      font-weight: 400;
+      text-decoration: none;
+      color: $color-gray-500;
+
+      @media (pointer: coarse) {
+        &:active {
+          color: $color-black;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+
+    svg {
+      color: #7C7C81;
+      margin: 0 20px;
+    }
+
+    span {
+      font-weight: 600;
+      color: $color-red-300;
+    }
+  }
+}

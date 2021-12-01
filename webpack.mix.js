@@ -38,6 +38,8 @@ const styles = [
   'layout/modal-application',
 
   'layout/main',
+
+  'partials/pages/breadcrumbs',
 ];
 
 for (let style of styles) {
