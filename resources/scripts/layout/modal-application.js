@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
       results = await response.json();
     }
 
-    console.log(results);
+    console.log('application form', results);
   });
 
   document.addEventListener('focusin', function (e) {
