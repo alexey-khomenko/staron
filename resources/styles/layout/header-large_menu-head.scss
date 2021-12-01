@@ -33,6 +33,7 @@
 }
 
 .header-large_menu-lang {
+  padding: 2px 0;
 
   .link {
     @include link;
@@ -56,9 +57,13 @@
 .header-large_menu-close {
   width: 24px;
   height: 24px;
-  margin-left: 30px;
+  margin-left: 36px;
   background: none;
   color: $color-gray-200;
+
+  @media (max-width: $media-grid-sm) {
+    margin-left: 30px;
+  }
 
   @media (pointer: coarse) {
     &:active {

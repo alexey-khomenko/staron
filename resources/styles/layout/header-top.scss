@@ -212,4 +212,38 @@
       transform: translateY(-50%);
     }
   }
+
+  .details {
+    margin: 0 18px;
+
+    @media (max-width: $media-grid-md) {
+      margin: 0 20px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      display: none;
+    }
+
+    .link.lang {
+      @media (pointer: coarse) {
+        &:active svg {
+          color: $color-gray-800;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover svg {
+          color: $color-gray-800;
+        }
+      }
+    }
+
+    &[open] .link.lang {
+      color: $color-red-700;
+
+      svg {
+        color: $color-gray-800;
+      }
+    }
+  }
 }

@@ -28,6 +28,9 @@
   }
 }
 
+.header-large_menu-lang {
+  padding: 2px 0;
+}
 .header-large_menu-lang .link {
   cursor: pointer;
   background-color: transparent;
@@ -60,9 +63,14 @@
 .header-large_menu-close {
   width: 24px;
   height: 24px;
-  margin-left: 30px;
+  margin-left: 36px;
   background: none;
   color: #C7C7C8;
+}
+@media (max-width: 750.98px) {
+  .header-large_menu-close {
+    margin-left: 30px;
+  }
 }
 @media (pointer: coarse) {
   .header-large_menu-close:active {
