@@ -58,6 +58,11 @@
   color: #7C7C81;
   text-decoration: none;
 }
+@media (max-width: 1262.98px) {
+  .header-large_menu-body .column-1 a, .header-large_menu-body .column-2 a, .header-large_menu-body .column-3 a {
+    color: #C7C7C8;
+  }
+}
 @media (pointer: coarse) {
   .header-large_menu-body .column-1 a:active, .header-large_menu-body .column-2 a:active, .header-large_menu-body .column-3 a:active {
     color: #FFFFFF;

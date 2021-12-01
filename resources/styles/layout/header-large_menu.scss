@@ -62,6 +62,10 @@
       color: $color-gray-500;
       text-decoration: none;
 
+      @media (max-width: $media-grid-md) {
+        color: $color-gray-200;
+      }
+
       @media (pointer: coarse) {
         &:active {
           color: $color-white;
