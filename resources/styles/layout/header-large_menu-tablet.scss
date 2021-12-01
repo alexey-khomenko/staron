@@ -53,11 +53,7 @@
 
   .form.search {
     position: relative;
-    margin-bottom: 36px;
-
-    @media (max-width: $media-grid-sm) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 12px;
 
     input[type=search] {
       height: 52px;

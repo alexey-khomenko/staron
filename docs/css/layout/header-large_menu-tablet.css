@@ -49,12 +49,7 @@
 }
 .header-large_menu-tablet .form.search {
   position: relative;
-  margin-bottom: 36px;
-}
-@media (max-width: 750.98px) {
-  .header-large_menu-tablet .form.search {
-    margin-bottom: 30px;
-  }
+  margin-bottom: 12px;
 }
 .header-large_menu-tablet .form.search input[type=search] {
   height: 52px;
