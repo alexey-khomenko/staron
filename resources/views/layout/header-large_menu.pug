@@ -6,89 +6,115 @@ div(class="header-large_menu hidden")
         include header-large_menu-tablet
 
         nav(class="header-large_menu-body")
-            div(class="column-1")
+            div(class="column column-1")
                 ul()
-                    li
+                    li(data-column="1", data-ul="1", data-li="1")
                         a(href="index.html")
                             | Продукция
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="1", data-ul="1", data-li="2")
                         a(href="index.html")
                             | Где купить
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="1", data-ul="1", data-li="3")
                         a(href="index.html")
                             | Обучение
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="1", data-ul="1", data-li="4")
                         a(href="index.html")
                             | Оплата и доставка
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="1", data-ul="1", data-li="5")
                         a(href="index.html")
                             | О компании
+                        include ../partials/svg/chevrone-right
 
-            div(class="column-2")
-                ul()
-                    li
+            div(class="column column-2")
+                h5(class="tablet-sub-menu-head hidden")
+                    include ../partials/svg/arrow-left
+                    span
+                        | .....
+
+                ul(data-parent="1.1.1")
+                    li(data-column="2", data-ul="1", data-li="1")
                         a(href="index.html")
                             | Коллекции
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="2", data-ul="1", data-li="2")
                         a(href="index.html")
                             | Клей
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="2", data-ul="1", data-li="3")
                         a(href="index.html")
                             | 3D визуализатор
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="2", data-ul="1", data-li="4")
                         a(href="index.html")
                             | Эксплуатация и уход за камнем
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="2", data-ul="1", data-li="5")
                         a(href="index.html")
                             | Документация
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="2", data-ul="1", data-li="6")
                         a(href="index.html")
                             | Галерея работ
+                        include ../partials/svg/chevrone-right
 
-                ul()
-                    li
+                ul(data-parent="1.1.5")
+                    li(data-column="2", data-ul="2", data-li="1")
                         a(href="index.html")
                             | Koros Stone
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="2", data-ul="2", data-li="2")
                         a(href="index.html")
                             | Lotte
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="2", data-ul="2", data-li="3")
                         a(href="index.html")
                             | Новости
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="2", data-ul="2", data-li="4")
                         a(href="index.html")
                             | Видео
-                    li
+                        include ../partials/svg/chevrone-right
+                    li(data-column="2", data-ul="2", data-li="5")
                         a(href="index.html")
                             | Контакты
+                        include ../partials/svg/chevrone-right
 
-            div(class="column-3")
-                ul()
-                    li
+            div(class="column column-3")
+                h5(class="tablet-sub-menu-head hidden")
+                    include ../partials/svg/arrow-left
+                    span
+                        | .......
+
+                ul(data-parent="2.1.1")
+                    li(data-column="3", data-ul="1", data-li="1")
                         a(href="index.html")
                             | Supreme
-                    li
+                    li(data-column="3", data-ul="1", data-li="2")
                         a(href="index.html")
                             | Tempest
-                    li
+                    li(data-column="3", data-ul="1", data-li="3")
                         a(href="index.html")
                             | Aspen
-                    li
+                    li(data-column="3", data-ul="1", data-li="4")
                         a(href="index.html")
                             | Metallic
-                    li
+                    li(data-column="3", data-ul="1", data-li="5")
                         a(href="index.html")
                             | Mosaic
-                    li
+                    li(data-column="3", data-ul="1", data-li="6")
                         a(href="index.html")
                             | Pebble
-                    li
+                    li(data-column="3", data-ul="1", data-li="7")
                         a(href="index.html")
                             | Sanded
-                    li
+                    li(data-column="3", data-ul="1", data-li="8")
                         a(href="index.html")
                             | Solid
-                    li
+                    li(data-column="3", data-ul="1", data-li="9")
                         a(href="index.html")
                             | Quarry
 
