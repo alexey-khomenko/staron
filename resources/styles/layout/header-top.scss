@@ -12,15 +12,9 @@
   }
 
   .button {
-    @include button;
-
     @media (max-width: $media-grid-md) {
       font-size: 14px;
       line-height: 17px;
-    }
-
-    &.active {
-      background-color: $color-gray-600;
     }
 
     svg {

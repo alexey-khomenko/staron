@@ -43,13 +43,9 @@
     color: $color-black;
   }
 
-  .button.close {
+  .close {
     flex-shrink: 0;
-    background: none;
-    border-radius: 0;
-    border: none;
     margin-left: 4px;
-    padding: 0;
     color: $color-black;
 
     @media (pointer: coarse) {
@@ -386,8 +382,6 @@
   }
 
   .button.submit {
-    @include button;
-
     width: 100%;
     height: 70px;
   }

@@ -18,32 +18,9 @@
   }
 }
 .footer-part.right .button {
-  border-radius: 0;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #313138;
-  font-family: "Proxima Nova", "Jost", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 21px;
-  color: #FFFFFF;
-  text-align: center;
   width: 220px;
   height: 48px;
   margin-bottom: auto;
-}
-@media (pointer: coarse) {
-  .footer-part.right .button:active {
-    background-color: #4A4A51;
-  }
-}
-@media (hover: hover) {
-  .footer-part.right .button:hover {
-    background-color: #4A4A51;
-  }
 }
 @media (max-width: 750.98px) {
   .footer-part.right .button {

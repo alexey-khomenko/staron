@@ -82,3 +82,87 @@ body.body {
 .hidden {
   display: none !important;
 }
+
+.button {
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family-1;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+
+  &.default {
+    background-color: $color-gray-800;
+    border-color: $color-gray-800;
+    color: $color-white;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-gray-700;
+        border-color: $color-gray-700;
+        color: $color-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-gray-600;
+      border-color: $color-gray-600;
+      color: $color-white;
+    }
+  }
+
+  &.default-inverse {
+
+  }
+
+  &.circuit {
+    background-color: $color-white;
+    border-color: $color-gray-800;
+    color: $color-gray-800;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-gray-300;
+        border-color: $color-gray-300;
+        color: $color-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-gray-400;
+      border-color: $color-gray-400;
+      color: $color-white;
+    }
+  }
+
+  &.circuit-inverse {
+
+  }
+
+  &.accent {
+    background-color: $color-red-700;
+    border-color: $color-red-700;
+    color: $color-white;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-red-500;
+        border-color: $color-red-500;
+        color: $color-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-red-300;
+      border-color: $color-red-300;
+      color: $color-white;
+    }
+  }
+}

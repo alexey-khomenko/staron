@@ -39,22 +39,18 @@
   letter-spacing: 0.02em;
   color: #000000;
 }
-.modal-popup.application .button.close {
+.modal-popup.application .close {
   flex-shrink: 0;
-  background: none;
-  border-radius: 0;
-  border: none;
   margin-left: 4px;
-  padding: 0;
   color: #000000;
 }
 @media (pointer: coarse) {
-  .modal-popup.application .button.close:active {
+  .modal-popup.application .close:active {
     color: #7C7C81;
   }
 }
 @media (hover: hover) {
-  .modal-popup.application .button.close:hover {
+  .modal-popup.application .close:hover {
     color: #7C7C81;
   }
 }
@@ -352,29 +348,6 @@
   border-bottom: 1px solid #DD2929;
 }
 .modal-popup.application .button.submit {
-  border-radius: 0;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #313138;
-  font-family: "Proxima Nova", "Jost", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 21px;
-  color: #FFFFFF;
-  text-align: center;
   width: 100%;
   height: 70px;
-}
-@media (pointer: coarse) {
-  .modal-popup.application .button.submit:active {
-    background-color: #4A4A51;
-  }
-}
-@media (hover: hover) {
-  .modal-popup.application .button.submit:hover {
-    background-color: #4A4A51;
-  }
 }

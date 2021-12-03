@@ -9,39 +9,11 @@
     height: 56px;
   }
 }
-.header-top .button {
-  border-radius: 0;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #313138;
-  font-family: "Proxima Nova", "Jost", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 21px;
-  color: #FFFFFF;
-  text-align: center;
-}
-@media (pointer: coarse) {
-  .header-top .button:active {
-    background-color: #4A4A51;
-  }
-}
-@media (hover: hover) {
-  .header-top .button:hover {
-    background-color: #4A4A51;
-  }
-}
 @media (max-width: 1262.98px) {
   .header-top .button {
     font-size: 14px;
     line-height: 17px;
   }
-}
-.header-top .button.active {
-  background-color: #636368;
 }
 .header-top .button svg {
   width: 24px;

@@ -82,3 +82,70 @@ body.body.closed {
 .hidden {
   display: none !important;
 }
+
+.button {
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+}
+.button.default {
+  background-color: #313138;
+  border-color: #313138;
+  color: #FFFFFF;
+}
+@media (hover: hover) {
+  .button.default:hover {
+    background-color: #4A4A51;
+    border-color: #4A4A51;
+    color: #FFFFFF;
+  }
+}
+.button.default:active {
+  background-color: #636368;
+  border-color: #636368;
+  color: #FFFFFF;
+}
+.button.circuit {
+  background-color: #FFFFFF;
+  border-color: #313138;
+  color: #313138;
+}
+@media (hover: hover) {
+  .button.circuit:hover {
+    background-color: #AEAEB1;
+    border-color: #AEAEB1;
+    color: #FFFFFF;
+  }
+}
+.button.circuit:active {
+  background-color: #959598;
+  border-color: #959598;
+  color: #FFFFFF;
+}
+.button.accent {
+  background-color: #DD2929;
+  border-color: #DD2929;
+  color: #FFFFFF;
+}
+@media (hover: hover) {
+  .button.accent:hover {
+    background-color: #E55858;
+    border-color: #E55858;
+    color: #FFFFFF;
+  }
+}
+.button.accent:active {
+  background-color: #ED8585;
+  border-color: #ED8585;
+  color: #FFFFFF;
+}
