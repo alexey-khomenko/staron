@@ -17,6 +17,10 @@ button::-moz-focus-inner {
 
 button {
   cursor: pointer;
+  border: none;
+  background: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 svg {
