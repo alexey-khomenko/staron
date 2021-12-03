@@ -39,6 +39,8 @@ const styles = [
 
   'layout/main',
 
+  'pages/404',
+
   'partials/pages/breadcrumbs',
 ];
 
@@ -58,6 +60,7 @@ const scripts = [
 
   'layout/modal',
   'layout/modal-application',
+
 ];
 
 for (let script of scripts) {

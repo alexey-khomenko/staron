@@ -1,0 +1,155 @@
+@import "././resources/styles/__/variables";
+
+.content {
+  padding: 1px 0;
+  margin-bottom: 60px;
+  position: relative;
+  min-height: 654px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (max-width: $media-grid-md) {
+    min-height: 500px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    min-height: 416px;
+  }
+}
+
+.h1 {
+  margin: 0 0 26px;
+  width: 400px;
+  font-family: $font-family-1;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.25px;
+  color: $color-black;
+
+  @media (max-width: $media-grid-sm) {
+    margin-bottom: 64px;
+  }
+
+  .strong {
+    font-size: 114px;
+    line-height: 126px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 72px;
+      line-height: 80px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 56px;
+      line-height: 64px;
+    }
+  }
+
+  .small {
+    font-size: 56px;
+    line-height: 62px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+}
+
+.subtitle {
+  width: 600px;
+  margin-bottom: 40px;
+  font-family: $font-family-1;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  color: $color-black;
+
+  @media (max-width: $media-grid-md) {
+    width: 346px;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    width: 100%;
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.text {
+  width: 700px;
+  font-family: $font-family-1;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: $color-black;
+
+  @media (max-width: $media-grid-md) {
+    width: 346px;
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.a {
+  color: $color-red-700;
+  text-decoration: underline;
+
+  @media (pointer: coarse) {
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.picture {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 490px;
+
+  @media (max-width: $media-grid-lg) {
+    left: 400px;
+  }
+
+  @media (max-width: $media-grid-md) {
+    left: 320px;
+    height: 320px;
+    width: auto;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    left: 150px;
+    height: 160px;
+    width: auto;
+
+    top: 0;
+    transform: none;
+  }
+}

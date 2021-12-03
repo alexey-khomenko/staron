@@ -4,5 +4,27 @@ block title
     | 404
 
 block main
+    link(rel="stylesheet", href="css/pages/404.css")
     div(class="container container-fixed")
         include ../partials/pages/breadcrumbs
+        div(class="content")
+            img(class="picture", src="/images/404.png", alt="404")
+            h1(class="h1")
+                div(class="strong")
+                    | 404
+                div(class="small")
+                    | Ошибка
+            div(class="subtitle")
+                | Приносим наши извинения, похоже, что-то пошло не так.
+            div(class="text")
+                | Возможно вы неправильно ввели адрес страницы в адресной строке браузера.
+                br
+                | Но вы всегда можете перейти на
+                |
+                a(class="a", href="index.html")
+                    | главную страницу
+                |
+                | или
+                |
+                a(class="a", href="index.html")
+                    | каталог продукции
