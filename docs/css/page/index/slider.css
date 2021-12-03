@@ -1,0 +1,13 @@
+.slider img {
+  height: 600px;
+}
+@media (max-width: 1262.98px) {
+  .slider img {
+    height: 400px;
+  }
+}
+@media (max-width: 750.98px) {
+  .slider img {
+    height: 470px;
+  }
+}

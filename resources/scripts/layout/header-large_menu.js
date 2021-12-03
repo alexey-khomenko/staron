@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  const isTouch = () => 'ontouchstart' in window || window?.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator?.msMaxTouchPoints > 0;
-
   function getChild(el) {
     const column = el.dataset.column;
     const ul = el.dataset.ul;
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const child = getChild(liElem);
 
     if (child) {
-      if (isTouch() && 'A' === e.target.tagName) e.preventDefault();
+      if (window.isTouch() && 'A' === e.target.tagName) e.preventDefault();
 
       liElem.closest('.column').querySelector('li.active')?.classList.remove('active');
       child.closest('.column').querySelector('ul:not(.hidden)')?.classList.add('hidden');
@@ -48,16 +46,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   for (let item of document.querySelectorAll('.header-large_menu-body .column li')) {
     item.addEventListener('mouseenter', function (e) {
-      if (!isTouch()) DesktopHandler(e);
+      if (!window.isTouch()) DesktopHandler(e);
     });
 
     item.addEventListener('click', function (e) {
-      if (isTouch()) DesktopHandler(e);
+      if (window.isTouch()) DesktopHandler(e);
     });
   }
 
   document.querySelector('.header-large_menu-body').addEventListener('mouseleave', function () {
-    if (isTouch()) return true;
+    if (window.isTouch()) return true;
     if (window.isTablet()) return true;
 
     for (let li of document.querySelectorAll('.column li.active')) {

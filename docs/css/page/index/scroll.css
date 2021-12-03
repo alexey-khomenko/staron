@@ -1,0 +1,38 @@
+.scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+}
+@media (max-width: 1262.98px) {
+  .scroll {
+    height: 130px;
+  }
+}
+
+.scroll-btn {
+  width: 31px;
+  color: #313138;
+}
+@media (max-width: 1262.98px) {
+  .scroll-btn {
+    width: 24px;
+  }
+}
+@media (max-width: 750.98px) {
+  .scroll-btn {
+    width: 20px;
+  }
+}
+@media (hover: hover) {
+  .scroll-btn:hover {
+    color: #DD2929;
+  }
+}
+.scroll-btn:active {
+  color: #E55858;
+}
+.scroll-btn svg {
+  width: 100%;
+  height: auto;
+}

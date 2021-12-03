@@ -24,6 +24,7 @@ const styles = [
   'layout/footer-left',
   'layout/footer-center',
   'layout/footer-right',
+  'layout/footer-to-top',
 
   'layout/header',
   'layout/header-top',
@@ -41,6 +42,9 @@ const styles = [
 
   'pages/404',
 
+  'page/index/slider',
+  'page/index/scroll',
+
   'partials/pages/breadcrumbs',
 ];
 
@@ -52,6 +56,8 @@ const scripts = [
   'layouts/inputmask.min',
   'layouts/script',
 
+  'layout/footer-to-top',
+
   'layout/header-top',
   'layout/header-large_menu',
   'layout/header-large_menu-head',
@@ -60,6 +66,9 @@ const scripts = [
 
   'layout/modal',
   'layout/modal-application',
+
+  'page/index/slider',
+  'page/index/scroll',
 
 ];
 

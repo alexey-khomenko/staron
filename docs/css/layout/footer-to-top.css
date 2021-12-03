@@ -1,0 +1,27 @@
+.footer-to-top {
+  position: fixed;
+  bottom: 400px;
+  left: 50%;
+  transform: translateX(600px);
+}
+@media (max-width: 1422.98px) {
+  .footer-to-top {
+    transform: translateX(520px);
+  }
+}
+@media (max-width: 1262.98px) {
+  .footer-to-top {
+    display: none;
+  }
+}
+.footer-to-top .button {
+  width: 102px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-to-top .button span {
+  text-transform: uppercase;
+}
