@@ -50,6 +50,10 @@
       justify-content: space-between;
       align-items: center;
 
+      @media (max-width: $media-grid-md) {
+        height: 50px;
+      }
+
       a {
         position: relative;
         font-family: $font-family-1;
@@ -174,35 +178,24 @@
   }
 
   .column-2 ul {
-    display: none;
+    display: block;
 
     @media (max-width: $media-grid-md) {
-      padding-left: 38px;
+      display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-    }
-
-    &.open {
-      display: block;
-
-      @media (max-width: $media-grid-md) {
-        display: flex;
-      }
+      padding-left: 38px;
     }
   }
 
   .column-3 ul {
-    display: none;
+    display: grid;
     gap: 0 8px;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
     @media (max-width: $media-grid-md) {
       padding-left: 38px;
-    }
-
-    &.open {
-      display: grid;
     }
   }
 
