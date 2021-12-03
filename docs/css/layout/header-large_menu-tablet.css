@@ -100,3 +100,7 @@
     color: #FFFFFF;
   }
 }
+.header-large_menu-tablet .form.search button svg {
+  width: 24px;
+  height: 24px;
+}
