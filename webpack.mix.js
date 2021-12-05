@@ -19,6 +19,7 @@ const styles = [
   'layouts/app-base',
   'layouts/app-fonts',
   'layouts/app-normalize',
+  'layouts/swiper-bundle',
 
   'layout/footer',
   'layout/footer-left',
@@ -44,6 +45,7 @@ const styles = [
 
   'page/index/slider',
   'page/index/scroll',
+  'page/index/benefits',
 
   'partials/pages/breadcrumbs',
 ];
@@ -54,6 +56,7 @@ for (let style of styles) {
 
 const scripts = [
   'layouts/inputmask.min',
+  'layouts/swiper-bundle.min',
   'layouts/script',
 
   'layout/footer-to-top',

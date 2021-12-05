@@ -1,6 +1,5 @@
 .footer-to-top {
-  position: fixed;
-  bottom: 400px;
+  display: none;
   left: 50%;
   transform: translateX(600px);
 }
@@ -9,10 +8,21 @@
     transform: translateX(520px);
   }
 }
+.footer-to-top.fixed, .footer-to-top.absolute {
+  display: block;
+}
 @media (max-width: 1262.98px) {
-  .footer-to-top {
+  .footer-to-top.fixed, .footer-to-top.absolute {
     display: none;
   }
+}
+.footer-to-top.fixed {
+  position: fixed;
+  bottom: 10px;
+}
+.footer-to-top.absolute {
+  position: absolute;
+  bottom: 360px;
 }
 .footer-to-top .button {
   width: 102px;
@@ -24,4 +34,7 @@
 }
 .footer-to-top .button span {
   text-transform: uppercase;
+}
+.footer-to-top .button svg {
+  margin-bottom: 10px;
 }
