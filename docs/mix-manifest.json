@@ -40,5 +40,6 @@
     "/js/layout/modal.js": "/js/layout/modal.js",
     "/js/layout/modal-application.js": "/js/layout/modal-application.js",
     "/js/page/index/slider.js": "/js/page/index/slider.js",
-    "/js/page/index/scroll.js": "/js/page/index/scroll.js"
+    "/js/page/index/scroll.js": "/js/page/index/scroll.js",
+    "/js/page/index/benefits.js": "/js/page/index/benefits.js"
 }

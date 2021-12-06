@@ -186,4 +186,24 @@ body.body {
       color: $color-white;
     }
   }
+
+  &.secondary {
+    background-color: $color-gray-050;
+    border-color: $color-gray-050;
+    color: $color-gray-800;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-gray-100;
+        border-color: $color-gray-100;
+        color: $color-gray-800;
+      }
+    }
+
+    &:active {
+      background-color: $color-gray-200;
+      border-color: $color-gray-200;
+      color: $color-gray-800;
+    }
+  }
 }

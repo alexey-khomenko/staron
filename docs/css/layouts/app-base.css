@@ -171,3 +171,20 @@ body.body.closed {
   border-color: #ED8585;
   color: #FFFFFF;
 }
+.button.secondary {
+  background-color: #F8F8F8;
+  border-color: #F8F8F8;
+  color: #313138;
+}
+@media (hover: hover) {
+  .button.secondary:hover {
+    background-color: #E0E0E1;
+    border-color: #E0E0E1;
+    color: #313138;
+  }
+}
+.button.secondary:active {
+  background-color: #C7C7C8;
+  border-color: #C7C7C8;
+  color: #313138;
+}

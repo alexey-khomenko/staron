@@ -2,4 +2,201 @@
 
 .benefits {
 
+  h2 {
+    margin: 0 0 52px;
+    font-family: $font-family-1;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.02em;
+    color: $color-gray-900;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 40px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 40px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  .benefits-tabs-head-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 24px;
+  }
+
+  .benefits-tabs-head {
+    display: flex;
+
+    .button {
+      flex-grow: 1;
+      flex-basis: 33%;
+      height: 145px;
+
+      @media (max-width: $media-grid-md) {
+        height: 100px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        height: 60px;
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      &:not(:first-child) {
+        margin-left: 16px;
+      }
+
+      &.default {
+        cursor: default;
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: $color-gray-800;
+            border-color: $color-gray-800;
+            color: $color-white;
+          }
+        }
+
+        &:active {
+          background-color: $color-gray-800;
+          border-color: $color-gray-800;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .benefits-tabs-body-wrapper {
+    margin-bottom: 146px;
+    overflow: hidden;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 90px;
+      max-width: $container-fixed-sm;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0 -8px;
+  }
+
+  .item {
+    width: 366px;
+    padding: 0 8px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: $media-grid-sm) {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    &.left {
+      margin-left: calc((100% - 32px)/3 - 174px);
+
+      @media (max-width: $media-grid-lg) {
+        margin-left: calc((100% - 32px)/3 - 172px);
+      }
+
+      @media (max-width: $media-grid-md) {
+        margin-left: auto;
+      }
+    }
+
+    &.right {
+      margin-right: calc((100% - 32px)/3 - 174px);
+
+      @media (max-width: $media-grid-lg) {
+        margin-right: calc((100% - 32px)/3 - 172px);
+      }
+
+      @media (max-width: $media-grid-md) {
+        margin-right: auto;
+      }
+    }
+
+    svg {
+      display: block;
+      margin: 62px auto 36px;
+      width: 42px;
+      height: 42px;
+      color: $color-gray-900;
+
+      @media (max-width: $media-grid-sm) {
+        margin: 0;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 33px;
+        left: 18px;
+      }
+    }
+
+    .title, .text {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+      font-family: $font-family-1;
+      font-style: normal;
+      color: $color-gray-800;
+      text-align: center;
+
+      @media (max-width: $media-grid-sm) {
+        text-align: left;
+        padding-left: 48px;
+      }
+    }
+
+    .title {
+      min-height: 42px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 21px;
+        line-height: 24px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        margin: 30px 0 12px;
+        min-height: auto;
+        font-size: 17px;
+        line-height: 20px;
+      }
+    }
+
+    .text {
+      min-height: 76px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 26px;
+      letter-spacing: 0.02em;
+
+      @media (max-width: $media-grid-md) {
+        min-height: 70px;
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        min-height: auto;
+      }
+    }
+  }
 }

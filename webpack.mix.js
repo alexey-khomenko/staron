@@ -72,6 +72,7 @@ const scripts = [
 
   'page/index/slider',
   'page/index/scroll',
+  'page/index/benefits',
 
 ];
 

@@ -48,21 +48,21 @@
 
     @media (max-width: $media-grid-md) {
       width: 700px;
-      padding-right: 22px;
+      padding-right: 0;
       top: 35px;
       bottom: 50px;
     }
 
     @media (max-width: $media-grid-sm) {
       width: 320px;
-      padding-right: 10px;
+      padding-right: 0;
       top: 35px;
       bottom: 40px;
     }
   }
 
   .sub-title {
-    padding-left: 32px;
+    padding-left: 35px;
     margin-bottom: 4px;
     font-family: $font-family-1;
     font-weight: 700;
@@ -73,6 +73,10 @@
     color: $color-white;
     text-transform: uppercase;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: $media-grid-lg) {
+      padding-left: 32px;
+    }
 
     @media (max-width: $media-grid-md) {
       padding-left: 22px;
