@@ -1,0 +1,12 @@
+.production {
+  padding: 122px 0 90px;
+}
+.production h2 {
+  margin: 0 0 60px;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 70px;
+  color: #27272B;
+}

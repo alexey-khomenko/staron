@@ -6,6 +6,8 @@
     "/css/layouts/app-fonts.css": "/css/layouts/app-fonts.css",
     "/css/layouts/app-base.css": "/css/layouts/app-base.css",
     "/css/partials/pages/breadcrumbs.css": "/css/partials/pages/breadcrumbs.css",
+    "/css/page/index/production.css": "/css/page/index/production.css",
+    "/css/page/index/trend.css": "/css/page/index/trend.css",
     "/css/page/index/benefits.css": "/css/page/index/benefits.css",
     "/css/page/index/scroll.css": "/css/page/index/scroll.css",
     "/css/page/index/slider.css": "/css/page/index/slider.css",
@@ -41,5 +43,6 @@
     "/js/layout/modal-application.js": "/js/layout/modal-application.js",
     "/js/page/index/slider.js": "/js/page/index/slider.js",
     "/js/page/index/scroll.js": "/js/page/index/scroll.js",
-    "/js/page/index/benefits.js": "/js/page/index/benefits.js"
+    "/js/page/index/benefits.js": "/js/page/index/benefits.js",
+    "/js/page/index/trend.js": "/js/page/index/trend.js"
 }

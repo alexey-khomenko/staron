@@ -46,6 +46,8 @@ const styles = [
   'page/index/slider',
   'page/index/scroll',
   'page/index/benefits',
+  'page/index/trend',
+  'page/index/production',
 
   'partials/pages/breadcrumbs',
 ];
@@ -73,6 +75,7 @@ const scripts = [
   'page/index/slider',
   'page/index/scroll',
   'page/index/benefits',
+  'page/index/trend',
 
 ];
 

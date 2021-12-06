@@ -1,0 +1,88 @@
+@import "././resources/styles/__/variables";
+
+.trend {
+  background-color: $color-gray-050;
+  padding-top: 116px;
+
+  h2 {
+    margin: 0 0 42px;
+    font-family: $font-family-1;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 80px;
+    color: $color-gray-900;
+  }
+
+  .trend-tabs-head {
+    position: relative;
+    z-index: 1;
+  }
+
+  .tabs-head {
+    display: flex;
+  }
+
+  .tabs-button {
+    padding-bottom: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    font-family: $font-family-1;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+
+    &:not(.active) {
+      border-bottom-color: transparent;
+      color: $color-gray-500;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $color-gray-900;
+        }
+      }
+
+      &:active {
+        color: $color-gray-900;
+      }
+    }
+
+    &.active {
+      cursor: default;
+      border-bottom-color: $color-red-700;
+      color: $color-black;
+    }
+
+    &:not(:first-child) {
+      margin-left: 55px;
+    }
+  }
+
+  .trend-tabs-body {
+    margin-top: -20px;
+    display: flex;
+
+    .left {
+      width: 620px;
+      min-height: 850px;
+      padding: 195px 0 100px;
+    }
+
+    .right {
+      width: 50%;
+      min-height: 850px;
+      padding: 78px 138px 78px 88px;
+      background-color: $color-gray-800;
+      border-radius: 3px;
+
+      color: white;
+    }
+  }
+
+}

@@ -100,7 +100,7 @@
   }
 }
 .benefits .item.left {
-  margin-left: calc((100% - 32px)/3 - 174px);
+  margin-left: calc((100% - 32px)/3 - 173px);
 }
 @media (max-width: 1422.98px) {
   .benefits .item.left {
@@ -113,7 +113,7 @@
   }
 }
 .benefits .item.right {
-  margin-right: calc((100% - 32px)/3 - 174px);
+  margin-right: calc((100% - 32px)/3 - 173px);
 }
 @media (max-width: 1422.98px) {
   .benefits .item.right {

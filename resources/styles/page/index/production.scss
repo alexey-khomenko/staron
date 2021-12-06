@@ -1,0 +1,15 @@
+@import "././resources/styles/__/variables";
+
+.production {
+  padding: 122px 0 90px;
+
+  h2 {
+    margin: 0 0 60px;
+    font-family: $font-family-1;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 70px;
+    color: $color-gray-900;
+  }
+}

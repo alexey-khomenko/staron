@@ -1,0 +1,72 @@
+.trend {
+  background-color: #F8F8F8;
+  padding-top: 116px;
+}
+.trend h2 {
+  margin: 0 0 42px;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 80px;
+  color: #27272B;
+}
+.trend .trend-tabs-head {
+  position: relative;
+  z-index: 1;
+}
+.trend .tabs-head {
+  display: flex;
+}
+.trend .tabs-button {
+  padding-bottom: 16px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+}
+.trend .tabs-button:not(.active) {
+  border-bottom-color: transparent;
+  color: #7C7C81;
+}
+@media (hover: hover) {
+  .trend .tabs-button:not(.active):hover {
+    color: #27272B;
+  }
+}
+.trend .tabs-button:not(.active):active {
+  color: #27272B;
+}
+.trend .tabs-button.active {
+  cursor: default;
+  border-bottom-color: #DD2929;
+  color: #000000;
+}
+.trend .tabs-button:not(:first-child) {
+  margin-left: 55px;
+}
+.trend .trend-tabs-body {
+  margin-top: -20px;
+  display: flex;
+}
+.trend .trend-tabs-body .left {
+  width: 620px;
+  min-height: 850px;
+  padding: 195px 0 100px;
+}
+.trend .trend-tabs-body .right {
+  width: 50%;
+  min-height: 850px;
+  padding: 78px 138px 78px 88px;
+  background-color: #313138;
+  border-radius: 3px;
+  color: white;
+}

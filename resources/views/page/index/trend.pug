@@ -1,1 +1,21 @@
+link(rel="stylesheet", href="css/page/index/trend.css")
+script(src="js/page/index/trend.js")
 section(class="trend")
+    div(class="container container-fixed")
+        h2
+            | В тренде
+        div(class="trend-tabs-head tabs-head")
+            button(type="button", class="tabs-button active", data-tab="1")
+                | Популярное
+            button(type="button", class="tabs-button", data-tab="2")
+                | Акции
+        div(class="trend-tabs-body trend-tabs-body-1")
+            div(class="left")
+                | l 1
+            div(class="right")
+                | r 1
+        div(class="trend-tabs-body trend-tabs-body-2 hidden")
+            div(class="left")
+                | l 2
+            div(class="right")
+                | r 2
