@@ -7,6 +7,8 @@
     "/css/layouts/app-base.css": "/css/layouts/app-base.css",
     "/css/partials/pages/breadcrumbs.css": "/css/partials/pages/breadcrumbs.css",
     "/css/page/index/production.css": "/css/page/index/production.css",
+    "/css/page/index/trend-right.css": "/css/page/index/trend-right.css",
+    "/css/page/index/trend-left.css": "/css/page/index/trend-left.css",
     "/css/page/index/trend.css": "/css/page/index/trend.css",
     "/css/page/index/benefits.css": "/css/page/index/benefits.css",
     "/css/page/index/scroll.css": "/css/page/index/scroll.css",

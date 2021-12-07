@@ -47,6 +47,8 @@ const styles = [
   'page/index/scroll',
   'page/index/benefits',
   'page/index/trend',
+  'page/index/trend-left',
+  'page/index/trend-right',
   'page/index/production',
 
   'partials/pages/breadcrumbs',

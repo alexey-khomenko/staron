@@ -1,9 +1,12 @@
+link(rel="stylesheet", href="css/page/index/trend-left.css")
+
 div(class="tiles")
     each item in items
         div(class="tile", data-id=`${item.id}`)
             span
                 = item.tile
             div(class="overlay hidden")
+                include ../../partials/svg/check
 
 div(class="spec-wrapper")
     div(class="spec-title")
