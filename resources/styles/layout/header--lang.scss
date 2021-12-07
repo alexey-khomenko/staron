@@ -30,7 +30,7 @@ $dropdown-lang-arrow-size: 9px;
 
 .dropdown-outer {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
 
   &.lang {
     padding-top: 9px;
