@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('click', function (e) {
-    if (!e.target.closest('.modal-popup .button.close')) return true;
+    if (!e.target.closest('.modal-popup .close')) return true;
 
     window.closeModal();
   });
