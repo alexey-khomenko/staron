@@ -30,9 +30,9 @@
       left: 50%;
       transform: translateX(-50%);
       margin: 0;
-      grid-gap: 30px 17px;
-      grid-template-columns: 38px 264px;
-      grid-template-rows: 264px 118px;
+      grid-gap: 30px 14px;
+      grid-template-columns: 38px 268px;
+      grid-template-rows: 268px 118px;
     }
 
     @media (max-width: 339px) {
@@ -60,7 +60,8 @@
   .tile {
     cursor: pointer;
     position: relative;
-
+    width: 100%;
+    height: 100%;
     background-color: darkseagreen;
 
     img {
@@ -68,6 +69,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
   }
 
