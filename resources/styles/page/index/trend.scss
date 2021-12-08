@@ -97,6 +97,7 @@
     }
 
     .left {
+      position: relative;
       flex-shrink: 0;
       padding: 172px 0 70px;
       width: 620px;
@@ -117,6 +118,7 @@
         padding: 50px 0 54px;
         width: auto;
         min-height: auto;
+        height: 516px;
       }
     }
 

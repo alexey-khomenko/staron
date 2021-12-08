@@ -3,8 +3,7 @@ link(rel="stylesheet", href="css/page/index/trend-left.css")
 div(class="tiles")
     each item in items
         div(class="tile", data-id=`${item.id}`)
-            span
-                = item.tile
+            img(src=`images/content-home-trend-popular-${item.id}.jpg`, alt=`${item.id}`)
             div(class="overlay hidden")
                 include ../../partials/svg/check
 
@@ -43,5 +42,4 @@ div(class="spec-wrapper")
                 = item.weight
 
 each item in items
-    div(class="target-tile hidden", data-id=`${item.id}`)
-        = item.tile
+    img(src=`images/content-home-trend-popular-${item.id}.jpg`, alt=`${item.id}`, class="target-tile hidden", data-id=`${item.id}`)
