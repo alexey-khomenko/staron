@@ -1,45 +1,45 @@
 link(rel="stylesheet", href="css/page/index/trend-left.css")
 
 div(class="tiles")
-    each item in items
-        div(class="tile", data-id=`${item.id}`)
-            img(src=`images/content-home-trend-popular-${item.id}.jpg`, alt=`${item.id}`)
-            div(class="overlay hidden")
-                include ../../partials/svg/check
+  each item in items
+    div(class="tile", data-id=`${item.id}`)
+      img(src=`${item.tile}`, alt=`${item.id}`)
+      div(class="overlay hidden")
+        include ../../partials/svg/check
 
 div(class="spec-wrapper")
-    div(class="spec-title")
-        | Технические характеристики
-    div(class="spec-item")
-        | длина (мм):
-        |
-        each item in items
-            span(class="spec-item-length hidden", data-id=`${item.id}`)
-                = item.length
-    div(class="spec-item")
-        | ширина (мм):
-        |
-        each item in items
-            span(class="spec-item-width hidden", data-id=`${item.id}`)
-                = item.width
-    div(class="spec-item")
-        | толщина (мм):
-        |
-        each item in items
-            span(class="spec-item-thickness hidden", data-id=`${item.id}`)
-                = item.thickness
-    div(class="spec-item")
-        | площадь (м2):
-        |
-        each item in items
-            span(class="spec-item-square hidden", data-id=`${item.id}`)
-                = item.square
-    div(class="spec-item")
-        | вес плиты (кг):
-        |
-        each item in items
-            span(class="spec-item-weight hidden", data-id=`${item.id}`)
-                = item.weight
+  div(class="spec-title")
+    | Технические характеристики
+  div(class="spec-item")
+    | длина (мм):
+    |
+    each item in items
+      span(class="spec-item-length hidden", data-id=`${item.id}`)
+        = item.length
+  div(class="spec-item")
+    | ширина (мм):
+    |
+    each item in items
+      span(class="spec-item-width hidden", data-id=`${item.id}`)
+        = item.width
+  div(class="spec-item")
+    | толщина (мм):
+    |
+    each item in items
+      span(class="spec-item-thickness hidden", data-id=`${item.id}`)
+        = item.thickness
+  div(class="spec-item")
+    | площадь (м2):
+    |
+    each item in items
+      span(class="spec-item-square hidden", data-id=`${item.id}`)
+        = item.square
+  div(class="spec-item")
+    | вес плиты (кг):
+    |
+    each item in items
+      span(class="spec-item-weight hidden", data-id=`${item.id}`)
+        = item.weight
 
 each item in items
-    img(src=`images/content-home-trend-popular-${item.id}.jpg`, alt=`${item.id}`, class="target-tile hidden", data-id=`${item.id}`)
+  img(src=`${item.tile}`, alt=`${item.id}`, class="target-tile hidden", data-id=`${item.id}`)

@@ -1,1 +1,261 @@
-
+.trend .right .title {
+  margin-bottom: 42px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+@media (max-width: 1422.98px) {
+  .trend .right .title {
+    flex-wrap: wrap;
+    margin-bottom: 52px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .trend .right .title {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .title {
+    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.trend .right .title-left {
+  flex-shrink: 0;
+  margin-right: 12px;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  color: #7C7C81;
+}
+@media (max-width: 1422.98px) {
+  .trend .right .title-left {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .trend .right .title-left {
+    margin-right: 0;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .title-left {
+    margin-bottom: 18px;
+  }
+}
+.trend .right .collection-text {
+  margin-bottom: 2px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+@media (max-width: 1262.98px) {
+  .trend .right .collection-text {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .collection-text {
+    margin-bottom: 0;
+    font-size: 9px;
+    text-align: center;
+  }
+}
+.trend .right .collection-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 1262.98px) {
+  .trend .right .collection-title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .collection-title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.trend .right .title-right {
+  flex-shrink: 0;
+  position: relative;
+  padding: 0 16px;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  color: #FFFFFF;
+  text-align: center;
+}
+.trend .right .title-right::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  bottom: -3px;
+  width: 12px;
+  border-left: 3px solid #FFFFFF;
+  border-top: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+}
+.trend .right .title-right::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 7px;
+  bottom: -3px;
+  width: 12px;
+  border-right: 3px solid #FFFFFF;
+  border-top: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+}
+.trend .right .product-text {
+  margin-bottom: 18px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+@media (max-width: 1262.98px) {
+  .trend .right .product-text {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .product-text {
+    margin-bottom: 4px;
+    font-size: 9px;
+    text-align: center;
+  }
+}
+.trend .right .product-title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 1262.98px) {
+  .trend .right .product-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .product-title {
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+.trend .right .text-wrap {
+  margin-bottom: 72px;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 26px;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 1422.98px) {
+  .trend .right .text-wrap {
+    margin-bottom: 52px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .trend .right .text-wrap {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .text-wrap {
+    margin-bottom: 26px;
+    font-size: 13px;
+  }
+}
+.trend .right .text-wrap p {
+  margin: 0 0 8px;
+}
+.trend .right .quantity-wrapper {
+  margin-bottom: 70px;
+  display: flex;
+  flex-flow: row wrap;
+  height: 54px;
+  background-color: #4A4A51;
+}
+@media (max-width: 1422.98px) {
+  .trend .right .quantity-wrapper {
+    margin-bottom: 64px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .trend .right .quantity-wrapper {
+    margin-bottom: 40px;
+    height: 148px;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .quantity-wrapper {
+    margin-bottom: 36px;
+  }
+}
+.trend .right .buttons {
+  display: flex;
+  flex-flow: row wrap;
+}
+.trend .right .add-to-order {
+  width: 220px;
+  height: 52px;
+}
+@media (max-width: 1422.98px) {
+  .trend .right .add-to-order {
+    width: 176px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .trend .right .add-to-order {
+    width: 100%;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .add-to-order {
+    height: 42px;
+    font-size: 15px;
+  }
+}
+.trend .right .go-to-product {
+  margin-left: 16px;
+  width: 220px;
+  height: 52px;
+}
+@media (max-width: 1422.98px) {
+  .trend .right .go-to-product {
+    margin-left: 14px;
+    width: 208px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .trend .right .go-to-product {
+    margin-left: 0;
+    margin-top: 16px;
+    width: 100%;
+  }
+}
+@media (max-width: 750.98px) {
+  .trend .right .go-to-product {
+    height: 42px;
+    font-size: 15px;
+  }
+}
+.trend .right .go-to-product svg {
+  margin-left: 6px;
+}

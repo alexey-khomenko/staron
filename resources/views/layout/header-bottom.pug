@@ -1,33 +1,33 @@
 -
-    links = {
-        0: {
-            title: 'Продукция',
-            url: '404.html',
-        },
-        1: {
-            title: 'Где купить',
-            url: '404.html',
-        },
-        2: {
-            title: 'Обучение',
-            url: '404.html',
-        },
-        3: {
-            title: 'Оплата и доставка',
-            url: '404.html',
-        },
-        4: {
-            title: 'О компании',
-            url: '404.html',
-        },
-    };
+  links = {
+    0: {
+      title: 'Продукция',
+      url: '404.html',
+    },
+    1: {
+      title: 'Где купить',
+      url: '404.html',
+    },
+    2: {
+      title: 'Обучение',
+      url: '404.html',
+    },
+    3: {
+      title: 'Оплата и доставка',
+      url: '404.html',
+    },
+    4: {
+      title: 'О компании',
+      url: '404.html',
+    },
+  };
 
 link(rel="stylesheet", href="css/layout/header-bottom.css")
 div(class="header-bottom")
-    nav
-        each link in links
-            a(href=`${link.url}`)
-                span
-                    | #{link.title}
-    a(href="index.html", class="logo")
-        include ../partials/svg/logo-radianz
+  nav
+    each link in links
+      a(href=`${link.url}`)
+        span
+          | #{link.title}
+  a(href="index.html", class="logo")
+    include ../partials/svg/logo-radianz

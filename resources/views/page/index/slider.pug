@@ -1,44 +1,44 @@
 -
-    slides = {
-        0: {
-            title: 'Supreme',
-            subTitle: 'Коллекция',
-            link: '404.html',
-        },
-        1: {
-            title: 'Supreme 1',
-            subTitle: 'Коллекция 1',
-            link: '404.html',
-        },
-        2: {
-            title: 'Supreme 2',
-            subTitle: 'Коллекция 2',
-            link: '404.html',
-        },
-        3: {
-            title: 'Supreme 3',
-            subTitle: 'Коллекция 3',
-            link: '404.html',
-        },
-    };
+  slides = {
+    0: {
+      title: 'Supreme',
+      subTitle: 'Коллекция',
+      link: '404.html',
+    },
+    1: {
+      title: 'Supreme 1',
+      subTitle: 'Коллекция 1',
+      link: '404.html',
+    },
+    2: {
+      title: 'Supreme 2',
+      subTitle: 'Коллекция 2',
+      link: '404.html',
+    },
+    3: {
+      title: 'Supreme 3',
+      subTitle: 'Коллекция 3',
+      link: '404.html',
+    },
+  };
 
 link(rel="stylesheet", href="css/page/index/slider.css")
 script(src="js/page/index/slider.js")
 section(class="slider")
-    div(class="swiper")
-        div(class="swiper-wrapper")
-            each slide in slides
-                div(class="swiper-slide", data-sub-title=`${slide.subTitle}`, data-title=`${slide.title}`, data-link=`${slide.link}`)
-                    img(src="images/content-home-slide.jpg", alt="")
-        div(class="overlay")
-            div(class="sub-title")
-            div(class="lead")
-                div(class="title")
-                div(class="bullets")
-                    each slide, index in slides
-                        div(class="bullet-wrapper")
-                            div(class="bullet", data-index=`${index}`)
-            a(href="#", class="link button default-inverse")
-                span
-                    | Подробнее
-                include ../../partials/svg/arrow-right
+  div(class="swiper")
+    div(class="swiper-wrapper")
+      each slide in slides
+        div(class="swiper-slide", data-sub-title=`${slide.subTitle}`, data-title=`${slide.title}`, data-link=`${slide.link}`)
+          img(src="images/content-home-slide.jpg", alt="")
+    div(class="overlay")
+      div(class="sub-title")
+      div(class="lead")
+        div(class="title")
+        div(class="bullets")
+          each slide, index in slides
+            div(class="bullet-wrapper")
+              div(class="bullet", data-index=`${index}`)
+      a(href="#", class="link button transparent")
+        span
+          | Подробнее
+        include ../../partials/svg/arrow-right

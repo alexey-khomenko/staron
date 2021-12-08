@@ -126,19 +126,19 @@ body.body {
   &.default-inverse {
     background-color: $color-white;
     border-color: $color-white;
-    color: $color-gray-800;
+    color: $color-gray-600;
 
     @media (hover: hover) {
       &:hover {
-        background-color: $color-white;
-        border-color: $color-white;
+        background-color: $color-gray-050;
+        border-color: $color-gray-050;
         color: $color-gray-600;
       }
     }
 
     &:active {
-      background-color: $color-white;
-      border-color: $color-white;
+      background-color: $color-gray-100;
+      border-color: $color-gray-100;
       color: $color-black;
     }
   }
@@ -164,7 +164,63 @@ body.body {
   }
 
   &.circuit-inverse {
+    background-color: $color-gray-800;
+    border-color: $color-gray-200;
+    color: $color-gray-200;
 
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-gray-800;
+        border-color: $color-gray-100;
+        color: $color-gray-100;
+      }
+    }
+
+    &:active {
+      background-color: $color-gray-800;
+      border-color: $color-white;
+      color: $color-white;
+    }
+  }
+
+  &.transparent {
+    background-color: $color-white;
+    border-color: $color-white;
+    color: $color-gray-800;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-gray-050;
+        border-color: $color-gray-050;
+        color: $color-gray-800;
+      }
+    }
+
+    &:active {
+      background-color: $color-gray-100;
+      border-color: $color-gray-100;
+      color: $color-gray-800;
+    }
+  }
+
+  &.transparent-inverse {
+    background-color: $color-gray-800;
+    border-color: $color-gray-800;
+    color: $color-gray-200;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-gray-700;
+        border-color: $color-gray-700;
+        color: $color-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-gray-600;
+      border-color: $color-gray-600;
+      color: $color-white;
+    }
   }
 
   &.accent {

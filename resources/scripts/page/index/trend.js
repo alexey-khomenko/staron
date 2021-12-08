@@ -43,6 +43,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tab.querySelector(`.target-tile:not(.hidden)`)?.classList.add('hidden');
     tab.querySelector(`.target-tile[data-id="${id}"]`).classList.remove('hidden');
+
+    tab.querySelector(`.target-tile:not(.hidden)`)?.classList.add('hidden');
+    tab.querySelector(`.target-tile[data-id="${id}"]`).classList.remove('hidden');
+
+    tab.querySelector(`.collection-title:not(.hidden)`)?.classList.add('hidden');
+    tab.querySelector(`.collection-title[data-id="${id}"]`).classList.remove('hidden');
+
+    tab.querySelector(`.product-title:not(.hidden)`)?.classList.add('hidden');
+    tab.querySelector(`.product-title[data-id="${id}"]`).classList.remove('hidden');
+
+    tab.querySelector(`.text-wrap:not(.hidden)`)?.classList.add('hidden');
+    tab.querySelector(`.text-wrap[data-id="${id}"]`).classList.remove('hidden');
+
+    tab.querySelector(`.go-to-product:not(.hidden)`)?.classList.add('hidden');
+    tab.querySelector(`.go-to-product[data-id="${id}"]`).classList.remove('hidden');
   });
 
   for (let tab of document.querySelectorAll('.trend-tabs-body')) {

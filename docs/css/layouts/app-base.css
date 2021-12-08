@@ -123,18 +123,18 @@ body.body.closed {
 .button.default-inverse {
   background-color: #FFFFFF;
   border-color: #FFFFFF;
-  color: #313138;
+  color: #636368;
 }
 @media (hover: hover) {
   .button.default-inverse:hover {
-    background-color: #FFFFFF;
-    border-color: #FFFFFF;
+    background-color: #F8F8F8;
+    border-color: #F8F8F8;
     color: #636368;
   }
 }
 .button.default-inverse:active {
-  background-color: #FFFFFF;
-  border-color: #FFFFFF;
+  background-color: #E0E0E1;
+  border-color: #E0E0E1;
   color: #000000;
 }
 .button.circuit {
@@ -152,6 +152,57 @@ body.body.closed {
 .button.circuit:active {
   background-color: #959598;
   border-color: #959598;
+  color: #FFFFFF;
+}
+.button.circuit-inverse {
+  background-color: #313138;
+  border-color: #C7C7C8;
+  color: #C7C7C8;
+}
+@media (hover: hover) {
+  .button.circuit-inverse:hover {
+    background-color: #313138;
+    border-color: #E0E0E1;
+    color: #E0E0E1;
+  }
+}
+.button.circuit-inverse:active {
+  background-color: #313138;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+.button.transparent {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #313138;
+}
+@media (hover: hover) {
+  .button.transparent:hover {
+    background-color: #F8F8F8;
+    border-color: #F8F8F8;
+    color: #313138;
+  }
+}
+.button.transparent:active {
+  background-color: #E0E0E1;
+  border-color: #E0E0E1;
+  color: #313138;
+}
+.button.transparent-inverse {
+  background-color: #313138;
+  border-color: #313138;
+  color: #C7C7C8;
+}
+@media (hover: hover) {
+  .button.transparent-inverse:hover {
+    background-color: #4A4A51;
+    border-color: #4A4A51;
+    color: #FFFFFF;
+  }
+}
+.button.transparent-inverse:active {
+  background-color: #636368;
+  border-color: #636368;
   color: #FFFFFF;
 }
 .button.accent {
