@@ -47,4 +47,16 @@ document.addEventListener('DOMContentLoaded', function () {
     tab.querySelector('.tile').click();
   }
 
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.add-to-order');
+    if (!btn) return true;
+
+    const wrap = btn.closest('.trend-tabs-body');
+
+    console.log('todo', wrap);
+
+    // id
+    // number
+    // fetch
+  });
 });
