@@ -26,38 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
     tab.querySelector('.overlay:not(.hidden)')?.classList.add('hidden');
     tile.querySelector('.overlay').classList.remove('hidden');
 
-    tab.querySelector(`.spec-item-length:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.spec-item-length[data-id="${id}"]`).classList.remove('hidden');
+    tab.querySelector('.spec-item-length').textContent = tile.dataset.length;
+    tab.querySelector('.spec-item-width').textContent = tile.dataset.width;
+    tab.querySelector('.spec-item-thickness').textContent = tile.dataset.thickness;
+    tab.querySelector('.spec-item-square').textContent = tile.dataset.square;
+    tab.querySelector('.spec-item-weight').textContent = tile.dataset.weight;
 
-    tab.querySelector(`.spec-item-width:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.spec-item-width[data-id="${id}"]`).classList.remove('hidden');
+    tab.querySelector('.target-tile').src = tile.dataset.tile;
 
-    tab.querySelector(`.spec-item-thickness:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.spec-item-thickness[data-id="${id}"]`).classList.remove('hidden');
-
-    tab.querySelector(`.spec-item-square:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.spec-item-square[data-id="${id}"]`).classList.remove('hidden');
-
-    tab.querySelector(`.spec-item-weight:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.spec-item-weight[data-id="${id}"]`).classList.remove('hidden');
-
-    tab.querySelector(`.target-tile:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.target-tile[data-id="${id}"]`).classList.remove('hidden');
-
-    tab.querySelector(`.target-tile:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.target-tile[data-id="${id}"]`).classList.remove('hidden');
-
-    tab.querySelector(`.collection-title:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.collection-title[data-id="${id}"]`).classList.remove('hidden');
-
-    tab.querySelector(`.product-title:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.product-title[data-id="${id}"]`).classList.remove('hidden');
+    tab.querySelector('.collection-title').textContent = tile.dataset.collection;
+    tab.querySelector('.product-title').textContent = tile.dataset.product;
 
     tab.querySelector(`.text-wrap:not(.hidden)`)?.classList.add('hidden');
     tab.querySelector(`.text-wrap[data-id="${id}"]`).classList.remove('hidden');
 
-    tab.querySelector(`.go-to-product:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.go-to-product[data-id="${id}"]`).classList.remove('hidden');
+    tab.querySelector('.go-to-product').href = tile.dataset.link;
   });
 
   for (let tab of document.querySelectorAll('.trend-tabs-body')) {

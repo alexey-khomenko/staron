@@ -2,7 +2,17 @@ link(rel="stylesheet", href="css/page/index/trend-left.css")
 
 div(class="tiles")
   each item in items
-    div(class="tile", data-id=`${item.id}`)
+    div(class="tile", data-id=`${item.id}`,
+      data-length=`${item.length}`,
+      data-width=`${item.width}`,
+      data-thickness=`${item.thickness}`,
+      data-square=`${item.square}`,
+      data-weight=`${item.weight}`,
+      data-tile=`${item.tile}`,
+      data-collection=`${item.collection}`,
+      data-product=`${item.product}`,
+      data-link=`${item.link}`,
+    )
       img(src=`${item.tile}`, alt=`${item.id}`)
       div(class="overlay hidden")
         include ../../partials/svg/check
@@ -13,33 +23,22 @@ div(class="spec-wrapper")
   div(class="spec-item")
     | длина (мм):
     |
-    each item in items
-      span(class="spec-item-length hidden", data-id=`${item.id}`)
-        = item.length
+    span(class="spec-item-length")
   div(class="spec-item")
     | ширина (мм):
     |
-    each item in items
-      span(class="spec-item-width hidden", data-id=`${item.id}`)
-        = item.width
+    span(class="spec-item-width")
   div(class="spec-item")
     | толщина (мм):
     |
-    each item in items
-      span(class="spec-item-thickness hidden", data-id=`${item.id}`)
-        = item.thickness
+    span(class="spec-item-thickness")
   div(class="spec-item")
     | площадь (м2):
     |
-    each item in items
-      span(class="spec-item-square hidden", data-id=`${item.id}`)
-        = item.square
+    span(class="spec-item-square")
   div(class="spec-item")
     | вес плиты (кг):
     |
-    each item in items
-      span(class="spec-item-weight hidden", data-id=`${item.id}`)
-        = item.weight
+    span(class="spec-item-weight")
 
-each item in items
-  img(src=`${item.tile}`, alt=`${item.id}`, class="target-tile hidden", data-id=`${item.id}`)
+img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", alt="", class="target-tile")

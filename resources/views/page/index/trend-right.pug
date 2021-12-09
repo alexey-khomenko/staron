@@ -4,26 +4,23 @@ div(class="title")
   div(class="title-left")
     div(class="collection-text")
       | Коллекция
-    each item in items
-      div(class="collection-title hidden", data-id=`${item.id}`)
-        = item.collection
+    div(class="collection-title")
   div(class="title-right")
     div(class="product-text")
       | Выбранный продукт
-    each item in items
-      div(class="product-title hidden", data-id=`${item.id}`)
-        = item.product
+    div(class="product-title")
 each item in items
   div(class="text-wrap hidden", data-id=`${item.id}`)
     | !{item.text}
 div(class="quantity-wrapper")
   |
+
+
 div(class="buttons")
   button(type="button", class="button circuit-inverse add-to-order")
     span
       | Добавить в заказ
-  each item in items
-    a(href=`${item.link}`, class="button transparent-inverse go-to-product hidden", data-id=`${item.id}`)
-      span
-        | Перейти к продукту
-      include ../../partials/svg/arrow-right
+  a(href="#", class="button transparent-inverse go-to-product")
+    span
+      | Перейти к продукту
+    include ../../partials/svg/arrow-right

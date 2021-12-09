@@ -188,22 +188,25 @@
     display: flex;
     flex-flow: row wrap;
 
-    height: 54px;
-    background-color: $color-gray-700;
-
     @media (max-width: $media-grid-lg) {
       margin-bottom: 64px;
     }
 
     @media (max-width: $media-grid-md) {
       margin-bottom: 40px;
-
-      height: 148px;
     }
 
     @media (max-width: $media-grid-sm) {
       margin-bottom: 36px;
     }
+  }
+
+  .quantity-left {
+
+  }
+
+  .quantity-right {
+
   }
 
   .buttons {
