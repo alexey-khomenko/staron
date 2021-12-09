@@ -81,13 +81,11 @@
 .dropdown-inner.lang a {
   color: #7C7C81;
 }
-@media (pointer: coarse) {
-  .dropdown-inner.lang a:active {
-    color: #27272B;
-  }
-}
 @media (hover: hover) {
   .dropdown-inner.lang a:hover {
     color: #27272B;
   }
+}
+.dropdown-inner.lang a:active {
+  color: #27272B;
 }

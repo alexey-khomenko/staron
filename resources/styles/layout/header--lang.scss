@@ -93,16 +93,14 @@ $dropdown-lang-arrow-size: 9px;
     a {
       color: $color-gray-500;
 
-      @media (pointer: coarse) {
-        &:active {
-          color: $color-gray-900;
-        }
-      }
-
       @media (hover: hover) {
         &:hover {
           color: $color-gray-900;
         }
+      }
+
+      &:active {
+        color: $color-gray-900;
       }
     }
   }

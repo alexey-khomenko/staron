@@ -58,5 +58,6 @@
     "/js/page/index/slider.js": "/js/page/index/slider.js",
     "/js/page/index/scroll.js": "/js/page/index/scroll.js",
     "/js/page/index/benefits.js": "/js/page/index/benefits.js",
-    "/js/page/index/trend.js": "/js/page/index/trend.js"
+    "/js/page/index/trend.js": "/js/page/index/trend.js",
+    "/js/page/index/trend-right.js": "/js/page/index/trend-right.js"
 }

@@ -48,15 +48,13 @@
   align-items: center;
   color: #7C7C81;
 }
-@media (pointer: coarse) {
-  .footer-part.center .social a:active {
-    color: #FFFFFF;
-  }
-}
 @media (hover: hover) {
   .footer-part.center .social a:hover {
     color: #FFFFFF;
   }
+}
+.footer-part.center .social a:active {
+  color: #FFFFFF;
 }
 .footer-part.center .logo {
   display: flex;

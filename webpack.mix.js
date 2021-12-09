@@ -78,6 +78,7 @@ const scripts = [
   'page/index/scroll',
   'page/index/benefits',
   'page/index/trend',
+  'page/index/trend-right',
 
 ];
 

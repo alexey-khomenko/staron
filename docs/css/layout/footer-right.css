@@ -55,13 +55,11 @@
     line-height: 26px;
   }
 }
-@media (pointer: coarse) {
-  .footer-part.right .link:active {
-    color: #FFFFFF;
-  }
-}
 @media (hover: hover) {
   .footer-part.right .link:hover {
     color: #FFFFFF;
   }
+}
+.footer-part.right .link:active {
+  color: #FFFFFF;
 }

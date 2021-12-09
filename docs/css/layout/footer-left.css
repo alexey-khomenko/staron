@@ -28,15 +28,13 @@
     margin-right: 0;
   }
 }
-@media (pointer: coarse) {
-  .footer-part.left .link:active {
-    color: #FFFFFF;
-  }
-}
 @media (hover: hover) {
   .footer-part.left .link:hover {
     color: #FFFFFF;
   }
+}
+.footer-part.left .link:active {
+  color: #FFFFFF;
 }
 .footer-part.left .link.top {
   margin-bottom: 12px;

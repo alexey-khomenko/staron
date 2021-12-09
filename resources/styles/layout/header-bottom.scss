@@ -57,16 +57,14 @@
         }
       }
 
-      @media (pointer: coarse) {
-        &:active {
-          color: $color-white;
-        }
-      }
-
       @media (hover: hover) {
         &:hover {
           color: $color-white;
         }
+      }
+
+      &:active {
+        color: $color-white;
       }
     }
   }
@@ -77,16 +75,14 @@
     align-items: center;
     color: $color-gray-200;
 
-    @media (pointer: coarse) {
-      &:active {
-        color: $color-white;
-      }
-    }
-
     @media (hover: hover) {
       &:hover {
         color: $color-white;
       }
+    }
+
+    &:active {
+      color: $color-white;
     }
 
     .svg-left {

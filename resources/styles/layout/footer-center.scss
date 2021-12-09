@@ -46,16 +46,14 @@
       align-items: center;
       color: $color-gray-500;
 
-      @media (pointer: coarse) {
-        &:active {
-          color: $color-white;
-        }
-      }
-
       @media (hover: hover) {
         &:hover {
           color: $color-white;
         }
+      }
+
+      &:active {
+        color: $color-white;
       }
     }
   }
