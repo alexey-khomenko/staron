@@ -307,9 +307,6 @@
 .trend .right .progress-number.active {
   color: #FFFFFF;
 }
-.trend .right .progress-number[data-number="50"] {
-  margin-left: 3px;
-}
 .trend .right .buttons {
   display: flex;
   flex-flow: row wrap;

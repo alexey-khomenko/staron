@@ -1,47 +1,79 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  const QUANTITY_NUMBER_MIN = 1;
-  const QUANTITY_NUMBER_MAX = 100;
+  function getPercent({min, max, current}) {
+    return Math.round(100 * (current - min) / (max - min));
+  }
 
-  function isNumberWrong(number) {
-    if (QUANTITY_NUMBER_MIN > number) return true;
+  function getNumberLimit(wrap) {
+    const progressNumbers = Array.from(wrap.querySelectorAll('.progress-numbers .progress-number'));
 
-    return QUANTITY_NUMBER_MAX < number;
+    return {
+      NUMBER_MIN: +progressNumbers.shift().dataset.number,
+      NUMBER_MAX: +progressNumbers.pop().dataset.number,
+    };
+  }
+
+  function getNumberNew(wrap, width) {
+    const {NUMBER_MIN, NUMBER_MAX} = getNumberLimit(wrap);
+    const {WIDTH_MIN, WIDTH_MAX} = getWidthLimit(wrap);
+
+    const percent = getPercent({min: WIDTH_MIN, max: WIDTH_MAX, current: width});
+
+    return Math.round(percent * (NUMBER_MAX - NUMBER_MIN) / 100 + NUMBER_MIN);
+  }
+
+  function validateNumber(wrap, number) {
+    const {NUMBER_MIN, NUMBER_MAX} = getNumberLimit(wrap);
+
+    if (NUMBER_MIN > number) return NUMBER_MIN;
+    if (NUMBER_MAX < number) return NUMBER_MAX;
+
+    return number;
+  }
+
+  function getWidthLimit(wrap) {
+    const progress = wrap.querySelector('.quantity-progress');
+    const point = wrap.querySelector('.progress-point');
+
+    return {
+      WIDTH_MIN: Math.round(+point.offsetWidth / 2),
+      WIDTH_MAX: Math.round(+progress.offsetWidth - +point.offsetWidth / 2),
+    };
+  }
+
+  function getWidthNew(wrap, number) {
+    const {NUMBER_MIN, NUMBER_MAX} = getNumberLimit(wrap);
+    const {WIDTH_MIN, WIDTH_MAX} = getWidthLimit(wrap);
+
+    const percent = getPercent({min: NUMBER_MIN, max: NUMBER_MAX, current: number});
+
+    return Math.round(percent * (WIDTH_MAX - WIDTH_MIN) / 100 + WIDTH_MIN);
+  }
+
+  function validateWidth(wrap, width) {
+    const {WIDTH_MIN, WIDTH_MAX} = getWidthLimit(wrap);
+
+    if (WIDTH_MIN > width) return WIDTH_MIN;
+    if (WIDTH_MAX < width) return WIDTH_MAX;
+
+    return width;
   }
 
   function setQuantityNumber(wrap, number) {
-    if (isNumberWrong(number)) return;
-
     wrap.querySelector('.quantity-number').textContent = number;
   }
 
-  function setProgressPoint(wrap, number) {
-    if (isNumberWrong(number)) return;
-
-    const line = wrap.querySelector('.progress-line');
-    const point = wrap.querySelector('.progress-point');
-
-    const widthAll = Math.round(wrap.querySelector('.quantity-progress').offsetWidth);
-    const widthMin = Math.round(+point.offsetWidth / 2);
-    const widthMax = Math.round(widthAll - widthMin);
-
-    const widthNew = Math.round((widthMax - widthMin) * number / QUANTITY_NUMBER_MAX + widthMin);
-
-    line.style.width = widthNew + 'px';
-    point.style.left = widthNew + 'px';
-  }
-
   function setProgressNumber(wrap, number) {
-    if (isNumberWrong(number)) return;
+    const {NUMBER_MIN, NUMBER_MAX} = getNumberLimit(wrap);
 
     const progressNumbers = wrap.querySelector('.progress-numbers');
     const oldNumberObj = progressNumbers.querySelector('.progress-number.active');
 
     const oldNumber = +oldNumberObj.dataset.number;
-    let newNumber = QUANTITY_NUMBER_MIN;
+    let newNumber = NUMBER_MIN;
 
-    if (QUANTITY_NUMBER_MAX / 4 <= number) newNumber = QUANTITY_NUMBER_MAX / 2;
-    if (QUANTITY_NUMBER_MAX / 4 * 3 <= number) newNumber = QUANTITY_NUMBER_MAX;
+    if (NUMBER_MAX / 4 <= number) newNumber = Math.round(NUMBER_MAX / 2);
+    if (NUMBER_MAX / 4 * 3 <= number) newNumber = NUMBER_MAX;
 
     if (oldNumber === newNumber) return;
 
@@ -51,16 +83,24 @@ document.addEventListener('DOMContentLoaded', function () {
     newNumberObj.classList.add('active');
   }
 
+  function setProgressPoint(wrap, width) {
+    wrap.querySelector('.progress-point').style.left = width + 'px';
+    wrap.querySelector('.progress-line').style.width = width + 'px';
+  }
+
   document.addEventListener('click', function (e) {
     const minus = e.target.closest('.trend .quantity-minus');
 
     if (!minus) return true;
 
     const wrap = minus.closest('.quantity-wrapper');
-    const number = +wrap.querySelector('.quantity-number').textContent - 1;
+    let number = +wrap.querySelector('.quantity-number').textContent - 1;
+    number = validateNumber(wrap, number);
 
+    const width = getWidthNew(wrap, number);
+
+    setProgressPoint(wrap, width);
     setQuantityNumber(wrap, number);
-    setProgressPoint(wrap, number);
     setProgressNumber(wrap, number);
   });
 
@@ -70,41 +110,28 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!plus) return true;
 
     const wrap = plus.closest('.quantity-wrapper');
-    const number = +wrap.querySelector('.quantity-number').textContent + 1;
+    let number = +wrap.querySelector('.quantity-number').textContent + 1;
+    number = validateNumber(wrap, number);
 
+    const width = getWidthNew(wrap, number);
+
+    setProgressPoint(wrap, width);
     setQuantityNumber(wrap, number);
-    setProgressPoint(wrap, number);
     setProgressNumber(wrap, number);
   });
 
-
-  const progressPoints = document.querySelectorAll('.trend .progress-point');
-
-  for (let point of progressPoints) {
+  for (let point of document.querySelectorAll('.trend .progress-point')) {
     let shiftX;
 
     function onPointerMoveHandler(e) {
-      const progress = point.closest('.quantity-progress');
-      const line = progress.querySelector('.progress-line');
+      const wrap = e.target.closest('.quantity-wrapper');
+      const progress = wrap.querySelector('.quantity-progress');
+      let width = e.clientX - progress.getBoundingClientRect().left - shiftX;
+      width = validateWidth(wrap, width);
 
-      const widthAll = Math.round(+progress.offsetWidth);
-      const widthMin = Math.round(+point.offsetWidth / 2);
-      const widthMax = Math.round(widthAll - widthMin);
+      const number = getNumberNew(wrap, width);
 
-      let widthNew = e.clientX - progress.getBoundingClientRect().left - shiftX;
-
-      if (widthMin > widthNew) widthNew = widthMin + 2;
-      if (widthMax < widthNew) widthNew = widthMax;
-
-      point.style.left = widthNew + 'px';
-      line.style.width = widthNew + 'px';
-
-      let number = Math.round((widthNew - widthMin) * QUANTITY_NUMBER_MAX / (widthMax - widthMin));
-
-      if (0 === number) number = 1;
-
-      const wrap = point.closest('.quantity-wrapper');
-
+      setProgressPoint(wrap, width);
       setQuantityNumber(wrap, number);
       setProgressNumber(wrap, number);
     }
