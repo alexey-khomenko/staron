@@ -42,6 +42,7 @@ const styles = [
   'layout/main',
 
   'pages/404',
+  'pages/payment_and_delivery',
 
   'page/index/slider',
   'page/index/scroll',

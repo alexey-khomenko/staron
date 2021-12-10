@@ -1,1 +1,63 @@
-
+.payment_and_delivery-bottom {
+  padding: 60px 0 90px;
+}
+@media (max-width: 750.98px) {
+  .payment_and_delivery-bottom {
+    padding: 45px 0 80px;
+  }
+}
+.payment_and_delivery-bottom .content {
+  padding: 40px;
+  width: 810px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #F8F8F8;
+}
+@media (max-width: 1422.98px) {
+  .payment_and_delivery-bottom .content {
+    padding: 40px 30px;
+    width: 640px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .payment_and_delivery-bottom .content {
+    padding: 50px 40px;
+    width: 100%;
+  }
+}
+@media (max-width: 750.98px) {
+  .payment_and_delivery-bottom .content {
+    padding: 28px 26px;
+    flex-direction: column;
+  }
+}
+.payment_and_delivery-bottom .h2 {
+  margin: 0 0 4px;
+}
+.payment_and_delivery-bottom .text {
+  margin: 0;
+}
+.payment_and_delivery-bottom .right {
+  width: 310px;
+  height: 70px;
+}
+@media (max-width: 1422.98px) {
+  .payment_and_delivery-bottom .right {
+    width: 220px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .payment_and_delivery-bottom .right {
+    width: 190px;
+    height: 52px;
+  }
+}
+@media (max-width: 750.98px) {
+  .payment_and_delivery-bottom .right {
+    margin-top: 16px;
+    width: 152px;
+    height: 42px;
+    font-size: 15px;
+  }
+}

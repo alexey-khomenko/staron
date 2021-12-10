@@ -1,3 +1,105 @@
-.payment_and_delivery-middle {
+@import "././resources/styles/__/variables";
 
+.payment_and_delivery-middle {
+  background-color: $color-gray-050;
+  padding: 84px 0 80px;
+
+  @media (max-width: $media-grid-md) {
+    padding: 88px 0 68px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    padding: 60px 0 80px;
+  }
+
+  .h2 {
+    margin: 0 0 36px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .text {
+    margin: 0 0 44px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 38px;
+    }
+  }
+
+  .tiles {
+    display: grid;
+    grid-column-gap: 75px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    @media (max-width: $media-grid-md) {
+      grid-column-gap: 16px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      grid-row-gap: 30px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+
+  .tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media (max-width: $media-grid-sm) {
+      flex-direction: row;
+    }
+
+    svg {
+      flex-shrink: 0;
+      margin-bottom: 26px;
+      width: 86px;
+      height: 86px;
+
+      @media (max-width: $media-grid-md) {
+        margin-bottom: 36px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        margin-bottom: 0;
+        margin-right: 24px;
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    span {
+      font-family: $font-family-1;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      color: $color-gray-900;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 21px;
+        line-height: 26px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        margin-top: 4px;
+        font-size: 19px;
+        line-height: 24px;
+      }
+    }
+  }
 }
