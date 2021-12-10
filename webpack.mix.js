@@ -51,6 +51,10 @@ const styles = [
   'page/index/trend-right',
   'page/index/production',
 
+  'page/payment_and_delivery/top',
+  'page/payment_and_delivery/middle',
+  'page/payment_and_delivery/bottom',
+
   'partials/pages/breadcrumbs',
 ];
 

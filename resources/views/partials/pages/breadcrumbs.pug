@@ -1,10 +1,18 @@
 link(rel="stylesheet", href="css/partials/pages/breadcrumbs.css")
-ul(class="breadcrumbs")
-  li
-    a(href="index.html")
-      | Главная
-    svg(width="12", height="12", viewBox="0 0 12 12", fill="none", xmlns="http://www.w3.org/2000/svg")
-      path(d="M3.24414 10.5658L4.12914 11.4508L9.07914 6.50078L4.12914 1.55078L3.24414 2.43578L7.30914 6.50078L3.24414 10.5658Z", fill="currentColor")
-  li
-    span
-      | Ошибка 404
+div(class="container container-fixed")
+  ul(class="breadcrumbs")
+    li
+      a(href="index.html")
+        | Главная
+      svg(width="12", height="12", viewBox="0 0 12 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+        path(d="M3.24414 10.5658L4.12914 11.4508L9.07914 6.50078L4.12914 1.55078L3.24414 2.43578L7.30914 6.50078L3.24414 10.5658Z", fill="currentColor")
+    each breadcrumb in breadcrumbs
+      li
+        if breadcrumb.link
+          a(href=`${breadcrumb.link}`)
+            = breadcrumb.name
+          svg(width="12", height="12", viewBox="0 0 12 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+            path(d="M3.24414 10.5658L4.12914 11.4508L9.07914 6.50078L4.12914 1.55078L3.24414 2.43578L7.30914 6.50078L3.24414 10.5658Z", fill="currentColor")
+        else
+          span
+            = breadcrumb.name

@@ -4,9 +4,16 @@ block title
   | 404 page
 
 block main
+  -
+    breadcrumbs = {
+      0: {
+        name: 'Ошибка 404',
+      },
+    };
+  include ../partials/pages/breadcrumbs
+
   link(rel="stylesheet", href="css/pages/404.css")
   div(class="container container-fixed")
-    include ../partials/pages/breadcrumbs
     div(class="content")
       img(class="picture", src="images/404.png", alt="404")
       h1(class="h1")
