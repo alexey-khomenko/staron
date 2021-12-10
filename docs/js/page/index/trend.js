@@ -47,16 +47,28 @@ document.addEventListener('DOMContentLoaded', function () {
     tab.querySelector('.tile').click();
   }
 
-  document.addEventListener('click', function (e) {
+  document.addEventListener('click', async function (e) {
     const btn = e.target.closest('.add-to-order');
     if (!btn) return true;
 
     const wrap = btn.closest('.trend-tabs-body');
+    const id = wrap.querySelector('.text-wrap:not(.hidden)').dataset.id;
+    const quantity = wrap.querySelector('.quantity-number').textContent;
 
-    console.log('todo', wrap);
+    const data = new FormData();
+    data.set('id', id);
+    data.set('quantity', quantity);
+    const response = await fetch('/ajax/to_cart_ajax.php', {method: 'POST', body: data});
 
-    // id
-    // number
-    // fetch
+    let results = {
+      status: '+',
+      demo: '+',
+    };
+
+    if (response.status === 200) {
+      results = await response.json();
+    }
+
+    console.log('to cart in home trend', results);
   });
 });

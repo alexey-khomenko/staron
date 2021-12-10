@@ -162,6 +162,7 @@
     line-height: 26px;
     color: $color-white;
     letter-spacing: 0.02em;
+    overflow: hidden;
 
     @media (max-width: $media-grid-lg) {
       margin-bottom: 52px;
@@ -195,11 +196,11 @@
     }
 
     @media (max-width: $media-grid-md) {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     @media (max-width: $media-grid-sm) {
-      margin-bottom: 36px;
+      margin-bottom: 28px;
     }
   }
 
@@ -218,6 +219,20 @@
     font-size: 17px;
     letter-spacing: 0.02em;
     text-align: center;
+
+    @media (max-width: $media-grid-lg) {
+      width: 176px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 40px;
+      width: 100%;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 32px;
+    }
+
   }
 
   .quantity-minus, .quantity-plus {
@@ -246,6 +261,14 @@
 
   .quantity-right {
     width: 236px;
+
+    @media (max-width: $media-grid-lg) {
+      width: 196px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      width: 100%;
+    }
   }
 
   .quantity-progress {
