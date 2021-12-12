@@ -1,4 +1,4 @@
-.payment_and_delivery-top .h1 {
+.payment_and_delivery.top .h1 {
   margin: 0 0 60px;
   font-family: "Proxima Nova", "Jost", sans-serif;
   font-weight: 600;
@@ -9,38 +9,38 @@
   letter-spacing: 0.02em;
 }
 @media (max-width: 1262.98px) {
-  .payment_and_delivery-top .h1 {
+  .payment_and_delivery.top .h1 {
     margin-bottom: 44px;
     font-size: 36px;
     line-height: 44px;
   }
 }
 @media (max-width: 750.98px) {
-  .payment_and_delivery-top .h1 {
+  .payment_and_delivery.top .h1 {
     margin-bottom: 38px;
     font-size: 30px;
     line-height: 36px;
   }
 }
-.payment_and_delivery-top .h2 {
+.payment_and_delivery.top .h2 {
   margin: 0 0 40px;
 }
 @media (max-width: 1262.98px) {
-  .payment_and_delivery-top .h2 {
+  .payment_and_delivery.top .h2 {
     margin-bottom: 30px;
   }
 }
 @media (max-width: 750.98px) {
-  .payment_and_delivery-top .h2 {
+  .payment_and_delivery.top .h2 {
     margin-bottom: 16px;
   }
 }
-.payment_and_delivery-top .text {
+.payment_and_delivery.top .text {
   margin: 0 0 60px;
   max-width: 460px;
 }
 @media (max-width: 1262.98px) {
-  .payment_and_delivery-top .text {
+  .payment_and_delivery.top .text {
     max-width: 100%;
   }
 }

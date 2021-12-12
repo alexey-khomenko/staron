@@ -1,4 +1,4 @@
-.h2 {
+.payment_and_delivery .h2 {
   font-family: "Proxima Nova", "Jost", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -8,19 +8,18 @@
   letter-spacing: 0.02em;
 }
 @media (max-width: 1262.98px) {
-  .h2 {
+  .payment_and_delivery .h2 {
     font-size: 24px;
     line-height: 30px;
   }
 }
 @media (max-width: 750.98px) {
-  .h2 {
+  .payment_and_delivery .h2 {
     font-size: 21px;
     line-height: 24px;
   }
 }
-
-.text {
+.payment_and_delivery .text {
   font-family: "Proxima Nova", "Jost", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -30,13 +29,13 @@
   letter-spacing: 0.02em;
 }
 @media (max-width: 1262.98px) {
-  .text {
+  .payment_and_delivery .text {
     font-size: 15px;
     line-height: 28px;
   }
 }
 @media (max-width: 750.98px) {
-  .text {
+  .payment_and_delivery .text {
     font-size: 14px;
     line-height: 24px;
   }

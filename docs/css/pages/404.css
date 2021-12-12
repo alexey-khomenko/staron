@@ -1,4 +1,4 @@
-.content {
+.error-404 {
   padding: 1px 0;
   margin-bottom: 60px;
   position: relative;
@@ -9,17 +9,16 @@
   align-items: flex-start;
 }
 @media (max-width: 1262.98px) {
-  .content {
+  .error-404 {
     min-height: 500px;
   }
 }
 @media (max-width: 750.98px) {
-  .content {
+  .error-404 {
     min-height: 416px;
   }
 }
-
-.h1 {
+.error-404 .h1 {
   margin: 0 0 26px;
   width: 400px;
   font-family: "Proxima Nova", "Jost", sans-serif;
@@ -29,44 +28,43 @@
   color: #000000;
 }
 @media (max-width: 750.98px) {
-  .h1 {
+  .error-404 .h1 {
     margin-bottom: 64px;
   }
 }
-.h1 .strong {
+.error-404 .h1 .strong {
   font-size: 114px;
   line-height: 126px;
 }
 @media (max-width: 1262.98px) {
-  .h1 .strong {
+  .error-404 .h1 .strong {
     font-size: 72px;
     line-height: 80px;
   }
 }
 @media (max-width: 750.98px) {
-  .h1 .strong {
+  .error-404 .h1 .strong {
     font-size: 56px;
     line-height: 64px;
   }
 }
-.h1 .small {
+.error-404 .h1 .small {
   font-size: 56px;
   line-height: 62px;
 }
 @media (max-width: 1262.98px) {
-  .h1 .small {
+  .error-404 .h1 .small {
     font-size: 36px;
     line-height: 40px;
   }
 }
 @media (max-width: 750.98px) {
-  .h1 .small {
+  .error-404 .h1 .small {
     font-size: 24px;
     line-height: 26px;
   }
 }
-
-.subtitle {
+.error-404 .subtitle {
   width: 600px;
   margin-bottom: 40px;
   font-family: "Proxima Nova", "Jost", sans-serif;
@@ -78,7 +76,7 @@
   color: #000000;
 }
 @media (max-width: 1262.98px) {
-  .subtitle {
+  .error-404 .subtitle {
     width: 346px;
     margin-bottom: 24px;
     font-size: 24px;
@@ -86,14 +84,13 @@
   }
 }
 @media (max-width: 750.98px) {
-  .subtitle {
+  .error-404 .subtitle {
     width: 100%;
     font-size: 21px;
     line-height: 26px;
   }
 }
-
-.text {
+.error-404 .text {
   width: 700px;
   font-family: "Proxima Nova", "Jost", sans-serif;
   font-style: normal;
@@ -104,35 +101,33 @@
   color: #000000;
 }
 @media (max-width: 1262.98px) {
-  .text {
+  .error-404 .text {
     width: 346px;
     font-size: 15px;
     line-height: 26px;
   }
 }
 @media (max-width: 750.98px) {
-  .text {
+  .error-404 .text {
     width: 100%;
     font-size: 14px;
   }
 }
-
-.a {
+.error-404 .a {
   color: #DD2929;
   text-decoration: underline;
 }
 @media (pointer: coarse) {
-  .a:active {
+  .error-404 .a:active {
     text-decoration: none;
   }
 }
 @media (hover: hover) {
-  .a:hover {
+  .error-404 .a:hover {
     text-decoration: none;
   }
 }
-
-.picture {
+.error-404 .picture {
   display: block;
   position: absolute;
   top: 50%;
@@ -140,19 +135,19 @@
   left: 490px;
 }
 @media (max-width: 1422.98px) {
-  .picture {
+  .error-404 .picture {
     left: 400px;
   }
 }
 @media (max-width: 1262.98px) {
-  .picture {
+  .error-404 .picture {
     left: 320px;
     height: 320px;
     width: auto;
   }
 }
 @media (max-width: 750.98px) {
-  .picture {
+  .error-404 .picture {
     left: 150px;
     height: 160px;
     width: auto;

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   function getPercent({min, max, current}) {
-    return Math.round(100 * (current - min) / (max - min));
+    return 100 * (current - min) / (max - min);
   }
 
   function getNumberLimit(wrap) {
