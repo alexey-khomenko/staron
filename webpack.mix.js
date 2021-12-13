@@ -42,6 +42,7 @@ const styles = [
   'layout/main',
 
   'pages/404',
+  'pages/exploitation_and_care',
   'pages/payment_and_delivery',
 
   'page/index/slider',
@@ -51,6 +52,11 @@ const styles = [
   'page/index/trend-left',
   'page/index/trend-right',
   'page/index/production',
+
+  'page/exploitation_and_care/care',
+  'page/exploitation_and_care/exploitation',
+  'page/exploitation_and_care/easily_removable_substances',
+  'page/exploitation_and_care/difficult_removable_substances',
 
   'page/payment_and_delivery/top',
   'page/payment_and_delivery/middle',
