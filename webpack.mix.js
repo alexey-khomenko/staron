@@ -42,6 +42,7 @@ const styles = [
   'layout/main',
 
   'pages/404',
+  'pages/about_koros_and_lotte',
   'pages/exploitation_and_care',
   'pages/payment_and_delivery',
 

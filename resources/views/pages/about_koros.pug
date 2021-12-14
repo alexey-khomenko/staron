@@ -1,0 +1,70 @@
+extends ../layouts/app
+
+block title
+  | About Koros Stone
+
+block main
+  -
+    breadcrumbs = {
+      0: {
+        name: 'О компании',
+        link: '404.html',
+      },
+      1: {
+        name: 'О Koros Stone',
+      },
+    };
+  include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/about_koros_and_lotte.css")
+  div(class="container container-fixed")
+    section(class="about_koros_and_lotte")
+      h1(class="h1")
+        span(class="title")
+          | О компании
+        span(class="subtitle")
+          | О Koros Stone
+      div(class="content")
+        div(class="left")
+          div(class="tabs")
+            span
+              | Koros Stone
+            a(href="about_lotte.html")
+              | Lotte Chemical
+
+          div(class="image")
+
+          div(class="alert")
+            | Компания Koros Stone является эксклюзивным дистрибьютором Staron и Tempest
+
+          div(class="text")
+            p
+              strong
+                | Компания KorosStone
+              | – эксклюзивный дистрибьютор южнокорейского концерна Lotte Chemical, одного из мировых лидеров по производству поверхностей из искусственного камня. Являясь крупным международным холдингом с широкой сетью филиалов и представительств, компания 16 лет поставляет акриловый камень Staron на рынок России и стран ближнего зарубежья таких, как Республика Казахстан, Республика Беларусь, Украина, Литва, Узбекистан, Киргизстан, Таджикистан, Туркменистан, Армения, Грузия, Азербайджан.
+            p
+              | KorosStone – надёжный партнёр для более чем 1 000 компаний, среди которых и небольшие перерабатывающие производства, и крупнейшие мебельные фабрики. Мы ценим каждого нашего клиента и выстраиваем отношения на принципах взаимовыгодного сотрудничества, профессионализма и гибкости.
+            p
+              | Обладая собственной технической базой, Компания не только поставляет материал, но и проводит обучение и практикумы по работе с ним. Технические специалисты всегда готовы проконсультировать, оказать поддержку в подготовке проектной документации.
+            p
+              | Компания KorosStoneявляется экспертом на рынке искусственного камня и постоянно делится опытом со своими партнёрами.
+
+          a(href="404.html", class="button circuit pdf")
+            svg
+            span
+              | Презентация компании в формате PDF
+
+          div(class="buttons")
+            a(href="404.html", class="button transparent read")
+              span
+                | Читать далее
+              svg
+            a(href="404.html", class="button secondary catalog")
+              span
+                | Каталоги продукции PDF
+
+        div(class="right")
+
+
+
+

@@ -1,0 +1,76 @@
+extends ../layouts/app
+
+block title
+  | About Lotte Chemical
+
+block main
+  -
+    breadcrumbs = {
+      0: {
+        name: 'О компании',
+        link: '404.html',
+      },
+      1: {
+        name: 'О Lotte Chemical',
+      },
+    };
+  include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/about_koros_and_lotte.css")
+  div(class="container container-fixed")
+    section(class="about_koros_and_lotte")
+      h1(class="h1")
+        span(class="title")
+          | О компании
+        span(class="subtitle")
+          | О Lotte Chemical
+      div(class="content")
+        div(class="left")
+          div(class="tabs")
+            a(href="about_koros.html")
+              | Koros Stone
+            span
+              | Lotte Chemical
+
+          div(class="image")
+
+          div(class="alert")
+            | Мы развиваемся как ведущий поставщик высококачественных интерьерных материалов и стремимся построить лучшее будущее
+
+          div(class="text")
+            p
+              strong
+                | Lotte Chemical входит в международный конгломерат LOTTE с центром в Южной Корее
+              | , который развивает большое количество бизнес-направлений в различных сферах, в том числе:
+            ul
+              li
+                | строительство
+              li
+                | химическое производство
+              li
+                | производство пищевых продуктов
+              li
+                | туризм и розничная торговля
+              li
+                | иные
+            p
+              | Химическое производство было основано в 1988 году компанией Samsung Cheil Industries, под руководством которой находилось до стратегического объединения с Lotte Chemical в 2016 году.
+            p
+              | Бывшее химическое подразделение Samsung вместе с основными продуктами - искусственным камнем Staron® и кварцевым агломератом Radianz® - перешло в собственность Lotte Chemical.
+            p
+              | Поглощение обеспечило компании 1-е место на южнокорейском и 3-е место на мировом рынке синтетических материалов для изготовления твердых поверхностей.
+            p
+              | Lotte Chemical – современная высокотехнологичная компания, обладающая собственными производственными мощностями и осуществляющая полный цикл создания акрилового камня Staron:
+              | от разработки текстур материала, до обработки сырья, производства красящих пигментов и литья слэбов.
+              | Полный контроль за всеми стадиями изготовления обеспечивает неизменно высокое качество продуктов и позволяет занимать прочные лидирующие позиции на рынке искусственного камня.
+
+          div(class="buttons")
+            a(href="404.html", class="button transparent read")
+              span
+                | Читать далее
+              svg
+            a(href="404.html", class="button secondary catalog")
+              span
+                | Каталоги продукции PDF
+
+        div(class="right")

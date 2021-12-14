@@ -1,0 +1,209 @@
+@import "././resources/styles/__/variables";
+
+.about_koros_and_lotte {
+  font-family: $font-family-1;
+  font-style: normal;
+
+  .h1 {
+    margin: 0 0 60px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+
+    @media (max-width: $media-grid-md) {
+      margin: 0 0 45px;
+    }
+
+    .title {
+      margin-bottom: 18px;
+      color: $color-black;
+      letter-spacing: 0.02em;
+      font-size: 48px;
+      line-height: 58px;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 36px;
+        line-height: 44px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    .subtitle {
+      color: $color-gray-300;
+      letter-spacing: 0.14em;
+      font-size: 13px;
+      line-height: 18px;
+      text-transform: uppercase;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 11px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $media-grid-md) {
+      flex-direction: column;
+    }
+  }
+
+  .left {
+    flex-shrink: 0;
+    width: 574px;
+
+    @media (max-width: $media-grid-lg) {
+      width: 506px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      width: 100%;
+    }
+  }
+
+  // todo
+  .tabs {
+    margin-bottom: 40px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  // todo
+  .image {
+    display: none;
+
+    @media (max-width: $media-grid-md) {
+      display: block;
+    }
+  }
+
+  .alert {
+    margin-bottom: 40px;
+    padding: 34px 30px;
+    border: 2px solid $color-red-700;
+    color: $color-black;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 30px;
+
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 36px;
+      padding: 26px 30px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 45px;
+      padding: 28px 30px;
+      font-size: 19px;
+      line-height: 28px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 30px;
+      padding: 22px 30px;
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+
+  // todo
+  .text {
+
+  }
+
+  .pdf {
+    margin-bottom: 70px;
+    width: 398px;
+    height: 70px;
+
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 52px;
+      width: 390px;
+      height: 52px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 38px;
+      width: 100%;
+      height: 42px;
+      font-size: 15px;
+    }
+
+    svg {
+      margin-right: 6px;
+      width: 20px;
+      height: 20px;
+
+      @media (max-width: $media-grid-sm) {
+        margin-right: 4px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  // todo
+  .buttons {
+    margin-bottom: 90px;
+    width: 410px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 90px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .read {
+    width: 160px;
+    height: 52px;
+
+    svg {
+      margin-left: 20px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .catalog {
+    width: 230px;
+    height: 52px;
+  }
+
+  .right {
+    display: block;
+
+    @media (max-width: $media-grid-md) {
+      display: none;
+    }
+  }
+}
