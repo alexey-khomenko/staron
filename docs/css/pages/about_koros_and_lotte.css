@@ -76,19 +76,67 @@
 }
 .about_koros_and_lotte .tabs {
   margin-bottom: 40px;
+  display: flex;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 48px;
 }
 @media (max-width: 1262.98px) {
   .about_koros_and_lotte .tabs {
     margin-bottom: 0;
+    font-size: 24px;
+    line-height: 36px;
   }
+}
+@media (max-width: 750.98px) {
+  .about_koros_and_lotte .tabs {
+    margin-bottom: 0;
+    font-size: 21px;
+    line-height: 28px;
+  }
+}
+.about_koros_and_lotte .tabs .l {
+  margin-right: 30px;
+}
+.about_koros_and_lotte .tabs .r {
+  margin-left: 30px;
+}
+.about_koros_and_lotte .tabs span {
+  padding-bottom: 4px;
+  color: #000000;
+  border-bottom: 2px solid #DD2929;
+}
+.about_koros_and_lotte .tabs a {
+  padding-bottom: 4px;
+  color: #7C7C81;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+@media (hover: hover) {
+  .about_koros_and_lotte .tabs a:hover {
+    color: #4A4A51;
+  }
+}
+.about_koros_and_lotte .tabs a:active {
+  color: #000000;
 }
 .about_koros_and_lotte .image {
   display: none;
+  position: relative;
 }
 @media (max-width: 1262.98px) {
   .about_koros_and_lotte .image {
     display: block;
+    height: 370px;
   }
+}
+@media (max-width: 750.98px) {
+  .about_koros_and_lotte .image {
+    height: 200px;
+  }
+}
+.about_koros_and_lotte .image img {
+  position: absolute;
 }
 .about_koros_and_lotte .alert {
   margin-bottom: 40px;
@@ -121,6 +169,38 @@
     font-size: 17px;
     line-height: 24px;
   }
+}
+.about_koros_and_lotte .text {
+  margin-bottom: 45px;
+  color: #000000;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 32px;
+}
+@media (max-width: 1262.98px) {
+  .about_koros_and_lotte .text {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 750.98px) {
+  .about_koros_and_lotte .text {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+.about_koros_and_lotte .text p {
+  margin: 0 0 10px;
+}
+@media (max-width: 750.98px) {
+  .about_koros_and_lotte .text p {
+    margin-bottom: 8px;
+  }
+}
+.about_koros_and_lotte .text strong {
+  font-weight: 700;
 }
 .about_koros_and_lotte .pdf {
   margin-bottom: 70px;
@@ -185,21 +265,51 @@
 .about_koros_and_lotte .read {
   width: 160px;
   height: 52px;
+  color: #7C7C81;
+}
+@media (max-width: 750.98px) {
+  .about_koros_and_lotte .read {
+    width: 150px;
+    height: 42px;
+    font-size: 15px;
+  }
 }
 .about_koros_and_lotte .read svg {
   margin-left: 20px;
-  width: 24px;
-  height: 24px;
+  width: auto;
+  height: 12px;
 }
 .about_koros_and_lotte .catalog {
   width: 230px;
   height: 52px;
 }
+@media (max-width: 750.98px) {
+  .about_koros_and_lotte .catalog {
+    margin-top: 14px;
+    width: 206px;
+    height: 42px;
+    font-size: 15px;
+  }
+}
 .about_koros_and_lotte .right {
+  flex-grow: 1;
   display: block;
+  position: relative;
 }
 @media (max-width: 1262.98px) {
   .about_koros_and_lotte .right {
     display: none;
+  }
+}
+.about_koros_and_lotte .right img {
+  position: absolute;
+  left: 0;
+  top: -90px;
+}
+@media (max-width: 1422.98px) {
+  .about_koros_and_lotte .right img {
+    left: 40px;
+    top: -80px;
+    width: 98%;
   }
 }

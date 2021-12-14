@@ -27,7 +27,7 @@ block main
       div(class="content")
         div(class="left")
           div(class="tabs")
-            span
+            span(class="l")
               | Koros Stone
             a(href="about_lotte.html")
               | Lotte Chemical
@@ -50,7 +50,7 @@ block main
               | Компания KorosStoneявляется экспертом на рынке искусственного камня и постоянно делится опытом со своими партнёрами.
 
           a(href="404.html", class="button circuit pdf")
-            svg
+            include ../partials/svg/pdf
             span
               | Презентация компании в формате PDF
 
@@ -58,13 +58,10 @@ block main
             a(href="404.html", class="button transparent read")
               span
                 | Читать далее
-              svg
+              include ../partials/svg/chevrone-right
             a(href="404.html", class="button secondary catalog")
               span
                 | Каталоги продукции PDF
 
         div(class="right")
-
-
-
-
+          img(alt="Koros Stone", src="images/about_koros.png")

@@ -29,7 +29,7 @@ block main
           div(class="tabs")
             a(href="about_koros.html")
               | Koros Stone
-            span
+            span(class="r")
               | Lotte Chemical
 
           div(class="image")
@@ -68,9 +68,10 @@ block main
             a(href="404.html", class="button transparent read")
               span
                 | Читать далее
-              svg
+              include ../partials/svg/chevrone-right
             a(href="404.html", class="button secondary catalog")
               span
                 | Каталоги продукции PDF
 
         div(class="right")
+          img(alt="Lotte Chemical", src="images/about_lotte.png")

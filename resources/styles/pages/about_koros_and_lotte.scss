@@ -73,21 +73,73 @@
     }
   }
 
-  // todo
   .tabs {
     margin-bottom: 40px;
+    display: flex;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 48px;
 
     @media (max-width: $media-grid-md) {
       margin-bottom: 0;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 0;
+      font-size: 21px;
+      line-height: 28px;
+    }
+
+    .l {
+      margin-right: 30px;
+    }
+
+    .r {
+      margin-left: 30px;
+    }
+
+    span {
+      padding-bottom: 4px;
+      color: $color-black;
+      border-bottom: 2px solid $color-red-700;
+    }
+
+    a {
+      padding-bottom: 4px;
+      color: $color-gray-500;
+      border-bottom: 2px solid transparent;
+      text-decoration: none;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $color-gray-700;
+        }
+      }
+
+      &:active {
+        color: $color-black;
+      }
     }
   }
 
   // todo
   .image {
     display: none;
+    position: relative;
 
     @media (max-width: $media-grid-md) {
       display: block;
+      height: 370px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      height: 200px;
+    }
+
+    img {
+      position: absolute;
     }
   }
 
@@ -121,9 +173,45 @@
     }
   }
 
-  // todo
   .text {
+    margin-bottom: 45px;
+    color: $color-black;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 32px;
 
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 30px;
+      font-size: 15px;
+      line-height: 28px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    p {
+      margin: 0 0 10px;
+
+      @media (max-width: $media-grid-sm) {
+        margin-bottom: 8px;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    // todo
+    ul {
+
+    }
+
+    li {
+
+    }
   }
 
   .pdf {
@@ -161,7 +249,6 @@
     }
   }
 
-  // todo
   .buttons {
     margin-bottom: 90px;
     width: 410px;
@@ -186,24 +273,52 @@
   .read {
     width: 160px;
     height: 52px;
+    color: $color-gray-500;
+
+    @media (max-width: $media-grid-sm) {
+      width: 150px;
+      height: 42px;
+      font-size: 15px;
+    }
 
     svg {
       margin-left: 20px;
-      width: 24px;
-      height: 24px;
+      width: auto;
+      height: 12px;
     }
   }
 
   .catalog {
     width: 230px;
     height: 52px;
+
+    @media (max-width: $media-grid-sm) {
+      margin-top: 14px;
+      width: 206px;
+      height: 42px;
+      font-size: 15px;
+    }
   }
 
   .right {
+    flex-grow: 1;
     display: block;
+    position: relative;
 
     @media (max-width: $media-grid-md) {
       display: none;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: -90px;
+
+      @media (max-width: $media-grid-lg) {
+        left: 40px;
+        top: -80px;
+        width: 98%;
+      }
     }
   }
 }
