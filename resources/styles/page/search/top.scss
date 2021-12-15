@@ -1,0 +1,58 @@
+@import "././resources/styles/__/variables";
+
+.search.top {
+  margin-bottom: 60px;
+
+  @media (max-width: $media-grid-md) {
+    margin-bottom: 45px;
+  }
+
+  .h1 {
+    margin: 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 600;
+
+    @media (max-width: $media-grid-sm) {
+      margin: 0 0 32px;
+    }
+
+    .title {
+      margin-bottom: 18px;
+      color: $color-black;
+      letter-spacing: 0.02em;
+      font-size: 48px;
+      line-height: 58px;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 36px;
+        line-height: 44px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    .subtitle {
+      color: $color-gray-300;
+      letter-spacing: 0.14em;
+      font-size: 13px;
+      line-height: 18px;
+      text-transform: uppercase;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 11px;
+        line-height: 16px;
+      }
+    }
+  }
+}

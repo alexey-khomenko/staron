@@ -1,0 +1,147 @@
+@import "././resources/styles/__/variables";
+
+.search.empty {
+  margin-bottom: 90px;
+
+  .h2 {
+    font-family: $font-family-1;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-gray-900;
+    letter-spacing: 0.02em;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 21px;
+      line-height: 24px;
+    }
+  }
+
+  .text {
+    font-family: $font-family-1;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 32px;
+    color: $color-gray-900;
+    letter-spacing: 0.02em;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+      line-height: 28px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  .light {
+
+    .h2 {
+      margin: 0 0 32px;
+      width: 570px;
+
+      @media (max-width: $media-grid-lg) {
+        width: 610px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        width: 100%;
+      }
+    }
+
+    .text {
+      margin: 0 0 66px;
+      width: 680px;
+
+      @media (max-width: $media-grid-lg) {
+        width: 610px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        width: 100%;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        margin-bottom: 45px;
+      }
+
+      a {
+        text-decoration: underline;
+        color: $color-red-700;
+
+        @media (hover: hover) {
+          &:hover {
+            color: $color-red-500;
+          }
+        }
+
+        &:active {
+          color: $color-red-300;
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 40px;
+    width: 810px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: $color-gray-050;
+
+    @media (max-width: $media-grid-lg) {
+      padding: 40px 30px;
+      width: 610px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      padding: 50px 40px;
+      width: 100%;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      padding: 28px 26px;
+      flex-direction: column;
+    }
+
+    .h2 {
+      margin: 0 0 4px;
+    }
+
+    .text {
+      margin: 0;
+    }
+  }
+
+
+  .right {
+    width: 310px;
+    height: 70px;
+
+    @media (max-width: $media-grid-lg) {
+      width: 220px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      width: 190px;
+      height: 52px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-top: 16px;
+      width: 152px;
+      height: 42px;
+      font-size: 15px;
+    }
+  }
+}

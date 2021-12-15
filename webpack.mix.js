@@ -63,6 +63,10 @@ const styles = [
   'page/payment_and_delivery/middle',
   'page/payment_and_delivery/bottom',
 
+  'page/search/top',
+  'page/search/results',
+  'page/search/empty',
+
   'partials/pages/breadcrumbs',
 ];
 

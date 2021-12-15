@@ -38,7 +38,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchEl = document.querySelector('.header-top .form.search input');
     const search = searchEl.value.trim();
 
-    console.log('search form', search);
+    if (search.length < 2) return true;
+
+    const query = encodeURIComponent(search);
+    const link = `${searchEl.closest('form').dataset.searchPage}?q=${query}`;
+
+    document.location.assign(link);
   });
 
   document.addEventListener('click', function (e) {
