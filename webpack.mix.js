@@ -16,10 +16,10 @@ mix
 ;
 
 const styles = [
-  'layouts/app-base',
-  'layouts/app-fonts',
-  'layouts/app-normalize',
-  'layouts/swiper-bundle',
+  'app-base',
+  'app-fonts',
+  'app-normalize',
+  'swiper-bundle',
 
   'layout/footer',
   'layout/footer-left',
