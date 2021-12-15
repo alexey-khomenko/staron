@@ -1,4 +1,5 @@
 link(rel="stylesheet", href="css/page/search/top.css")
+script(src="js/page/search/top.js")
 section(class="search top")
   h1(class="h1")
     span(class="title")
@@ -6,5 +7,6 @@ section(class="search top")
     span(class="subtitle")
       | Результаты поиска по запросу:
   form(class="form search", novalidate="novalidate", data-search-page="search.html")
-    input
-    | todo
+    input(type="search", placeholder="Что вы ищите?", value="плита акриловая")
+    button(type="submit" class="link")
+      include ../../partials/svg/header-search

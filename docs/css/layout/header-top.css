@@ -85,15 +85,13 @@
     line-height: 18px;
   }
 }
-@media (pointer: coarse) {
-  .header-top .link:active {
-    color: #DD2929;
-  }
-}
 @media (hover: hover) {
   .header-top .link:hover {
     color: #DD2929;
   }
+}
+.header-top .link:active {
+  color: #DD2929;
 }
 .header-top .link.search {
   margin-right: 11px;

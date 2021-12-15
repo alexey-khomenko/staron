@@ -73,16 +73,14 @@
 
     color: $color-gray-800;
 
-    @media (pointer: coarse) {
-      &:active {
-        color: $color-red-700;
-      }
-    }
-
     @media (hover: hover) {
       &:hover {
         color: $color-red-700;
       }
+    }
+
+    &:active {
+      color: $color-red-700;
     }
 
     &.search {

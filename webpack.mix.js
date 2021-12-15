@@ -96,6 +96,8 @@ const scripts = [
   'page/index/trend',
   'page/index/trend-right',
 
+  'page/search/top',
+  'page/search/results',
 ];
 
 for (let script of scripts) {
