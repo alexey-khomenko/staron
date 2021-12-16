@@ -1,42 +1,84 @@
 -
   links = {
     0: {
-      title: '1',
-      url: '404.html',
+      image: 'images/content-search-results-1.jpg',
+      title: 'Natural Bridge V111',
+      subtitle: 'Коллекция METALLIC',
+      text: 'Листы искусственного камня',
+      link: '404.html',
     },
     1: {
-      title: '2',
-      url: '404.html',
+      image: 'images/content-search-results-1.jpg',
+      title: 'Delphi V111',
+      subtitle: 'Коллекция Supreme',
+      text: 'Листы искусственного камня',
+      link: '404.html',
     },
     2: {
-      title: '3',
-      url: '404.html',
+      image: 'images/content-search-results-2.jpg',
+      title: 'Cotton White V111',
+      subtitle: 'Коллекция supreme',
+      text: 'Листы искусственного камня',
+      link: '404.html',
     },
     3: {
-      title: '4',
-      url: '404.html',
+      image: 'images/content-search-results-3.jpg',
+      title: 'Delphi V111',
+      subtitle: 'Коллекция aspen',
+      text: 'Листы искусственного камня',
+      link: '404.html',
     },
     4: {
-      title: '5',
-      url: '404.html',
+      image: 'images/content-search-results-4.jpg',
+      title: 'Delphi V111',
+      subtitle: 'Коллекция Supreme',
+      text: 'Листы искусственного камня',
+      link: '404.html',
     },
     5: {
-      title: '6',
-      url: '404.html',
+      image: 'images/content-search-results-1.jpg',
+      title: 'Natural Bridge V111',
+      subtitle: 'Коллекция METALLIC',
+      text: 'Листы искусственного камня',
+      link: '404.html',
     },
     6: {
-      title: '7',
-      url: '404.html',
+      image: 'images/content-search-results-2.jpg',
+      title: 'Delphi V111',
+      subtitle: 'Коллекция aspen',
+      text: 'Листы искусственного камня',
+      link: '404.html',
     },
     7: {
-      title: '8',
-      url: '404.html',
+      image: 'images/content-search-results-3.jpg',
+      title: 'Delphi V111',
+      subtitle: 'Коллекция Supreme',
+      text: 'Листы искусственного камня',
+      link: '404.html',
     },
   };
 link(rel="stylesheet", href="css/page/search/results.css")
 script(src="js/page/search/results.js")
 section(class="search results")
-  each link in links
-    a(href=`${link.url}`)
-      span
-        | #{link.title}
+  h2(class="h2")
+    | Вот что удалось найти:
+  nav(class="nav", data-found-total="9")
+    each link in links
+      a(href=`${link.link}`, class="a")
+        img(alt="", class="l", src=`${link.image}`)
+        div(class="c")
+          div(class="title")
+            span
+              | #{link.title}
+          div(class="subtitle")
+            span
+              | #{link.subtitle}
+          div(class="text")
+            span
+              | #{link.text}
+        div(class="r")
+          include ../../partials/svg/arrow-right
+  button(type="button", class="button circuit show-more")
+    span
+      | Показать больше
+    include ../../partials/svg/arrow-bottom

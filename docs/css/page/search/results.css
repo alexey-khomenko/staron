@@ -1,13 +1,199 @@
 .search.results {
   margin-bottom: 90px;
+}
+.search.results .h2 {
+  margin: 0 0 32px;
+  color: #000000;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 1262.98px) {
+  .search.results .h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 750.98px) {
+  .search.results .h2 {
+    font-size: 21px;
+    line-height: 24px;
+  }
+}
+.search.results .nav {
+  margin-bottom: 40px;
   display: grid;
   grid-gap: 10px 16px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
 }
 @media (max-width: 1262.98px) {
-  .search.results {
+  .search.results .nav {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(8, 1fr);
+  }
+}
+@media (max-width: 750.98px) {
+  .search.results .nav {
+    margin-bottom: 30px;
+  }
+}
+.search.results .a {
+  padding: 4px;
+  border: 3px solid transparent;
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+}
+@media (hover: hover) {
+  .search.results .a:hover {
+    border-color: #7C7C81;
+  }
+}
+.search.results .a:active {
+  border-color: #4A4A51;
+}
+.search.results .a .l {
+  flex-shrink: 0;
+  margin-right: 32px;
+  width: 111px;
+  height: 111px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 750.98px) {
+  .search.results .a .l {
+    margin-right: 14px;
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (hover: hover) {
+  .search.results .a:hover .l {
+    box-shadow: none;
+  }
+}
+.search.results .a:active .l {
+  box-shadow: none;
+}
+.search.results .a .c {
+  flex-grow: 1;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+}
+.search.results .a .r {
+  flex-shrink: 0;
+  margin: 10px;
+  width: 24px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+}
+@media (max-width: 750.98px) {
+  .search.results .a .r {
+    display: none;
+  }
+}
+@media (hover: hover) {
+  .search.results .a:hover .r {
+    color: #313138;
+  }
+}
+.search.results .c .title, .search.results .c .subtitle, .search.results .c .text {
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 750.98px) {
+  .search.results .c .title, .search.results .c .subtitle, .search.results .c .text {
+    height: 24px;
+  }
+}
+.search.results .c .title {
+  margin: 10px 0 0;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+@media (max-width: 1262.98px) {
+  .search.results .c .title {
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 750.98px) {
+  .search.results .c .title {
+    margin: 6px 0 3px;
+    line-height: 24px;
+  }
+}
+.search.results .c .subtitle {
+  margin: 0;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7C7C81;
+}
+@media (max-width: 1262.98px) {
+  .search.results .c .subtitle {
+    font-size: 12px;
+  }
+}
+.search.results .c .text {
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+@media (max-width: 1262.98px) {
+  .search.results .c .text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 750.98px) {
+  .search.results .c .text {
+    margin-bottom: 0;
+  }
+}
+.search.results .show-more {
+  width: 225px;
+  height: 70px;
+}
+@media (max-width: 1262.98px) {
+  .search.results .show-more {
+    width: 195px;
+    height: 52px;
+  }
+}
+@media (max-width: 750.98px) {
+  .search.results .show-more {
+    width: 175px;
+    height: 42px;
+    font-size: 15px;
+  }
+}
+.search.results .show-more svg {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 750.98px) {
+  .search.results .show-more svg {
+    width: 16px;
+    height: 16px;
   }
 }
