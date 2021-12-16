@@ -1,1 +1,13 @@
-
+.where_to_buy.bottom {
+  padding: 60px 0 90px;
+}
+@media (max-width: 1262.98px) {
+  .where_to_buy.bottom {
+    padding-top: 56px;
+  }
+}
+@media (max-width: 750.98px) {
+  .where_to_buy.bottom {
+    padding-top: 45px;
+  }
+}

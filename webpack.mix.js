@@ -73,7 +73,6 @@ const styles = [
   'page/search/empty',
 
   'page/where_to_buy/top',
-  'page/where_to_buy/middle',
   'page/where_to_buy/bottom',
 
   'partials/pages/breadcrumbs',
@@ -108,7 +107,7 @@ const scripts = [
   'page/search/top',
   'page/search/results',
 
-  'page/where_to_buy/middle',
+  'page/where_to_buy/top',
   'page/where_to_buy/bottom',
 ];
 

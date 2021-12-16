@@ -1,5 +1,15 @@
 @import "././resources/styles/__/variables";
 
 .where_to_buy.bottom {
+  padding: 60px 0 90px;
+
+  @media (max-width: $media-grid-md) {
+    padding-top: 56px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    padding-top: 45px;
+  }
+
 
 }

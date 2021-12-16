@@ -1,6 +1,59 @@
 .contacts.bottom {
   padding: 58px 0 80px;
 }
+@media (max-width: 1262.98px) {
+  .contacts.bottom {
+    padding-bottom: 90px;
+  }
+}
 .contacts.bottom .h2 {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
+}
+@media (max-width: 1262.98px) {
+  .contacts.bottom .row {
+    flex-direction: column;
+  }
+}
+.contacts.bottom .l {
+  margin-right: 64px;
+  width: 574px;
+}
+@media (max-width: 1422.98px) {
+  .contacts.bottom .l {
+    margin-right: 58px;
+    width: 504px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .contacts.bottom .l {
+    margin-right: 0;
+    margin-bottom: 26px;
+    width: 100%;
+  }
+}
+@media (max-width: 750.98px) {
+  .contacts.bottom .l {
+    margin-bottom: 24px;
+  }
+}
+.contacts.bottom .items {
+  width: 330px;
+  display: grid;
+  grid-gap: 36px 16px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+@media (max-width: 1262.98px) {
+  .contacts.bottom .items {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+@media (max-width: 750.98px) {
+  .contacts.bottom .items {
+    grid-row-gap: 24px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
 }

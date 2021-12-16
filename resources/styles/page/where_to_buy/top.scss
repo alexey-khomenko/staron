@@ -2,4 +2,41 @@
 
 .where_to_buy.top {
 
+  .h1 {
+    margin: 0 0 54px;
+    font-family: $font-family-1;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.02em;
+    color: $color-black;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 60px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 38px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  .form {
+    padding: 52px 0 48px;
+    background-color: $color-gray-050;
+
+    @media (max-width: $media-grid-md) {
+      padding: 44px 0 60px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      padding-bottom: 50px;
+    }
+
+
+  }
 }
