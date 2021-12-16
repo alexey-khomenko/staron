@@ -43,6 +43,7 @@ const styles = [
 
   'pages/404',
   'pages/about_koros_and_lotte',
+  'pages/contacts',
   'pages/exploitation_and_care',
   'pages/payment_and_delivery',
 
@@ -53,6 +54,10 @@ const styles = [
   'page/index/trend-left',
   'page/index/trend-right',
   'page/index/production',
+
+  'page/contacts/top',
+  'page/contacts/middle',
+  'page/contacts/bottom',
 
   'page/exploitation_and_care/care',
   'page/exploitation_and_care/exploitation',
@@ -66,6 +71,10 @@ const styles = [
   'page/search/top',
   'page/search/results',
   'page/search/empty',
+
+  'page/where_to_buy/top',
+  'page/where_to_buy/middle',
+  'page/where_to_buy/bottom',
 
   'partials/pages/breadcrumbs',
 ];
@@ -98,6 +107,9 @@ const scripts = [
 
   'page/search/top',
   'page/search/results',
+
+  'page/where_to_buy/middle',
+  'page/where_to_buy/bottom',
 ];
 
 for (let script of scripts) {

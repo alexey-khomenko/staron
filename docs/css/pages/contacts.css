@@ -1,0 +1,70 @@
+.contacts {
+  color: #000000;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+}
+.contacts .row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contacts .h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 1262.98px) {
+  .contacts .h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.contacts .h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 1262.98px) {
+  .contacts .h3 {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 750.98px) {
+  .contacts .h3 {
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+.contacts .text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 1262.98px) {
+  .contacts .text {
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
+@media (max-width: 750.98px) {
+  .contacts .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.contacts .text p {
+  margin: 0 0 5px;
+}
+.contacts .text p:last-child {
+  margin-bottom: 0;
+}
+.contacts .text strong {
+  font-weight: 700;
+}

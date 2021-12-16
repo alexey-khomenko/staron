@@ -1,0 +1,17 @@
+extends ../layouts/app
+
+block title
+  | Where to buy
+
+block main
+  -
+    breadcrumbs = {
+      0: {
+        name: 'Где купить продукцию Staron',
+      },
+    };
+  include ../partials/pages/breadcrumbs
+
+  include ../page/where_to_buy/top
+  include ../page/where_to_buy/middle
+  include ../page/where_to_buy/bottom

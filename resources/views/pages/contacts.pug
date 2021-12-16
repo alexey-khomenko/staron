@@ -1,0 +1,22 @@
+extends ../layouts/app
+
+block title
+  | Contacts
+
+block main
+  -
+    breadcrumbs = {
+      0: {
+        name: 'О компании',
+        link: '404.html',
+      },
+      1: {
+        name: 'Контакты',
+      },
+    };
+  include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/contacts.css")
+  include ../page/contacts/top
+  include ../page/contacts/middle
+  include ../page/contacts/bottom
