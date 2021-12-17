@@ -1,4 +1,184 @@
+-
+  dealers = {
+    0: {
+      city: 'Домодедово',
+      productTypes: 'Листы;Кухни со столешницей;Мойки и раковины',
+      title: 'ООО «Компания Корос Альянс»',
+      subtitle: 'Официальный дистрибьютор',
+      address: 'г. Домодедово, микрорайон Северный, ул. Логистическая, с. 8',
+      phones: [
+        '+7 (495) 223-64-40',
+      ],
+      sites: [
+        'www.staron.ru',
+      ],
+      emails: [
+        'office@koros-alianse.ru',
+      ],
+    },
+    1: {
+      city: 'Новосибирск',
+      productTypes: 'Мойки и раковины',
+      title: 'Филиал в г. Новосибирск',
+      subtitle: 'Официальный дистрибьютор',
+      address: 'г. Новосибирск, ул. Линейная, 114, к. 2',
+      phones: [
+        '+7 (495) 223-64-40',
+        '+7 (383) 200-36-90',
+      ],
+      sites: [
+        'www.staron.ru',
+      ],
+      emails: [
+        'office@koros-alianse.ru',
+      ],
+    },
+    2: {
+      city: 'Санкт-Петербург',
+      productTypes: 'Листы;Мойки и раковины',
+      title: 'Филиал в г. Санкт-Петербург',
+      subtitle: 'Официальный дистрибьютор',
+      address: 'г. Санкт-Петербург, пр-т Невский, 80',
+      phones: [
+        '+7 (495) 223-64-40',
+        '+7 (383) 200-36-90',
+      ],
+      sites: [
+        'www.staron.ru',
+      ],
+      emails: [
+        'office@koros-alianse.ru',
+      ],
+    },
+    3: {
+      city: 'Санкт-Петербург',
+      productTypes: 'Кухни со столешницей;Мойки и раковины',
+      title: 'Филиал в г. Санкт-Петербург',
+      subtitle: 'Официальный дистрибьютор',
+      address: 'г. Санкт-Петербург, пр-т Невский, 60',
+      phones: [
+        '+7 (495) 223-64-40',
+      ],
+      sites: [
+        'www.staron.ru',
+      ],
+      emails: [
+        'office@koros-alianse.ru',
+      ],
+    },
+    4: {
+      city: 'Краснодар',
+      productTypes: 'Кухни со столешницей',
+      title: 'Филиал в г. Краснодар',
+      subtitle: 'Официальный дистрибьютор',
+      address: '',
+      phones: [
+        '+7 (495) 223-64-40',
+      ],
+      sites: [
+        'www.staron.ru',
+      ],
+      emails: [
+        'office@koros-alianse.ru',
+      ],
+    },
+    5: {
+      city: 'Москва',
+      productTypes: 'Листы;Кухни со столешницей;Мойки и раковины',
+      title: 'Филиал в г. Москва',
+      subtitle: 'Официальный дистрибьютор',
+      address: 'г. Москва, ул. Парковая, 77',
+      phones: [
+        '+7 (495) 223-64-40',
+      ],
+      sites: [
+        'www.staron.ru',
+      ],
+      emails: [
+        'office@koros-alianse.ru',
+      ],
+    },
+    6: {
+      city: 'Тула',
+      productTypes: 'Листы',
+      title: 'Филиал в г. Тула',
+      subtitle: 'Официальный дистрибьютор',
+      address: 'г. Тула, ул. Ленина, 39',
+      phones: [
+        '+7 (495) 223-64-40',
+      ],
+      sites: [
+        'www.staron.ru',
+      ],
+      emails: [
+        'office@koros-alianse-alianse.ru',
+      ],
+    },
+  };
 link(rel="stylesheet", href="css/page/where_to_buy/bottom.css")
 script(src="js/page/where_to_buy/bottom.js")
 section(class="where_to_buy bottom")
   div(class="container container-fixed")
+    div(class="where_to_buy-tabs-head")
+      button(type="button", class="btn active", data-tab="where_to_buy-tabs-body-dealers")
+        span
+          | Списком
+      button(type="button", class="btn", data-tab="where_to_buy-tabs-body-map")
+        span
+          | На карте
+
+    div(class="where_to_buy-tabs-body")
+      div(class="tabs_body where_to_buy-tabs-body-dealers")
+        div(class="title-row")
+          h2(class="h2")
+            | Дилеры
+          div(class="found")
+            | Всего найдено:
+            |
+            span
+              | 23
+
+        div(class="dealers")
+          each dealer in dealers
+            div(class="dealer", data-city=`${dealer.city}`, data-product-types=`${dealer.productTypes}`)
+              div(class="title")
+                = dealer.title
+              div(class="subtitle")
+                = dealer.subtitle
+              div(class="items")
+                include ../../partials/svg/address
+                div(class="item")
+                  = dealer.address
+              div(class="contacts")
+                if dealer.phones.length
+                  div(class="items")
+                    include ../../partials/svg/phone
+                    each phone in dealer.phones
+                      div(class="item")
+                        a(href=`tel:+${phone.replace(/[^0-9]/g, "")}`)
+                          = phone
+                if dealer.sites.length
+                  div(class="items")
+                    include ../../partials/svg/site
+                    each site in dealer.sites
+                      div(class="item")
+                        a(href=`//${site}`, target="_blank")
+                          = site
+                if dealer.phones.length
+                  div(class="items")
+                    include ../../partials/svg/email
+                    each email in dealer.emails
+                      div(class="item")
+                        a(href=`mailto:${email}`)
+                          = email
+
+        div(class="buttons")
+          button(type="button", class="button circuit")
+            span
+              | Показать меньше
+          button(type="button", class="button circuit")
+            span
+              | Показать больше
+
+      div(class="tabs_body where_to_buy-tabs-body-map tab_hidden")
+        img(src="images/tmp-where_to_buy-map.jpg", alt="")

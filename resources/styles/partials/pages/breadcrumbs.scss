@@ -24,16 +24,14 @@
       text-decoration: none;
       color: $color-gray-500;
 
-      @media (pointer: coarse) {
-        &:active {
-          color: $color-black;
-        }
-      }
-
       @media (hover: hover) {
         &:hover {
           color: $color-black;
         }
+      }
+
+      &:active {
+        color: $color-black;
       }
     }
 

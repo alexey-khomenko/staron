@@ -65,15 +65,13 @@
     margin-left: 30px;
   }
 
-  @media (pointer: coarse) {
-    &:active {
-      color: $color-white;
-    }
-  }
-
   @media (hover: hover) {
     &:hover {
       color: $color-white;
     }
+  }
+
+  &:active {
+    color: $color-white;
   }
 }

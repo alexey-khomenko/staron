@@ -22,15 +22,13 @@
   text-decoration: none;
   color: #7C7C81;
 }
-@media (pointer: coarse) {
-  .breadcrumbs li a:active {
-    color: #000000;
-  }
-}
 @media (hover: hover) {
   .breadcrumbs li a:hover {
     color: #000000;
   }
+}
+.breadcrumbs li a:active {
+  color: #000000;
 }
 .breadcrumbs li svg {
   color: #7C7C81;

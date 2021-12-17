@@ -72,13 +72,11 @@
     margin-left: 30px;
   }
 }
-@media (pointer: coarse) {
-  .header-large_menu-close:active {
-    color: #FFFFFF;
-  }
-}
 @media (hover: hover) {
   .header-large_menu-close:hover {
     color: #FFFFFF;
   }
+}
+.header-large_menu-close:active {
+  color: #FFFFFF;
 }

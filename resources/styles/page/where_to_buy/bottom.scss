@@ -11,5 +11,329 @@
     padding-top: 45px;
   }
 
+  .where_to_buy-tabs-head {
+    display: none;
+    margin-bottom: 46px;
+    justify-content: flex-start;
+    align-items: stretch;
 
+    @media (max-width: $media-grid-md) {
+      display: flex;
+    }
+
+    .btn {
+      height: 48px;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      color: $color-gray-500;
+      font-family: $font-family-1;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 21px;
+        line-height: 26px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      &.active {
+        cursor: default;
+        border-bottom-color: $color-red-700;
+        color: $color-black;
+      }
+    }
+  }
+
+  .where_to_buy-tabs-body {
+    height: 950px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media (max-width: $media-grid-md) {
+      height: auto;
+      display: block;
+    }
+  }
+
+  .where_to_buy-tabs-body-dealers {
+    margin-right: 16px;
+    width: 571px;
+    position: relative;
+    flex-shrink: 0;
+
+    @media (max-width: $media-grid-lg) {
+      width: 505px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      height: 192px;
+      width: 542px;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+      pointer-events: none;
+
+      @media (max-width: $media-grid-md) {
+        display: none;
+      }
+    }
+  }
+
+  .title-row {
+    margin-bottom: 30px;
+    width: 542px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: $font-family-1;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    color: $color-black;
+
+    @media (max-width: $media-grid-lg) {
+      width: 480px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      width: 100%;
+    }
+
+    .h2 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 36px;
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 21px;
+        line-height: 26px;
+      }
+    }
+
+    .found {
+      font-size: 17px;
+      line-height: 28px;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 15px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      span {
+        color: $color-red-700;
+      }
+    }
+  }
+
+  .dealers {
+    max-height: 884px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 45px;
+      max-height: 100%;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .dealer {
+    margin-bottom: 10px;
+    padding: 19px 29px 9px;
+    width: 542px;
+    border: 3px solid transparent;
+    background-color: $color-gray-100;
+    font-family: $font-family-1;
+    font-style: normal;
+
+    @media (max-width: $media-grid-lg) {
+      width: 480px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      border-color: $color-gray-500;
+      background-color: $color-white;
+    }
+
+    .title {
+      margin-bottom: 6px;
+      color: $color-black;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+    }
+
+    &.active .title {
+      color: $color-red-700;
+    }
+
+    .subtitle {
+      margin-bottom: 20px;
+      color: $color-gray-500;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .contacts {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+    .items {
+      flex-grow: 1;
+      flex-basis: 50%;
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 10px;
+      color: $color-black;
+
+      svg {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .item {
+      color: $color-black;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+
+      a {
+        color: $color-black;
+        text-decoration: none;
+
+        @media (hover: hover) {
+          &:hover {
+            color: $color-gray-600;
+          }
+        }
+
+        &:active {
+          color: $color-gray-800;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: stretch;
+
+    @media (max-width: $media-grid-md) {
+      display: flex;
+    }
+
+    .button {
+      width: 198px;
+      height: 52px;
+
+      @media (max-width: $media-grid-sm) {
+        width: 176px;
+        height: 42px;
+        font-size: 15px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 15px;
+
+        @media (max-width: $media-grid-sm) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .where_to_buy-tabs-body-map {
+    margin-right: -140px;
+    width: 712px;
+    height: 950px;
+
+    @media (max-width: $media-grid-lg) {
+      margin-right: -124px;
+      width: 633px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      padding-top: 10px;
+      margin-right: 0;
+      width: 100%;
+      height: 610px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin: 0 -20px;
+      height: 410px;
+      width: auto;
+    }
+
+    img {
+      width: 712px;
+      height: 960px;
+      display: block;
+      object-fit: cover;
+
+      @media (max-width: $media-grid-lg) {
+        width: 633px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        width: 100%;
+        height: 600px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        height: 400px;
+      }
+    }
+  }
+
+  .tab_hidden {
+    @media (max-width: $media-grid-md) {
+      display: none;
+    }
+  }
 }
