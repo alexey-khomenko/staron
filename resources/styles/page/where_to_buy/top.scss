@@ -36,7 +36,34 @@
     @media (max-width: $media-grid-sm) {
       padding-bottom: 50px;
     }
+  }
 
+  .row {
+    height: 70px;
+    display: grid;
+    grid-gap: 30px 36px;
+    grid-template-columns: 212px 310px 310px 220px;
+    grid-template-rows: auto;
+    font-family: $font-family-1;
+    font-style: normal;
+  }
 
+  .label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $color-gray-900;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+  }
+
+  .city-wrapper {
+    background-color: darkseagreen;
+  }
+
+  .type-wrapper {
+    background-color: darkseagreen;
   }
 }

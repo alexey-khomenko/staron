@@ -36,3 +36,28 @@
     padding-bottom: 50px;
   }
 }
+.where_to_buy.top .row {
+  height: 70px;
+  display: grid;
+  grid-gap: 30px 36px;
+  grid-template-columns: 212px 310px 310px 220px;
+  grid-template-rows: auto;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+}
+.where_to_buy.top .label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #27272B;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+}
+.where_to_buy.top .city-wrapper {
+  background-color: darkseagreen;
+}
+.where_to_buy.top .type-wrapper {
+  background-color: darkseagreen;
+}
