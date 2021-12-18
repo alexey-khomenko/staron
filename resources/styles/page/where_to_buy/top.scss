@@ -46,6 +46,24 @@
     grid-template-rows: auto;
     font-family: $font-family-1;
     font-style: normal;
+
+    @media (max-width: $media-grid-lg) {
+      grid-template-columns: 112px 310px 310px 190px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      height: 134px;
+      grid-column-gap: 16px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      height: 224px;
+      grid-row-gap: 24px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr 1fr 1fr;
+    }
   }
 
   .label {
@@ -54,16 +72,188 @@
     align-items: center;
     color: $color-gray-900;
     font-weight: 600;
+    letter-spacing: 0.02em;
     font-size: 30px;
     line-height: 36px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+
+  .button {
+    @media (max-width: $media-grid-sm) {
+      font-size: 15px;
+    }
+  }
+
+  input {
+    padding: 3px 43px 3px 21px;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    color: $color-gray-900;
+    font-family: $font-family-1;
+    font-weight: 400;
+    font-style: normal;
     letter-spacing: 0.02em;
+    font-size: 17px;
+    line-height: 32px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      padding-left: 15px;
+      padding-right: 38px;
+      font-size: 14px;
+    }
+
+    &::placeholder {
+      opacity: 1;
+      color: $color-gray-500;
+    }
+
+    &:focus {
+      border-color: $color-black;
+    }
   }
 
   .city-wrapper {
-    background-color: darkseagreen;
+    position: relative;
+
+    svg {
+      color: $color-black;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+
+      @media (max-width: $media-grid-sm) {
+        right: 16px;
+      }
+    }
   }
 
   .type-wrapper {
-    background-color: darkseagreen;
+    position: relative;
+
+    summary {
+      position: relative;
+      display: block;
+      height: 100%;
+    }
+
+    input[readonly] {
+      cursor: pointer;
+      padding-left: 0;
+      padding-right: 32px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid $color-black;
+      background-color: $color-gray-050;
+
+      @media (pointer: coarse) {
+        &:active::placeholder {
+          color: $color-gray-900;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover::placeholder {
+          color: $color-gray-900;
+        }
+      }
+    }
+
+    svg {
+      position: absolute;
+      right: 8px;
+      top: calc(50% - 1px);
+      display: block;
+      color: $color-gray-800;
+      transform: translateY(-50%);
+    }
+
+    &[open] {
+      input[readonly], input[readonly]::placeholder {
+        color: $color-red-700;
+      }
+
+      svg {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px 24px;
+    background: $color-white;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .option {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: $color-black;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+      line-height: 30px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 14px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    @media (pointer: coarse) {
+      &:not(.active):active {
+        color: $color-gray-500;
+      }
+    }
+
+    @media (hover: hover) {
+      &:not(.active):hover {
+        color: $color-gray-500;
+      }
+    }
+
+    &.active {
+      cursor: default;
+      border-bottom: 1px solid $color-red-700;
+    }
   }
 }

@@ -363,8 +363,33 @@
             <div class="container container-fixed">
               <div class="row">
                 <div class="label"><span>Поиск дилера</span></div>
-                <div class="city-wrapper"></div>
-                <div class="type-wrapper"></div>
+                <div class="city-wrapper">
+                  <input id="where_to_buy-city" name="city" type="text" placeholder="Ваш город...">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.8448 19.1095H19.9319L19.6084 18.7975C20.7408 17.4802 21.4226 15.77 21.4226 13.9095C21.4226 9.7611 18.0599 6.39844 13.9115 6.39844C9.76306 6.39844 6.40039 9.7611 6.40039 13.9095C6.40039 18.058 9.76306 21.4207 13.9115 21.4207C15.7719 21.4207 17.4822 20.7389 18.7995 19.6064L19.1115 19.93V20.8429L24.8893 26.6091L26.6111 24.8873L20.8448 19.1095ZM13.9115 19.1095C11.0342 19.1095 8.7115 16.7869 8.7115 13.9095C8.7115 11.0322 11.0342 8.70955 13.9115 8.70955C16.7888 8.70955 19.1115 11.0322 19.1115 13.9095C19.1115 16.7869 16.7888 19.1095 13.9115 19.1095Z" fill="currentColor"></path>
+                  </svg>
+                  <div class="options hidden">
+                    <div class="option" data-value="Домодедово"><span>Домодедово</span></div>
+                    <div class="option" data-value="Новосибирск"><span>Новосибирск</span></div>
+                    <div class="option" data-value="Санкт-Петербург"><span>Санкт-Петербург</span></div>
+                    <div class="option" data-value="Краснодар"><span>Краснодар</span></div>
+                    <div class="option" data-value="Москва"><span>Москва</span></div>
+                    <div class="option" data-value="Тула"><span>Тула</span></div>
+                  </div>
+                </div>
+                <details class="type-wrapper select">
+                  <summary>
+                    <input id="where_to_buy-type" readonly="readonly" name="type" type="text" placeholder="Выберите тип продукта">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.59 0.589844L6 5.16984L1.41 0.589844L0 1.99984L6 7.99984L12 1.99984L10.59 0.589844Z" fill="currentColor"></path>
+                    </svg>
+                  </summary>
+                  <div class="options">
+                    <div class="option" data-value="Листы"><span>Листы</span></div>
+                    <div class="option" data-value="Кухни со столешницей"><span>Кухни со столешницей</span></div>
+                    <div class="option" data-value="Мойки и раковины"><span>Мойки и раковины</span></div>
+                  </div>
+                </details>
                 <button class="button default" type="submit"><span>Найти</span></button>
               </div>
             </div>
@@ -387,6 +412,7 @@
                     <span>23</span>
                   </div>
                 </div>
+                <link rel="stylesheet" href="css/page/where_to_buy/bottom-dealers.css">
                 <div class="dealers">
                   <div class="dealer" data-city="Домодедово" data-product-types="Листы;Кухни со столешницей;Мойки и раковины">
                     <div class="title">ООО «Компания Корос Альянс»
@@ -775,9 +801,9 @@
                   </svg>
                 </summary>
                 <div class="options">
-                  <div class="option" data-value="ru-id"><span>Россия</span></div>
-                  <div class="option" data-value="rb-id"><span>Белоруссия</span></div>
-                  <div class="option" data-value="kz-id"><span>Казахстан</span></div>
+                  <div class="option" data-value="Россия"><span>Россия</span></div>
+                  <div class="option" data-value="Белоруссия"><span>Белоруссия</span></div>
+                  <div class="option" data-value="Казахстан"><span>Казахстан</span></div>
                 </div>
               </details>
               <div class="row row-right">

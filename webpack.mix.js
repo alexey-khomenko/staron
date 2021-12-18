@@ -74,6 +74,7 @@ const styles = [
 
   'page/where_to_buy/top',
   'page/where_to_buy/bottom',
+  'page/where_to_buy/bottom-dealers',
 
   'partials/pages/breadcrumbs',
 ];
