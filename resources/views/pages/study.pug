@@ -1,0 +1,17 @@
+extends ../layouts/app
+
+block title
+  | Study
+
+block main
+  -
+    breadcrumbs = {
+      0: {
+        name: 'Обучение',
+      },
+    };
+  include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/study.css")
+  div(class="container container-fixed")
+    section(class="study")

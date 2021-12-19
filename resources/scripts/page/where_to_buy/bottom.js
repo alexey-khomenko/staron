@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.renderWhereToBuyMap = function () {
+  console.log('todo render map...');
+}
 
-  function renderMap() {
-    console.log('todo render map...');
-  }
+document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('click', function (e) {
     const dealer = e.target.closest('.where_to_buy.bottom .dealer');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!dealer) {
       if (dealerActive && !tabHead) {
         dealerActive.classList.remove('active');
-        renderMap();
+        window.renderWhereToBuyMap();
       }
 
       return true;
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     dealerActive?.classList.remove('active');
     dealer.classList.add('active');
-    renderMap();
+    window.renderWhereToBuyMap();
   });
 
   document.addEventListener('click', function (e) {

@@ -239,7 +239,7 @@
   }
 }
 @media (max-width: 1262.98px) {
-  .where_to_buy.bottom .tab_hidden {
+  .where_to_buy.bottom .tab_hidden, .where_to_buy.bottom .dealer_hidden {
     display: none;
   }
 }

@@ -109,13 +109,13 @@ body.body.closed {
   color: #FFFFFF;
 }
 @media (hover: hover) {
-  .button.default:hover {
+  .button.default:not(:disabled):hover {
     background-color: #4A4A51;
     border-color: #4A4A51;
     color: #FFFFFF;
   }
 }
-.button.default:active {
+.button.default:not(:disabled):active {
   background-color: #636368;
   border-color: #636368;
   color: #FFFFFF;
@@ -126,13 +126,13 @@ body.body.closed {
   color: #636368;
 }
 @media (hover: hover) {
-  .button.default-inverse:hover {
+  .button.default-inverse:not(:disabled):hover {
     background-color: #F8F8F8;
     border-color: #F8F8F8;
     color: #636368;
   }
 }
-.button.default-inverse:active {
+.button.default-inverse:not(:disabled):active {
   background-color: #E0E0E1;
   border-color: #E0E0E1;
   color: #000000;
@@ -143,13 +143,13 @@ body.body.closed {
   color: #313138;
 }
 @media (hover: hover) {
-  .button.circuit:hover {
+  .button.circuit:not(:disabled):hover {
     background-color: #AEAEB1;
     border-color: #AEAEB1;
     color: #FFFFFF;
   }
 }
-.button.circuit:active {
+.button.circuit:not(:disabled):active {
   background-color: #959598;
   border-color: #959598;
   color: #FFFFFF;
@@ -160,13 +160,13 @@ body.body.closed {
   color: #C7C7C8;
 }
 @media (hover: hover) {
-  .button.circuit-inverse:hover {
+  .button.circuit-inverse:not(:disabled):hover {
     background-color: #313138;
     border-color: #E0E0E1;
     color: #E0E0E1;
   }
 }
-.button.circuit-inverse:active {
+.button.circuit-inverse:not(:disabled):active {
   background-color: #313138;
   border-color: #FFFFFF;
   color: #FFFFFF;
@@ -177,13 +177,13 @@ body.body.closed {
   color: #313138;
 }
 @media (hover: hover) {
-  .button.transparent:hover {
+  .button.transparent:not(:disabled):hover {
     background-color: #F8F8F8;
     border-color: #F8F8F8;
     color: #313138;
   }
 }
-.button.transparent:active {
+.button.transparent:not(:disabled):active {
   background-color: #E0E0E1;
   border-color: #E0E0E1;
   color: #313138;
@@ -194,13 +194,13 @@ body.body.closed {
   color: #C7C7C8;
 }
 @media (hover: hover) {
-  .button.transparent-inverse:hover {
+  .button.transparent-inverse:not(:disabled):hover {
     background-color: #4A4A51;
     border-color: #4A4A51;
     color: #FFFFFF;
   }
 }
-.button.transparent-inverse:active {
+.button.transparent-inverse:not(:disabled):active {
   background-color: #636368;
   border-color: #636368;
   color: #FFFFFF;
@@ -211,13 +211,13 @@ body.body.closed {
   color: #FFFFFF;
 }
 @media (hover: hover) {
-  .button.accent:hover {
+  .button.accent:not(:disabled):hover {
     background-color: #E55858;
     border-color: #E55858;
     color: #FFFFFF;
   }
 }
-.button.accent:active {
+.button.accent:not(:disabled):active {
   background-color: #ED8585;
   border-color: #ED8585;
   color: #FFFFFF;
@@ -228,13 +228,13 @@ body.body.closed {
   color: #313138;
 }
 @media (hover: hover) {
-  .button.secondary:hover {
+  .button.secondary:not(:disabled):hover {
     background-color: #E0E0E1;
     border-color: #E0E0E1;
     color: #313138;
   }
 }
-.button.secondary:active {
+.button.secondary:not(:disabled):active {
   background-color: #C7C7C8;
   border-color: #C7C7C8;
   color: #313138;

@@ -234,7 +234,7 @@
     }
   }
 
-  .tab_hidden {
+  .tab_hidden, .dealer_hidden {
     @media (max-width: $media-grid-md) {
       display: none;
     }

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  const MAX_MOBILE_CARDS = +document.querySelector('.where_to_buy.bottom .dealers').dataset.maxMobileCards;
   const CITY_MIN_LENGTH = 2;
 
   function showCityOptions() {
@@ -62,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
     hideCityOptions();
   });
 
+//----------------------------------------------------------------------------------------------------------------------
+
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.where_to_buy.form .select summary input[readonly]')) return true;
 
@@ -92,16 +95,107 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#where_to_buy-type').value = option.dataset.value;
   });
 
-  // todo disabled submit
+//----------------------------------------------------------------------------------------------------------------------
 
   document.addEventListener('submit', function (e) {
-    const form = e.target.closest('.where_to_buy.form');
-
-    if (!form) return true;
+    if (!e.target.closest('.where_to_buy.form')) return true;
 
     e.preventDefault();
 
-    console.log('todo filter tiles');
+    const city = document.querySelector('#where_to_buy-city').value.trim().toLowerCase();
+    const type = document.querySelector('#where_to_buy-type').value.trim().toLowerCase();
+
+    for (let dealer of document.querySelectorAll('.where_to_buy.bottom .dealer')) {
+
+      if (CITY_MIN_LENGTH <= city.length && 0 < type.length) {
+        if (dealer.dataset.city.toLowerCase().includes(city) && dealer.dataset.productTypes.toLowerCase().includes(type)) {
+          dealer.classList.remove('hidden');
+        }
+        else {
+          dealer.classList.add('hidden');
+        }
+      }
+      else if (CITY_MIN_LENGTH <= city.length) {
+        if (dealer.dataset.city.toLowerCase().includes(city)) {
+          dealer.classList.remove('hidden');
+        }
+        else {
+          dealer.classList.add('hidden');
+        }
+      }
+      else if (0 < type.length) {
+        if (dealer.dataset.productTypes.toLowerCase().includes(type)) {
+          dealer.classList.remove('hidden');
+        }
+        else {
+          dealer.classList.add('hidden');
+        }
+      }
+      else {
+        dealer.classList.remove('hidden');
+      }
+
+    }
+
+    const notHidden = document.querySelectorAll('.where_to_buy.bottom .dealer:not(.hidden)');
+
+    for (let i = 0, n = notHidden.length; i < n; i++) {
+      if (i < MAX_MOBILE_CARDS) {
+        notHidden[i].classList.remove('dealer_hidden');
+      }
+      else {
+        notHidden[i].classList.add('dealer_hidden');
+      }
+    }
+
+    document.querySelector('.where_to_buy.bottom .found span').textContent = String(notHidden.length);
+
+    document.querySelector('.where_to_buy.bottom .dealers_less').classList.add('hidden');
+
+    if (0 < document.querySelectorAll('.where_to_buy.bottom .dealer.dealer_hidden:not(.hidden)').length) {
+      document.querySelector('.where_to_buy.bottom .dealers_more').classList.remove('hidden');
+    }
+    else {
+      document.querySelector('.where_to_buy.bottom .dealers_more').classList.add('hidden');
+    }
+
+    window.renderWhereToBuyMap();
+  });
+
+//----------------------------------------------------------------------------------------------------------------------
+
+  document.addEventListener('click', function (e) {
+    const button = e.target.closest('.where_to_buy.bottom .dealers_more');
+
+    if (!button) return true;
+
+    const dealers = Array.from(document.querySelectorAll('.where_to_buy.bottom .dealer.dealer_hidden:not(.hidden)'));
+
+    if (0 < dealers.length) dealers.shift().classList.remove('dealer_hidden');
+    if (0 < dealers.length) dealers.shift().classList.remove('dealer_hidden');
+
+    document.querySelector('.where_to_buy.bottom .dealers_less').classList.remove('hidden');
+
+    if (0 === dealers.length) {
+      document.querySelector('.where_to_buy.bottom .dealers_more').classList.add('hidden');
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    const button = e.target.closest('.where_to_buy.bottom .dealers_less');
+
+    if (!button) return true;
+
+    const dealers = Array.from(document.querySelectorAll('.where_to_buy.bottom .dealer:not(.hidden):not(.dealer_hidden)'));
+
+    if (MAX_MOBILE_CARDS < dealers.length) dealers.pop().classList.add('dealer_hidden');
+    if (MAX_MOBILE_CARDS < dealers.length) dealers.pop().classList.add('dealer_hidden');
+
+    document.querySelector('.where_to_buy.bottom .dealers_more').classList.remove('hidden');
+
+    if (MAX_MOBILE_CARDS === dealers.length) {
+      document.querySelector('.where_to_buy.bottom .dealers_less').classList.add('hidden');
+    }
   });
 
 });

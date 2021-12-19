@@ -46,6 +46,7 @@ const styles = [
   'pages/contacts',
   'pages/exploitation_and_care',
   'pages/payment_and_delivery',
+  'pages/study',
 
   'page/index/slider',
   'page/index/scroll',
