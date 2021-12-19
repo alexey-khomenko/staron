@@ -1,3 +1,12 @@
+-
+  cities = [
+    'Домодедово',
+    'Новосибирск',
+    'Санкт-Петербург',
+    'Краснодар',
+    'Москва',
+    'Тула',
+  ];
 link(rel="stylesheet", href="css/page/where_to_buy/top.css")
 script(src="js/page/where_to_buy/top.js")
 section(class="where_to_buy top")
@@ -11,8 +20,31 @@ section(class="where_to_buy top")
           span
             | Поиск дилера
         div(class="city-wrapper")
+          input(id="where_to_buy-city", name="city", type="text", placeholder="Ваш город...")
+          include ../../partials/svg/search
+          div(class="options hidden")
+            each city in cities
+              div(class="option", data-value=`${city}`)
+                span
+                  = city
 
-        div(class="type-wrapper")
+        details(class="type-wrapper select")
+          summary
+            input(id="where_to_buy-type", readonly="readonly", name="type", type="text", placeholder="Выберите тип продукта")
+
+            svg(width="12", height="8", viewBox="0 0 12 8", fill="none", xmlns="http://www.w3.org/2000/svg")
+              path(d="M10.59 0.589844L6 5.16984L1.41 0.589844L0 1.99984L6 7.99984L12 1.99984L10.59 0.589844Z", fill="currentColor")
+
+          div(class="options")
+            div(class="option", data-value="Листы")
+              span
+                | Листы
+            div(class="option", data-value="Кухни со столешницей")
+              span
+                | Кухни со столешницей
+            div(class="option", data-value="Мойки и раковины")
+              span
+                | Мойки и раковины
 
         button(type="submit", class="button default")
           span
