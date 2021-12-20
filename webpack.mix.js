@@ -104,6 +104,9 @@ const scripts = [
   'layout/modal',
   'layout/modal-application',
 
+  'pages/study_directions',
+  'pages/study_request',
+
   'page/index/slider',
   'page/index/scroll',
   'page/index/benefits',

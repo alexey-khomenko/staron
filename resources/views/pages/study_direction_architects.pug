@@ -16,10 +16,66 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  -
+    events = [
+      {
+        type: 'Семинар',
+        name: 'Cветопроницаемость камня Staron',
+
+        text: 'Как работать с продукцией Staron. Особенности и характеристики искуственного камня. Светопроницаемость камня и его применение в интерьерном дизайне.',
+      },
+      {
+        type: 'Практикум',
+        name: 'Особенности работы с камнем в сильно нагреваемых помещениях',
+
+        text: 'Как работать с продукцией Staron. Особенности и характеристики искуственного камня. Светопроницаемость камня и его применение в интерьерном дизайне.',
+      },
+    ];
   link(rel="stylesheet", href="css/pages/study_directions.css")
+  script(src="js/pages/study_directions.js")
   section(class="study_directions")
     div(class="container container-fixed")
+      h1(class="h1")
+        span(class="title")
+          | Обучение
+        span(class="subtitle")
+          | Для архитекторов
+      h2(class="h2")
+        | Архитекторам и дизайнерам
+      div(class="subtitle-text")
+        | В данном разделе вы найдете ближайшие события центра обучения.
+      h3(class="h3")
+        | Грядущих мероприятий
+        |
+        strong
+          = events.length
 
+      div(class="events")
+        each event in events
+          div(class="event")
+            div(class="type")
+              = event.type
+            div(class="top")
+              div(class="name")
+                = event.name
 
+            div(class="text")
+              = event.text
+
+            details(class="spoiler")
+              summary(class="spoiler-head")
+                span
+                  | Программа мероприятия
+                include ../partials/svg/chevrone-top
+              div(class="spoiler-body")
+                div(class="l")
+                  | ...
+                div(class="r")
+                  | ...
+
+            a(href="study_request.html", class="button default bottom_btn")
+              span
+                | Записаться
+              svg
 
   include ../page/study/bottom
