@@ -47,6 +47,8 @@ const styles = [
   'pages/exploitation_and_care',
   'pages/payment_and_delivery',
   'pages/study',
+  'pages/study_directions',
+  'pages/study_request',
 
   'page/index/slider',
   'page/index/scroll',
@@ -72,6 +74,8 @@ const styles = [
   'page/search/top',
   'page/search/results',
   'page/search/empty',
+
+  'page/study/bottom',
 
   'page/where_to_buy/top',
   'page/where_to_buy/bottom',

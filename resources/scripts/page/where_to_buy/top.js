@@ -171,8 +171,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const dealers = Array.from(document.querySelectorAll('.where_to_buy.bottom .dealer.dealer_hidden:not(.hidden)'));
 
-    if (0 < dealers.length) dealers.shift().classList.remove('dealer_hidden');
-    if (0 < dealers.length) dealers.shift().classList.remove('dealer_hidden');
+    for (let i = 0, n = MAX_MOBILE_CARDS; i < n; i++) {
+      if (0 < dealers.length) dealers.shift().classList.remove('dealer_hidden');
+    }
 
     document.querySelector('.where_to_buy.bottom .dealers_less').classList.remove('hidden');
 
@@ -188,8 +189,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const dealers = Array.from(document.querySelectorAll('.where_to_buy.bottom .dealer:not(.hidden):not(.dealer_hidden)'));
 
-    if (MAX_MOBILE_CARDS < dealers.length) dealers.pop().classList.add('dealer_hidden');
-    if (MAX_MOBILE_CARDS < dealers.length) dealers.pop().classList.add('dealer_hidden');
+    for (let i = 0, n = MAX_MOBILE_CARDS; i < n; i++) {
+      if (MAX_MOBILE_CARDS < dealers.length) dealers.pop().classList.add('dealer_hidden');
+    }
 
     document.querySelector('.where_to_buy.bottom .dealers_more').classList.remove('hidden');
 

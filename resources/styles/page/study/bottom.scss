@@ -1,0 +1,100 @@
+@import "././resources/styles/__/variables";
+
+.study--bottom {
+  background-color: $color-gray-050;
+  padding: 36px 0 84px;
+  color: $color-gray-900;
+  font-family: $font-family-1;
+  font-style: normal;
+  letter-spacing: 0.02em;
+
+  @media (max-width: $media-grid-md) {
+    padding: 50px 0 70px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    padding: 60px 0 90px;
+  }
+
+  .row {
+    display: grid;
+    grid-gap: 30px 76px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    @media (max-width: $media-grid-lg) {
+      grid-column-gap: 60px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      grid-column-gap: 16px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  .title {
+    margin: 0 0 20px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 30px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 19px;
+      line-height: 28px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 15px;
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+
+  .text {
+    font-size: 15px;
+    line-height: 26px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 13px;
+    }
+
+    &-svg {
+      position: relative;
+      padding-left: 32px;
+
+      @media (max-width: $media-grid-md) {
+        padding-left: 29px;
+      }
+    }
+  }
+
+  span {
+    display: block;
+    color: $color-gray-900;
+    font-weight: 400;
+  }
+
+  strong {
+    display: block;
+    color: $color-red-700;
+    font-weight: 600;
+  }
+
+  svg {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    color: $color-gray-900;
+  }
+}

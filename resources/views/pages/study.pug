@@ -5,13 +5,39 @@ block title
 
 block main
   -
-    breadcrumbs = {
-      0: {
+    breadcrumbs = [
+      {
         name: 'Обучение',
       },
-    };
+    ];
   include ../partials/pages/breadcrumbs
 
   link(rel="stylesheet", href="css/pages/study.css")
-  div(class="container container-fixed")
-    section(class="study")
+  section(class="study")
+    div(class="container container-fixed")
+      h1(class="h1")
+        | Обучение
+      div(class="row row-top")
+        div(class="l l-top text text-top")
+          h2(class="h2")
+            | Учебный центр компании Корос Альянс
+          p
+            | Цель создания центра - проведение бесплатных семинаров-практикумов, обучающих приемам обработки и продаж
+            | материалов торговых марок Staron®, Tempest®, Radianz®, Scorino®.
+          p
+            | Мы собрали воедино все мифы, которые есть об искусственном камне и в частности – камне Staron и Radianz.
+        img(src="images/study.png", class="r r-top")
+
+      h3(class="h3")
+        | Дата ближайшего семинара
+      div(class="text text-bottom")
+        | Чтобы узнать дату ближайшего семинара, выберите интересующее вас направление:
+
+      div(class="row row-bottom")
+        a(href="study_direction_architects.html", class="button circuit l l-bottom")
+          span
+            | Для дизайнеров и архитекторов
+        a(href="study_direction_handlers.html", class="button circuit r r-bottom")
+          span
+            | Для обработчиков
+  include ../page/study/bottom

@@ -1,0 +1,29 @@
+extends ../layouts/app
+
+block title
+  | Study Request
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Обучение',
+        link: 'study.html',
+      },
+      {
+        name: 'Для архитекторов',
+        link: 'study_direction_architects.html',
+      },
+      {
+        name: 'Запись на семинар',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/study_request.css")
+  section(class="study_request")
+    div(class="container container-fixed")
+
+
+
+  include ../page/study/bottom

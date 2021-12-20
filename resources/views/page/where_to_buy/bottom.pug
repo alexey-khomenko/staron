@@ -1,6 +1,6 @@
 -
-  dealers = {
-    0: {
+  dealers = [
+    {
       city: 'Домодедово',
       productTypes: 'Листы;Кухни со столешницей;Мойки и раковины',
       title: 'ООО «Компания Корос Альянс»',
@@ -16,7 +16,7 @@
         'office@koros-alianse.ru',
       ],
     },
-    1: {
+    {
       city: 'Новосибирск',
       productTypes: 'Мойки и раковины',
       title: 'Филиал в г. Новосибирск',
@@ -33,7 +33,7 @@
         'office@koros-alianse.ru',
       ],
     },
-    2: {
+    {
       city: 'Санкт-Петербург',
       productTypes: 'Листы;Мойки и раковины',
       title: 'Филиал в г. Санкт-Петербург',
@@ -50,7 +50,7 @@
         'office@koros-alianse.ru',
       ],
     },
-    3: {
+    {
       city: 'Санкт-Петербург',
       productTypes: 'Кухни со столешницей;Мойки и раковины',
       title: 'Филиал в г. Санкт-Петербург',
@@ -66,7 +66,7 @@
         'office@koros-alianse.ru',
       ],
     },
-    4: {
+    {
       city: 'Краснодар',
       productTypes: 'Кухни со столешницей',
       title: 'Филиал в г. Краснодар',
@@ -82,7 +82,7 @@
         'office@koros-alianse.ru',
       ],
     },
-    5: {
+    {
       city: 'Москва',
       productTypes: 'Листы;Кухни со столешницей;Мойки и раковины',
       title: 'Филиал в г. Москва',
@@ -98,7 +98,7 @@
         'office@koros-alianse.ru',
       ],
     },
-    6: {
+    {
       city: 'Тула',
       productTypes: 'Листы',
       title: 'Филиал в г. Тула',
@@ -114,7 +114,7 @@
         'office@koros-alianse-alianse.ru',
       ],
     },
-  };
+  ];
 link(rel="stylesheet", href="css/page/where_to_buy/bottom.css")
 script(src="js/page/where_to_buy/bottom.js")
 section(class="where_to_buy bottom")
@@ -136,7 +136,7 @@ section(class="where_to_buy bottom")
             | Всего найдено:
             |
             span
-              | 23
+              = dealers.length
 
         link(rel="stylesheet", href="css/page/where_to_buy/bottom-dealers.css")
         div(class="dealers", data-max-mobile-cards="2")

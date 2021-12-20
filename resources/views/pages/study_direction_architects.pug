@@ -1,0 +1,25 @@
+extends ../layouts/app
+
+block title
+  | Study Architects
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Обучение',
+        link: 'study.html',
+      },
+      {
+        name: 'Для архитекторов',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/study_directions.css")
+  section(class="study_directions")
+    div(class="container container-fixed")
+
+
+
+  include ../page/study/bottom
