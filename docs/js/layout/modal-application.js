@@ -37,11 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
     select.open = false;
 
     const country = document.querySelector('#application-country');
-    const countryId = document.querySelector('#application-country-id');
 
     country.classList.remove('error');
-    country.value = option.querySelector('span').textContent;
-    countryId.value = option.dataset.value;
+    country.value = option.dataset.value;
   });
 
 
@@ -61,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const tel = telEl.inputmask.unmaskedvalue();
     const email = emailEl.value.trim();
 
-    const country = document.querySelector('#application-country-id').value.trim();
+    const country = countryEl.value.trim();
     const message = messageEl.value.trim();
 
     if (!document.querySelector('#application-agree:checked')) return true;

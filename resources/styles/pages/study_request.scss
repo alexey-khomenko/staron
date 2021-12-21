@@ -1,11 +1,26 @@
 @import "././resources/styles/__/variables";
 
+@media (max-width: $media-grid-md) {
+  .breadcrumbs {
+    max-width: 400px !important;
+  }
+}
+
 .study_request {
   font-family: $font-family-1;
   font-style: normal;
 
   .container {
     position: relative;
+    padding-bottom: 85px;
+
+    @media (max-width: $media-grid-md) {
+      padding-bottom: 90px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      padding-bottom: 104px;
+    }
 
     &::before {
       content: "";
@@ -15,6 +30,11 @@
       top: -100px;
       right: -130px;
       width: 600px;
+
+      @media (max-width: $media-grid-lg) {
+        right: -115px;
+        width: 528px;
+      }
 
       @media (max-width: $media-grid-md) {
         right: -24px;
@@ -33,10 +53,14 @@
     position: relative;
     z-index: 1;
     margin: 0 0 60px;
-    width: 500px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     font-weight: 600;
+
+    @media (max-width: $media-grid-lg) {
+      width: 500px;
+    }
 
     @media (max-width: $media-grid-md) {
       margin-bottom: 45px;
@@ -88,12 +112,16 @@
     position: relative;
     z-index: 1;
     margin: 0 0 40px;
-    width: 500px;
+    width: 600px;
     color: $color-gray-900;
     font-weight: 600;
     letter-spacing: 0.02em;
     font-size: 30px;
     line-height: 36px;
+
+    @media (max-width: $media-grid-lg) {
+      width: 500px;
+    }
 
     @media (max-width: $media-grid-md) {
       margin-bottom: 30px;
@@ -110,31 +138,47 @@
   }
 
   .row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin: 0 0 50px;
 
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 64px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 112px;
+    }
+
     .text {
-      padding-right: 30px;
-      width: 580px;
-      color: $color-gray-900;
-      font-weight: 600;
+      margin-right: 330px;
+      width: 450px;
+      color: $color-black;
+      font-weight: 400;
       letter-spacing: 0.02em;
-      font-size: 30px;
-      line-height: 36px;
+      font-size: 17px;
+      line-height: 32px;
 
       @media (max-width: $media-grid-lg) {
+        margin-right: 240px;
         width: 450px;
       }
 
       @media (max-width: $media-grid-md) {
-        margin-bottom: 36px;
-        padding-right: 0;
-        width: 100%;
-        font-size: 24px;
-        line-height: 30px;
+        margin-right: 150px;
+        width: 300px;
+        font-size: 15px;
+        line-height: 28px;
       }
 
       @media (max-width: $media-grid-sm) {
-        font-size: 21px;
+        margin-right: 0;
+        width: 100%;
+        font-size: 14px;
         line-height: 26px;
       }
     }
@@ -149,7 +193,7 @@
 
     .t {
       margin-top: 5px;
-      color: $color-gray-900;
+      color: $color-white;
       font-weight: 700;
       letter-spacing: 0.02em;
       font-size: 21px;
@@ -169,7 +213,7 @@
 
     .b {
       margin-top: 7px;
-      color: $color-gray-500;
+      color: $color-gray-300;
       font-weight: 400;
       letter-spacing: 0.02em;
       font-size: 15px;
@@ -189,6 +233,22 @@
   }
 
   .card {
+    position: relative;
+    z-index: 1;
+    background-color: $color-gray-050;
+    padding: 72px 120px;
+
+    @media (max-width: $media-grid-lg) {
+      padding: 72px 104px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      padding: 60px 44px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      padding: 44px 24px 52px;
+    }
 
     .title {
 

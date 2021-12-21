@@ -16,6 +16,11 @@
       right: -130px;
       width: 600px;
 
+      @media (max-width: $media-grid-lg) {
+        right: -115px;
+        width: 528px;
+      }
+
       @media (max-width: $media-grid-md) {
         right: -24px;
         width: 312px;
