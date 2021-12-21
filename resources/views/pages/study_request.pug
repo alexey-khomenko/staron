@@ -24,7 +24,64 @@ block main
   script(src="js/pages/study_request.js")
   section(class="study_request")
     div(class="container container-fixed")
+      h1(class="h1")
+        span(class="title")
+          | Обучение
+        span(class="subtitle")
+          | Запись на семинар
+      h2(class="h2")
+        | Cветопроницаемость камня Staron
+      div(class="row")
+        div(class="text")
+          | Как работать с продукцией Staron. Особенности и характеристики искусственного камня.
+          br
+          | Светопроницаемость камня и его применение в интерьерном дизайне.
+        div(class="date")
+          div(class="t")
+            | 1 декабря
+          div(class="b")
+            | Суббота, 2022
+        div(class="time")
+          div(class="t")
+            | 17:00-20:00
+          div(class="b")
+            | Длительность 3ч
+      div(class="card")
+        div(class="title")
+          | Заявка на участие в семинаре
+        div(class="text")
+          | Для участия в семинаре необходимо заполнить заявку на участие. После отправки заявки вам будет зарезервировано место, а на почту придет письмо с датой, временем и адресом проведения семинара.
 
+        form(class="form study_request", novalidate="novalidate")
+          div(class="fieldset")
+            div(class="field")
+              label(class="label", for="study_request-name")
+                | Имя
+              input(class="input", id="study_request-name", name="name", type="text", placeholder="Ваше имя")
+            div(class="field")
+              label(class="label", for="study_request-last_name")
+                | Фамилия
+              input(class="input", id="study_request-last_name", name="last_name", type="text", placeholder="Ваша фамилия")
+            div(class="field")
+              label(class="label", for="study_request-tel")
+                | Телефон *
+              input(class="input", id="study_request-tel", name="tel", type="tel", placeholder="+7 (___) ___-__-__")
+            div(class="field")
+              label(class="label", for="study_request-email")
+                | E-mail *
+              input(class="input", id="study_request-email", name="email", type="email", placeholder="Ваш email")
+            div(class="field")
+              label(class="label", for="study_request-organization")
+                | Название вашей организации
+              input(class="input", id="study_request-organization", name="organization", type="text", placeholder="Ваша организация")
 
+          div(class="foot")
+            input(class="checkbox-input", type="checkbox")
+            label(class="checkbox-label")
+              |
+            button(type="submit", class="button default bottom_btn")
+              span
+                | Записаться
+              include ../partials/svg/calendar-check
 
   include ../page/study/bottom

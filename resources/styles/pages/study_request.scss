@@ -1,5 +1,247 @@
 @import "././resources/styles/__/variables";
 
 .study_request {
+  font-family: $font-family-1;
+  font-style: normal;
 
+  .container {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $color-gray-800;
+      bottom: 0;
+      top: -100px;
+      right: -130px;
+      width: 600px;
+
+      @media (max-width: $media-grid-md) {
+        right: -24px;
+        width: 312px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        top: 300px;
+        right: -10px;
+        width: 306px;
+      }
+    }
+  }
+
+  .h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 60px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 45px;
+      width: 400px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      width: 100%;
+    }
+
+    .title {
+      margin-bottom: 18px;
+      color: $color-black;
+      letter-spacing: 0.02em;
+      font-size: 48px;
+      line-height: 58px;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 36px;
+        line-height: 44px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        margin-bottom: 14px;
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    .subtitle {
+      text-transform: uppercase;
+      color: $color-gray-300;
+      letter-spacing: 0.14em;
+      font-size: 13px;
+      line-height: 18px;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 12px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 11px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 40px;
+    width: 500px;
+    color: $color-gray-900;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 30px;
+    line-height: 36px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 30px;
+      width: 400px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      width: 100%;
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+
+  .row {
+    margin: 0 0 50px;
+
+    .text {
+      padding-right: 30px;
+      width: 580px;
+      color: $color-gray-900;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      font-size: 30px;
+      line-height: 36px;
+
+      @media (max-width: $media-grid-lg) {
+        width: 450px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        margin-bottom: 36px;
+        padding-right: 0;
+        width: 100%;
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 21px;
+        line-height: 26px;
+      }
+    }
+
+    .date {
+      margin-right: auto;
+    }
+
+    .time {
+      margin-left: auto;
+    }
+
+    .t {
+      margin-top: 5px;
+      color: $color-gray-900;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      font-size: 21px;
+      line-height: 30px;
+
+      @media (max-width: $media-grid-md) {
+        margin-top: 0;
+        font-size: 19px;
+        line-height: 28px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 17px;
+        line-height: 24px;
+      }
+    }
+
+    .b {
+      margin-top: 7px;
+      color: $color-gray-500;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      font-size: 15px;
+      line-height: 28px;
+
+      @media (max-width: $media-grid-md) {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 13px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .card {
+
+    .title {
+
+    }
+
+    .text {
+
+    }
+
+    .form.study_request {
+
+    }
+
+    .fieldset {
+
+    }
+
+    .field {
+
+    }
+
+    .label {
+
+    }
+
+    .input {
+
+    }
+
+    .foot {
+
+    }
+
+    .checkbox-input {
+
+    }
+
+    .checkbox-label {
+
+    }
+
+    .bottom_btn {
+
+      svg {
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+
+        @media (max-width: $media-grid-sm) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
 }
