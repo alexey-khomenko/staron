@@ -77,6 +77,8 @@ const styles = [
 
   'page/study/bottom',
 
+  'page/study_directions/events',
+
   'page/where_to_buy/top',
   'page/where_to_buy/bottom',
   'page/where_to_buy/bottom-dealers',
@@ -104,7 +106,6 @@ const scripts = [
   'layout/modal',
   'layout/modal-application',
 
-  'pages/study_directions',
   'pages/study_request',
 
   'page/index/slider',

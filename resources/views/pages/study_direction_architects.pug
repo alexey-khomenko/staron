@@ -21,18 +21,31 @@ block main
       {
         type: 'Семинар',
         name: 'Cветопроницаемость камня Staron',
-
+        date: {
+          top: '1 декабря',
+          bottom: 'Суббота, 2022',
+        },
+        time: {
+          top: '17:00-20:00',
+          bottom: 'Длительность 3ч',
+        },
         text: 'Как работать с продукцией Staron. Особенности и характеристики искуственного камня. Светопроницаемость камня и его применение в интерьерном дизайне.',
       },
       {
         type: 'Практикум',
         name: 'Особенности работы с камнем в сильно нагреваемых помещениях',
-
+        date: {
+          top: '1 декабря',
+          bottom: 'Суббота, 2022',
+        },
+        time: {
+          top: '17:00-20:00',
+          bottom: 'Длительность 3ч',
+        },
         text: 'Как работать с продукцией Staron. Особенности и характеристики искуственного камня. Светопроницаемость камня и его применение в интерьерном дизайне.',
       },
     ];
   link(rel="stylesheet", href="css/pages/study_directions.css")
-  script(src="js/pages/study_directions.js")
   section(class="study_directions")
     div(class="container container-fixed")
       h1(class="h1")
@@ -50,6 +63,7 @@ block main
         strong
           = events.length
 
+      link(rel="stylesheet", href="css/page/study_directions/events.css")
       div(class="events")
         each event in events
           div(class="event")
@@ -58,7 +72,16 @@ block main
             div(class="top")
               div(class="name")
                 = event.name
-
+              div(class="date")
+                div(class="t")
+                  = event.date.top
+                div(class="b")
+                  = event.date.bottom
+              div(class="time")
+                div(class="t")
+                  = event.time.top
+                div(class="b")
+                  = event.time.bottom
             div(class="text")
               = event.text
 
@@ -69,9 +92,31 @@ block main
                 include ../partials/svg/chevrone-top
               div(class="spoiler-body")
                 div(class="l")
-                  | ...
+                  | 17:00 — 17:10
                 div(class="r")
-                  | ...
+                  | Знакомство со спикерами
+                div(class="l")
+                  | 17:10 — 18:10
+                div(class="r")
+                  | Светопроницаемые разновидности продукции Staron. Особенности работы
+                div(class="l")
+                  | 18:00 — 19:00
+                div(class="r")
+                  | Применение Delphi, Mangro и Augenblick в интерьере.
+                div(class="l")
+                  | 19:00 — 19:30
+                div(class="r")
+                  | Выступление специального гостя
+                div(class="l")
+                  | 19:30 — 20:00
+                div(class="r")
+                  | Вопросы и ответы
+                div(class="l")
+                  | 20:00 — 22:00
+                div(class="r")
+                  | Обмен опытом, знакомства с коллегами (по желанию).
+                  br
+                  | Для всех желающих работает снек-бар.
 
             a(href="study_request.html", class="button default bottom_btn")
               span
