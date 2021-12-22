@@ -8,6 +8,8 @@
     "/css/page/where_to_buy/bottom-dealers.css": "/css/page/where_to_buy/bottom-dealers.css",
     "/css/page/where_to_buy/bottom.css": "/css/page/where_to_buy/bottom.css",
     "/css/page/where_to_buy/top.css": "/css/page/where_to_buy/top.css",
+    "/css/page/study_request/modal.css": "/css/page/study_request/modal.css",
+    "/css/page/study_request/card.css": "/css/page/study_request/card.css",
     "/css/page/study_directions/events.css": "/css/page/study_directions/events.css",
     "/css/page/study/bottom.css": "/css/page/study/bottom.css",
     "/css/page/search/empty.css": "/css/page/search/empty.css",
@@ -195,6 +197,7 @@
     "/js/page/index/trend-right.js": "/js/page/index/trend-right.js",
     "/js/page/search/top.js": "/js/page/search/top.js",
     "/js/page/search/results.js": "/js/page/search/results.js",
+    "/js/page/study_request/modal.js": "/js/page/study_request/modal.js",
     "/js/page/where_to_buy/top.js": "/js/page/where_to_buy/top.js",
     "/js/page/where_to_buy/bottom.js": "/js/page/where_to_buy/bottom.js"
 }

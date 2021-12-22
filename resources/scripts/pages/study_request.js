@@ -1,3 +1,61 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  window.Inputmask({mask: '+7 (999) 999-99-99'}).mask('#study_request-tel');
+
+  document.addEventListener('submit', async function (e) {
+    if (!e.target.closest('.study_request .study_request_form')) return true;
+
+    e.preventDefault();
+
+    const nameEl = document.querySelector('#study_request-name');
+    const lastNameEl = document.querySelector('#study_request-last_name');
+    const telEl = document.querySelector('#study_request-tel');
+    const emailEl = document.querySelector('#study_request-email');
+    const organizationEl = document.querySelector('#application-country');
+
+    const name = nameEl.value.trim();
+    const lastName = lastNameEl.value.trim();
+    const tel = telEl.inputmask.unmaskedvalue();
+    const email = emailEl.value.trim();
+    const organization = organizationEl.value.trim();
+
+    if (!document.querySelector('#study_request-agree:checked')) return true;
+
+    let error = false;
+
+    if (10 !== tel.length) {
+      telEl.classList.add('error');
+      error = true;
+    }
+
+    const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!pattern.test(email)) {
+      emailEl.classList.add('error');
+      error = true;
+    }
+
+    if (error) return true;
+
+    const data = new FormData();
+    data.set('name', name);
+    data.set('lastName', lastName);
+    data.set('tel', tel);
+    data.set('email', email);
+    data.set('organization', organization);
+    const response = await fetch('/ajax/study_request_ajax.php', {method: 'POST', body: data});
+
+    let results = {
+      status: '+',
+      demo: '+',
+    };
+
+    if (response.status === 200) {
+      results = await response.json();
+    }
+
+    console.log('study_request form', results);
+
+    window.openModal('study_request_modal');
+  });
+
 });

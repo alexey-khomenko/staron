@@ -78,6 +78,8 @@ const styles = [
   'page/study/bottom',
 
   'page/study_directions/events',
+  'page/study_request/card',
+  'page/study_request/modal',
 
   'page/where_to_buy/top',
   'page/where_to_buy/bottom',
@@ -116,6 +118,8 @@ const scripts = [
 
   'page/search/top',
   'page/search/results',
+
+  'page/study_request/modal',
 
   'page/where_to_buy/top',
   'page/where_to_buy/bottom',

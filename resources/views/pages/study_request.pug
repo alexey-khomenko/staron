@@ -46,13 +46,15 @@ block main
             | 17:00-20:00
           div(class="b")
             | Длительность 3ч
+
+      link(rel="stylesheet", href="css/page/study_request/card.css")
       div(class="card")
         div(class="title")
           | Заявка на участие в семинаре
         div(class="text")
           | Для участия в семинаре необходимо заполнить заявку на участие. После отправки заявки вам будет зарезервировано место, а на почту придет письмо с датой, временем и адресом проведения семинара.
 
-        form(class="form study_request", novalidate="novalidate")
+        form(class="study_request_form", novalidate="novalidate")
           div(class="fieldset")
             div(class="field")
               label(class="label", for="study_request-name")
@@ -63,10 +65,12 @@ block main
                 | Фамилия
               input(class="input", id="study_request-last_name", name="last_name", type="text", placeholder="Ваша фамилия")
             div(class="field")
+              //- todo error
               label(class="label", for="study_request-tel")
                 | Телефон *
               input(class="input", id="study_request-tel", name="tel", type="tel", placeholder="+7 (___) ___-__-__")
             div(class="field")
+              //- todo error
               label(class="label", for="study_request-email")
                 | E-mail *
               input(class="input", id="study_request-email", name="email", type="email", placeholder="Ваш email")
@@ -76,9 +80,14 @@ block main
               input(class="input", id="study_request-organization", name="organization", type="text", placeholder="Ваша организация")
 
           div(class="foot")
-            input(class="checkbox-input", type="checkbox")
-            label(class="checkbox-label")
+            input(id="study_request-agree", name="agree", class="checkbox-input", type="checkbox")
+            label(class="checkbox-label", for="study_request-agree")
+              | Я ознакомлен с
               |
+              a(href="404.html", target="_blank")
+                | политикой конфиденциальности
+              |
+              | и обработки персональных данных
             button(type="submit", class="button default bottom_btn")
               span
                 | Записаться

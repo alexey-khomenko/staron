@@ -1,0 +1,270 @@
+.study_request .card {
+  position: relative;
+  z-index: 1;
+  background-color: #F8F8F8;
+  padding: 72px 120px;
+}
+@media (max-width: 1422.98px) {
+  .study_request .card {
+    padding: 72px 104px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .study_request .card {
+    padding: 60px 44px;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .card {
+    padding: 44px 24px 52px;
+  }
+}
+.study_request .card .title {
+  margin-bottom: 30px;
+  color: #27272B;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .card .title {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+.study_request .card .text {
+  margin-bottom: 48px;
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .text {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .card .text {
+    margin-bottom: 28px;
+  }
+}
+.study_request .card .fieldset {
+  margin-bottom: 68px;
+  display: grid;
+  grid-gap: 40px 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1422.98px) {
+  .study_request .card .fieldset {
+    grid-column-gap: 16px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .fieldset {
+    margin-bottom: 40px;
+    grid-column-gap: 20px;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .card .fieldset {
+    margin-bottom: 36px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+}
+.study_request .card .field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #27272B;
+  padding-bottom: 10px;
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .field:last-child {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .card .field:last-child {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+  }
+}
+.study_request .card .label {
+  color: #7C7C81;
+  font-size: 14px;
+  line-height: 22px;
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .label {
+    font-size: 13px;
+  }
+}
+.study_request .card .input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  color: #000000;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .input {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+.study_request .card .input::-moz-placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: #AEAEB1;
+}
+.study_request .card .input:-ms-input-placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: #AEAEB1;
+}
+.study_request .card .input::placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: #AEAEB1;
+}
+.study_request .card .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.study_request .card .checkbox-input {
+  display: none;
+}
+.study_request .card .checkbox-label {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 36px;
+  color: #000000;
+  width: 450px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+}
+@media (max-width: 1422.98px) {
+  .study_request .card .checkbox-label {
+    width: 403px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .checkbox-label {
+    margin-bottom: 42px;
+    width: 100%;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .card .checkbox-label {
+    margin-bottom: 30px;
+  }
+}
+.study_request .card .checkbox-label::after {
+  border-color: #DD2929;
+}
+@media (pointer: coarse) {
+  .study_request .card .checkbox-label:active::after {
+    border-color: #ED8585;
+  }
+}
+@media (hover: hover) {
+  .study_request .card .checkbox-label:hover::after {
+    border-color: #ED8585;
+  }
+}
+.study_request .card .checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid #636368;
+}
+.study_request .card .checkbox-label a {
+  color: #DD2929;
+  text-decoration: underline;
+}
+@media (pointer: coarse) {
+  .study_request .card .checkbox-label a:active {
+    color: #ED8585;
+  }
+}
+@media (hover: hover) {
+  .study_request .card .checkbox-label a:hover {
+    color: #ED8585;
+  }
+}
+.study_request .card .checkbox-input:checked + .checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 9px;
+  height: 6px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  transform: rotate(-48deg);
+}
+.study_request .card .bottom_btn {
+  margin-left: 20px;
+  width: 450px;
+  height: 70px;
+}
+@media (max-width: 1422.98px) {
+  .study_request .card .bottom_btn {
+    margin-left: 16px;
+    width: 403px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .bottom_btn {
+    margin-left: 0;
+    width: 100%;
+    height: 52px;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .card .bottom_btn {
+    font-size: 15px;
+    height: 42px;
+  }
+}
+.study_request .card .bottom_btn svg {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 750.98px) {
+  .study_request .card .bottom_btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}

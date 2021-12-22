@@ -380,10 +380,11 @@
                 <div class="b">Длительность 3ч</div>
               </div>
             </div>
+            <link rel="stylesheet" href="css/page/study_request/card.css">
             <div class="card">
               <div class="title">Заявка на участие в семинаре</div>
               <div class="text">Для участия в семинаре необходимо заполнить заявку на участие. После отправки заявки вам будет зарезервировано место, а на почту придет письмо с датой, временем и адресом проведения семинара.</div>
-              <form class="form study_request" novalidate="novalidate">
+              <form class="study_request_form" novalidate="novalidate">
                 <div class="fieldset">
                   <div class="field">
                     <label class="label" for="study_request-name">Имя</label>
@@ -407,8 +408,12 @@
                   </div>
                 </div>
                 <div class="foot">
-                  <input class="checkbox-input" type="checkbox">
-                  <label class="checkbox-label"></label>
+                  <input class="checkbox-input" id="study_request-agree" name="agree" type="checkbox">
+                  <label class="checkbox-label" for="study_request-agree">
+                    Я ознакомлен с
+                    <a href="404.html" target="_blank">политикой конфиденциальности</a>
+                    и обработки персональных данных
+                  </label>
                   <button class="button default bottom_btn" type="submit"><span>Записаться</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15 7.50065L13.825 6.31732L8.33333 11.809L6.175 9.65898L5 10.834L8.33333 14.1673L15 7.50065ZM15.8333 2.50065H12.35C12 1.53398 11.0833 0.833984 10 0.833984C8.91667 0.833984 8 1.53398 7.65 2.50065H4.16667C4.05 2.50065 3.94167 2.50898 3.83333 2.53398C3.50833 2.60065 3.21667 2.76732 2.99167 2.99232C2.84167 3.14232 2.71667 3.32565 2.63333 3.52565C2.55 3.71732 2.5 3.93398 2.5 4.16732V15.834C2.5 16.059 2.55 16.284 2.63333 16.484C2.71667 16.684 2.84167 16.859 2.99167 17.0173C3.21667 17.2423 3.50833 17.409 3.83333 17.4757C3.94167 17.4923 4.05 17.5007 4.16667 17.5007H15.8333C16.75 17.5007 17.5 16.7507 17.5 15.834V4.16732C17.5 3.25065 16.75 2.50065 15.8333 2.50065ZM10 2.29232C10.3417 2.29232 10.625 2.57565 10.625 2.91732C10.625 3.25898 10.3417 3.54232 10 3.54232C9.65833 3.54232 9.375 3.25898 9.375 2.91732C9.375 2.57565 9.65833 2.29232 10 2.29232ZM15.8333 15.834H4.16667V4.16732H15.8333V15.834Z" fill="currentColor"></path>
@@ -601,6 +606,21 @@
               <button class="button default submit" type="submit"><span>Отправить заявку</span></button>
             </section>
           </form>
+        </div>
+      </section>
+      <link rel="stylesheet" href="css/page/study_request/modal.css">
+      <script src="js/page/study_request/modal.js"></script>
+      <section class="modal-popup study_request_modal">
+        <div class="wrapper">
+          <div class="head">
+            <h4 class="h4">Спасибо за заявку</h4>
+            <button class="close" type="button">
+              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="36.5684" y1="2.0938" x2="2.0918" y2="36.5705" stroke="currentColor" stroke-width="2"></line>
+                <line x1="35.8613" y1="36.5704" x2="2.3846" y2="2.0937" stroke="currentColor" stroke-width="2"></line>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
     </div>
