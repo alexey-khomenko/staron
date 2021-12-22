@@ -91,6 +91,20 @@
         grid-column-end: span 1;
       }
     }
+
+    svg {
+      color: transparent;
+      display: block;
+      width: 17px;
+      height: auto;
+      position: absolute;
+      top: 28px;
+      right: 3px;
+    }
+
+    &.error svg {
+      color: $color-red-700;
+    }
   }
 
   .label {

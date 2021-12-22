@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let error = false;
 
     if (10 !== tel.length) {
-      telEl.classList.add('error');
+      telEl.closest('.field').classList.add('error');
       error = true;
     }
 
     const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!pattern.test(email)) {
-      emailEl.classList.add('error');
+      emailEl.closest('.field').classList.add('error');
       error = true;
     }
 
@@ -56,6 +56,14 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('study_request form', results);
 
     window.openModal('study_request_modal');
+  });
+
+  document.addEventListener('focusin', function (e) {
+    const tel = e.target.closest('#study_request-tel');
+    if (tel) tel.closest('.field').classList.remove('error');
+
+    const email = e.target.closest('#study_request-email');
+    if (email) email.closest('.field').classList.remove('error');
   });
 
 });

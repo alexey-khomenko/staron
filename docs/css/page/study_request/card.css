@@ -97,6 +97,18 @@
     grid-column-end: span 1;
   }
 }
+.study_request .card .field svg {
+  color: transparent;
+  display: block;
+  width: 17px;
+  height: auto;
+  position: absolute;
+  top: 28px;
+  right: 3px;
+}
+.study_request .card .field.error svg {
+  color: #DD2929;
+}
 .study_request .card .label {
   color: #7C7C81;
   font-size: 14px;
