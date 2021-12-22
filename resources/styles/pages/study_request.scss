@@ -1,8 +1,18 @@
 @import "././resources/styles/__/variables";
 
-@media (max-width: $media-grid-md) {
-  .breadcrumbs {
-    max-width: 400px !important;
+.breadcrumbs {
+  width: 550px !important;
+
+  @media (max-width: $media-grid-lg) {
+    width: 500px !important;
+  }
+
+  @media (max-width: $media-grid-md) {
+    width: 400px !important;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    width: 100% !important;
   }
 }
 
@@ -29,7 +39,7 @@
       bottom: 0;
       top: -100px;
       right: -130px;
-      width: 600px;
+      width: 550px;
 
       @media (max-width: $media-grid-lg) {
         right: -115px;
@@ -53,7 +63,7 @@
     position: relative;
     z-index: 1;
     margin: 0 0 60px;
-    width: 600px;
+    width: 550px;
     display: flex;
     flex-direction: column;
     font-weight: 600;
@@ -112,7 +122,7 @@
     position: relative;
     z-index: 1;
     margin: 0 0 40px;
-    width: 600px;
+    width: 550px;
     color: $color-gray-900;
     font-weight: 600;
     letter-spacing: 0.02em;
@@ -137,6 +147,24 @@
     }
   }
 
+  .text {
+    color: $color-black;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 17px;
+    line-height: 32px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+      line-height: 28px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
   .row {
     position: relative;
     z-index: 1;
@@ -155,31 +183,22 @@
     }
 
     .text {
-      margin-right: 330px;
-      width: 450px;
-      color: $color-black;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      font-size: 17px;
-      line-height: 32px;
+      margin-right: 290px;
+      width: 550px;
 
       @media (max-width: $media-grid-lg) {
-        margin-right: 240px;
-        width: 450px;
+        margin-right: 215px;
+        width: 500px;
       }
 
       @media (max-width: $media-grid-md) {
-        margin-right: 150px;
-        width: 300px;
-        font-size: 15px;
-        line-height: 28px;
+        margin-right: 55px;
+        width: 400px;
       }
 
       @media (max-width: $media-grid-sm) {
         margin-right: 0;
         width: 100%;
-        font-size: 14px;
-        line-height: 26px;
       }
     }
 
@@ -251,35 +270,88 @@
     }
 
     .title {
+      margin-bottom: 30px;
+      color: $color-gray-900;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      font-size: 30px;
+      line-height: 36px;
 
+      @media (max-width: $media-grid-md) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 21px;
+        line-height: 26px;
+      }
     }
 
     .text {
+      margin-bottom: 48px;
 
-    }
+      @media (max-width: $media-grid-md) {
+        margin-bottom: 36px;
+      }
 
-    .form.study_request {
-
+      @media (max-width: $media-grid-sm) {
+        margin-bottom: 28px;
+      }
     }
 
     .fieldset {
+      margin-bottom: 68px;
+      display: grid;
+      grid-gap: 40px 20px;
+      grid-template-columns: repeat(2, 1fr);
 
+      @media (max-width: $media-grid-lg) {
+        grid-column-gap: 16px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        grid-column-gap: 20px;
+      }
     }
 
     .field {
-
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border-bottom: 1px solid $color-gray-900;
+      padding-bottom: 10px;
     }
 
     .label {
-
+      color: $color-gray-500;
+      font-size: 14px;
+      line-height: 22px;
     }
 
     .input {
-
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: auto;
+      border: none;
+      background-color: transparent;
+      color: $color-black;
+      font-size: 17px;
+      line-height: 24px;
     }
 
     .foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
+      @media (max-width: $media-grid-md) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     .checkbox-input {
@@ -287,10 +359,28 @@
     }
 
     .checkbox-label {
-
+      margin-bottom: 42px;
     }
 
     .bottom_btn {
+      margin-left: 20px;
+      width: 450px;
+      height: 70px;
+
+      @media (max-width: $media-grid-lg) {
+        margin-left: 16px;
+        width: 403px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        margin-left: 0;
+        width: 100%;
+        height: 52px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+
+      }
 
       svg {
         margin-left: 5px;

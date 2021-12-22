@@ -1,8 +1,22 @@
-@media (max-width: 1262.98px) {
+.breadcrumbs {
+  width: 550px !important;
+}
+@media (max-width: 1422.98px) {
   .breadcrumbs {
-    max-width: 400px !important;
+    width: 500px !important;
   }
 }
+@media (max-width: 1262.98px) {
+  .breadcrumbs {
+    width: 400px !important;
+  }
+}
+@media (max-width: 750.98px) {
+  .breadcrumbs {
+    width: 100% !important;
+  }
+}
+
 .study_request {
   font-family: "Proxima Nova", "Jost", sans-serif;
   font-style: normal;
@@ -28,7 +42,7 @@
   bottom: 0;
   top: -100px;
   right: -130px;
-  width: 600px;
+  width: 550px;
 }
 @media (max-width: 1422.98px) {
   .study_request .container::before {
@@ -53,7 +67,7 @@
   position: relative;
   z-index: 1;
   margin: 0 0 60px;
-  width: 600px;
+  width: 550px;
   display: flex;
   flex-direction: column;
   font-weight: 600;
@@ -116,7 +130,7 @@
   position: relative;
   z-index: 1;
   margin: 0 0 40px;
-  width: 600px;
+  width: 550px;
   color: #27272B;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -143,6 +157,25 @@
     line-height: 26px;
   }
 }
+.study_request .text {
+  color: #000000;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 32px;
+}
+@media (max-width: 1262.98px) {
+  .study_request .text {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .text {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
 .study_request .row {
   position: relative;
   z-index: 1;
@@ -163,34 +196,25 @@
   }
 }
 .study_request .row .text {
-  margin-right: 330px;
-  width: 450px;
-  color: #000000;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  font-size: 17px;
-  line-height: 32px;
+  margin-right: 290px;
+  width: 550px;
 }
 @media (max-width: 1422.98px) {
   .study_request .row .text {
-    margin-right: 240px;
-    width: 450px;
+    margin-right: 215px;
+    width: 500px;
   }
 }
 @media (max-width: 1262.98px) {
   .study_request .row .text {
-    margin-right: 150px;
-    width: 300px;
-    font-size: 15px;
-    line-height: 28px;
+    margin-right: 55px;
+    width: 400px;
   }
 }
 @media (max-width: 750.98px) {
   .study_request .row .text {
     margin-right: 0;
     width: 100%;
-    font-size: 14px;
-    line-height: 26px;
   }
 }
 .study_request .row .date {
@@ -260,6 +284,112 @@
 @media (max-width: 750.98px) {
   .study_request .card {
     padding: 44px 24px 52px;
+  }
+}
+.study_request .card .title {
+  margin-bottom: 30px;
+  color: #27272B;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .card .title {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+.study_request .card .text {
+  margin-bottom: 48px;
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .text {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 750.98px) {
+  .study_request .card .text {
+    margin-bottom: 28px;
+  }
+}
+.study_request .card .fieldset {
+  margin-bottom: 68px;
+  display: grid;
+  grid-gap: 40px 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1422.98px) {
+  .study_request .card .fieldset {
+    grid-column-gap: 16px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .fieldset {
+    grid-column-gap: 20px;
+  }
+}
+.study_request .card .field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #27272B;
+  padding-bottom: 10px;
+}
+.study_request .card .label {
+  color: #7C7C81;
+  font-size: 14px;
+  line-height: 22px;
+}
+.study_request .card .input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  color: #000000;
+  font-size: 17px;
+  line-height: 24px;
+}
+.study_request .card .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.study_request .card .checkbox-label {
+  margin-bottom: 42px;
+}
+.study_request .card .bottom_btn {
+  margin-left: 20px;
+  width: 450px;
+  height: 70px;
+}
+@media (max-width: 1422.98px) {
+  .study_request .card .bottom_btn {
+    margin-left: 16px;
+    width: 403px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .study_request .card .bottom_btn {
+    margin-left: 0;
+    width: 100%;
+    height: 52px;
   }
 }
 .study_request .card .bottom_btn svg {
