@@ -53,9 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
       results = await response.json();
     }
 
-    console.log('study_request form', results);
+    document.querySelector('.study_request_form .checkbox-label').click();
 
     window.openModal('study_request_modal');
+
+    console.log('study_request form', results);
   });
 
   document.addEventListener('focusin', function (e) {

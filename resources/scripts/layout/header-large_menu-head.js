@@ -9,6 +9,8 @@ window.closeHeaderLargeMenu = function () {
   document.querySelector('.header-large_menu').classList.add('hidden');
   document.querySelector('.header .button.hamburger').classList.remove('active');
 
+  if (document.querySelector('.modal-popup.opened')) return true;
+
   window.openBody();
 };
 

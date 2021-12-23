@@ -1,1 +1,67 @@
-
+.modal-popup.study_request_modal {
+  display: none;
+  max-width: 480px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+  padding: 50px;
+}
+@media (max-width: 1262.98px) {
+  .modal-popup.study_request_modal {
+    max-width: 720px;
+    padding: 32px;
+  }
+}
+@media (max-width: 750.98px) {
+  .modal-popup.study_request_modal {
+    max-width: 360px;
+    padding: 24px;
+  }
+}
+.modal-popup.study_request_modal.opened {
+  display: block;
+}
+.modal-popup.study_request_modal .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.modal-popup.study_request_modal .h4 {
+  margin: 0;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.modal-popup.study_request_modal .close {
+  flex-shrink: 0;
+  margin-left: 4px;
+  color: #000000;
+}
+@media (pointer: coarse) {
+  .modal-popup.study_request_modal .close:active {
+    color: #7C7C81;
+  }
+}
+@media (hover: hover) {
+  .modal-popup.study_request_modal .close:hover {
+    color: #7C7C81;
+  }
+}
+.modal-popup.study_request_modal .body .button {
+  width: 218px;
+  height: 52px;
+}
+@media (max-width: 750.98px) {
+  .modal-popup.study_request_modal .body .button {
+    font-size: 15px;
+    width: 144px;
+    height: 42px;
+  }
+}
