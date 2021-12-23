@@ -268,15 +268,13 @@
   color: #DD2929;
   text-decoration: underline;
 }
-@media (pointer: coarse) {
-  .modal-popup.application .checkbox-right a:active {
-    color: #ED8585;
-  }
-}
 @media (hover: hover) {
   .modal-popup.application .checkbox-right a:hover {
     color: #ED8585;
   }
+}
+.modal-popup.application .checkbox-right a:active {
+  color: #ED8585;
 }
 .modal-popup.application .select {
   position: relative;

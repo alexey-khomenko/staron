@@ -284,16 +284,14 @@
       color: $color-red-700;
       text-decoration: underline;
 
-      @media (pointer: coarse) {
-        &:active {
-          color: $color-red-300;
-        }
-      }
-
       @media (hover: hover) {
         &:hover {
           color: $color-red-300;
         }
+      }
+
+      &:active {
+        color: $color-red-300;
       }
     }
   }
