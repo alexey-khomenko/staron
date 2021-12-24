@@ -1,0 +1,98 @@
+.collection-wrapper .collection_filter .filters {
+  padding: 40px 34px 44px;
+  background-color: #F8F8F8;
+}
+.collection-wrapper .collection_filter .btn-filter-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  color: #27272B;
+  margin-bottom: 28px;
+}
+.collection-wrapper .collection_filter .btn-filter-title span {
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 19px;
+  line-height: 28px;
+}
+@media (max-width: 1422.98px) {
+  .collection-wrapper .collection_filter .btn-filter-title span {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .collection-wrapper .collection_filter .btn-filter-title span {
+    font-size: 19px;
+  }
+}
+@media (max-width: 750.98px) {
+  .collection-wrapper .collection_filter .btn-filter-title span {
+    font-size: 17px;
+  }
+}
+.collection-wrapper .collection_filter .btn-filter-title svg {
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+}
+.collection-wrapper .collection_filter .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.collection-wrapper .collection_filter .link {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #000000;
+}
+@media (hover: hover) {
+  .collection-wrapper .collection_filter .link:hover {
+    color: #636368;
+  }
+}
+.collection-wrapper .collection_filter .link:active {
+  color: #4A4A51;
+}
+.collection-wrapper .collection_filter .link span {
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 24px;
+}
+.collection-wrapper .collection_filter .link svg {
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+}
+.collection-wrapper .collection_filter .filter_reset {
+  margin-top: 14px;
+  width: 100%;
+  height: 52px;
+}
+@media (max-width: 750.98px) {
+  .collection-wrapper .collection_filter .filter_reset {
+    height: 42px;
+    font-size: 15px;
+  }
+}
+.collection-wrapper .collection_filter .filter_reset svg {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 750.98px) {
+  .collection-wrapper .collection_filter .filter_reset svg {
+    height: 16px;
+    font-size: 16px;
+  }
+}

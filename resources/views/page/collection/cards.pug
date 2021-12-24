@@ -1,0 +1,55 @@
+-
+  collections = [
+    {
+      title: 'Supreme',
+      image: 'images/content-collection-1.jpg',
+      link: 'product.html',
+    },
+    {
+      title: 'Aspen',
+      image: 'images/content-collection-2.jpg',
+      link: 'product.html',
+    },
+    {
+      title: 'Metallic',
+      image: 'images/content-collection-3.jpg',
+      link: 'product.html',
+    },
+    {
+      title: 'Tempest',
+      image: 'images/content-collection-4.jpg',
+      link: 'product.html',
+    },
+    {
+      title: 'Pebble',
+      image: 'images/content-collection-5.jpg',
+      link: 'product.html',
+    },
+    {
+      title: 'Sanded',
+      image: 'images/content-collection-6.jpg',
+      link: 'product.html',
+    },
+    {
+      title: 'Solid',
+      image: 'images/content-collection-7.jpg',
+      link: 'product.html',
+    },
+    {
+      title: 'Mosaic',
+      image: 'images/content-collection-8.jpg',
+      link: 'product.html',
+    },
+    {
+      title: 'Quarry',
+      image: 'images/content-collection-9.jpg',
+      link: 'product.html',
+    },
+  ];
+link(rel="stylesheet", href="css/page/collection/cards.css")
+section(class="collection_cards")
+  each collection in collections
+    a(href=`${collection.link}`, class="card")
+      span(class="title")
+        = collection.title
+      img(src=`${collection.image}`, alt=`${collection.title}`, class="img")

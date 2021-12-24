@@ -1,0 +1,68 @@
+@import "././resources/styles/__/variables";
+
+.collection-h1 {
+  margin: 0 0 58px;
+  color: $color-black;
+  font-family: $font-family-1;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 48px;
+  line-height: 58px;
+
+  @media (max-width: $media-grid-md) {
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.collection-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 92px;
+
+  @media (max-width: $media-grid-md) {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 106px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    margin-bottom: 58px;
+  }
+}
+
+.collection-left {
+  flex-shrink: 0;
+  width: 338px;
+  margin-right: 16px;
+
+  @media (max-width: $media-grid-lg) {
+    width: 298px;
+  }
+
+  @media (max-width: $media-grid-md) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    margin-bottom: 15px;
+  }
+}
+
+.collection-right {
+  flex-grow: 1;
+
+  @media (max-width: $media-grid-md) {
+    width: 100%;
+  }
+}

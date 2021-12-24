@@ -1,0 +1,28 @@
+extends ../layouts/app
+
+block title
+  | Catalog
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Каталог продукции Staron',
+        link: 'catalog.html',
+      },
+      {
+        name: 'Коллекция SUPREME',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/collection.css")
+  div(class="container container-fixed")
+    h1(class="collection-h1")
+      | Коллекция SUPREME
+    div(class="collection-wrapper")
+      div(class="collection-left")
+        include ../page/collection/filter
+      div(class="collection-right")
+        include ../page/collection/cards
+        include ../page/collection/buttons
