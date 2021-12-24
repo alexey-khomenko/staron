@@ -25,7 +25,6 @@
   position: relative;
   z-index: 0;
   text-decoration: none;
-  background-color: #F8F8F8;
 }
 .catalog-wrapper .catalog_cards .card::before {
   content: "";

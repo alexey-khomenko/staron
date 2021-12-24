@@ -1,1 +1,15 @@
-
+.catalog-wrapper .catalog_buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.catalog-wrapper .catalog_buttons .btn-home {
+  margin-right: auto;
+  width: 230px;
+  height: 52px;
+}
+.catalog-wrapper .catalog_buttons .btn-home svg {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
