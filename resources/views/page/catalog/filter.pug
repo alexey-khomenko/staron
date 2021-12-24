@@ -1,6 +1,20 @@
 link(rel="stylesheet", href="css/page/catalog/filter.css")
 section(class="catalog_filter")
   div(class="filters")
+    button(type="button", class="btn-filter-title")
+      span
+        | Фильтры по продукции
+      include ../../partials/svg/filter
+
+    div(class="links")
+      a(href="exploitation_and_care.html", class="link")
+        span
+          | Эксплуатация и уход
+        include ../../partials/svg/triangle
+      a(href="404.html", class="link")
+        span
+          | Документация
+        include ../../partials/svg/triangle
 
   button(type="button", class="button circuit filter_reset")
     span
