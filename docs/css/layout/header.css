@@ -1,7 +1,11 @@
 .header {
   background-color: #27272B;
   font-family: "Proxima Nova", "Jost", sans-serif;
-  position: relative;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .header a {
   text-align: center;

@@ -1,3 +1,5 @@
+@import "././resources/styles/__/variables";
+
 .main {
   display: flex;
   flex-direction: column;
@@ -5,4 +7,9 @@
   overflow: hidden;
   background-color: #FFFFFF;
   flex-grow: 1;
+  margin-top: 150px;
+
+  @media (max-width: $media-grid-md) {
+    margin-top: 104px;
+  }
 }

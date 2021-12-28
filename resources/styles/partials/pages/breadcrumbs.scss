@@ -1,12 +1,16 @@
 @import "././resources/styles/__/variables";
 
 .breadcrumbs {
-  margin: 58px 0 16px;
+  margin: 56px 0 16px;
   padding: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
+
+  @media (max-width: $media-grid-sm) {
+    margin-top: 52px;
+  }
 
   li {
     margin: 0;
