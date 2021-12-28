@@ -1,0 +1,107 @@
+.modal-popup.collection_modal {
+  display: none;
+  max-width: 1090px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+  padding: 32px;
+}
+@media (max-width: 1262.98px) {
+  .modal-popup.collection_modal {
+    max-width: 720px;
+  }
+}
+@media (max-width: 750.98px) {
+  .modal-popup.collection_modal {
+    max-width: 360px;
+    padding: 24px;
+  }
+}
+.modal-popup.collection_modal.opened {
+  display: block;
+}
+.modal-popup.collection_modal .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.modal-popup.collection_modal .logo svg {
+  display: block;
+  width: 116px;
+  height: 40px;
+}
+.modal-popup.collection_modal .close {
+  flex-shrink: 0;
+  margin-left: 4px;
+  color: #E0E0E1;
+}
+@media (hover: hover) {
+  .modal-popup.collection_modal .close:hover {
+    color: #7C7C81;
+  }
+}
+.modal-popup.collection_modal .close:active {
+  color: #000000;
+}
+.modal-popup.collection_modal .close svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.modal-popup.collection_modal .body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.modal-popup.collection_modal .images {
+  flex-shrink: 0;
+  margin-right: 40px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 120px 392px;
+  grid-template-rows: repeat(3, 120px);
+}
+.modal-popup.collection_modal .images img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: darkseagreen;
+}
+.modal-popup.collection_modal .img-small {
+  width: 120px;
+  height: 120px;
+}
+.modal-popup.collection_modal .img-0 {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+}
+.modal-popup.collection_modal .img-1 {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+}
+.modal-popup.collection_modal .img-2 {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 3;
+  grid-row-end: span 1;
+}
+.modal-popup.collection_modal .img-big {
+  width: 392px;
+  height: 392px;
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  grid-row-start: 1;
+  grid-row-end: span 3;
+}
+.modal-popup.collection_modal .texts {
+  flex-grow: 1;
+  height: 200px;
+  background-color: darkseagreen;
+}

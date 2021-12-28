@@ -67,6 +67,7 @@ const styles = [
   'page/collection/buttons',
   'page/collection/cards',
   'page/collection/filter',
+  'page/collection/modal',
 
   'page/contacts/top',
   'page/contacts/middle',
@@ -119,6 +120,14 @@ const scripts = [
   'layout/modal-application',
 
   'pages/study_request',
+
+  'page/catalog/buttons',
+  'page/catalog/filter',
+
+  'page/collection/buttons',
+  'page/collection/cards',
+  'page/collection/filter',
+  'page/collection/modal',
 
   'page/index/slider',
   'page/index/scroll',
