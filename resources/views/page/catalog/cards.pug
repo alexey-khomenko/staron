@@ -47,7 +47,7 @@
     },
   ];
 link(rel="stylesheet", href="css/page/catalog/cards.css")
-section(class="catalog_cards")
+section(class="catalog_cards", data-all="11", data-limit="9")
   each collection in collections
     a(href=`${collection.link}`, class="card")
       span(class="title")
