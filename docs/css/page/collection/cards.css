@@ -54,6 +54,7 @@
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.02em;
+  white-space: nowrap;
   font-size: 17px;
   line-height: 24px;
 }
@@ -67,7 +68,6 @@
     top: 12px;
     font-size: 14px;
     line-height: 22px;
-    white-space: nowrap;
   }
 }
 .collection-wrapper .collection_cards .btn-link, .collection-wrapper .collection_cards .btn-popup {

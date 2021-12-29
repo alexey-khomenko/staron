@@ -68,6 +68,8 @@ const styles = [
   'page/collection/cards',
   'page/collection/filter',
   'page/collection/modal',
+  'page/collection/modal-images',
+  'page/collection/modal-texts',
 
   'page/contacts/top',
   'page/contacts/middle',

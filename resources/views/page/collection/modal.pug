@@ -8,6 +8,8 @@ section(class="modal-popup collection_modal")
       button(type="button", class="close")
         include ../../partials/svg/close-2
     div(class="body")
+
+      link(rel="stylesheet", href="css/page/collection/modal-images.css")
       div(class="images")
         div(class="img-small img-0 active")
           img(alt="", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
@@ -18,6 +20,7 @@ section(class="modal-popup collection_modal")
         div(class="img-big")
           img(alt="", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
 
+      link(rel="stylesheet", href="css/page/collection/modal-texts.css")
       div(class="texts")
         div(class="title")
           div(class="title-left")
@@ -29,9 +32,15 @@ section(class="modal-popup collection_modal")
               | Выбранный продукт
             div(class="product-title")
         div(class="text")
-
         div(class="properties-head")
             | Технические характеристики
         div(class="properties")
-
         div(class="buttons")
+          button(type="button", class="button secondary btn-next", data-next="0")
+            span
+              | Следующий продукт
+            include ../../partials/svg/next
+          a(href="#", class="button default btn-link")
+            span
+              | В карточку товара
+            include ../../partials/svg/arrow-bottom

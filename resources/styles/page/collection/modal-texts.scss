@@ -1,0 +1,244 @@
+@import "././resources/styles/__/variables";
+
+.modal-popup.collection_modal .texts {
+  flex-grow: 1;
+
+  @media (max-width: 359px) {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $media-grid-sm) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .title-left {
+    @media (max-width: $media-grid-md) {
+      min-width: 50%;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .collection-text {
+    font-weight: normal;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $color-gray-500;
+    margin-bottom: 2px;
+    font-size: 11px;
+    line-height: 16px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 5px;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 0;
+      font-size: 9px;
+      line-height: 12px;
+    }
+  }
+
+  .collection-title {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: $color-gray-500;
+    font-size: 48px;
+    line-height: 58px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  .title-right {
+    min-width: 210px;
+
+    @media (max-width: $media-grid-md) {
+      min-width: 50%;
+    }
+  }
+
+  .product-text {
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $color-gray-900;
+    margin-bottom: 16px;
+    font-size: 11px;
+    line-height: 16px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 4px;
+      font-size: 9px;
+      line-height: 12px;
+    }
+  }
+
+  .product-title {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: $color-gray-900;
+    font-size: 30px;
+    line-height: 36px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 19px;
+      line-height: 24px;
+    }
+  }
+
+  .text {
+    margin-bottom: 44px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: $color-gray-900;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 36px;
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 32px;
+      font-size: 13px;
+      line-height: 24px;
+    }
+
+    p {
+      margin: 0 0 8px;
+    }
+  }
+
+  .properties-head {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $color-black;
+    font-size: 13px;
+    line-height: 44px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 2px;
+      font-size: 12px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 0;
+      font-size: 11px;
+    }
+  }
+
+  .properties {
+    margin-bottom: 48px;
+    display: grid;
+    grid-gap: 5px 10px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 40px;
+      grid-gap: 7px 12px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 36px;
+      grid-gap: 3px 16px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    div {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      color: $color-gray-500;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 13px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $media-grid-sm) {
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
+  }
+
+  .button {
+    width: 220px;
+    height: 52px;
+
+    @media (max-width: $media-grid-sm) {
+      width: 204px;
+      height: 42px;
+      font-size: 15px;
+    }
+
+    svg {
+      margin-left: 8px;
+      width: 20px;
+      height: 20px;
+
+      @media (max-width: $media-grid-sm) {
+        margin-left: 5px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .btn-link svg {
+    transform: rotate(270deg);
+  }
+
+  .btn-link {
+    @media (max-width: $media-grid-sm) {
+      margin-top: 16px;
+    }
+  }
+}
