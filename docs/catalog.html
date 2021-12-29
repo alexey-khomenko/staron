@@ -362,20 +362,47 @@
               <script src="js/page/catalog/filter.js"></script>
               <section class="catalog_filter">
                 <div class="filters">
-                  <button class="btn-filter-title" type="button"><span>Фильтры по продукции</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 18H14V16H10V18ZM3 6V8H21V6H3ZM6 13H18V11H6V13Z" fill="currentColor"></path>
-                    </svg>
-                  </button>
-                  <div class="links"><a class="link" href="exploitation_and_care.html"><span>Эксплуатация и уход</span>
-                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 17.5L15 12.5L10 7.5V17.5Z" fill="currentColor"></path>
-                      </svg></a><a class="link" href="404.html"><span>Документация</span>
-                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 17.5L15 12.5L10 7.5V17.5Z" fill="currentColor"></path>
-                      </svg></a></div>
+                  <div class="title-wrapper">
+                    <button class="btn-filter-title" type="button"><span>Фильтры по продукции</span>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 18H14V16H10V18ZM3 6V8H21V6H3ZM6 13H18V11H6V13Z" fill="currentColor"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="body-wrapper md-hidden">
+                    <div class="input-wrapper">
+                      <input class="input" type="search" id="filter-search" placeholder="Поиск по названию">
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.8448 19.1095H19.9319L19.6084 18.7975C20.7408 17.4802 21.4226 15.77 21.4226 13.9095C21.4226 9.7611 18.0599 6.39844 13.9115 6.39844C9.76306 6.39844 6.40039 9.7611 6.40039 13.9095C6.40039 18.058 9.76306 21.4207 13.9115 21.4207C15.7719 21.4207 17.4822 20.7389 18.7995 19.6064L19.1115 19.93V20.8429L24.8893 26.6091L26.6111 24.8873L20.8448 19.1095ZM13.9115 19.1095C11.0342 19.1095 8.7115 16.7869 8.7115 13.9095C8.7115 11.0322 11.0342 8.70955 13.9115 8.70955C16.7888 8.70955 19.1115 11.0322 19.1115 13.9095C19.1115 16.7869 16.7888 19.1095 13.9115 19.1095Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                    <div class="switches"></div>
+                    <details class="spoiler">
+                      <summary class="spoiler-head"><span>Коллекция</span>
+                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
+                        </svg>
+                      </summary>
+                      <div class="spoiler-body"></div>
+                    </details>
+                    <details class="spoiler">
+                      <summary class="spoiler-head"><span>Цвет</span>
+                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
+                        </svg>
+                      </summary>
+                      <div class="spoiler-body"></div>
+                    </details>
+                    <div class="links"><a class="link" href="exploitation_and_care.html"><span>Эксплуатация и уход</span>
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 17.5L15 12.5L10 7.5V17.5Z" fill="currentColor"></path>
+                        </svg></a><a class="link" href="404.html"><span>Документация</span>
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 17.5L15 12.5L10 7.5V17.5Z" fill="currentColor"></path>
+                        </svg></a></div>
+                  </div>
                 </div>
-                <button class="button circuit filter_reset" type="button"><span>Сбросить фильтры</span>
+                <button class="button circuit filter_reset md-hidden" type="button"><span>Сбросить фильтры</span>
                   <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.33333 5.83366H14.6667V8.33366L18 5.00033L14.6667 1.66699V4.16699H4.66667V9.16699H6.33333V5.83366ZM14.6667 14.167H6.33333V11.667L3 15.0003L6.33333 18.3337V15.8337H16.3333V10.8337H14.6667V14.167Z" fill="currentColor"></path>
                   </svg>

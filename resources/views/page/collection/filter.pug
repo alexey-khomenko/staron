@@ -2,22 +2,46 @@ link(rel="stylesheet", href="css/page/collection/filter.css")
 script(src="js/page/collection/filter.js")
 section(class="collection_filter")
   div(class="filters")
-    button(type="button", class="btn-filter-title")
-      span
-        | Фильтры по продукции
-      include ../../partials/svg/filter
-
-    div(class="links")
-      a(href="exploitation_and_care.html", class="link")
+    div(class="title-wrapper")
+      button(type="button", class="btn-filter-title")
         span
-          | Эксплуатация и уход
-        include ../../partials/svg/triangle
-      a(href="404.html", class="link")
-        span
-          | Документация
-        include ../../partials/svg/triangle
+          | Фильтры по продукции
+        include ../../partials/svg/filter
 
-  button(type="button", class="button circuit filter_reset")
+    div(class="body-wrapper md-hidden")
+      div(class="input-wrapper")
+        input(type="search", id="filter-search", class="input", placeholder="Поиск по названию")
+        include ../../partials/svg/search
+
+      div(class="switches")
+
+      details(class="spoiler")
+        summary(class="spoiler-head")
+          span
+            | Коллекция
+          include ../../partials/svg/chevrone-top
+        div(class="spoiler-body")
+
+
+      details(class="spoiler")
+        summary(class="spoiler-head")
+          span
+            | Цвет
+          include ../../partials/svg/chevrone-top
+        div(class="spoiler-body")
+
+
+      div(class="links")
+        a(href="exploitation_and_care.html", class="link")
+          span
+            | Эксплуатация и уход
+          include ../../partials/svg/triangle
+        a(href="404.html", class="link")
+          span
+            | Документация
+          include ../../partials/svg/triangle
+
+  button(type="button", class="button circuit filter_reset md-hidden")
     span
       | Сбросить фильтры
     include ../../partials/svg/reset
