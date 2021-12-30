@@ -381,14 +381,71 @@
                         <path d="M20.8448 19.1095H19.9319L19.6084 18.7975C20.7408 17.4802 21.4226 15.77 21.4226 13.9095C21.4226 9.7611 18.0599 6.39844 13.9115 6.39844C9.76306 6.39844 6.40039 9.7611 6.40039 13.9095C6.40039 18.058 9.76306 21.4207 13.9115 21.4207C15.7719 21.4207 17.4822 20.7389 18.7995 19.6064L19.1115 19.93V20.8429L24.8893 26.6091L26.6111 24.8873L20.8448 19.1095ZM13.9115 19.1095C11.0342 19.1095 8.7115 16.7869 8.7115 13.9095C8.7115 11.0322 11.0342 8.70955 13.9115 8.70955C16.7888 8.70955 19.1115 11.0322 19.1115 13.9095C19.1115 16.7869 16.7888 19.1095 13.9115 19.1095Z" fill="currentColor"></path>
                       </svg>
                     </div>
-                    <div class="switches"></div>
+                    <div class="switches">
+                      <div>
+                        <input id="filter-switch-0" name="filter-switch[]" type="checkbox" value="0">
+                        <label class="switch-label" for="filter-switch-0">Популярные товары
+                        </label>
+                      </div>
+                      <div>
+                        <input id="filter-switch-1" name="filter-switch[]" type="checkbox" value="1">
+                        <label class="switch-label" for="filter-switch-1">Акционные товары
+                        </label>
+                      </div>
+                    </div>
                     <details class="spoiler">
                       <summary class="spoiler-head"><span>Коллекция</span>
                         <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
                         </svg>
                       </summary>
-                      <div class="spoiler-body"></div>
+                      <div class="spoiler-body collections">
+                        <div>
+                          <input id="filter-collection-0" name="filter-collection[]" type="checkbox" value="0">
+                          <label class="checkbox-collection" for="filter-collection-0">Supreme
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-collection-1" name="filter-collection[]" type="checkbox" value="1">
+                          <label class="checkbox-collection" for="filter-collection-1">Tempest
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-collection-2" name="filter-collection[]" type="checkbox" value="2">
+                          <label class="checkbox-collection" for="filter-collection-2">Aspen
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-collection-3" name="filter-collection[]" type="checkbox" value="3">
+                          <label class="checkbox-collection" for="filter-collection-3">Metallic
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-collection-4" name="filter-collection[]" type="checkbox" value="4">
+                          <label class="checkbox-collection" for="filter-collection-4">Mosaic
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-collection-5" name="filter-collection[]" type="checkbox" value="5">
+                          <label class="checkbox-collection" for="filter-collection-5">Pebble
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-collection-6" name="filter-collection[]" type="checkbox" value="6">
+                          <label class="checkbox-collection" for="filter-collection-6">Sanded
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-collection-7" name="filter-collection[]" type="checkbox" value="7">
+                          <label class="checkbox-collection" for="filter-collection-7">Solid
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-collection-8" name="filter-collection[]" type="checkbox" value="8">
+                          <label class="checkbox-collection" for="filter-collection-8">Quarry
+                          </label>
+                        </div>
+                      </div>
                     </details>
                     <details class="spoiler">
                       <summary class="spoiler-head"><span>Цвет</span>
@@ -396,7 +453,48 @@
                           <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
                         </svg>
                       </summary>
-                      <div class="spoiler-body"></div>
+                      <div class="spoiler-body colors">
+                        <div>
+                          <input id="filter-color-0" name="filter-color[]" type="checkbox" value="0">
+                          <label class="checkbox-color" for="filter-color-0">images/content-catalog-1.jpg
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-color-1" name="filter-color[]" type="checkbox" value="1">
+                          <label class="checkbox-color" for="filter-color-1">images/content-catalog-2.jpg
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-color-2" name="filter-color[]" type="checkbox" value="2">
+                          <label class="checkbox-color" for="filter-color-2">images/content-catalog-3.jpg
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-color-3" name="filter-color[]" type="checkbox" value="3">
+                          <label class="checkbox-color" for="filter-color-3">images/content-catalog-4.jpg
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-color-4" name="filter-color[]" type="checkbox" value="4">
+                          <label class="checkbox-color" for="filter-color-4">images/content-catalog-5.jpg
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-color-5" name="filter-color[]" type="checkbox" value="5">
+                          <label class="checkbox-color" for="filter-color-5">images/content-catalog-6.jpg
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-color-6" name="filter-color[]" type="checkbox" value="6">
+                          <label class="checkbox-color" for="filter-color-6">images/content-catalog-7.jpg
+                          </label>
+                        </div>
+                        <div>
+                          <input id="filter-color-7" name="filter-color[]" type="checkbox" value="7">
+                          <label class="checkbox-color" for="filter-color-7">images/content-catalog-8.jpg
+                          </label>
+                        </div>
+                      </div>
                     </details>
                     <div class="links"><a class="link" href="exploitation_and_care.html"><span>Эксплуатация и уход</span>
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">

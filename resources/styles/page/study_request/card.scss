@@ -186,16 +186,14 @@
       border-color: $color-red-700;
     }
 
-    @media (pointer: coarse) {
-      &:active::after {
-        border-color: $color-red-300;
-      }
-    }
-
     @media (hover: hover) {
       &:hover::after {
         border-color: $color-red-300;
       }
+    }
+
+    &:active::after {
+      border-color: $color-red-300;
     }
 
     &::before {

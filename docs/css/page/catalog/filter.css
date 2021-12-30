@@ -43,8 +43,6 @@
   }
 }
 .catalog-wrapper .catalog_filter .btn-filter-title span {
-  font-family: "Proxima Nova", "Jost", sans-serif;
-  font-style: normal;
   font-weight: 700;
   letter-spacing: 0.02em;
   font-size: 19px;
@@ -116,7 +114,55 @@
 .catalog-wrapper .catalog_filter .switches {
   padding: 20px 34px;
   border-bottom: 1px solid #E0E0E1;
-  min-height: 100px;
+}
+.catalog-wrapper .catalog_filter .switches input[type=checkbox] {
+  display: none;
+}
+.catalog-wrapper .catalog_filter .switches > div:not(:last-child) {
+  margin-bottom: 5px;
+}
+.catalog-wrapper .catalog_filter .switch-label {
+  cursor: pointer;
+  padding-right: 36px;
+  display: block;
+  position: relative;
+  color: #000000;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+}
+@media (hover: hover) {
+  .catalog-wrapper .catalog_filter .switch-label:hover::after {
+    background-color: #ED8585;
+  }
+}
+.catalog-wrapper .catalog_filter .switch-label:active::after {
+  background-color: #ED8585;
+}
+.catalog-wrapper .catalog_filter .switch-label::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 99999px;
+  background-color: #C7C7C8;
+}
+.catalog-wrapper .catalog_filter input[type=checkbox]:checked + .switch-label::after {
+  right: 4px;
+  background-color: #DD2929;
+}
+.catalog-wrapper .catalog_filter .switch-label::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 22px;
+  height: 12px;
+  border-radius: 99999px;
+  border: 2px solid #27272B;
 }
 .catalog-wrapper .catalog_filter .spoiler {
   padding: 20px 34px;
@@ -153,7 +199,105 @@
 }
 .catalog-wrapper .catalog_filter .spoiler-body {
   margin-top: 10px;
-  min-height: 100px;
+}
+.catalog-wrapper .catalog_filter .spoiler-body input[type=checkbox] {
+  display: none;
+}
+.catalog-wrapper .catalog_filter .checkbox-collection {
+  cursor: pointer;
+  padding-right: 36px;
+  display: block;
+  position: relative;
+  color: #000000;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+}
+.catalog-wrapper .catalog_filter .checkbox-collection::after {
+  border-color: #DD2929;
+}
+@media (hover: hover) {
+  .catalog-wrapper .catalog_filter .checkbox-collection:hover::after {
+    border-color: #ED8585;
+  }
+}
+.catalog-wrapper .catalog_filter .checkbox-collection:active::after {
+  border-color: #ED8585;
+}
+.catalog-wrapper .catalog_filter .collections > div:not(:last-child) {
+  margin-bottom: 5px;
+}
+.catalog-wrapper .catalog_filter .checkbox-collection::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid #636368;
+}
+.catalog-wrapper .catalog_filter input[type=checkbox]:checked + .checkbox-collection::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  width: 9px;
+  height: 6px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  transform: rotate(-48deg);
+}
+.catalog-wrapper .catalog_filter .colors {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.catalog-wrapper .catalog_filter .checkbox-color {
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+.catalog-wrapper .catalog_filter .checkbox-color img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+.catalog-wrapper .catalog_filter input[type=checkbox]:checked + .checkbox-color::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 23px;
+  height: 11px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-left-width: 4px;
+  border-bottom-width: 4px;
+  border-color: #000000;
+  transform: rotate(-48deg) translate(-1px, -11px);
+}
+.catalog-wrapper .catalog_filter input[type=checkbox]:checked + .checkbox-color::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 10px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  border-color: #FFFFFF;
+  transform: rotate(-48deg) translate(-1px, -11px);
 }
 .catalog-wrapper .catalog_filter .links {
   padding: 20px 34px 44px;

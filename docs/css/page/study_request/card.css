@@ -198,15 +198,13 @@
 .study_request .card .checkbox-label::after {
   border-color: #DD2929;
 }
-@media (pointer: coarse) {
-  .study_request .card .checkbox-label:active::after {
-    border-color: #ED8585;
-  }
-}
 @media (hover: hover) {
   .study_request .card .checkbox-label:hover::after {
     border-color: #ED8585;
   }
+}
+.study_request .card .checkbox-label:active::after {
+  border-color: #ED8585;
 }
 .study_request .card .checkbox-label::before {
   content: "";

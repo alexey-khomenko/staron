@@ -64,8 +64,6 @@
     }
 
     span {
-      font-family: $font-family-1;
-      font-style: normal;
       font-weight: 700;
       letter-spacing: 0.02em;
       font-size: 19px;
@@ -132,8 +130,62 @@
     padding: 20px 34px;
     border-bottom: 1px solid $color-gray-100;
 
-    // todo
-    min-height: 100px;
+    input[type="checkbox"] {
+      display: none;
+    }
+  }
+
+  .switches > div:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .switch-label {
+    cursor: pointer;
+    padding-right: 36px;
+    display: block;
+    position: relative;
+    color: $color-black;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+
+    @media (hover: hover) {
+      &:hover::after {
+        background-color: $color-red-300;
+      }
+    }
+
+    &:active::after {
+      background-color: $color-red-300;
+    }
+  }
+
+  .switch-label::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 99999px;
+    background-color: $color-gray-200;
+  }
+
+  input[type="checkbox"]:checked + .switch-label::after {
+    right: 4px;
+    background-color: $color-red-700;
+  }
+
+  .switch-label::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 22px;
+    height: 12px;
+    border-radius: 99999px;
+    border: 2px solid $color-gray-900;
   }
 
   .spoiler {
@@ -179,8 +231,116 @@
   .spoiler-body {
     margin-top: 10px;
 
-    // todo
-    min-height: 100px;
+    input[type="checkbox"] {
+      display: none;
+    }
+  }
+
+  .checkbox-collection {
+    cursor: pointer;
+    padding-right: 36px;
+    display: block;
+    position: relative;
+    color: $color-black;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+
+    &::after {
+      border-color: $color-red-700;
+    }
+
+    @media (hover: hover) {
+      &:hover::after {
+        border-color: $color-red-300;
+      }
+    }
+
+    &:active::after {
+      border-color: $color-red-300;
+    }
+  }
+
+  .collections > div:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .checkbox-collection::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    border: 2px solid $color-gray-600;
+  }
+
+  input[type="checkbox"]:checked + .checkbox-collection::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 4px;
+    width: 9px;
+    height: 6px;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    transform: rotate(-48deg);
+  }
+
+  .colors {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .checkbox-color {
+    cursor: pointer;
+    position: relative;
+    display: block;
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  input[type="checkbox"]:checked + .checkbox-color::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 23px;
+    height: 11px;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-left-width: 4px;
+    border-bottom-width: 4px;
+    border-color: $color-black;
+    transform: rotate(-48deg) translate(-1px, -11px);
+  }
+
+  input[type="checkbox"]:checked + .checkbox-color::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 10px;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: $color-white;
+    transform: rotate(-48deg) translate(-1px, -11px);
   }
 
   .links {
