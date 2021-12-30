@@ -1,5 +1,5 @@
 @import "././resources/styles/__/variables";
-@import "././resources/styles/__/mixins";
+@import "././resources/styles/partials/mixins/catalog-filter";
 
 .catalog-wrapper .catalog_filter {
   @include filters;

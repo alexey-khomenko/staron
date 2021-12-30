@@ -127,7 +127,7 @@ section(class="collection_filter")
             div
               input(id=`filter-color-${color.id}`, name="filter-color[]", type="checkbox", value=`${color.id}`)
               label(for=`filter-color-${color.id}`, class="checkbox-color")
-                = color.src
+                img(src=`${color.src}`, alt="")
 
       div(class="links")
         a(href="exploitation_and_care.html", class="link")

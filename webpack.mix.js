@@ -48,6 +48,7 @@ const styles = [
   'pages/contacts',
   'pages/exploitation_and_care',
   'pages/payment_and_delivery',
+  'pages/product',
   'pages/study',
   'pages/study_directions',
   'pages/study_request',
@@ -83,6 +84,9 @@ const styles = [
   'page/payment_and_delivery/top',
   'page/payment_and_delivery/middle',
   'page/payment_and_delivery/bottom',
+
+  'page/product/images',
+  'page/product/info',
 
   'page/search/top',
   'page/search/results',
@@ -129,7 +133,6 @@ const scripts = [
   'page/collection/buttons',
   'page/collection/cards',
   'page/collection/filter',
-  'page/collection/modal',
 
   'page/index/slider',
   'page/index/scroll',
@@ -139,8 +142,6 @@ const scripts = [
 
   'page/search/top',
   'page/search/results',
-
-  'page/study_request/modal',
 
   'page/where_to_buy/top',
   'page/where_to_buy/bottom',
