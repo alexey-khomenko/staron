@@ -10,21 +10,19 @@ document.addEventListener('DOMContentLoaded', function () {
     };
   }
 
-  document.addEventListener('click', function (e) {
+  document.addEventListener('click', async function (e) {
     const button = e.target.closest('.catalog_buttons .btn-more');
 
     if (!button) return true;
 
     const {cardsAll, cardsVisible, cardsHidden, limit, all} = getData();
 
-    console.log('more', cardsAll.length, cardsVisible.length, cardsHidden.length, limit, all);
-
-    if (cardsVisible.length === cardsAll.length) return true;
+    if (cardsVisible.length === all) return true;
 
     if (0 < cardsHidden.length) {
       document.querySelector('.catalog_buttons .btn-less').classList.remove('hidden');
 
-      if (all === cardsVisible.length + limit) button.classList.add('hidden');
+      if (all <= cardsVisible.length + limit) button.classList.add('hidden');
 
       const n = limit > cardsHidden.length ? cardsHidden.length : limit;
 
@@ -35,7 +33,48 @@ document.addEventListener('DOMContentLoaded', function () {
       return true;
     }
 
-    // todo запрос на получение новых карточек
+    const data = new FormData();
+    data.set('page', window.location.href);
+    data.set('from', String(cardsAll.length));
+    data.set('limit', String(limit));
+
+    const response = await fetch('/ajax/catalog_ajax.php', {method: 'POST', body: data});
+
+    let results = [
+      {
+        title: 'Supreme',
+        image: 'images/content-catalog-1.jpg',
+        link: 'collection.html',
+      },
+      {
+        title: 'Aspen',
+        image: 'images/content-catalog-2.jpg',
+        link: 'collection.html',
+      },
+    ];
+
+    if (response.status === 200) {
+      results = await response.json();
+    }
+
+    console.log('catalog ajax', results);
+
+    if (all === cardsAll.length + results.length) button.classList.add('hidden');
+
+    document.querySelector('.catalog_buttons .btn-less').classList.remove('hidden');
+
+    const cards = document.querySelector('.catalog_cards');
+
+    for (let result of results) {
+      const card = cards.querySelector('.card').cloneNode(true);
+
+      card.href= result.link;
+      card.querySelector('.title').textContent = result.title;
+      card.querySelector('.img').src = result.image;
+      card.querySelector('.img').alt = result.title;
+
+      cards.append(card);
+    }
   });
 
   document.addEventListener('click', function (e) {
