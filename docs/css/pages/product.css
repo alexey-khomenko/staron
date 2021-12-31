@@ -1,3 +1,33 @@
-.product {
+.product .h1 {
+  color: #000000;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 48px;
+  line-height: 58px;
+  margin: 0 0 58px;
+}
+@media (max-width: 1262.98px) {
+  .product .h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 750.98px) {
+  .product .h1 {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 40px;
+  }
+}
+.product .product-wrapper {
   display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+@media (max-width: 750.98px) {
+  .product .product-wrapper {
+    flex-direction: column;
+  }
 }

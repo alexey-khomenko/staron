@@ -1,5 +1,35 @@
 @import "././resources/styles/__/variables";
 
 .product {
-  display: flex;
+  .h1 {
+    color: $color-black;
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 48px;
+    line-height: 58px;
+    margin: 0 0 58px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .product-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media (max-width: $media-grid-sm) {
+      flex-direction: column;
+    }
+  }
 }
