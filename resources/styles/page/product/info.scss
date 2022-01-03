@@ -3,6 +3,8 @@
 .product.info {
   width: 536px;
   padding-bottom: 90px;
+  font-family: $font-family-1;
+  font-style: normal;
 
   @media (max-width: $media-grid-lg) {
     width: 466px;
@@ -19,20 +21,237 @@
     padding-bottom: 202px;
   }
 
-  // todo
-  min-height: 900px;
-  background-color: darkkhaki;
+  .title {
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 32px;
+      flex-direction: column;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      align-items: center;
+    }
+  }
+
+  .title-left {
+
+  }
+
+  .collection-text {
+
+  }
+
+  .collection-title {
+
+  }
+
+  .title-right {
+
+  }
+
+  .product-text {
+
+  }
+
+  .product-title {
+
+  }
+
+  .product-article {
+
+  }
+
+  .text {
+    margin-bottom: 32px;
+    color: $color-gray-900;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 15px;
+    line-height: 28px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 24px;
+      font-size: 13px;
+    }
+
+    p {
+      margin: 0 0 8px;
+    }
+  }
+
+  .properties-head, .glues-head {
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 44px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 12px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 11px;
+    }
+  }
+
+  .properties-body {
+    margin-bottom: 44px;
+    display: grid;
+    grid-gap: 5px 12px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 40px;
+      grid-gap: 5px 10px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      grid-gap: 7px 8px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $media-grid-sm) {
+      grid-gap: 3px 16px;
+    }
+
+    div {
+      color: $color-gray-500;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      font-size: 15px;
+      line-height: 28px;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 13px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .quantity-wrapper {
+    margin-bottom: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    min-height: 60px;
+
+    @media (max-width: $media-grid-lg) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 40px;
+    }
+  }
 
 
-  .text {}
+  .glues {
+    margin-bottom: 38px;
+    padding: 16px 28px;
+    background-color: $color-gray-050;
 
-  .properties-head {}
+    min-height: 136px;
 
-  .properties-body {}
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 44px;
+    }
 
-  .glues {}
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 40px;
+    }
 
-  .buttons {}
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 44px;
+    }
+  }
 
-  .links {}
+  .glues-body {
+    display: flex;
+
+    @media (max-width: $media-grid-lg) {
+      flex-direction: column;
+    }
+  }
+
+  .glues-left {
+    color: $color-gray-500;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 15px;
+    line-height: 28px;
+    width: 356px;
+
+    @media (max-width: $media-grid-md) {
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-red-700;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $color-red-500;
+        }
+      }
+
+      &:active {
+        color: $color-red-300;
+      }
+    }
+  }
+
+  .glues-right {}
+
+
+  .buttons {
+    margin-bottom: 92px;
+    position: relative;
+    display: flex;
+
+    min-height: 52px;
+
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 52px;
+    }
+  }
+
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    min-height: 24px;
+
+    @media (max-width: $media-grid-md) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      align-items: center;
+    }
+  }
 }

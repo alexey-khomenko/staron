@@ -1,8 +1,8 @@
 .product.info {
   width: 536px;
   padding-bottom: 90px;
-  min-height: 900px;
-  background-color: darkkhaki;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
 }
 @media (max-width: 1422.98px) {
   .product.info {
@@ -20,5 +20,209 @@
     width: 100%;
     padding-top: 40px;
     padding-bottom: 202px;
+  }
+}
+.product.info .title {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+@media (max-width: 1422.98px) {
+  .product.info .title {
+    margin-bottom: 32px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 750.98px) {
+  .product.info .title {
+    align-items: center;
+  }
+}
+.product.info .text {
+  margin-bottom: 32px;
+  color: #27272B;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  line-height: 28px;
+}
+@media (max-width: 1262.98px) {
+  .product.info .text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 750.98px) {
+  .product.info .text {
+    margin-bottom: 24px;
+    font-size: 13px;
+  }
+}
+.product.info .text p {
+  margin: 0 0 8px;
+}
+.product.info .properties-head, .product.info .glues-head {
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 44px;
+}
+@media (max-width: 1262.98px) {
+  .product.info .properties-head, .product.info .glues-head {
+    font-size: 12px;
+  }
+}
+@media (max-width: 750.98px) {
+  .product.info .properties-head, .product.info .glues-head {
+    font-size: 11px;
+  }
+}
+.product.info .properties-body {
+  margin-bottom: 44px;
+  display: grid;
+  grid-gap: 5px 12px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1422.98px) {
+  .product.info .properties-body {
+    margin-bottom: 40px;
+    grid-gap: 5px 10px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .product.info .properties-body {
+    grid-gap: 7px 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 750.98px) {
+  .product.info .properties-body {
+    grid-gap: 3px 16px;
+  }
+}
+.product.info .properties-body div {
+  color: #7C7C81;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  line-height: 28px;
+}
+@media (max-width: 1262.98px) {
+  .product.info .properties-body div {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 750.98px) {
+  .product.info .properties-body div {
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
+.product.info .quantity-wrapper {
+  margin-bottom: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 60px;
+}
+@media (max-width: 1422.98px) {
+  .product.info .quantity-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+@media (max-width: 1262.98px) {
+  .product.info .quantity-wrapper {
+    margin-bottom: 40px;
+  }
+}
+.product.info .glues {
+  margin-bottom: 38px;
+  padding: 16px 28px;
+  background-color: #F8F8F8;
+  min-height: 136px;
+}
+@media (max-width: 1422.98px) {
+  .product.info .glues {
+    margin-bottom: 44px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .product.info .glues {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 750.98px) {
+  .product.info .glues {
+    margin-bottom: 44px;
+  }
+}
+.product.info .glues-body {
+  display: flex;
+}
+@media (max-width: 1422.98px) {
+  .product.info .glues-body {
+    flex-direction: column;
+  }
+}
+.product.info .glues-left {
+  color: #7C7C81;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  line-height: 28px;
+  width: 356px;
+}
+@media (max-width: 1262.98px) {
+  .product.info .glues-left {
+    width: 100%;
+  }
+}
+.product.info .glues-left a {
+  text-decoration: none;
+  color: #DD2929;
+}
+@media (hover: hover) {
+  .product.info .glues-left a:hover {
+    color: #E55858;
+  }
+}
+.product.info .glues-left a:active {
+  color: #ED8585;
+}
+.product.info .buttons {
+  margin-bottom: 92px;
+  position: relative;
+  display: flex;
+  min-height: 52px;
+}
+@media (max-width: 1422.98px) {
+  .product.info .buttons {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .product.info .buttons {
+    margin-bottom: 52px;
+  }
+}
+.product.info .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 24px;
+}
+@media (max-width: 1262.98px) {
+  .product.info .links {
+    flex-direction: column;
+  }
+}
+@media (max-width: 750.98px) {
+  .product.info .links {
+    align-items: center;
   }
 }

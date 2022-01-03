@@ -48,16 +48,14 @@
     margin-left: 4px;
     color: $color-black;
 
-    @media (pointer: coarse) {
-      &:active {
-        color: $color-gray-500;
-      }
-    }
-
     @media (hover: hover) {
       &:hover {
         color: $color-gray-500;
       }
+    }
+
+    &:active {
+      color: $color-gray-500;
     }
   }
 

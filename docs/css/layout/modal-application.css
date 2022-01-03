@@ -44,15 +44,13 @@
   margin-left: 4px;
   color: #000000;
 }
-@media (pointer: coarse) {
-  .modal-popup.application .close:active {
-    color: #7C7C81;
-  }
-}
 @media (hover: hover) {
   .modal-popup.application .close:hover {
     color: #7C7C81;
   }
+}
+.modal-popup.application .close:active {
+  color: #7C7C81;
 }
 .modal-popup.application .body {
   display: flex;
