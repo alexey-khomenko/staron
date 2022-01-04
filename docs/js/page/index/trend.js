@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
     tab.querySelector('.collection-title').textContent = tile.dataset.collection;
     tab.querySelector('.product-title').textContent = tile.dataset.product;
 
-    tab.querySelector(`.text-wrap:not(.hidden)`)?.classList.add('hidden');
-    tab.querySelector(`.text-wrap[data-id="${id}"]`).classList.remove('hidden');
+    tab.querySelector(`.text-wrapper:not(.hidden)`)?.classList.add('hidden');
+    tab.querySelector(`.text-wrapper[data-id="${id}"]`).classList.remove('hidden');
 
     tab.querySelector('.go-to-product').href = tile.dataset.link;
   });
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!btn) return true;
 
     const wrap = btn.closest('.trend-tabs-body');
-    const id = wrap.querySelector('.text-wrap:not(.hidden)').dataset.id;
+    const id = wrap.querySelector('.text-wrapper:not(.hidden)').dataset.id;
     const quantity = wrap.querySelector('.quantity-number').textContent;
 
     const data = new FormData();

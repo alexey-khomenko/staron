@@ -24,7 +24,7 @@
   .title {
     margin-bottom: 28px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
 
     @media (max-width: $media-grid-lg) {
@@ -38,31 +38,138 @@
   }
 
   .title-left {
+    flex-shrink: 0;
+    margin-right: 12px;
+    color: $color-gray-500;
 
+    @media (max-width: $media-grid-lg) {
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 18px;
+      text-align: center;
+    }
   }
 
   .collection-text {
+    margin-bottom: 2px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 16px;
 
+    @media (max-width: $media-grid-md) {
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: -4px;
+      font-size: 9px;
+    }
   }
 
   .collection-title {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 48px;
+    line-height: 58px;
 
+    @media (max-width: $media-grid-md) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 30px;
+      line-height: 36px;
+    }
   }
 
   .title-right {
+    flex-shrink: 0;
+    position: relative;
+    padding: 0 16px;
+    color: $color-black;
+    text-align: center;
 
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      border-top: 5px solid $color-black;
+      border-bottom: 5px solid $color-black;
+      top: 2px;
+      bottom: 6px;
+    }
+
+    &::before {
+      left: 0;
+      border-left: 5px solid $color-black;
+    }
+
+    &::after {
+      right: 0;
+      border-right: 5px solid $color-black;
+    }
   }
 
   .product-text {
+    margin-bottom: 8px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 16px;
 
+    @media (max-width: $media-grid-md) {
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 4px;
+      font-size: 9px;
+    }
   }
 
   .product-title {
+    margin-bottom: 4px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 30px;
+    line-height: 36px;
 
+    @media (max-width: $media-grid-md) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 19px;
+      line-height: 24px;
+    }
   }
 
   .product-article {
+    margin-bottom: 0;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 17px;
+    line-height: 24px;
 
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   .text {
@@ -147,28 +254,145 @@
   .quantity-wrapper {
     margin-bottom: 38px;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-
-    min-height: 60px;
-
-    @media (max-width: $media-grid-lg) {
-      flex-direction: column;
-      align-items: stretch;
-    }
 
     @media (max-width: $media-grid-md) {
       margin-bottom: 40px;
     }
   }
 
+  .quantity-left {
+    margin-top: 2px;
+    height: 48px;
+    width: 198px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    background-color: $color-gray-050;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 36px;
+      width: 100%;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 36px;
+    }
+  }
+
+  .quantity-minus, .quantity-plus {
+    cursor: pointer;
+    padding: 0 0 2px;
+    width: 44px;
+    line-height: 42px;
+    color: $color-gray-500;
+    user-select: none;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-black;
+      }
+    }
+
+    &:active {
+      color: $color-black;
+    }
+  }
+
+  .quantity-number {
+    line-height: 32px;
+    color: $color-black;
+  }
+
+  .quantity-right {
+    width: 316px;
+
+    @media (max-width: $media-grid-lg) {
+      width: 100%;
+    }
+  }
+
+  .quantity-progress {
+    position: relative;
+    height: 24px;
+    margin-bottom: 8px;
+
+    &::before, .progress-line {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 2px;
+      border-style: solid;
+    }
+
+    &::before {
+      z-index: 0;
+      width: 100%;
+      border-color: $color-gray-100;
+    }
+
+    .progress-line {
+      z-index: 1;
+      border: 2px solid $color-gray-700;
+    }
+  }
+
+  .progress-point {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border-radius: 99999px;
+    border: 2px solid $color-white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    background-color: $color-gray-800;
+  }
+
+  .progress-numbers {
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .progress-number {
+    flex-basis: 24px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    font-family: $font-family-1;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    color: $color-gray-500;
+    text-align: center;
+
+    &.active {
+      color: $color-black;
+    }
+  }
 
   .glues {
     margin-bottom: 38px;
     padding: 16px 28px;
     background-color: $color-gray-050;
-
-    min-height: 136px;
 
     @media (max-width: $media-grid-lg) {
       margin-bottom: 44px;
@@ -185,9 +409,11 @@
 
   .glues-body {
     display: flex;
+    align-items: center;
 
     @media (max-width: $media-grid-lg) {
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 
@@ -199,8 +425,17 @@
     line-height: 28px;
     width: 356px;
 
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 18px;
+    }
+
     @media (max-width: $media-grid-md) {
       width: 100%;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 14px;
     }
 
     a {
@@ -219,15 +454,91 @@
     }
   }
 
-  .glues-right {}
+  .glues-right {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 208px;
 
+    @media (max-width: $media-grid-lg) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    @media (max-width: $media-grid-md) {
+      grid-gap: 24px;
+    }
+
+    div {
+      display: flex;
+    }
+  }
+
+  .checkbox-input {
+    display: none;
+  }
+
+  .checkbox-label {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    padding-left: 28px;
+    color: $color-gray-900;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+
+    @media (max-width: $media-grid-lg) {
+      width: 100px;
+    }
+
+    &::after {
+      border-color: $color-red-700;
+    }
+
+    @media (hover: hover) {
+      &:hover::after {
+        border-color: $color-red-300;
+      }
+    }
+
+    &:active::after {
+      border-color: $color-red-300;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      border: 2px solid $color-gray-600;
+    }
+  }
+
+  .checkbox-input:checked + .checkbox-label::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    width: 8px;
+    height: 5px;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    transform: rotate(-48deg);
+  }
 
   .buttons {
     margin-bottom: 92px;
     position: relative;
     display: flex;
-
-    min-height: 52px;
+    justify-content: space-between;
 
     @media (max-width: $media-grid-lg) {
       margin-bottom: 80px;
@@ -238,13 +549,48 @@
     }
   }
 
+  .btn-back {
+    width: 198px;
+    height: 52px;
+
+    @media (max-width: $media-grid-md) {
+      position: absolute;
+      right: 100%;
+      transform: translateX(-200px);
+    }
+
+    @media (max-width: $media-grid-sm) {
+      top: 100%;
+      width: 100%;
+      right: 0;
+      transform: translateY(206px);
+    }
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  .btn-order {
+    width: 316px;
+    height: 52px;
+
+    @media (max-width: $media-grid-lg) {
+      width: 238px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      width: 100%;
+    }
+  }
 
   .links {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
-    min-height: 24px;
 
     @media (max-width: $media-grid-md) {
       flex-direction: column;
@@ -252,6 +598,44 @@
 
     @media (max-width: $media-grid-sm) {
       align-items: center;
+    }
+  }
+
+  .link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    color: $color-black;
+
+    @media (max-width: $media-grid-md) {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-gray-600;
+      }
+    }
+
+    &:active {
+      color: $color-gray-700;
+    }
+
+    span {
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-left: 5px;
     }
   }
 }

@@ -1,4 +1,5 @@
 link(rel="stylesheet", href="css/page/product/info.css")
+script(src="js/page/product/info.js")
 section(class="product info")
 
   div(class="title")
@@ -37,6 +38,24 @@ section(class="product info")
       | площадь (м2): 2,8
 
   div(class="quantity-wrapper")
+    div(class="quantity-left")
+      div(class="quantity-minus")
+        | -
+      div(class="quantity-number")
+        | 1
+      div(class="quantity-plus")
+        | +
+    div(class="quantity-right")
+      div(class="quantity-progress")
+        div(class="progress-line", style="width: 12px")
+        div(class="progress-point", style="left: 12px")
+      div(class="progress-numbers")
+        span(class="progress-number active", data-number="1")
+          | 1
+        span(class="progress-number", data-number="50")
+          | 50
+        span(class="progress-number", data-number="100")
+          | 100
 
   div(class="glues")
     div(class="glues-head")
@@ -48,7 +67,32 @@ section(class="product info")
         a(href="404.html")
           | клей
       div(class="glues-right")
+        div
+          input(id="glue-500", name="agree", class="checkbox-input", type="checkbox")
+          label(class="checkbox-label", for="glue-500")
+            | 500 мл
+        div
+          input(id="glue-700", name="agree", class="checkbox-input", type="checkbox")
+          label(class="checkbox-label", for="glue-700")
+            | 700 мл
 
   div(class="buttons")
+    a(href="catalog.html", class="button secondary btn-back")
+      include ../../partials/svg/arrow-left
+      span
+        | Назад в каталог
+
+    button(type="button", class="button accent btn-order", data-product-id="1")
+      span
+        | Добавить в заказ
 
   div(class="links")
+    a(href="exploitation_and_care.html", class="link")
+      span
+        | Эксплуатация и уход
+      include ../../partials/svg/triangle
+
+    a(href="404.html", class="link")
+      span
+        | Документация
+      include ../../partials/svg/triangle

@@ -1,5 +1,7 @@
 .index.trend .right .title {
   margin-bottom: 42px;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -26,8 +28,6 @@
 .index.trend .right .title-left {
   flex-shrink: 0;
   margin-right: 12px;
-  font-family: "Proxima Nova", "Jost", sans-serif;
-  font-style: normal;
   color: #7C7C81;
 }
 @media (max-width: 1422.98px) {
@@ -43,15 +43,16 @@
 @media (max-width: 750.98px) {
   .index.trend .right .title-left {
     margin-bottom: 18px;
+    text-align: center;
   }
 }
 .index.trend .right .collection-text {
   margin-bottom: 2px;
   font-weight: 400;
-  font-size: 11px;
-  line-height: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  font-size: 11px;
+  line-height: 16px;
 }
 @media (max-width: 1262.98px) {
   .index.trend .right .collection-text {
@@ -63,14 +64,13 @@
   .index.trend .right .collection-text {
     margin-bottom: 0;
     font-size: 9px;
-    text-align: center;
   }
 }
 .index.trend .right .collection-title {
   font-weight: 600;
+  letter-spacing: 0.02em;
   font-size: 48px;
   line-height: 58px;
-  letter-spacing: 0.02em;
 }
 @media (max-width: 1262.98px) {
   .index.trend .right .collection-title {
@@ -88,40 +88,33 @@
   flex-shrink: 0;
   position: relative;
   padding: 0 16px;
-  font-family: "Proxima Nova", "Jost", sans-serif;
-  font-style: normal;
   color: #FFFFFF;
   text-align: center;
 }
-.index.trend .right .title-right::before {
+.index.trend .right .title-right::before, .index.trend .right .title-right::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 7px;
-  bottom: -3px;
   width: 12px;
-  border-left: 3px solid #FFFFFF;
   border-top: 3px solid #FFFFFF;
   border-bottom: 3px solid #FFFFFF;
+  top: 7px;
+  bottom: -3px;
+}
+.index.trend .right .title-right::before {
+  left: 0;
+  border-left: 3px solid #FFFFFF;
 }
 .index.trend .right .title-right::after {
-  content: "";
-  position: absolute;
   right: 0;
-  top: 7px;
-  bottom: -3px;
-  width: 12px;
   border-right: 3px solid #FFFFFF;
-  border-top: 3px solid #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
 }
 .index.trend .right .product-text {
   margin-bottom: 18px;
   font-weight: 400;
-  font-size: 11px;
-  line-height: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  font-size: 11px;
+  line-height: 16px;
 }
 @media (max-width: 1262.98px) {
   .index.trend .right .product-text {
@@ -138,9 +131,9 @@
 }
 .index.trend .right .product-title {
   font-weight: 600;
+  letter-spacing: 0.02em;
   font-size: 30px;
   line-height: 36px;
-  letter-spacing: 0.02em;
 }
 @media (max-width: 1262.98px) {
   .index.trend .right .product-title {
@@ -154,7 +147,7 @@
     line-height: 24px;
   }
 }
-.index.trend .right .text-wrap {
+.index.trend .right .text-wrapper {
   margin-bottom: 72px;
   font-family: "Proxima Nova", "Jost", sans-serif;
   font-weight: 400;
@@ -166,24 +159,24 @@
   overflow: hidden;
 }
 @media (max-width: 1422.98px) {
-  .index.trend .right .text-wrap {
+  .index.trend .right .text-wrapper {
     margin-bottom: 52px;
   }
 }
 @media (max-width: 1262.98px) {
-  .index.trend .right .text-wrap {
+  .index.trend .right .text-wrapper {
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 22px;
   }
 }
 @media (max-width: 750.98px) {
-  .index.trend .right .text-wrap {
+  .index.trend .right .text-wrapper {
     margin-bottom: 26px;
     font-size: 13px;
   }
 }
-.index.trend .right .text-wrap p {
+.index.trend .right .text-wrapper p {
   margin: 0 0 8px;
 }
 .index.trend .right .quantity-wrapper {

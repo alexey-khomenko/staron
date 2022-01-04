@@ -141,6 +141,7 @@ const scripts = [
   'page/index/trend-right',
 
   'page/product/images',
+  'page/product/info',
 
   'page/search/top',
   'page/search/results',
