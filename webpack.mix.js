@@ -47,6 +47,7 @@ const styles = [
   'pages/collection',
   'pages/contacts',
   'pages/exploitation_and_care',
+  'pages/glue',
   'pages/payment_and_delivery',
   'pages/product',
   'pages/study',

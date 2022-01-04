@@ -1,0 +1,34 @@
+extends ../layouts/app
+
+block title
+  | Glue
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Продукция',
+        link: 'catalog.html',
+      },
+      {
+        name: 'Клей',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/glue.css")
+  div(class="container container-fixed")
+    h1(class="glue h1")
+      | Клей
+
+    include ../page/glue/info
+    include ../page/glue/liquid
+    include ../page/glue/solid
+
+    div(class="glue buttons")
+      a(href="index.html", class="button secondary to-home")
+        span
+          | Вернуться на главную
+      a(href="catalog.html", class="button transparent to-catalog")
+        span
+          | Перейти в каталог

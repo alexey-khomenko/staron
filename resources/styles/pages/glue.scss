@@ -1,0 +1,21 @@
+.glue {
+  &.h1 {
+    margin: 0 0 52px;
+  }
+
+  &.info {}
+
+  &.liquid {}
+
+  &.solid {}
+
+  &.buttons {
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: space-between;
+
+    .to-home {}
+
+    .to-catalog {}
+  }
+}
