@@ -132,6 +132,9 @@ const scripts = [
 
   'pages/study_request',
 
+  'page/cart/order',
+  'page/cart/info',
+
   'page/catalog/buttons',
   'page/catalog/filter',
 

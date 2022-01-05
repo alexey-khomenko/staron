@@ -240,6 +240,8 @@
     "/js/layout/modal.js": "/js/layout/modal.js",
     "/js/layout/modal-application.js": "/js/layout/modal-application.js",
     "/js/pages/study_request.js": "/js/pages/study_request.js",
+    "/js/page/cart/order.js": "/js/page/cart/order.js",
+    "/js/page/cart/info.js": "/js/page/cart/info.js",
     "/js/page/catalog/buttons.js": "/js/page/catalog/buttons.js",
     "/js/page/catalog/filter.js": "/js/page/catalog/filter.js",
     "/js/page/collection/buttons.js": "/js/page/collection/buttons.js",
