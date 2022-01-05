@@ -1,0 +1,96 @@
+@import "././resources/styles/__/variables";
+
+.cart {
+  font-family: $font-family-1;
+  font-style: normal;
+
+  .h1 {
+    margin: 0 0 60px;
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 48px;
+    line-height: 58px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 44px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 32px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  .text {
+    margin-bottom: 40px;
+    max-width: 700px;
+    color: $color-black;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 17px;
+    line-height: 32px;
+
+    @media (max-width: $media-grid-lg) {
+      max-width: 600px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 48px;
+      max-width: 100%;
+      font-size: 15px;
+      line-height: 28px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 40px;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media (max-width: $media-grid-md) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  .title {
+    margin-bottom: 44px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .h2 {
+    margin: 0 8px 0 0;
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 30px;
+    line-height: 42px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 21px;
+    }
+  }
+}

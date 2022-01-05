@@ -1,0 +1,43 @@
+@import "././resources/styles/__/variables";
+
+.cart.order {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 543px;
+
+  @media (max-width: $media-grid-lg) {
+    width: 488px;
+  }
+
+  @media (max-width: $media-grid-md) {
+    margin-bottom: 60px;
+    width: 100%;
+  }
+
+  .to-clear {
+    width: 160px;
+    height: 42px;
+
+    span {
+      font-size: 15px;
+    }
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+    }
+  }
+
+  .positions {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    // todo
+    min-height: 10px;
+    background-color: darkseagreen;
+  }
+}

@@ -43,6 +43,7 @@ const styles = [
 
   'pages/404',
   'pages/about_koros_and_lotte',
+  'pages/cart',
   'pages/catalog',
   'pages/collection',
   'pages/contacts',
@@ -61,6 +62,9 @@ const styles = [
   'page/index/trend-left',
   'page/index/trend-right',
   'page/index/production',
+
+  'page/cart/order',
+  'page/cart/info',
 
   'page/catalog/buttons',
   'page/catalog/cards',

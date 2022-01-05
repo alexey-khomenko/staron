@@ -1,0 +1,23 @@
+extends ../layouts/app
+
+block title
+  | Cart
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Корзина',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/cart.css")
+  div(class="container container-fixed cart")
+    h1(class="h1")
+      | Корзина
+    div(class="text")
+      | Проверьте количество необходимой продукции в вашем заказе и заполните формуляр с вашей контактной информацией. Наши специалисты свяжутся с вами для подтверждения и завершения оформления заказа.
+    div(class="content")
+      include ../page/cart/order
+      include ../page/cart/info

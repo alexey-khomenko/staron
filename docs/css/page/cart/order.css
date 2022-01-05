@@ -1,0 +1,37 @@
+.cart.order {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 543px;
+}
+@media (max-width: 1422.98px) {
+  .cart.order {
+    width: 488px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .cart.order {
+    margin-bottom: 60px;
+    width: 100%;
+  }
+}
+.cart.order .to-clear {
+  width: 160px;
+  height: 42px;
+}
+.cart.order .to-clear span {
+  font-size: 15px;
+}
+.cart.order .to-clear svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+.cart.order .positions {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 10px;
+  background-color: darkseagreen;
+}
