@@ -8,16 +8,125 @@
   }
 
   @media (max-width: $media-grid-md) {
-    margin-bottom: 60px;
     width: 100%;
+  }
+
+  .form-wrapper {
+    position: relative;
+    padding: 46px 38px 60px 50px;
+
+    @media (max-width: $media-grid-lg) {
+      padding: 46px 0 60px 36px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      padding: 36px 0 68px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      padding: 36px 0 72px;
+    }
+
+    &::before {
+      content: "";
+      background-color: $color-gray-050;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: -140px;
+
+      @media (max-width: $media-grid-lg) {
+        right: -125px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        left: -34px;
+        right: -34px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        left: -20px;
+        right: -20px;
+      }
+    }
+  }
+
+  .form-title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 22px;
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 24px;
+    line-height: 30px;
+
+    @media (max-width: $media-grid-lg) {
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      font-size: 21px;
+      line-height: 26px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 20px;
+      font-size: 19px;
+      line-height: 24;
+    }
   }
 
   .form {
     position: relative;
-    padding: 46px 38px 60px 50px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
 
-    // todo
-    min-height: 300px;
-    background-color: darkseagreen;
+
+  }
+
+  .checkboxes-top {
+    margin-bottom: 22px;
+  }
+
+  .checkboxes-bottom {
+    margin-bottom: 40px;
+  }
+
+  .inputs {
+    margin-bottom: 34px;
+  }
+
+  .form-textarea {
+    margin-bottom: 30px;
+  }
+
+  .form-agree {
+    margin-bottom: 30px;
+  }
+
+  .checkboxes-head {
+    margin-bottom: 12px;
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    font-size: 21px;
+    line-height: 26px;
+
+
+  }
+
+
+
+  .btn-submit {
+    height: 52px;
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 15px;
+      height: 42px;
+    }
   }
 }

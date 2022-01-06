@@ -1,3 +1,14 @@
+-
+  positions = [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+  ];
 link(rel="stylesheet", href="css/page/cart/order.css")
 script(src="js/page/cart/order.js")
 section(class="cart order")
@@ -9,4 +20,7 @@ section(class="cart order")
         | Очистить заказ
       include ../../partials/svg/clear-order
 
-  div(class="positions")
+  div(class="positions-outer")
+    div(class="positions-inner")
+      each position in positions
+        div(class="position")

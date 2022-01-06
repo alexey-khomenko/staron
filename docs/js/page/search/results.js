@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     data.set('loaded', String(loaded));
     data.set('total', String(total));
     data.set('q', q);
-    const response = await fetch('/ajax/search.php', {method: 'POST', body: data});
+    const response = await fetch('/ajax/search_ajax.php', {method: 'POST', body: data});
 
     let results = [{
       image: 'images/content-search-results-1.jpg',

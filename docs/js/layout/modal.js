@@ -14,6 +14,10 @@ window.closeModal = function () {
   modal.classList.remove('opened');
   backdrop.classList.remove('opened');
   backdrop.style.paddingRight = window.openBody();
+
+  document.dispatchEvent(new CustomEvent('closeModal', {
+    detail: {classList: modal.classList},
+  }));
 };
 
 document.addEventListener('DOMContentLoaded', function () {
