@@ -100,6 +100,69 @@
     margin-bottom: 34px;
   }
 
+  .field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px solid $color-gray-900;
+    padding-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    svg {
+      color: transparent;
+      display: block;
+      width: 17px;
+      height: auto;
+      position: absolute;
+      top: 28px;
+      right: 3px;
+    }
+
+    &.error svg {
+      color: $color-red-700;
+    }
+  }
+
+  .label {
+    color: $color-gray-500;
+    font-size: 14px;
+    line-height: 22px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 13px;
+    }
+  }
+
+  .input {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    border: none;
+    display: block;
+    background-color: transparent;
+    color: $color-black;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+
+    &::placeholder {
+      opacity: 1;
+      font-weight: 400;
+      color: $color-gray-300;
+    }
+  }
+
   .form-textarea {
     margin-bottom: 30px;
   }
@@ -118,7 +181,6 @@
 
 
   }
-
 
 
   .btn-submit {

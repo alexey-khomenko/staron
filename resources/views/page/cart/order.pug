@@ -1,13 +1,53 @@
 -
   positions = [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
+    {
+      id: 1,
+      image: 'images/content-catalog-1.jpg',
+      title: 'Natural Bridge V111',
+      collection: 'METALLIC',
+    },
+    {
+      id: 2,
+      image: 'images/content-catalog-2.jpg',
+      title: 'Natural Bridge V222',
+      collection: 'Supreme',
+    },
+    {
+      id: 3,
+      image: 'images/content-catalog-3.jpg',
+      title: 'Natural Bridge V333',
+      collection: 'METALLIC',
+    },
+    {
+      id: 4,
+      image: 'images/content-catalog-4.jpg',
+      title: 'Natural Bridge V444',
+      collection: 'Supreme',
+    },
+    {
+      id: 5,
+      image: 'images/content-catalog-5.jpg',
+      title: 'Natural Bridge V555',
+      collection: 'METALLIC',
+    },
+    {
+      id: 6,
+      image: 'images/content-catalog-6.jpg',
+      title: 'Natural Bridge V666',
+      collection: 'Supreme',
+    },
+    {
+      id: 7,
+      image: 'images/content-catalog-7.jpg',
+      title: 'Natural Bridge V777',
+      collection: 'METALLIC',
+    },
+    {
+      id: 8,
+      image: 'images/content-catalog-8.jpg',
+      title: 'Natural Bridge V888',
+      collection: 'Supreme',
+    },
   ];
 link(rel="stylesheet", href="css/page/cart/order.css")
 script(src="js/page/cart/order.js")
@@ -23,4 +63,20 @@ section(class="cart order")
   div(class="positions-outer")
     div(class="positions-inner")
       each position in positions
-        div(class="position")
+        div(class="position", data-product-id=`${position.id}`)
+          div(class="position-image")
+            img(src=`${position.image}`, alt="")
+          div(class="position-rows")
+            div(class="position-row-1")
+              div(class="position-title")
+                = position.title
+              button(class="position-delete")
+                | x
+            div(class="position-row-2")
+              div(class="position-collection")
+                = position.collection
+            div(class="position-row-3")
+
+            div(class="position-row-4")
+
+

@@ -1,0 +1,75 @@
+@import "././resources/styles/__/variables";
+
+.modal-popup.order_modal {
+  display: none;
+  max-width: 614px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $color-white;
+  padding: 50px;
+
+  @media (max-width: $media-grid-md) {
+    max-width: 460px;
+    padding: 32px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    max-width: $container-fluid-sm;
+    padding: 24px;
+  }
+
+  &.opened {
+    display: block;
+  }
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .h4 {
+    margin: 0;
+    font-family: $font-family-1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: $color-black;
+  }
+
+  .body {
+    p {
+      margin: 0 0 8px;
+      color: $color-black;
+      font-size: 17px;
+      line-height: 32px;
+
+      @media (max-width: $media-grid-md) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    .button {
+      margin-top: 20px;
+      width: 218px;
+      height: 52px;
+
+      @media (max-width: $media-grid-sm) {
+        font-size: 15px;
+        width: 144px;
+        height: 42px;
+      }
+    }
+  }
+}

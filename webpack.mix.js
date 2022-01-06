@@ -65,6 +65,7 @@ const styles = [
 
   'page/cart/order',
   'page/cart/info',
+  'page/cart/modal',
 
   'page/catalog/buttons',
   'page/catalog/cards',

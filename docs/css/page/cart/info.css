@@ -100,6 +100,74 @@
 .cart.info .inputs {
   margin-bottom: 34px;
 }
+.cart.info .field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #27272B;
+  padding-bottom: 10px;
+}
+.cart.info .field:not(:last-child) {
+  margin-bottom: 25px;
+}
+.cart.info .field svg {
+  color: transparent;
+  display: block;
+  width: 17px;
+  height: auto;
+  position: absolute;
+  top: 28px;
+  right: 3px;
+}
+.cart.info .field.error svg {
+  color: #DD2929;
+}
+.cart.info .label {
+  color: #7C7C81;
+  font-size: 14px;
+  line-height: 22px;
+}
+@media (max-width: 1262.98px) {
+  .cart.info .label {
+    font-size: 13px;
+  }
+}
+.cart.info .input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+  background-color: transparent;
+  color: #000000;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+}
+@media (max-width: 1262.98px) {
+  .cart.info .input {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+.cart.info .input::-moz-placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: #AEAEB1;
+}
+.cart.info .input:-ms-input-placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: #AEAEB1;
+}
+.cart.info .input::placeholder {
+  opacity: 1;
+  font-weight: 400;
+  color: #AEAEB1;
+}
 .cart.info .form-textarea {
   margin-bottom: 30px;
 }

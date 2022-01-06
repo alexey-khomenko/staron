@@ -14,7 +14,28 @@ section(class="cart info")
           | Род занятий
         div(class="checkboxes-body")
 
+
       div(class="inputs")
+        div(class="field")
+          include ../../partials/svg/check
+          label(class="label", for="cart-name")
+            | Имя
+          input(class="input", id="cart-name", name="name", type="text")
+        div(class="field")
+          include ../../partials/svg/check
+          label(class="label", for="cart-tel")
+            | Телефон *
+          input(class="input", id="cart-tel", name="tel", type="tel")
+        div(class="field")
+          include ../../partials/svg/check
+          label(class="label", for="cart-email")
+            | Email *
+          input(class="input", id="cart-email", name="email", type="email")
+        div(class="field")
+          include ../../partials/svg/check
+          label(class="label", for="cart-organization")
+            | Название вашей организации
+          input(class="input", id="cart-organization", name="organization", type="text")
 
 
       div(class="checkboxes-bottom")
@@ -24,10 +45,11 @@ section(class="cart info")
 
 
       div(class="form-textarea")
-
+        textarea(id="cart-message", name="message")
 
       div(class="form-agree")
-
+        input(type="checkbox", id="cart-agree")
+        label
 
       button(type="submit", class="button default btn-submit")
         span

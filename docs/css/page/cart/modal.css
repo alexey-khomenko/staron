@@ -1,0 +1,71 @@
+.modal-popup.order_modal {
+  display: none;
+  max-width: 614px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+  padding: 50px;
+}
+@media (max-width: 1262.98px) {
+  .modal-popup.order_modal {
+    max-width: 460px;
+    padding: 32px;
+  }
+}
+@media (max-width: 750.98px) {
+  .modal-popup.order_modal {
+    max-width: 360px;
+    padding: 24px;
+  }
+}
+.modal-popup.order_modal.opened {
+  display: block;
+}
+.modal-popup.order_modal .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.modal-popup.order_modal .h4 {
+  margin: 0;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.modal-popup.order_modal .body p {
+  margin: 0 0 8px;
+  color: #000000;
+  font-size: 17px;
+  line-height: 32px;
+}
+@media (max-width: 1262.98px) {
+  .modal-popup.order_modal .body p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 750.98px) {
+  .modal-popup.order_modal .body p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+.modal-popup.order_modal .body .button {
+  margin-top: 20px;
+  width: 218px;
+  height: 52px;
+}
+@media (max-width: 750.98px) {
+  .modal-popup.order_modal .body .button {
+    font-size: 15px;
+    width: 144px;
+    height: 42px;
+  }
+}

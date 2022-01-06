@@ -18,7 +18,28 @@ document.addEventListener('DOMContentLoaded', function () {
     location.assign(results.link);
   });
 
-  // todo del from cart
+  document.addEventListener('click', async function (e) {
+    const btn = e.target.closest('.cart.order .position-delete');
+
+    if (!btn) return true;
+
+    const id = btn.closest('.position').dataset.productId;
+
+    const data = new FormData();
+    data.set('productId', id);
+    const response = await fetch('/ajax/cart_position_delete_ajax.php', {method: 'POST', body: data});
+
+    let results = {
+      status: '+',
+      demo: '+',
+    };
+
+    if (response.status === 200) {
+      results = await response.json();
+    }
+
+    console.log('delete position in cart', results);
+  });
 
   async function updatePosition (position) {
     const id = position.dataset.productId;
@@ -28,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const quantity = position.querySelector('.quantity-number').textContent;
 
     const data = new FormData();
-    data.set('id', id);
+    data.set('productId', id);
     data.set('glue500', glue500);
     data.set('glue700', glue700);
     data.set('quantity', quantity);

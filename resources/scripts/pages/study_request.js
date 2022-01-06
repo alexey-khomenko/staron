@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const lastNameEl = document.querySelector('#study_request-last_name');
     const telEl = document.querySelector('#study_request-tel');
     const emailEl = document.querySelector('#study_request-email');
+    // todo
     const organizationEl = document.querySelector('#application-country');
 
     const name = nameEl.value.trim();
