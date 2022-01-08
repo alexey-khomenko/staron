@@ -71,12 +71,24 @@ section(class="cart order")
               div(class="position-title")
                 = position.title
               button(class="position-delete")
-                | x
+                include ../../partials/svg/close-3
+
             div(class="position-row-2")
               div(class="position-collection")
                 = position.collection
+
             div(class="position-row-3")
+              div(class="l")
+                | Листы искусственного камня
+              div(class="r")
 
             div(class="position-row-4")
-
-
+              div(class="l")
+                | Объем клея
+              div(class="r")
+                input(type="checkbox", class="glue-500", id=`glue-500-${position.id}`)
+                label(class="label", for=`glue-500-${position.id}`)
+                  | 500 мл
+                input(type="checkbox", class="glue-700", id=`glue-700-${position.id}`)
+                label(class="label", for=`glue-700-${position.id}`)
+                  | 700 мл

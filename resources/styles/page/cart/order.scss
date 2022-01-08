@@ -130,4 +130,125 @@
     font-size: 21px;
     line-height: 30px;
   }
+
+  .position-delete {
+    display: block;
+    margin-left: 5px;
+    color: $color-gray-800;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-gray-500;
+      }
+    }
+
+    &:active {
+      color: $color-gray-600;
+    }
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .position-row-2 {
+    margin-bottom: 5px;
+  }
+
+  .position-collection {
+    color: $color-gray-500;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    font-size: 13px;
+    line-height: 32px;
+  }
+
+  .position-row-3, .position-row-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $media-grid-sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .position-row-3 {
+    margin-bottom: 24px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .l {
+    color: $color-black;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    font-size: 14px;
+    line-height: 20px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 13px;
+    }
+  }
+
+  .position-row-3 .r {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-white;
+    border-radius: 3px;
+    width: 142px;
+    height: 36px;
+
+    @media (max-width: $media-grid-lg) {
+      width: 100px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      width: 142px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      width: 134px;
+      margin-top: 10px;
+    }
+  }
+
+  .position-row-4 .r {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 142px;
+
+    @media (max-width: $media-grid-sm) {
+      width: 156px;
+      margin-top: 6px;
+    }
+  }
+
+  .r input[type="checkbox"] {
+    display: none;
+  }
+
+  .r .label {
+    cursor: pointer;
+    display: block;
+    padding-left: 24px;
+    color: $color-gray-900;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    font-size: 13px;
+    line-height: 18px;
+
+  }
 }

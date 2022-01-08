@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!btn) return true;
 
-    const id = btn.closest('.position').dataset.productId;
+    const position = btn.closest('.position');
+    const id = position.dataset.productId;
 
     const data = new FormData();
     data.set('productId', id);
@@ -39,6 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     console.log('delete position in cart', results);
+
+    position.remove();
+
+    if (0 === document.querySelectorAll('.position').length) {
+      const link = document.querySelector('.cart.container').dataset.catalogLink;
+      location.assign(link);
+    }
   });
 
   async function updatePosition (position) {

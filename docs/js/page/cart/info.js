@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.Inputmask({mask: '+7 (999) 999-99-99'}).mask('#cart-tel');
 
-  let link = null;
-
   document.addEventListener('submit', async function (e) {
     if (!e.target.closest('.cart.info .form')) return true;
 
@@ -65,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const response = await fetch('/ajax/cart_order_ajax.php', {method: 'POST', body: data});
 
     let results = {
-      link: '/catalog.html',
+      status: '+',
+      demo: '+',
     };
 
     if (response.status === 200) {
@@ -73,8 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     console.log('order in cart', results);
-
-    link = results.link;
 
     window.openModal('order_modal');
   });
@@ -90,7 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('closeModal', function (e) {
     if (!e.detail.classList.contains('order_modal')) return true;
 
-    if (link) location.assign(link);
+    const link = document.querySelector('.cart.container').dataset.catalogLink;
+    location.assign(link);
   });
 
 });
