@@ -193,13 +193,7 @@
   }
 }
 .cart.order .position-row-3 .r {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #FFFFFF;
-  border-radius: 3px;
   width: 142px;
-  height: 36px;
 }
 @media (max-width: 1422.98px) {
   .cart.order .position-row-3 .r {
@@ -216,6 +210,38 @@
     width: 134px;
     margin-top: 10px;
   }
+}
+.cart.order .quantity {
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 34px;
+}
+.cart.order .quantity-minus, .cart.order .quantity-plus {
+  width: 32px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #7C7C81;
+}
+@media (hover: hover) {
+  .cart.order .quantity-minus:hover, .cart.order .quantity-plus:hover {
+    color: #313138;
+  }
+}
+.cart.order .quantity-minus:active, .cart.order .quantity-plus:active {
+  color: #000000;
+}
+.cart.order .quantity-number {
+  color: #27272B;
 }
 .cart.order .position-row-4 .r {
   display: flex;
@@ -235,10 +261,61 @@
 .cart.order .r .label {
   cursor: pointer;
   display: block;
+  position: relative;
   padding-left: 24px;
-  color: #27272B;
+  color: #7C7C81;
   font-weight: 400;
   letter-spacing: 0.01em;
   font-size: 13px;
   line-height: 18px;
+}
+.cart.order .r .label::before {
+  border-color: #7C7C81;
+}
+.cart.order .r .label::after {
+  border-color: #DD2929;
+}
+@media (hover: hover) {
+  .cart.order .r .label:hover {
+    color: #27272B;
+  }
+  .cart.order .r .label:hover::before {
+    border-color: #27272B;
+  }
+  .cart.order .r .label:hover::after {
+    border-color: #ED8585;
+  }
+}
+.cart.order .r .label:active::after {
+  border-color: #ED8585;
+}
+.cart.order .r .label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 2px;
+}
+.cart.order input[type=checkbox]:checked + .label {
+  color: #27272B;
+}
+.cart.order input[type=checkbox]:checked + .label::before {
+  border-color: #27272B;
+}
+.cart.order input[type=checkbox]:checked + .label::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  width: 8px;
+  height: 5px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  transform: rotate(-48deg);
 }

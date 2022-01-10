@@ -389,7 +389,11 @@
                       </div>
                       <div class="position-row-3">
                         <div class="l">Листы искусственного камня</div>
-                        <div class="r"></div>
+                        <div class="r quantity">
+                          <div class="quantity-minus">-</div>
+                          <div class="quantity-number">1</div>
+                          <div class="quantity-plus">+</div>
+                        </div>
                       </div>
                       <div class="position-row-4">
                         <div class="l">Объем клея</div>
@@ -420,7 +424,11 @@
                       </div>
                       <div class="position-row-3">
                         <div class="l">Листы искусственного камня</div>
-                        <div class="r"></div>
+                        <div class="r quantity">
+                          <div class="quantity-minus">-</div>
+                          <div class="quantity-number">1</div>
+                          <div class="quantity-plus">+</div>
+                        </div>
                       </div>
                       <div class="position-row-4">
                         <div class="l">Объем клея</div>
@@ -451,7 +459,11 @@
                       </div>
                       <div class="position-row-3">
                         <div class="l">Листы искусственного камня</div>
-                        <div class="r"></div>
+                        <div class="r quantity">
+                          <div class="quantity-minus">-</div>
+                          <div class="quantity-number">1</div>
+                          <div class="quantity-plus">+</div>
+                        </div>
                       </div>
                       <div class="position-row-4">
                         <div class="l">Объем клея</div>
@@ -482,7 +494,11 @@
                       </div>
                       <div class="position-row-3">
                         <div class="l">Листы искусственного камня</div>
-                        <div class="r"></div>
+                        <div class="r quantity">
+                          <div class="quantity-minus">-</div>
+                          <div class="quantity-number">1</div>
+                          <div class="quantity-plus">+</div>
+                        </div>
                       </div>
                       <div class="position-row-4">
                         <div class="l">Объем клея</div>
@@ -513,7 +529,11 @@
                       </div>
                       <div class="position-row-3">
                         <div class="l">Листы искусственного камня</div>
-                        <div class="r"></div>
+                        <div class="r quantity">
+                          <div class="quantity-minus">-</div>
+                          <div class="quantity-number">1</div>
+                          <div class="quantity-plus">+</div>
+                        </div>
                       </div>
                       <div class="position-row-4">
                         <div class="l">Объем клея</div>
@@ -544,7 +564,11 @@
                       </div>
                       <div class="position-row-3">
                         <div class="l">Листы искусственного камня</div>
-                        <div class="r"></div>
+                        <div class="r quantity">
+                          <div class="quantity-minus">-</div>
+                          <div class="quantity-number">1</div>
+                          <div class="quantity-plus">+</div>
+                        </div>
                       </div>
                       <div class="position-row-4">
                         <div class="l">Объем клея</div>
@@ -575,7 +599,11 @@
                       </div>
                       <div class="position-row-3">
                         <div class="l">Листы искусственного камня</div>
-                        <div class="r"></div>
+                        <div class="r quantity">
+                          <div class="quantity-minus">-</div>
+                          <div class="quantity-number">1</div>
+                          <div class="quantity-plus">+</div>
+                        </div>
                       </div>
                       <div class="position-row-4">
                         <div class="l">Объем клея</div>
@@ -606,7 +634,11 @@
                       </div>
                       <div class="position-row-3">
                         <div class="l">Листы искусственного камня</div>
-                        <div class="r"></div>
+                        <div class="r quantity">
+                          <div class="quantity-minus">-</div>
+                          <div class="quantity-number">1</div>
+                          <div class="quantity-plus">+</div>
+                        </div>
                       </div>
                       <div class="position-row-4">
                         <div class="l">Объем клея</div>
@@ -633,7 +665,14 @@
                 <form class="form">
                   <div class="checkboxes-top">
                     <div class="checkboxes-head">Род занятий</div>
-                    <div class="checkboxes-body"></div>
+                    <div class="checkboxes-body">
+                      <input id="cart-classes-0" name="classes[]" type="checkbox" value="Обработчик">
+                      <label for="cart-classes-0">Обработчик</label>
+                      <input id="cart-classes-1" name="classes[]" type="checkbox" value="Дизайнер / архитектор">
+                      <label for="cart-classes-1">Дизайнер / архитектор</label>
+                      <input id="cart-classes-2" name="classes[]" type="checkbox" value="Физическое лицо">
+                      <label for="cart-classes-2">Физическое лицо</label>
+                    </div>
                   </div>
                   <div class="inputs">
                     <div class="field">
@@ -641,40 +680,52 @@
                         <path d="M5.88461 10.1718L2.22807 6.51527L0.98291 7.75166L5.88461 12.6534L16.4071 2.13092L15.1707 0.894531L5.88461 10.1718Z" fill="currentColor"></path>
                       </svg>
                       <label class="label" for="cart-name">Имя</label>
-                      <input class="input" id="cart-name" name="name" type="text">
+                      <input class="input" id="cart-name" name="name" type="text" placeholder="Ваше имя">
                     </div>
                     <div class="field">
                       <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.88461 10.1718L2.22807 6.51527L0.98291 7.75166L5.88461 12.6534L16.4071 2.13092L15.1707 0.894531L5.88461 10.1718Z" fill="currentColor"></path>
                       </svg>
                       <label class="label" for="cart-tel">Телефон *</label>
-                      <input class="input" id="cart-tel" name="tel" type="tel">
+                      <input class="input" id="cart-tel" name="tel" type="tel" placeholder="+7 (___) ___-__-__">
                     </div>
                     <div class="field">
                       <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.88461 10.1718L2.22807 6.51527L0.98291 7.75166L5.88461 12.6534L16.4071 2.13092L15.1707 0.894531L5.88461 10.1718Z" fill="currentColor"></path>
                       </svg>
                       <label class="label" for="cart-email">Email *</label>
-                      <input class="input" id="cart-email" name="email" type="email">
+                      <input class="input" id="cart-email" name="email" type="email" placeholder="Ваш email">
                     </div>
                     <div class="field">
                       <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.88461 10.1718L2.22807 6.51527L0.98291 7.75166L5.88461 12.6534L16.4071 2.13092L15.1707 0.894531L5.88461 10.1718Z" fill="currentColor"></path>
                       </svg>
                       <label class="label" for="cart-organization">Название вашей организации</label>
-                      <input class="input" id="cart-organization" name="organization" type="text">
+                      <input class="input" id="cart-organization" name="organization" type="text" placeholder="Ваша организация">
                     </div>
                   </div>
                   <div class="checkboxes-bottom">
                     <div class="checkboxes-head">Меня интересует</div>
-                    <div class="checkboxes-body"></div>
+                    <div class="checkboxes-body">
+                      <input id="cart-interested-0" name="interested[]" type="checkbox" value="Узнать наличие продуктов / купить">
+                      <label for="cart-interested-0">Узнать наличие продуктов / купить</label>
+                      <input id="cart-interested-1" name="interested[]" type="checkbox" value="Заказать образцы">
+                      <label for="cart-interested-1">Заказать образцы</label>
+                      <input id="cart-interested-2" name="interested[]" type="checkbox" value="Узнать цену">
+                      <label for="cart-interested-2">Узнать цену</label>
+                    </div>
                   </div>
                   <div class="form-textarea">
-                    <textarea id="cart-message" name="message"></textarea>
+                    <label class="label" for="cart-message">Комментарий к заказу</label>
+                    <textarea class="textarea" id="cart-message" name="message" rows="5"></textarea>
                   </div>
                   <div class="form-agree">
                     <input type="checkbox" id="cart-agree">
-                    <label></label>
+                    <label for="cart-agree">
+                      Я согласен с
+                      <a href="404.html" target="_blank">политикой конфиденциальности</a>
+                      и политикой обработки персональных данных
+                    </label>
                   </div>
                   <button class="button default btn-submit" type="submit"><span>Оформить заказ</span></button>
                 </form>

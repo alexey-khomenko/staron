@@ -117,15 +117,13 @@
   color: #DD2929;
   text-decoration: underline;
 }
-@media (pointer: coarse) {
-  .error-404 .a:active {
-    text-decoration: none;
-  }
-}
 @media (hover: hover) {
   .error-404 .a:hover {
     text-decoration: none;
   }
+}
+.error-404 .a:active {
+  text-decoration: none;
 }
 .error-404 .picture {
   display: block;

@@ -13,43 +13,66 @@ section(class="cart info")
         div(class="checkboxes-head")
           | Род занятий
         div(class="checkboxes-body")
-
+          input(id="cart-classes-0", name="classes[]", type="checkbox", value="Обработчик")
+          label(for="cart-classes-0")
+            | Обработчик
+          input(id="cart-classes-1", name="classes[]", type="checkbox", value="Дизайнер / архитектор")
+          label(for="cart-classes-1")
+            | Дизайнер / архитектор
+          input(id="cart-classes-2", name="classes[]", type="checkbox", value="Физическое лицо")
+          label(for="cart-classes-2")
+            | Физическое лицо
 
       div(class="inputs")
         div(class="field")
           include ../../partials/svg/check
           label(class="label", for="cart-name")
             | Имя
-          input(class="input", id="cart-name", name="name", type="text")
+          input(class="input", id="cart-name", name="name", type="text", placeholder="Ваше имя")
         div(class="field")
           include ../../partials/svg/check
           label(class="label", for="cart-tel")
             | Телефон *
-          input(class="input", id="cart-tel", name="tel", type="tel")
+          input(class="input", id="cart-tel", name="tel", type="tel", placeholder="+7 (___) ___-__-__")
         div(class="field")
           include ../../partials/svg/check
           label(class="label", for="cart-email")
             | Email *
-          input(class="input", id="cart-email", name="email", type="email")
+          input(class="input", id="cart-email", name="email", type="email", placeholder="Ваш email")
         div(class="field")
           include ../../partials/svg/check
           label(class="label", for="cart-organization")
             | Название вашей организации
-          input(class="input", id="cart-organization", name="organization", type="text")
-
+          input(class="input", id="cart-organization", name="organization", type="text", placeholder="Ваша организация")
 
       div(class="checkboxes-bottom")
         div(class="checkboxes-head")
           | Меня интересует
         div(class="checkboxes-body")
-
+          input(id="cart-interested-0", name="interested[]", type="checkbox", value="Узнать наличие продуктов / купить")
+          label(for="cart-interested-0")
+            | Узнать наличие продуктов / купить
+          input(id="cart-interested-1", name="interested[]", type="checkbox", value="Заказать образцы")
+          label(for="cart-interested-1")
+            | Заказать образцы
+          input(id="cart-interested-2", name="interested[]", type="checkbox", value="Узнать цену")
+          label(for="cart-interested-2")
+            | Узнать цену
 
       div(class="form-textarea")
-        textarea(id="cart-message", name="message")
+        label(class="label", for="cart-message")
+          | Комментарий к заказу
+        textarea(class="textarea", id="cart-message", name="message", rows="5")
 
       div(class="form-agree")
         input(type="checkbox", id="cart-agree")
-        label
+        label(for="cart-agree")
+          | Я согласен с
+          |
+          a(href="404.html", target="_blank")
+            | политикой конфиденциальности
+          |
+          | и политикой обработки персональных данных
 
       button(type="submit", class="button default btn-submit")
         span

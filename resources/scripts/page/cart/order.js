@@ -53,13 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const id = position.dataset.productId;
     const glue500 = !!position.querySelector('.glue-500:checked') ? '1' : '0';
     const glue700 = !!position.querySelector('.glue-700:checked') ? '1' : '0';
-
     const quantity = position.querySelector('.quantity-number').textContent;
 
     const data = new FormData();
     data.set('productId', id);
-    data.set('glue500', glue500);
     data.set('glue700', glue700);
+    data.set('glue500', glue500);
     data.set('quantity', quantity);
     const response = await fetch('/ajax/to_cart_ajax.php', {method: 'POST', body: data});
 
@@ -75,9 +74,32 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('update position in cart', results);
   }
 
-  // todo click minus
-  // todo click plus
-  // todo click glue-500
-  // todo click glue-700
+  document.addEventListener('change', async function (e) {
+    const glue500 = e.target.closest('.cart.order .position .glue-500');
+    const glue700 = e.target.closest('.cart.order .position .glue-700');
+    const glue = glue500 || glue700;
+
+    if (!glue) return true;
+
+    await updatePosition(glue.closest('.position'));
+  });
+
+  document.addEventListener('click', async function (e) {
+    const minus = e.target.closest('.cart.order .position .quantity-minus');
+    const plus = e.target.closest('.cart.order .position .quantity-plus');
+    const btn = minus || plus;
+
+    if (!btn) return true;
+
+    const position = btn.closest('.position');
+    const quantityEl = position.querySelector('.quantity-number');
+    let quantity = +quantityEl.textContent;
+
+    if (1 >= quantity && minus) return true;
+
+    quantityEl.textContent = String(plus ? ++quantity : --quantity);
+
+    await updatePosition(position);
+  });
 
 });

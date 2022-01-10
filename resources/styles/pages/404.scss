@@ -113,16 +113,14 @@
     color: $color-red-700;
     text-decoration: underline;
 
-    @media (pointer: coarse) {
-      &:active {
-        text-decoration: none;
-      }
-    }
-
     @media (hover: hover) {
       &:hover {
         text-decoration: none;
       }
+    }
+
+    &:active {
+      text-decoration: none;
     }
   }
 
