@@ -69,7 +69,6 @@ const styles = [
 
   'page/catalog/buttons',
   'page/catalog/cards',
-  'page/catalog/filter',
 
   'page/collection/buttons',
   'page/collection/cards',
@@ -137,7 +136,6 @@ const scripts = [
   'page/cart/info',
 
   'page/catalog/buttons',
-  'page/catalog/filter',
 
   'page/collection/buttons',
   'page/collection/cards',
