@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const lastNameEl = document.querySelector('#study_request-last_name');
     const telEl = document.querySelector('#study_request-tel');
     const emailEl = document.querySelector('#study_request-email');
-    // todo
-    const organizationEl = document.querySelector('#application-country');
+    const organizationEl = document.querySelector('#study_request-organization');
 
     const name = nameEl.value.trim();
     const lastName = lastNameEl.value.trim();
@@ -67,6 +66,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const email = e.target.closest('#study_request-email');
     if (email) email.closest('.field').classList.remove('error');
+  });
+
+  document.addEventListener('closeModal', function (e) {
+    if (!e.detail.classList.contains('study_request_modal')) return true;
+
+    const link = document.querySelector('.study_request_modal a.button.default').href;
+    location.assign(link);
   });
 
 });

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  async function updatePosition (position) {
+  async function updatePosition(position) {
     const id = position.dataset.productId;
     const glue500 = !!position.querySelector('.glue-500:checked') ? '1' : '0';
     const glue700 = !!position.querySelector('.glue-700:checked') ? '1' : '0';
