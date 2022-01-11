@@ -1,9 +1,11 @@
 .news.content {
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(6, 1fr);
 }
-@media (max-width: 1262.98px) {
+@media (max-width: 1422.98px) {
   .news.content {
     grid-gap: 18px;
   }
@@ -28,25 +30,53 @@
 .news.content .card:hover img {
   filter: none;
 }
-.news.content .card .info {
+.news.content .card .info-outer {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.news.content .card .info-inner {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  position: absolute;
-  z-index: 1;
   max-width: 100%;
 }
 .news.content .card .type {
+  margin-bottom: 16px;
   text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  font-size: 13px;
+  line-height: 18px;
 }
 .news.content .card .title {
   flex-grow: 1;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 24px;
+}
+.news.content .card .title span {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .news.content .card .times {
+  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-size: 13px;
+  line-height: 18px;
+}
+.news.content .card .time {
+  margin-left: 8px;
 }
 .news.content .card:nth-child(5n-4) {
   grid-column-start: 1;
@@ -149,15 +179,13 @@
   top: 0;
   left: 0;
   height: 50%;
-  background-color: lightblue;
 }
-.news.content .card:nth-child(5n-4) .info, .news.content .card:nth-child(5n-2) .info {
+.news.content .card:nth-child(5n-4) .info-outer, .news.content .card:nth-child(5n-2) .info-outer {
   bottom: 0;
   left: 0;
-  width: 100%;
   height: 50%;
-  padding: 24px 26px 28px;
   background-color: #F8F8F8;
+  padding: 24px 26px 28px;
 }
 .news.content .card:nth-child(5n-4) .type, .news.content .card:nth-child(5n-4) .times, .news.content .card:nth-child(5n-2) .type, .news.content .card:nth-child(5n-2) .times {
   color: #7C7C81;
@@ -169,15 +197,13 @@
   bottom: 0;
   left: 0;
   height: 50%;
-  background-color: darkslategray;
 }
-.news.content .card:nth-child(5n-3) .info {
+.news.content .card:nth-child(5n-3) .info-outer {
   top: 0;
   left: 0;
-  width: 100%;
   height: 50%;
-  padding: 28px 26px 24px;
   background-color: #27272B;
+  padding: 28px 26px 24px;
 }
 .news.content .card:nth-child(5n-3) .type, .news.content .card:nth-child(5n-3) .times {
   color: #7C7C81;
@@ -189,17 +215,16 @@
   top: 0;
   left: 0;
   height: 100%;
-  background-color: darkred;
 }
-.news.content .card:nth-child(5n-1) .info, .news.content .card:nth-child(5n-0) .info {
+.news.content .card:nth-child(5n-1) .info-outer, .news.content .card:nth-child(5n-0) .info-outer {
   bottom: 0;
   left: 0;
-  width: auto;
   height: auto;
+  background-color: rgba(125, 125, 125, 0.4);
   padding: 22px 26px 24px;
 }
-.news.content .card:nth-child(5n-1):hover .info, .news.content .card:nth-child(5n-0):hover .info {
-  background-color: rgba(125, 125, 125, 0.5);
+.news.content .card:nth-child(5n-1):hover .info-outer, .news.content .card:nth-child(5n-0):hover .info-outer {
+  background-color: rgba(125, 125, 125, 0.7);
 }
 .news.content .card:nth-child(5n-1) .type, .news.content .card:nth-child(5n-1) .times, .news.content .card:nth-child(5n-1) .title, .news.content .card:nth-child(5n-0) .type, .news.content .card:nth-child(5n-0) .times, .news.content .card:nth-child(5n-0) .title {
   color: #FFFFFF;
