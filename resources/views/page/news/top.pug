@@ -1,0 +1,16 @@
+link(rel="stylesheet", href="css/page/news/top.css")
+script(src="js/page/news/top.js")
+section(class="news top")
+  h1(class="h1")
+    | Новости
+  div(class="top-wrapper")
+    div(class="search-wrapper")
+      input(type="search", placeholder="Поиск по названию")
+
+    details(class="details")
+      summary(class="button secondary details-head")
+        include ../../partials/svg/ellipsis
+        span
+          | Категории
+      div(class="details-body")
+        | todo

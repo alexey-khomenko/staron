@@ -1,0 +1,22 @@
+extends ../layouts/app
+
+block title
+  | News
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'О компании',
+        link: '404.html',
+      },
+      {
+        name: 'Новости',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  div(class="container container-fixed")
+    include ../page/news/top
+    include ../page/news/content
+    include ../page/news/buttons

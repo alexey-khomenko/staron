@@ -55,14 +55,6 @@ const styles = [
   'pages/study_directions',
   'pages/study_request',
 
-  'page/index/slider',
-  'page/index/scroll',
-  'page/index/benefits',
-  'page/index/trend',
-  'page/index/trend-left',
-  'page/index/trend-right',
-  'page/index/production',
-
   'page/cart/order',
   'page/cart/info',
   'page/cart/modal',
@@ -85,6 +77,23 @@ const styles = [
   'page/exploitation_and_care/exploitation',
   'page/exploitation_and_care/easily_removable_substances',
   'page/exploitation_and_care/difficult_removable_substances',
+
+  'page/index/slider',
+  'page/index/scroll',
+  'page/index/benefits',
+  'page/index/trend',
+  'page/index/trend-left',
+  'page/index/trend-right',
+  'page/index/production',
+
+  'page/new/bottom',
+  'page/new/buttons',
+  'page/new/content',
+  'page/new/top',
+
+  'page/news/buttons',
+  'page/news/content',
+  'page/news/top',
 
   'page/payment_and_delivery/top',
   'page/payment_and_delivery/middle',
@@ -146,6 +155,9 @@ const scripts = [
   'page/index/benefits',
   'page/index/trend',
   'page/index/trend-right',
+
+  'page/news/buttons',
+  'page/news/top',
 
   'page/product/images',
   'page/product/info',

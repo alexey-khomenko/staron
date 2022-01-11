@@ -1,0 +1,82 @@
+-
+  news = [
+    {
+      img: '',
+      type: 'Мероприятия',
+      title: '2 марта в нашем учебном центре прошел учебный семинар для обработчиков акрилового камня',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+    {
+      img: '',
+      type: 'Видео',
+      title: 'Обработка поверхностей Staron. Как создавать бесшовные стыки',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+    {
+      img: '',
+      type: 'Квартирный вопрос',
+      title: 'Горох, маркиза и шатер, проект автор проекта TOTASTE.STUDIO',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+    {
+      img: '',
+      type: 'Видео',
+      title: 'Фрагмент записи семинара по обработке акрилового камня',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+    {
+      img: '',
+      type: 'Мастер-класс',
+      title: 'Мастер-класс по обработке акрилового камня',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+    {
+      img: '',
+      type: 'Мероприятия',
+      title: '2 марта в нашем учебном центре прошел учебный семинар для обработчиков акрилового камня',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+    {
+      img: '',
+      type: 'Видео',
+      title: 'Обработка поверхностей Staron. Как создавать бесшовные стыки',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+    {
+      img: '',
+      type: 'Квартирный вопрос',
+      title: 'Горох, маркиза и шатер, проект автор проекта TOTASTE.STUDIO',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+  ];
+link(rel="stylesheet", href="css/page/news/content.css")
+section(class="news content", data-all="11", data-limit="5")
+  each card in news
+    a(href=`${card.link}`, class="card")
+      img(src=`${card.src}`, alt="")
+      div(class="info")
+        div(class="type")
+          = card.type
+        div(class="title")
+          = card.title
+        div(class="times")
+          span(class="date")
+            = card.date
+          span(class="time")
+            = card.time

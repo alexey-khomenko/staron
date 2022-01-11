@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
       title: 'Natural Bridge V111',
       subtitle: 'Коллекция METALLIC',
       text: 'Листы искусственного камня',
-      link: '404.html',
+      link: 'collection.html',
     }];
 
     if (response.status === 200) {

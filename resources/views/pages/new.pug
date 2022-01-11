@@ -1,0 +1,26 @@
+extends ../layouts/app
+
+block title
+  | New
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'О компании',
+        link: '404.html',
+      },
+      {
+        name: 'Новости',
+        link: 'news.html',
+      },
+      {
+        name: '2 марта в нашем учебном центре...',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  include ../page/new/top
+  include ../page/new/content
+  include ../page/new/buttons
+  include ../page/new/bottom
