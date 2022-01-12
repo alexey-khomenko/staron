@@ -32,7 +32,9 @@
 }
 .news.content .card .info-outer {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -52,12 +54,37 @@
   font-size: 13px;
   line-height: 18px;
 }
+@media (max-width: 1262.98px) {
+  .news.content .card .type {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 750.98px) {
+  .news.content .card .type {
+    margin-bottom: 10px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
 .news.content .card .title {
   flex-grow: 1;
   font-weight: 600;
   letter-spacing: 0.02em;
   font-size: 17px;
   line-height: 24px;
+}
+@media (max-width: 1262.98px) {
+  .news.content .card .title {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 750.98px) {
+  .news.content .card .title {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .news.content .card .title span {
   overflow: hidden;
@@ -74,6 +101,19 @@
   letter-spacing: 0.01em;
   font-size: 13px;
   line-height: 18px;
+}
+@media (max-width: 1262.98px) {
+  .news.content .card .times {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 750.98px) {
+  .news.content .card .times {
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 16px;
+  }
 }
 .news.content .card .time {
   margin-left: 8px;
@@ -187,6 +227,24 @@
   background-color: #F8F8F8;
   padding: 24px 26px 28px;
 }
+@media (max-width: 1422.98px) {
+  .news.content .card:nth-child(5n-4) .info-outer, .news.content .card:nth-child(5n-2) .info-outer {
+    padding: 21px 26px 23px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .news.content .card:nth-child(5n-4) .info-outer, .news.content .card:nth-child(5n-2) .info-outer {
+    padding: 20px 12px 18px;
+  }
+}
+@media (max-width: 750.98px) {
+  .news.content .card:nth-child(5n-4) .info-outer, .news.content .card:nth-child(5n-2) .info-outer {
+    padding: 16px 15px 18px;
+  }
+}
+.news.content .card:nth-child(5n-4) .info-inner, .news.content .card:nth-child(5n-2) .info-inner {
+  flex-grow: 1;
+}
 .news.content .card:nth-child(5n-4) .type, .news.content .card:nth-child(5n-4) .times, .news.content .card:nth-child(5n-2) .type, .news.content .card:nth-child(5n-2) .times {
   color: #7C7C81;
 }
@@ -205,6 +263,24 @@
   background-color: #27272B;
   padding: 28px 26px 24px;
 }
+@media (max-width: 1422.98px) {
+  .news.content .card:nth-child(5n-3) .info-outer {
+    padding: 23px 26px 21px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .news.content .card:nth-child(5n-3) .info-outer {
+    padding: 18px 12px 20px;
+  }
+}
+@media (max-width: 750.98px) {
+  .news.content .card:nth-child(5n-3) .info-outer {
+    padding: 18px 15px 16px;
+  }
+}
+.news.content .card:nth-child(5n-3) .info-inner {
+  flex-grow: 1;
+}
 .news.content .card:nth-child(5n-3) .type, .news.content .card:nth-child(5n-3) .times {
   color: #7C7C81;
 }
@@ -217,14 +293,26 @@
   height: 100%;
 }
 .news.content .card:nth-child(5n-1) .info-outer, .news.content .card:nth-child(5n-0) .info-outer {
-  bottom: 0;
+  top: 0;
   left: 0;
-  height: auto;
-  background-color: rgba(125, 125, 125, 0.4);
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
   padding: 22px 26px 24px;
 }
-.news.content .card:nth-child(5n-1):hover .info-outer, .news.content .card:nth-child(5n-0):hover .info-outer {
-  background-color: rgba(125, 125, 125, 0.7);
+@media (max-width: 1422.98px) {
+  .news.content .card:nth-child(5n-1) .info-outer, .news.content .card:nth-child(5n-0) .info-outer {
+    padding: 19px 26px 21px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .news.content .card:nth-child(5n-1) .info-outer, .news.content .card:nth-child(5n-0) .info-outer {
+    padding: 20px 12px 22px;
+  }
+}
+@media (max-width: 750.98px) {
+  .news.content .card:nth-child(5n-1) .info-outer, .news.content .card:nth-child(5n-0) .info-outer {
+    padding: 20px 20px 22px;
+  }
 }
 .news.content .card:nth-child(5n-1) .type, .news.content .card:nth-child(5n-1) .times, .news.content .card:nth-child(5n-1) .title, .news.content .card:nth-child(5n-0) .type, .news.content .card:nth-child(5n-0) .times, .news.content .card:nth-child(5n-0) .title {
   color: #FFFFFF;
