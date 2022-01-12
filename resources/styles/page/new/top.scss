@@ -1,5 +1,108 @@
 @import "././resources/styles/__/variables";
 
 .new.top {
+  font-family: $font-family-1;
+  font-style: normal;
+  padding: 2px 0 32px;
 
+  @media (max-width: $media-grid-md) {
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    padding-bottom: 32px;
+  }
+
+  .title {
+    margin: 0 0 18px;
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 48px;
+    line-height: 58px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 16px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  .type {
+    margin: 0 0 60px;
+    color: $color-gray-300;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 18px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 44px;
+      font-size: 12px;
+    }
+  }
+
+  .h1 {
+    margin: 0 auto 24px;
+    max-width: 930px;
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+
+    @media (max-width: $media-grid-md) {
+      margin-bottom: 20px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      margin-bottom: 24px;
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+
+  .times {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    color: $color-gray-700;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-align: center;
+    font-size: 17px;
+    line-height: 32px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+      line-height: 28px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      flex-direction: column;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+
+  .date {
+    padding-right: 30px;
+    border-right: 1px solid $color-gray-100;
+    margin-right: 30px;
+
+    @media (max-width: $media-grid-sm) {
+      padding-right: 0;
+      border-right: none;
+      margin-right: 0;
+    }
+  }
 }

@@ -1,1 +1,42 @@
-
+.new.buttons {
+  max-width: 928px;
+  margin: 0 auto;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  padding: 52px 0 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+@media (max-width: 750.98px) {
+  .new.buttons {
+    padding: 44px 0 76px;
+    flex-direction: column-reverse;
+  }
+}
+.new.buttons .btn-back {
+  min-width: 153px;
+  height: 52px;
+}
+@media (max-width: 750.98px) {
+  .new.buttons .btn-back {
+    margin-top: 52px;
+  }
+}
+.new.buttons .btn-back svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.new.buttons .btn-next {
+  min-width: 218px;
+  height: 52px;
+}
+.new.buttons .btn-next svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  transform: rotate(180deg);
+}

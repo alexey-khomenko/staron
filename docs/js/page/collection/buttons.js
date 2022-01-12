@@ -1,45 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  function getData() {
+  function getData(content) {
     return {
-      cardsAll: Array.from(document.querySelectorAll('.collection_cards .card')),
-      cardsVisible: Array.from(document.querySelectorAll('.collection_cards .card:not(.hidden)')),
-      cardsHidden: Array.from(document.querySelectorAll('.collection_cards .card.hidden')),
-      limit: +document.querySelector('.collection_cards').dataset.limit,
-      all: +document.querySelector('.collection_cards').dataset.all,
+      cardsAll: Array.from(document.querySelectorAll(`${content} .card`)),
+      cardsVisible: Array.from(document.querySelectorAll(`${content} .card:not(.hidden)`)),
+      cardsHidden: Array.from(document.querySelectorAll(`${content} .card.hidden`)),
+      limit: +document.querySelector(content).dataset.limit,
+      all: +document.querySelector(content).dataset.all,
     };
   }
 
   document.addEventListener('click', async function (e) {
-    const button = e.target.closest('.collection_buttons .btn-more');
-
-    if (!button) return true;
-
-    const {cardsAll, cardsVisible, cardsHidden, limit, all} = getData();
-
-    if (cardsVisible.length === all) return true;
-
-    if (0 < cardsHidden.length) {
-      document.querySelector('.collection_buttons .btn-less').classList.remove('hidden');
-
-      if (all <= cardsVisible.length + limit) button.classList.add('hidden');
-
-      const n = limit > cardsHidden.length ? cardsHidden.length : limit;
-
-      for (let i = 0; i < n; i++) {
-        cardsHidden.shift().classList.remove('hidden');
-      }
-
-      return true;
-    }
-
-    const data = new FormData();
-    data.set('page', window.location.href);
-    data.set('from', String(cardsAll.length));
-    data.set('limit', String(limit));
-
-    const response = await fetch('/ajax/collection_ajax.php', {method: 'POST', body: data});
-
+    const buttons = '.collection_buttons';
+    const content = '.collection_cards';
+    const ajaxLink = '/ajax/collection_ajax.php';
     let results = [
       {
         title: 'Cotton White',
@@ -77,17 +51,48 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     ];
 
+    const btnMore = e.target.closest(`${buttons} .btn-more`);
+
+    if (!btnMore) return true;
+
+    const btnLess = document.querySelector(`${buttons} .btn-less`);
+
+    const {cardsAll, cardsVisible, cardsHidden, limit, all} = getData(content);
+
+    if (cardsVisible.length === all) return true;
+
+    if (0 < cardsHidden.length) {
+      btnLess.classList.remove('hidden');
+
+      if (all <= cardsVisible.length + limit) btnMore.classList.add('hidden');
+
+      const n = limit > cardsHidden.length ? cardsHidden.length : limit;
+
+      for (let i = 0; i < n; i++) {
+        cardsHidden.shift().classList.remove('hidden');
+      }
+
+      return true;
+    }
+
+    const data = new FormData();
+    data.set('page', window.location.href);
+    data.set('from', String(cardsAll.length));
+    data.set('limit', String(limit));
+
+    const response = await fetch(ajaxLink, {method: 'POST', body: data});
+
     if (response.status === 200) {
       results = await response.json();
     }
 
-    console.log('collection ajax', results);
+    console.log(`${content} ajax`, results);
 
-    if (all === cardsAll.length + results.length) button.classList.add('hidden');
+    if (all === cardsAll.length + results.length) btnMore.classList.add('hidden');
 
-    document.querySelector('.collection_buttons .btn-less').classList.remove('hidden');
+    btnLess.classList.remove('hidden');
 
-    const cards = document.querySelector('.collection_cards');
+    const cards = document.querySelector(content);
 
     for (let result of results) {
       const card = cards.querySelector('.card').cloneNode(true);
@@ -113,17 +118,22 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('click', function (e) {
-    const button = e.target.closest('.collection_buttons .btn-less');
+    const buttons = '.collection_buttons';
+    const content = '.collection_cards';
 
-    if (!button) return true;
+    const btnLess = e.target.closest(`${buttons} .btn-less`);
 
-    const {cardsVisible, limit} = getData();
+    if (!btnLess) return true;
+
+    const btnMore = document.querySelector(`${buttons} .btn-more`);
+
+    const {cardsVisible, limit} = getData(content);
 
     if (limit === cardsVisible.length) return true;
 
-    document.querySelector('.collection_buttons .btn-more').classList.remove('hidden');
+    btnMore.classList.remove('hidden');
 
-    if (limit >= cardsVisible.length - limit) button.classList.add('hidden');
+    if (limit >= cardsVisible.length - limit) btnLess.classList.add('hidden');
 
     const n = limit > cardsVisible.length - limit ? cardsVisible.length - limit : limit;
 

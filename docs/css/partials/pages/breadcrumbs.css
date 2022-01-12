@@ -39,6 +39,11 @@
   color: #7C7C81;
   margin: 0 20px;
 }
+@media (max-width: 750.98px) {
+  .breadcrumbs li svg {
+    margin: 0 14px;
+  }
+}
 .breadcrumbs li span {
   font-weight: 600;
   color: #ED8585;

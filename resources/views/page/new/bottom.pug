@@ -1,2 +1,48 @@
+-
+  news = [
+    {
+      img: 'images/content-news-1.jpg',
+      type: 'Мероприятия',
+      title: '2 марта в нашем учебном центре прошел учебный семинар для обработчиков акрилового камня',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+    {
+      img: 'images/content-news-2.jpg',
+      type: 'Видео',
+      title: 'Обработка поверхностей Staron. Как создавать бесшовные стыки',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+    {
+      img: 'images/content-news-3.jpg',
+      type: 'Квартирный вопрос',
+      title: 'Горох, маркиза и шатер, проект автор проекта TOTASTE.STUDIO',
+      date: '6 сентября 2021',
+      time: '2 мин',
+      link: 'new.html',
+    },
+  ];
 link(rel="stylesheet", href="css/page/new/bottom.css")
 section(class="new bottom")
+  div(class="container container-fixed")
+    h2(class="h2")
+      | Вам также может быть интересно
+    div(class="content")
+      each card in news
+        a(href=`${card.link}`, class="card")
+          img(src=`${card.img}`, alt="")
+          div(class="info-outer")
+            div(class="info-inner")
+              div(class="type")
+                = card.type
+              div(class="title")
+                span
+                  = card.title
+              div(class="times")
+                span(class="date")
+                  = card.date
+                span(class="time")
+                  = card.time

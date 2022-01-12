@@ -1,28 +1,46 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  function getData() {
+  function getData(content) {
     return {
-      cardsAll: Array.from(document.querySelectorAll('.catalog_cards .card')),
-      cardsVisible: Array.from(document.querySelectorAll('.catalog_cards .card:not(.hidden)')),
-      cardsHidden: Array.from(document.querySelectorAll('.catalog_cards .card.hidden')),
-      limit: +document.querySelector('.catalog_cards').dataset.limit,
-      all: +document.querySelector('.catalog_cards').dataset.all,
+      cardsAll: Array.from(document.querySelectorAll(`${content} .card`)),
+      cardsVisible: Array.from(document.querySelectorAll(`${content} .card:not(.hidden)`)),
+      cardsHidden: Array.from(document.querySelectorAll(`${content} .card.hidden`)),
+      limit: +document.querySelector(content).dataset.limit,
+      all: +document.querySelector(content).dataset.all,
     };
   }
 
   document.addEventListener('click', async function (e) {
-    const button = e.target.closest('.catalog_buttons .btn-more');
+    const buttons = '.catalog_buttons';
+    const content = '.catalog_cards';
+    const ajaxLink = '/ajax/catalog_ajax.php';
+    let results = [
+      {
+        title: 'Supreme',
+        image: 'images/content-catalog-1.jpg',
+        link: 'collection.html',
+      },
+      {
+        title: 'Aspen',
+        image: 'images/content-catalog-2.jpg',
+        link: 'collection.html',
+      },
+    ];
 
-    if (!button) return true;
+    const btnMore = e.target.closest(`${buttons} .btn-more`);
 
-    const {cardsAll, cardsVisible, cardsHidden, limit, all} = getData();
+    if (!btnMore) return true;
+
+    const btnLess = document.querySelector(`${buttons} .btn-less`);
+
+    const {cardsAll, cardsVisible, cardsHidden, limit, all} = getData(content);
 
     if (cardsVisible.length === all) return true;
 
     if (0 < cardsHidden.length) {
-      document.querySelector('.catalog_buttons .btn-less').classList.remove('hidden');
+      btnLess.classList.remove('hidden');
 
-      if (all <= cardsVisible.length + limit) button.classList.add('hidden');
+      if (all <= cardsVisible.length + limit) btnMore.classList.add('hidden');
 
       const n = limit > cardsHidden.length ? cardsHidden.length : limit;
 
@@ -38,32 +56,19 @@ document.addEventListener('DOMContentLoaded', function () {
     data.set('from', String(cardsAll.length));
     data.set('limit', String(limit));
 
-    const response = await fetch('/ajax/catalog_ajax.php', {method: 'POST', body: data});
-
-    let results = [
-      {
-        title: 'Supreme',
-        image: 'images/content-catalog-1.jpg',
-        link: 'collection.html',
-      },
-      {
-        title: 'Aspen',
-        image: 'images/content-catalog-2.jpg',
-        link: 'collection.html',
-      },
-    ];
+    const response = await fetch(ajaxLink, {method: 'POST', body: data});
 
     if (response.status === 200) {
       results = await response.json();
     }
 
-    console.log('catalog ajax', results);
+    console.log(`${content} ajax`, results);
 
-    if (all === cardsAll.length + results.length) button.classList.add('hidden');
+    if (all === cardsAll.length + results.length) btnMore.classList.add('hidden');
 
-    document.querySelector('.catalog_buttons .btn-less').classList.remove('hidden');
+    btnLess.classList.remove('hidden');
 
-    const cards = document.querySelector('.catalog_cards');
+    const cards = document.querySelector(content);
 
     for (let result of results) {
       const card = cards.querySelector('.card').cloneNode(true);
@@ -78,17 +83,22 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener('click', function (e) {
-    const button = e.target.closest('.catalog_buttons .btn-less');
+    const buttons = '.catalog_buttons';
+    const content = '.catalog_cards';
 
-    if (!button) return true;
+    const btnLess = e.target.closest(`${buttons} .btn-less`);
 
-    const {cardsVisible, limit} = getData();
+    if (!btnLess) return true;
+
+    const btnMore = document.querySelector(`${buttons} .btn-more`);
+
+    const {cardsVisible, limit} = getData(content);
 
     if (limit === cardsVisible.length) return true;
 
-    document.querySelector('.catalog_buttons .btn-more').classList.remove('hidden');
+    btnMore.classList.remove('hidden');
 
-    if (limit >= cardsVisible.length - limit) button.classList.add('hidden');
+    if (limit >= cardsVisible.length - limit) btnLess.classList.add('hidden');
 
     const n = limit > cardsVisible.length - limit ? cardsVisible.length - limit : limit;
 

@@ -1,1 +1,111 @@
-
+.new.top {
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  padding: 2px 0 32px;
+}
+@media (max-width: 1262.98px) {
+  .new.top {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 750.98px) {
+  .new.top {
+    padding-bottom: 32px;
+  }
+}
+.new.top .title {
+  margin: 0 0 18px;
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 48px;
+  line-height: 58px;
+}
+@media (max-width: 1262.98px) {
+  .new.top .title {
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+@media (max-width: 750.98px) {
+  .new.top .title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.new.top .type {
+  margin: 0 0 60px;
+  color: #AEAEB1;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+}
+@media (max-width: 1262.98px) {
+  .new.top .type {
+    margin-bottom: 44px;
+    font-size: 12px;
+  }
+}
+.new.top .h1 {
+  margin: 0 auto 24px;
+  max-width: 930px;
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 1262.98px) {
+  .new.top .h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 750.98px) {
+  .new.top .h1 {
+    margin-bottom: 24px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+.new.top .times {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  color: #4A4A51;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-align: center;
+  font-size: 17px;
+  line-height: 32px;
+}
+@media (max-width: 1262.98px) {
+  .new.top .times {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 750.98px) {
+  .new.top .times {
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+.new.top .date {
+  padding-right: 30px;
+  border-right: 1px solid #E0E0E1;
+  margin-right: 30px;
+}
+@media (max-width: 750.98px) {
+  .new.top .date {
+    padding-right: 0;
+    border-right: none;
+    margin-right: 0;
+  }
+}

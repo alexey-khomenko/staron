@@ -1,2 +1,11 @@
 link(rel="stylesheet", href="css/page/new/buttons.css")
-section(class="new buttons")
+div(class="container container-fixed")
+  section(class="new buttons")
+    a(href="news.html", class="button secondary btn-back")
+      include ../../partials/svg/arrow-left
+      span
+        | Все новости
+    a(href="new.html", class="button circuit btn-next")
+      span
+        | Следующая новость
+      include ../../partials/svg/arrow-left

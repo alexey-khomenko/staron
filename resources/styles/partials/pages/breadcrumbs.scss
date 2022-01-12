@@ -42,6 +42,10 @@
     svg {
       color: #7C7C81;
       margin: 0 20px;
+
+      @media (max-width: $media-grid-sm) {
+        margin: 0 14px;
+      }
     }
 
     span {

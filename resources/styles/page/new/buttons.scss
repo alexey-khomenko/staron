@@ -1,5 +1,46 @@
 @import "././resources/styles/__/variables";
 
 .new.buttons {
+  max-width: 928px;
+  margin: 0 auto;
+  font-family: $font-family-1;
+  font-style: normal;
+  padding: 52px 0 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 
+  @media (max-width: $media-grid-sm) {
+    padding: 44px 0 76px;
+    flex-direction: column-reverse;
+  }
+
+  .btn-back {
+    min-width: 153px;
+    height: 52px;
+
+    @media (max-width: $media-grid-sm) {
+      margin-top: 52px;
+    }
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  .btn-next {
+    min-width: 218px;
+    height: 52px;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      transform: rotate(180deg);
+    }
+  }
 }
