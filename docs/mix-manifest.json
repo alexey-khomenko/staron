@@ -123,6 +123,7 @@
     "/images/content-home-trend-popular-4.jpg": "/images/content-home-trend-popular-4.jpg",
     "/images/content-home-trend-popular-5.jpg": "/images/content-home-trend-popular-5.jpg",
     "/images/content-home-trend-popular-6.jpg": "/images/content-home-trend-popular-6.jpg",
+    "/images/content-new.jpg": "/images/content-new.jpg",
     "/images/content-news-1.jpg": "/images/content-news-1.jpg",
     "/images/content-news-2.jpg": "/images/content-news-2.jpg",
     "/images/content-news-3.jpg": "/images/content-news-3.jpg",
@@ -271,6 +272,5 @@
     "/js/page/search/top.js": "/js/page/search/top.js",
     "/js/page/search/results.js": "/js/page/search/results.js",
     "/js/page/where_to_buy/top.js": "/js/page/where_to_buy/top.js",
-    "/js/page/where_to_buy/bottom.js": "/js/page/where_to_buy/bottom.js",
-    "/images/content-new.jpg": "/images/content-new.jpg"
+    "/js/page/where_to_buy/bottom.js": "/js/page/where_to_buy/bottom.js"
 }

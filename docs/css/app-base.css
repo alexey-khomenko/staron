@@ -102,6 +102,10 @@ body.body.closed {
   border-width: 2px;
   border-style: solid;
   text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .button.default {
   background-color: #313138;

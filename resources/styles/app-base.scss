@@ -102,6 +102,7 @@ body.body {
   border-width: 2px;
   border-style: solid;
   text-decoration: none;
+  user-select: none;
 
   &.default {
     background-color: $color-gray-800;
