@@ -1,0 +1,77 @@
+@import "././resources/styles/__/variables";
+
+@mixin h1 {
+  margin: 0 0 60px;
+  color: $color-black;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 48px;
+  line-height: 58px;
+
+  @media (max-width: $media-grid-md) {
+    margin-bottom: 45px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@mixin tiles {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
+  overflow: auto;
+}
+
+@mixin tile {
+  flex-shrink: 0;
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  a, span {
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 46px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      font-size: 14px;
+      line-height: 42px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    padding-bottom: 2px;
+    color: $color-gray-500;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-gray-700;
+      }
+    }
+
+    &:active {
+      color: $color-gray-900;
+    }
+  }
+
+  span {
+    border-bottom: 2px solid $color-red-700;
+    color: $color-black;
+  }
+}

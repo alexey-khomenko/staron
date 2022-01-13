@@ -1,0 +1,21 @@
+-
+  links = [
+    'Ванные комнаты',
+    'Кухни',
+    'Облицовка стен',
+    'Офис',
+    'Horeca',
+  ];
+link(rel="stylesheet", href="css/page/gallery/top.css")
+div(class="container container-fixed")
+  section(class="gallery top")
+    h1(class="h1")
+      | Галерея
+    nav(class="tiles")
+      div(class="tile")
+        span
+          | Все работы
+      each link in links
+        div(class="tile")
+          a(href="gallery.html")
+            = link

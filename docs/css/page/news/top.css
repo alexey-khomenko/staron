@@ -58,8 +58,6 @@
 }
 .news.top .details-body {
   margin-top: 32px;
-  overflow-y: hidden;
-  overflow-x: auto;
 }
 @media (max-width: 750.98px) {
   .news.top .details-body {

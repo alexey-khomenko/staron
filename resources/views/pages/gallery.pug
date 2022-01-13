@@ -1,0 +1,21 @@
+extends ../layouts/app
+
+block title
+  | Gallery
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Продукция',
+        link: 'catalog.html',
+      },
+      {
+        name: 'Галерея',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  include ../page/gallery/top
+  include ../page/gallery/content
+  include ../page/gallery/buttons

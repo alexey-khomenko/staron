@@ -1,0 +1,76 @@
+.gallery.top {
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  padding-bottom: 40px;
+}
+.gallery.top .h1 {
+  margin: 0 0 60px;
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 48px;
+  line-height: 58px;
+}
+@media (max-width: 1262.98px) {
+  .gallery.top .h1 {
+    margin-bottom: 45px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+@media (max-width: 750.98px) {
+  .gallery.top .h1 {
+    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.gallery.top .tiles {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
+  overflow: auto;
+}
+.gallery.top .tile {
+  flex-shrink: 0;
+}
+.gallery.top .tile:not(:first-child) {
+  margin-left: 30px;
+}
+.gallery.top .tile a, .gallery.top .tile span {
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 46px;
+}
+@media (max-width: 1262.98px) {
+  .gallery.top .tile a, .gallery.top .tile span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 750.98px) {
+  .gallery.top .tile a, .gallery.top .tile span {
+    font-size: 14px;
+    line-height: 42px;
+  }
+}
+.gallery.top .tile a {
+  text-decoration: none;
+  padding-bottom: 2px;
+  color: #7C7C81;
+}
+@media (hover: hover) {
+  .gallery.top .tile a:hover {
+    color: #4A4A51;
+  }
+}
+.gallery.top .tile a:active {
+  color: #27272B;
+}
+.gallery.top .tile span {
+  border-bottom: 2px solid #DD2929;
+  color: #000000;
+}

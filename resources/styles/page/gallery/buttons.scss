@@ -1,0 +1,32 @@
+@import "././resources/styles/__/variables";
+@import "././resources/styles/partials/mixins/gallery-news-buttons";
+
+.gallery.buttons {
+  @include section;
+
+  .btn-back, .btn-less, .btn-more {
+    @include all-buttons;
+  }
+
+  .btn-less, .btn-more {
+    @include two-buttons;
+  }
+
+  .btn-less svg {
+    transform: rotate(180deg);
+  }
+
+  .btn-back {
+    margin-right: auto;
+
+    @media (max-width: $media-grid-sm) {
+      margin-top: 30px;
+      order: 1;
+      width: 100%;
+    }
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+}

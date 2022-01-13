@@ -1,0 +1,16 @@
+link(rel="stylesheet", href="css/page/gallery/buttons.css")
+script(src="js/page/gallery/buttons.js")
+div(class="container container-fixed")
+  section(class="gallery buttons")
+    a(href="index.html", class="button secondary btn-back")
+      include ../../partials/svg/arrow-left
+      span
+        | Вернуться на главную
+    button(type="button", class="button circuit btn-less hidden")
+      span
+        | Показать меньше
+      include ../../partials/svg/arrow-bottom
+    button(type="button", class="button circuit btn-more")
+      span
+        | Показать больше
+      include ../../partials/svg/arrow-bottom

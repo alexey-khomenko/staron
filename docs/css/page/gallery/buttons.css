@@ -1,0 +1,72 @@
+.gallery.buttons {
+  padding-top: 40px;
+  padding-bottom: 75px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+@media (max-width: 750.98px) {
+  .gallery.buttons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+.gallery.buttons .btn-back, .gallery.buttons .btn-less, .gallery.buttons .btn-more {
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 70px;
+}
+@media (max-width: 1262.98px) {
+  .gallery.buttons .btn-back, .gallery.buttons .btn-less, .gallery.buttons .btn-more {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 52px;
+  }
+}
+@media (max-width: 750.98px) {
+  .gallery.buttons .btn-back, .gallery.buttons .btn-less, .gallery.buttons .btn-more {
+    padding: 0;
+    height: 42px;
+    font-size: 15px;
+  }
+}
+.gallery.buttons .btn-back svg, .gallery.buttons .btn-less svg, .gallery.buttons .btn-more svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 750.98px) {
+  .gallery.buttons .btn-back svg, .gallery.buttons .btn-less svg, .gallery.buttons .btn-more svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+.gallery.buttons .btn-less, .gallery.buttons .btn-more {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+@media (max-width: 750.98px) {
+  .gallery.buttons .btn-less, .gallery.buttons .btn-more {
+    order: 0;
+    width: 180px;
+  }
+}
+.gallery.buttons .btn-less svg, .gallery.buttons .btn-more svg {
+  margin-left: 5px;
+}
+.gallery.buttons .btn-less svg {
+  transform: rotate(180deg);
+}
+.gallery.buttons .btn-back {
+  margin-right: auto;
+}
+@media (max-width: 750.98px) {
+  .gallery.buttons .btn-back {
+    margin-top: 30px;
+    order: 1;
+    width: 100%;
+  }
+}
+.gallery.buttons .btn-back svg {
+  margin-right: 5px;
+}

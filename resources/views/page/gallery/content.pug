@@ -1,0 +1,56 @@
+-
+  gallery = [
+    {
+      src: 'images/content-news-1.jpg',
+      alt: 'alt 1',
+    },
+    {
+      src: 'images/content-news-2.jpg',
+      alt: 'alt 2',
+    },
+    {
+      src: 'images/content-news-2.jpg',
+      alt: 'alt 3',
+    },
+    {
+      src: 'images/content-news-3.jpg',
+      alt: 'alt 4',
+    },
+    {
+      src: 'images/content-news-4.jpg',
+      alt: 'alt 5',
+    },
+    {
+      src: 'images/content-news-4.jpg',
+      alt: 'alt 6',
+    },
+    {
+      src: 'images/content-news-1.jpg',
+      alt: 'alt 7',
+    },
+    {
+      src: 'images/content-news-2.jpg',
+      alt: 'alt 8',
+    },
+    {
+      src: 'images/content-news-3.jpg',
+      alt: 'alt 9',
+    },
+    {
+      src: 'images/content-news-4.jpg',
+      alt: 'alt 10',
+    },
+    {
+      src: 'images/content-news-1.jpg',
+      alt: 'alt 11',
+    },
+    {
+      src: 'images/content-news-2.jpg',
+      alt: 'alt 12',
+    },
+  ];
+link(rel="stylesheet", href="css/page/gallery/content.css")
+div(class="gallery-content-wrapper")
+  section(class="gallery content", data-all="14", data-limit="12")
+    each card in gallery
+      img(src=`${card.src}`, alt=`${card.alt}`, class="card")

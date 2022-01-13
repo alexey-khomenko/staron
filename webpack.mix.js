@@ -78,6 +78,10 @@ const styles = [
   'page/exploitation_and_care/easily_removable_substances',
   'page/exploitation_and_care/difficult_removable_substances',
 
+  'page/gallery/buttons',
+  'page/gallery/content',
+  'page/gallery/top',
+
   'page/index/slider',
   'page/index/scroll',
   'page/index/benefits',
@@ -149,6 +153,8 @@ const scripts = [
   'page/collection/buttons',
   'page/collection/cards',
   'page/collection/filter',
+
+  'page/gallery/buttons',
 
   'page/index/slider',
   'page/index/scroll',
