@@ -1,0 +1,59 @@
+@import "././resources/styles/__/variables";
+
+.modal-popup.gallery {
+  display: none;
+  max-width: 900px;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $color-white;
+  padding: 26px;
+
+  @media (max-width: $media-grid-md) {
+    max-width: $container-fluid-md;
+    padding: 26px 34px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    max-width: $container-fluid-sm;
+  }
+
+  &.opened {
+    display: block;
+  }
+
+  .head {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .close {
+    flex-shrink: 0;
+    color: $color-gray-100;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-gray-600;
+      }
+    }
+
+    &:active {
+      color: $color-gray-900;
+    }
+  }
+
+  .body {
+    @media (max-width: $media-grid-md) {
+      margin-left: -34px;
+      margin-right: -34px;
+    }
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

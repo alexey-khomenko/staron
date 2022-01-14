@@ -80,6 +80,7 @@ const styles = [
 
   'page/gallery/buttons',
   'page/gallery/content',
+  'page/gallery/modal',
   'page/gallery/top',
 
   'page/index/slider',
@@ -155,6 +156,7 @@ const scripts = [
   'page/collection/filter',
 
   'page/gallery/buttons',
+  'page/gallery/modal',
 
   'page/index/slider',
   'page/index/scroll',

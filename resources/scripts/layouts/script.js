@@ -5,6 +5,7 @@ window.openBody = function () {
 
   const offset = '0';
   body.style.paddingRight = offset;
+  document.querySelector('header.header').style.marginRight = offset;
 
   return offset;
 };
@@ -18,6 +19,7 @@ window.closeBody = function () {
 
   const offset = Math.round(widthOuter - widthInner) + 'px';
   body.style.paddingRight = offset;
+  document.querySelector('header.header').style.marginRight = offset;
 
   return offset;
 };

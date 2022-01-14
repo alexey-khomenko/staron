@@ -53,4 +53,4 @@ link(rel="stylesheet", href="css/page/gallery/content.css")
 div(class="gallery-content-wrapper")
   section(class="gallery content", data-all="14", data-limit="12")
     each card in gallery
-      img(src=`${card.src}`, alt=`${card.alt}`, class="card")
+      img(src=`${card.src}`, data-src-large=`${card.src}`, alt=`${card.alt}`, class="card")
