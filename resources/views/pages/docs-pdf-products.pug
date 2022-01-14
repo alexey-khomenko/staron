@@ -1,0 +1,23 @@
+extends ../layouts/app
+
+block title
+  | Docs: Pdf: Products
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Каталог продукции',
+        link: 'catalog.html',
+      },
+      {
+        name: 'Документация: PDF: О продукции Staron',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  div(class="container container-fixed")
+    include ../partials/docs/top
+    include ../partials/docs/aside
+    include ../page/docs-pdf-products/content
+    include ../partials/docs/bottom

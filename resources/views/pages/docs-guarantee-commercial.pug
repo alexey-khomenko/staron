@@ -1,0 +1,23 @@
+extends ../layouts/app
+
+block title
+  | Docs: Guarantee: Commercial
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Каталог продукции',
+        link: 'catalog.html',
+      },
+      {
+        name: 'Документация: Гарантия: Коммерческое использование',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  div(class="container container-fixed")
+    include ../partials/docs/top
+    include ../partials/docs/aside
+    include ../page/docs-guarantee-commercial/content
+    include ../partials/docs/bottom

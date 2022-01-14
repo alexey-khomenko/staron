@@ -1,0 +1,23 @@
+extends ../layouts/app
+
+block title
+  | Docs: Pdf: Company
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Каталог продукции',
+        link: 'catalog.html',
+      },
+      {
+        name: 'Документация: PDF: О компании LOTTE ADVANCED MATERIALS',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  div(class="container container-fixed")
+    include ../partials/docs/top
+    include ../partials/docs/aside
+    include ../page/docs-pdf-company/content
+    include ../partials/docs/bottom

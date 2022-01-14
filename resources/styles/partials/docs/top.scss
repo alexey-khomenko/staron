@@ -1,0 +1,16 @@
+@import "././resources/styles/__/variables";
+
+.docs.top {
+  background-color: darkolivegreen;
+  min-height: 160px;
+
+  padding: 0 0 26px;
+
+  @media (max-width: $media-grid-md) {
+    padding-bottom: 44px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    padding-bottom: 36px;
+  }
+}

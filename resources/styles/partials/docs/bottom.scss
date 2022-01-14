@@ -1,0 +1,18 @@
+@import "././resources/styles/__/variables";
+
+.docs.bottom {
+  background-color: darkkhaki;
+
+  position: relative;
+  padding: 60px 0 90px;
+
+  @media (max-width: $media-grid-md) {
+    padding: 44px 0 85px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    padding: 60px 0 80px;
+  }
+
+
+}

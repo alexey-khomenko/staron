@@ -73,6 +73,16 @@ const styles = [
   'page/contacts/middle',
   'page/contacts/bottom',
 
+  'page/docs-certificates/content',
+  'page/docs-guarantee-commercial/content',
+  'page/docs-guarantee-private/content',
+  'page/docs-guide/content',
+  'page/docs-passport/content',
+  'page/docs-pdf-company/content',
+  'page/docs-pdf-products/content',
+  'page/docs-security/content',
+  'page/docs-sizes/content',
+
   'page/exploitation_and_care/care',
   'page/exploitation_and_care/exploitation',
   'page/exploitation_and_care/easily_removable_substances',
@@ -120,6 +130,10 @@ const styles = [
   'page/where_to_buy/top',
   'page/where_to_buy/bottom',
   'page/where_to_buy/bottom-dealers',
+
+  'partials/docs/aside',
+  'partials/docs/bottom',
+  'partials/docs/top',
 
   'partials/pages/breadcrumbs',
 ];

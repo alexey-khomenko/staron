@@ -1,0 +1,23 @@
+extends ../layouts/app
+
+block title
+  | Docs: Sizes
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Каталог продукции',
+        link: 'catalog.html',
+      },
+      {
+        name: 'Документация: Размеры продуктов',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  div(class="container container-fixed")
+    include ../partials/docs/top
+    include ../partials/docs/aside
+    include ../page/docs-sizes/content
+    include ../partials/docs/bottom

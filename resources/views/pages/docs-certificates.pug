@@ -1,0 +1,23 @@
+extends ../layouts/app
+
+block title
+  | Docs: Certificates
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Каталог продукции',
+        link: 'catalog.html',
+      },
+      {
+        name: 'Документация: Сертификаты',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  div(class="container container-fixed")
+    include ../partials/docs/top
+    include ../partials/docs/aside
+    include ../page/docs-certificates/content
+    include ../partials/docs/bottom

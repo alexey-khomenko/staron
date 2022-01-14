@@ -1,0 +1,23 @@
+extends ../layouts/app
+
+block title
+  | Docs: Guide
+
+block main
+  -
+    breadcrumbs = [
+      {
+        name: 'Каталог продукции',
+        link: 'catalog.html',
+      },
+      {
+        name: 'Документация: Справочник обработки',
+      },
+    ];
+  include ../partials/pages/breadcrumbs
+
+  div(class="container container-fixed")
+    include ../partials/docs/top
+    include ../partials/docs/aside
+    include ../page/docs-guide/content
+    include ../partials/docs/bottom
