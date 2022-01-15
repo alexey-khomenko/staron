@@ -16,8 +16,13 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  - h1 = 'Частное использование';
+  - page = 'docs-guarantee-private.html';
+  - next = 'docs-guarantee-commercial.html';
+
   div(class="container container-fixed")
     include ../partials/docs/top
-    include ../partials/docs/aside
-    include ../page/docs-guarantee-private/content
+    div(class="doc middle")
+      include ../partials/docs/aside
+      include ../page/docs-guarantee-private/content
     include ../partials/docs/bottom

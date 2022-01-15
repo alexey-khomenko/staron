@@ -16,8 +16,13 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  - h1 = 'Справочник обработки';
+  - page = 'docs-guide.html';
+  - next = 'docs-sizes.html';
+
   div(class="container container-fixed")
     include ../partials/docs/top
-    include ../partials/docs/aside
-    include ../page/docs-guide/content
+    div(class="doc middle")
+      include ../partials/docs/aside
+      include ../page/docs-guide/content
     include ../partials/docs/bottom

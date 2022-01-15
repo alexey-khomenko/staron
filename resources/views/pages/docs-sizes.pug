@@ -16,8 +16,13 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  - h1 = 'Размеры продуктов';
+  - page = 'docs-sizes.html';
+  - next = 'docs-pdf-company.html';
+
   div(class="container container-fixed")
     include ../partials/docs/top
-    include ../partials/docs/aside
-    include ../page/docs-sizes/content
+    div(class="doc middle")
+      include ../partials/docs/aside
+      include ../page/docs-sizes/content
     include ../partials/docs/bottom

@@ -16,8 +16,13 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  - h1 = 'О компании Lotte advanced materials';
+  - page = 'docs-pdf-company.html';
+  - next = 'docs-pdf-products.html';
+
   div(class="container container-fixed")
     include ../partials/docs/top
-    include ../partials/docs/aside
-    include ../page/docs-pdf-company/content
+    div(class="doc middle")
+      include ../partials/docs/aside
+      include ../page/docs-pdf-company/content
     include ../partials/docs/bottom

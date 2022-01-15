@@ -16,8 +16,13 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  - h1 = 'Сертификаты';
+  - page = 'docs-certificates.html';
+  - next = 'docs-guarantee-private.html';
+
   div(class="container container-fixed")
     include ../partials/docs/top
-    include ../partials/docs/aside
-    include ../page/docs-certificates/content
+    div(class="doc middle")
+      include ../partials/docs/aside
+      include ../page/docs-certificates/content
     include ../partials/docs/bottom

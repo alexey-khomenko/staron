@@ -16,8 +16,13 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  - h1 = 'Технический паспорт';
+  - page = 'docs-passport.html';
+  - next = 'docs-security.html';
+
   div(class="container container-fixed")
     include ../partials/docs/top
-    include ../partials/docs/aside
-    include ../page/docs-passport/content
+    div(class="doc middle")
+      include ../partials/docs/aside
+      include ../page/docs-passport/content
     include ../partials/docs/bottom

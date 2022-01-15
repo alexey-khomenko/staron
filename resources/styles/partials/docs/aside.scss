@@ -1,6 +1,74 @@
 @import "././resources/styles/__/variables";
 
-.docs.aside {
+.doc.middle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.content {
+  flex-grow: 1;
+
+  //todo
   background-color: darkseagreen;
-  height: 60px;
+  min-height: 670px;
+}
+
+.docs.aside {
+  // todo
+  min-height: 620px;
+
+  position: relative;
+  padding: 38px 20px 38px 0;
+  margin-right: 60px;
+  width: 338px;
+
+  @media (max-width: $media-grid-lg) {
+    margin-right: 50px;
+    width: 298px;
+  }
+
+  @media (max-width: $media-grid-md) {
+    padding-right: 15px;
+    margin-right: 31px;
+    width: 225px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+
+    left: 0;
+    right: 0;
+    // todo
+    position: absolute;
+    z-index: 1;
+    height: 50px;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    background-color: $color-gray-050;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -140px;
+
+    @media (max-width: $media-grid-lg) {
+      left: -125px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      left: -34px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      left: -20px;
+      right: -20px;
+    }
+  }
 }

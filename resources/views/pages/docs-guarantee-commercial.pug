@@ -16,8 +16,13 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  - h1 = 'Коммерческое использование';
+  - page = 'docs-guarantee-commercial.html';
+  - next = 'docs-passport.html';
+
   div(class="container container-fixed")
     include ../partials/docs/top
-    include ../partials/docs/aside
-    include ../page/docs-guarantee-commercial/content
+    div(class="doc middle")
+      include ../partials/docs/aside
+      include ../page/docs-guarantee-commercial/content
     include ../partials/docs/bottom

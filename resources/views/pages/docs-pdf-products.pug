@@ -16,8 +16,13 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  - h1 = 'О продукции Staron';
+  - page = 'docs-pdf-products.html';
+  - next = 'docs-certificates.html';
+
   div(class="container container-fixed")
     include ../partials/docs/top
-    include ../partials/docs/aside
-    include ../page/docs-pdf-products/content
+    div(class="doc middle")
+      include ../partials/docs/aside
+      include ../page/docs-pdf-products/content
     include ../partials/docs/bottom

@@ -1,0 +1,71 @@
+.doc.middle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: darkseagreen;
+  min-height: 670px;
+}
+
+.docs.aside {
+  min-height: 620px;
+  position: relative;
+  padding: 38px 20px 38px 0;
+  margin-right: 60px;
+  width: 338px;
+}
+@media (max-width: 1422.98px) {
+  .docs.aside {
+    margin-right: 50px;
+    width: 298px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .docs.aside {
+    padding-right: 15px;
+    margin-right: 31px;
+    width: 225px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs.aside {
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    height: 50px;
+  }
+}
+.docs.aside::before {
+  display: block;
+  content: "";
+  background-color: #F8F8F8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -140px;
+}
+@media (max-width: 1422.98px) {
+  .docs.aside::before {
+    left: -125px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .docs.aside::before {
+    left: -34px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs.aside::before {
+    left: -20px;
+    right: -20px;
+  }
+}

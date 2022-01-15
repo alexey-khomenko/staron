@@ -16,8 +16,13 @@ block main
     ];
   include ../partials/pages/breadcrumbs
 
+  - h1 = 'Технический паспорт безопасности материалов';
+  - page = 'docs-passport.html';
+  - next = 'docs-guide.html';
+
   div(class="container container-fixed")
     include ../partials/docs/top
-    include ../partials/docs/aside
-    include ../page/docs-security/content
+    div(class="doc middle")
+      include ../partials/docs/aside
+      include ../page/docs-security/content
     include ../partials/docs/bottom
