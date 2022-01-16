@@ -109,17 +109,16 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+@media (max-width: 750.98px) {
+  .docs.bottom .buttons {
+    flex-direction: column;
+  }
+}
 .docs.bottom .buttons .to-home {
   position: absolute;
   bottom: 144px;
   width: 264px;
   height: 70px;
-}
-.docs.bottom .buttons .to-home svg {
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
 }
 @media (max-width: 1262.98px) {
   .docs.bottom .buttons .to-home {
@@ -127,6 +126,19 @@
     width: 224px;
     height: 52px;
   }
+}
+@media (max-width: 750.98px) {
+  .docs.bottom .buttons .to-home {
+    margin-top: 50px;
+    width: 100%;
+    order: 3;
+  }
+}
+.docs.bottom .buttons .to-home svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 .docs.bottom .buttons .to-next {
   margin-left: auto;
@@ -138,14 +150,18 @@
     width: 150px;
   }
 }
-.docs.bottom .buttons .to-next svg {
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin-left: 5px;
+@media (max-width: 750.98px) {
+  .docs.bottom .buttons .to-next {
+    margin-bottom: 12px;
+    width: 100%;
+    order: 1;
+  }
 }
 .docs.bottom .buttons .to-next svg {
-  transform: rotate(180deg);
+  display: block;
+  width: 8px;
+  height: 12px;
+  margin-left: 15px;
 }
 .docs.bottom .buttons .to-pdf {
   margin-left: 20px;
@@ -155,5 +171,12 @@
 @media (max-width: 1262.98px) {
   .docs.bottom .buttons .to-pdf {
     width: 226px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs.bottom .buttons .to-pdf {
+    margin-left: 0;
+    width: 100%;
+    order: 2;
   }
 }

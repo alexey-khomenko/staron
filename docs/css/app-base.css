@@ -178,7 +178,7 @@ body.body.closed {
 .button.transparent {
   background-color: #FFFFFF;
   border-color: #FFFFFF;
-  color: #313138;
+  color: #7C7C81;
 }
 @media (hover: hover) {
   .button.transparent:not(:disabled):hover {

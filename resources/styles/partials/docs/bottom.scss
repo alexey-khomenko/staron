@@ -104,7 +104,7 @@
     align-items: flex-start;
 
     @media (max-width: $media-grid-sm) {
-      // todo
+      flex-direction: column;
     }
 
     .to-home {
@@ -113,17 +113,23 @@
       width: 264px;
       height: 70px;
 
+      @media (max-width: $media-grid-md) {
+        position: static;
+        width: 224px;
+        height: 52px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        margin-top: 50px;
+        width: 100%;
+        order: 3;
+      }
+
       svg {
         display: block;
         width: 20px;
         height: 20px;
         margin-right: 5px;
-      }
-
-      @media (max-width: $media-grid-md) {
-        position: static;
-        width: 224px;
-        height: 52px;
       }
     }
 
@@ -136,16 +142,18 @@
         width: 150px;
       }
 
+      @media (max-width: $media-grid-sm) {
+        margin-bottom: 12px;
+        width: 100%;
+        order: 1;
+      }
+
       svg {
         display: block;
-        width: 20px;
-        height: 20px;
-        margin-left: 5px;
+        width: 8px;
+        height: 12px;
+        margin-left: 15px;
       }
-    }
-
-    .to-next svg {
-      transform: rotate(180deg);
     }
 
     .to-pdf {
@@ -155,6 +163,12 @@
 
       @media (max-width: $media-grid-md) {
         width: 226px;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        margin-left: 0;
+        width: 100%;
+        order: 2;
       }
     }
   }
