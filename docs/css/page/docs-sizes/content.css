@@ -1,1 +1,124 @@
-
+.docs-sizes.content .item {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1262.98px) {
+  .docs-sizes.content .item {
+    flex-direction: column;
+  }
+}
+.docs-sizes.content .item:not(:last-child) {
+  margin-bottom: 60px;
+}
+@media (max-width: 750.98px) {
+  .docs-sizes.content .item:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+.docs-sizes.content .right {
+  height: auto;
+  max-width: 220px;
+}
+@media (max-width: 1422.98px) {
+  .docs-sizes.content .right {
+    max-width: 190px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .docs-sizes.content .right {
+    max-width: 220px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs-sizes.content .right {
+    max-width: 160px;
+    margin-bottom: 36px;
+  }
+}
+.docs-sizes.content .left {
+  width: 410px;
+}
+@media (max-width: 1262.98px) {
+  .docs-sizes.content .left {
+    width: 100%;
+  }
+}
+.docs-sizes.content .text {
+  margin-bottom: 10px;
+  color: #27272B;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 24px;
+}
+@media (max-width: 1262.98px) {
+  .docs-sizes.content .text {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs-sizes.content .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.docs-sizes.content .title {
+  margin-bottom: 20px;
+  color: #27272B;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 21px;
+  line-height: 30px;
+}
+@media (max-width: 1262.98px) {
+  .docs-sizes.content .title {
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs-sizes.content .title {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+.docs-sizes.content .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.docs-sizes.content .table th {
+  padding: 0 0 16px;
+  border-bottom: 1px solid #E0E0E1;
+  margin: 0;
+  text-align: left;
+  color: #7C7C81;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-size: 13px;
+  line-height: 18px;
+}
+@media (max-width: 1262.98px) {
+  .docs-sizes.content .table th {
+    font-size: 12px;
+  }
+}
+.docs-sizes.content .table td {
+  padding: 15px 0 0;
+  margin: 0;
+  text-align: left;
+  color: #000000;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  line-height: 28px;
+}
+@media (max-width: 1262.98px) {
+  .docs-sizes.content .table td {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}

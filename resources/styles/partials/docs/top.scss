@@ -3,6 +3,7 @@
 .docs.top {
   font-family: $font-family-1;
   font-style: normal;
+  position: relative;
   padding: 0 0 40px;
 
   @media (max-width: $media-grid-lg) {
@@ -36,6 +37,7 @@
   }
 
   .h1 {
+    padding-right: 42px;
     margin: 18px 0 60px;
     color: $color-gray-300;
     font-weight: 600;
@@ -80,6 +82,40 @@
     @media (max-width: $media-grid-sm) {
       font-size: 14px;
       line-height: 26px;
+    }
+  }
+
+  .btn {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 41px;
+    width: 40px;
+    height: 40px;
+    background-color: $color-gray-050;
+    color: $color-gray-900;
+
+    @media (max-width: $media-grid-sm) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-gray-500;
+      }
+    }
+
+    &:active {
+      color: $color-red-700;
+    }
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
     }
   }
 }

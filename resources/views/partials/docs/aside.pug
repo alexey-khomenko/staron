@@ -1,2 +1,92 @@
 link(rel="stylesheet", href="css/partials/docs/aside.css")
 section(class="docs aside")
+
+  div(class="link lvl-1")
+    if 'docs-sizes.html' === page
+      span
+        | Размеры продуктов
+    else
+      a(href="docs-sizes.html")
+        | Размеры продуктов
+
+  div(class="title")
+    span
+      | Каталоги продукции PDF
+    include ../../partials/svg/chevrone-top
+
+  div(class="link lvl-2")
+    if 'docs-pdf-company.html' === page
+      span
+        | О компании LOTTE ADVANCED MATERIALS
+    else
+      a(href="docs-pdf-company.html")
+        | О компании LOTTE ADVANCED MATERIALS
+
+  div(class="link lvl-2")
+    if 'docs-pdf-products.html' === page
+      span
+        | О продукции Staron
+    else
+      a(href="docs-pdf-products.html")
+        | О продукции Staron
+
+  div(class="link lvl-1")
+    if 'docs-certificates.html' === page
+      span
+        | Сертификаты
+    else
+      a(href="docs-certificates.html")
+        | Сертификаты
+
+  div(class="link lvl-1")
+    a(href="404.html")
+      | Презентации
+
+  div(class="link lvl-1")
+    a(href="404.html")
+      | Удостоверение
+
+  div(class="title")
+    span
+      | Гарантия
+    include ../../partials/svg/chevrone-top
+
+  div(class="link lvl-2")
+    if 'docs-guarantee-private.html' === page
+      span
+        | Частное использование
+    else
+      a(href="docs-guarantee-private.html")
+        | Частное использование
+
+  div(class="link lvl-2")
+    if 'docs-guarantee-commercial.html' === page
+      span
+        | Коммерческое использование
+    else
+      a(href="docs-guarantee-commercial.html")
+        | Коммерческое использование
+
+  div(class="link lvl-1")
+    if 'docs-passport.html' === page
+      span
+        | Технический паспорт
+    else
+      a(href="docs-passport.html")
+        | Технический паспорт
+
+  div(class="link lvl-1")
+    if 'docs-security.html' === page
+      span
+        | Технический паспорт безопасности материалов
+    else
+      a(href="docs-security.html")
+        | Технический паспорт безопасности материалов
+
+  div(class="link lvl-1")
+    if 'docs-guide.html' === page
+      span
+        | Справочник обработки
+    else
+      a(href="docs-guide.html")
+        | Справочник обработки

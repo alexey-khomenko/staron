@@ -1,1 +1,66 @@
-
+.docs-pdf-company.content {
+  padding-top: 8px;
+}
+.docs-pdf-company.content .h2 {
+  margin-bottom: 24px;
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 30px;
+  line-height: 36px;
+}
+.docs-pdf-company.content .item {
+  overflow: hidden;
+  background-color: #F8F8F8;
+  padding: 30px 28px;
+}
+.docs-pdf-company.content .item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.docs-pdf-company.content .img {
+  float: left;
+  margin-right: 28px;
+  width: 72px;
+  height: auto;
+  display: block;
+  height: 100px;
+}
+@media (max-width: 1262.98px) {
+  .docs-pdf-company.content .img {
+    margin-right: 20px;
+    width: 56px;
+  }
+}
+.docs-pdf-company.content .title {
+  margin-bottom: 16px;
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 24px;
+}
+@media (max-width: 1262.98px) {
+  .docs-pdf-company.content .title {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+.docs-pdf-company.content .buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.docs-pdf-company.content .btn-pdf {
+  height: 42px;
+  padding: 2px 15px;
+  color: #313138;
+}
+.docs-pdf-company.content .btn-pdf svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+.docs-pdf-company.content .btn-pdf + .btn-pdf {
+  margin-left: 16px;
+}

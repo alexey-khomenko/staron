@@ -133,6 +133,7 @@ const styles = [
 
   'partials/docs/aside',
   'partials/docs/bottom',
+  'partials/docs/modal',
   'partials/docs/top',
 
   'partials/pages/breadcrumbs',
@@ -189,6 +190,8 @@ const scripts = [
 
   'page/where_to_buy/top',
   'page/where_to_buy/bottom',
+
+  'partials/docs/top',
 ];
 
 for (let script of scripts) {

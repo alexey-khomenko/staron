@@ -1,6 +1,7 @@
 .docs.top {
   font-family: "Proxima Nova", "Jost", sans-serif;
   font-style: normal;
+  position: relative;
   padding: 0 0 40px;
 }
 @media (max-width: 1422.98px) {
@@ -38,6 +39,7 @@
   }
 }
 .docs.top .h1 {
+  padding-right: 42px;
   margin: 18px 0 60px;
   color: #AEAEB1;
   font-weight: 600;
@@ -88,4 +90,35 @@
     font-size: 14px;
     line-height: 26px;
   }
+}
+.docs.top .btn {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 41px;
+  width: 40px;
+  height: 40px;
+  background-color: #F8F8F8;
+  color: #27272B;
+}
+@media (max-width: 750.98px) {
+  .docs.top .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (hover: hover) {
+  .docs.top .btn:hover {
+    color: #7C7C81;
+  }
+}
+.docs.top .btn:active {
+  color: #DD2929;
+}
+.docs.top .btn svg {
+  display: block;
+  width: 24px;
+  height: 24px;
 }

@@ -16,8 +16,8 @@
 }
 .docs.bottom .info {
   margin-left: auto;
-  padding: 40px 28px 40px 44px;
-  width: 806px;
+  padding: 40px 32px;
+  width: 794px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -111,6 +111,7 @@
 }
 @media (max-width: 750.98px) {
   .docs.bottom .buttons {
+    margin-top: 40px;
     flex-direction: column;
   }
 }

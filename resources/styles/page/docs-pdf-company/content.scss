@@ -1,5 +1,79 @@
 @import "././resources/styles/__/variables";
 
 .docs-pdf-company.content {
+  padding-top: 8px;
 
+  .h2 {
+    margin-bottom: 24px;
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 30px;
+    line-height: 36px;
+
+
+  }
+
+  .item {
+    overflow: hidden;
+    background-color: $color-gray-050;
+    padding: 30px 28px;
+  }
+
+  .item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .img {
+    float: left;
+    margin-right: 28px;
+    width: 72px;
+    height: auto;
+    display: block;
+
+    height: 100px;
+
+
+    @media (max-width: $media-grid-md) {
+      margin-right: 20px;
+      width: 56px;
+    }
+  }
+
+  .title {
+    margin-bottom: 16px;
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 17px;
+    line-height: 24px;
+
+    @media (max-width: $media-grid-md) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .btn-pdf {
+    height: 42px;
+    padding: 2px 15px;
+    color: $color-gray-800;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+    }
+  }
+
+  .btn-pdf + .btn-pdf {
+    margin-left: 16px;
+  }
 }

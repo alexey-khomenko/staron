@@ -1,0 +1,50 @@
+.modal-popup.docs {
+  display: none;
+  max-width: 360px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+  padding: 24px 20px;
+}
+.modal-popup.docs.opened {
+  display: block;
+}
+.modal-popup.docs .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+.modal-popup.docs .h4 {
+  margin: 0;
+  font-family: "Proxima Nova", "Jost", sans-serif;
+  font-style: normal;
+  color: #AEAEB1;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+}
+.modal-popup.docs .close {
+  flex-shrink: 0;
+  margin-left: 4px;
+  color: #000000;
+}
+@media (hover: hover) {
+  .modal-popup.docs .close:hover {
+    color: #7C7C81;
+  }
+}
+.modal-popup.docs .close:active {
+  color: #7C7C81;
+}
+.modal-popup.docs .close svg {
+  width: 24px;
+  height: 24px;
+}
+.modal-popup.docs .body .docs.aside {
+  width: 100%;
+}

@@ -1,0 +1,60 @@
+@import "././resources/styles/__/variables";
+
+.modal-popup.docs {
+  display: none;
+  max-width: 360px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $color-white;
+  padding: 24px 20px;
+
+  &.opened {
+    display: block;
+  }
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+
+  .h4 {
+    margin: 0;
+    font-family: $font-family-1;
+    font-style: normal;
+    color: $color-gray-300;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .close {
+    flex-shrink: 0;
+    margin-left: 4px;
+    color: $color-black;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-gray-500;
+      }
+    }
+
+    &:active {
+      color: $color-gray-500;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .body .docs.aside {
+    width: 100%;
+  }
+}
