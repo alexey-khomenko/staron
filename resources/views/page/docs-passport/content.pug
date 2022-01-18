@@ -1,2 +1,40 @@
+-
+  items = [
+    {
+      title: 'Passport 1',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Passport 2',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Passport 3',
+      read: '404.html',
+      download: '404.html',
+    },
+  ];
 link(rel="stylesheet", href="css/page/docs-passport/content.css")
 section(class="docs-passport content")
+  div(class="titles")
+    span(class="title")
+      | Список паспортов
+    a(href="404.html", class="button circuit download-all")
+      span
+        | Скачать все материалы
+      include ../../partials/svg/download
+
+  each item in items
+    div(class="item")
+      span(class="name")
+        = item.title
+      a(href=`${item.read}`, class="button transparent to-read")
+        span
+          | Читать PDF
+        include ../../partials/svg/pdf
+      a(href=`${item.download}`, class="button transparent to-download")
+        span
+          | Скачать PDF
+        include ../../partials/svg/download
