@@ -2,7 +2,7 @@
   padding-top: 8px;
 }
 .docs-pdf-company.content .h2 {
-  margin-bottom: 24px;
+  margin: 0 0 24px;
   color: #000000;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -17,7 +17,7 @@
   }
 }
 .docs-pdf-company.content .item {
-  overflow: hidden;
+  margin-bottom: 20px;
   background-color: #F8F8F8;
   padding: 30px 28px;
 }
@@ -26,8 +26,12 @@
     padding: 20px;
   }
 }
-.docs-pdf-company.content .item:not(:last-child) {
-  margin-bottom: 20px;
+@media (max-width: 750.98px) {
+  .docs-pdf-company.content .item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 .docs-pdf-company.content .img {
   float: left;
@@ -44,8 +48,8 @@
 }
 @media (max-width: 750.98px) {
   .docs-pdf-company.content .img {
-    margin-bottom: 12px;
     width: 48px;
+    float: none;
   }
 }
 .docs-pdf-company.content .title {
@@ -66,6 +70,9 @@
   .docs-pdf-company.content .title {
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 0;
+    flex-basis: 50%;
+    flex-grow: 1;
   }
 }
 .docs-pdf-company.content .buttons {
@@ -75,18 +82,21 @@
 }
 @media (max-width: 750.98px) {
   .docs-pdf-company.content .buttons {
-    clear: both;
+    margin-top: 12px;
+    flex-grow: 1;
   }
 }
 .docs-pdf-company.content .btn-pdf {
   height: 42px;
   padding: 2px 15px;
   color: #313138;
+  font-size: 15px;
+  line-height: 18px;
 }
-@media (max-width: 1262.98px) {
+@media (max-width: 750.98px) {
   .docs-pdf-company.content .btn-pdf {
-    font-size: 15px;
-    line-height: 18px;
+    padding: 0;
+    flex-grow: 1;
   }
 }
 .docs-pdf-company.content .btn-pdf svg {

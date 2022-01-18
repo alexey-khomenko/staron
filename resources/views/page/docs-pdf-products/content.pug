@@ -1,2 +1,50 @@
+-
+  items = [
+    {
+      title: 'Каталог',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Лифлет',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Буклет',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Листовка «Новая коллекция Supreme»',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Каталог «Коллаб Staron | Radianze»',
+      read: '404.html',
+      download: '404.html',
+    },
+  ];
 link(rel="stylesheet", href="css/page/docs-pdf-products/content.css")
 section(class="docs-pdf-products content")
+  div(class="title")
+    span(class="text")
+      | Список материалов
+    a(href="404.html", class="button circuit download-all")
+      span
+        | Скачать все материалы
+      include ../../partials/svg/download
+
+  each item in items
+    div(class="item")
+      span(class="name")
+        = item.title
+      a(href=`${item.read}`, class="button transparent to-read")
+        span
+          | Читать PDF
+        include ../../partials/svg/pdf
+      a(href=`${item.download}`, class="button transparent to-download")
+        span
+          | Скачать PDF
+        include ../../partials/svg/download

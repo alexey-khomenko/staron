@@ -4,7 +4,7 @@
   padding-top: 8px;
 
   .h2 {
-    margin-bottom: 24px;
+    margin: 0 0 24px;
     color: $color-black;
     font-weight: 600;
     letter-spacing: 0.02em;
@@ -19,17 +19,19 @@
   }
 
   .item {
-    overflow: hidden;
+    margin-bottom: 20px;
     background-color: $color-gray-050;
     padding: 30px 28px;
 
     @media (max-width: $media-grid-md) {
       padding: 20px;
     }
-  }
 
-  .item:not(:last-child) {
-    margin-bottom: 20px;
+    @media (max-width: $media-grid-sm) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
   }
 
   .img {
@@ -45,8 +47,8 @@
     }
 
     @media (max-width: $media-grid-sm) {
-      margin-bottom: 12px;
       width: 48px;
+      float: none;
     }
   }
 
@@ -66,6 +68,9 @@
     @media (max-width: $media-grid-sm) {
       font-size: 14px;
       line-height: 20px;
+      margin-bottom: 0;
+      flex-basis: 50%;
+      flex-grow: 1;
     }
   }
 
@@ -75,7 +80,8 @@
     align-items: stretch;
 
     @media (max-width: $media-grid-sm) {
-      clear: both;
+      margin-top: 12px;
+      flex-grow: 1;
     }
   }
 
@@ -83,10 +89,12 @@
     height: 42px;
     padding: 2px 15px;
     color: $color-gray-800;
+    font-size: 15px;
+    line-height: 18px;
 
-    @media (max-width: $media-grid-md) {
-      font-size: 15px;
-      line-height: 18px;
+    @media (max-width: $media-grid-sm) {
+      padding: 0;
+      flex-grow: 1;
     }
 
     svg {
