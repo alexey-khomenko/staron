@@ -241,6 +241,7 @@
     "/fonts/ProximaNovaT-Thin.woff": "/fonts/ProximaNovaT-Thin.woff",
     "/fonts/ProximaNovaT-Thin.woff2": "/fonts/ProximaNovaT-Thin.woff2",
     "/favicon.ico": "/favicon.ico",
+    "/favicon.png": "/favicon.png",
     "/404.html": "/404.html",
     "/about_koros.html": "/about_koros.html",
     "/about_lotte.html": "/about_lotte.html",
@@ -304,5 +305,7 @@
     "/js/page/search/results.js": "/js/page/search/results.js",
     "/js/page/where_to_buy/top.js": "/js/page/where_to_buy/top.js",
     "/js/page/where_to_buy/bottom.js": "/js/page/where_to_buy/bottom.js",
-    "/js/partials/docs/top.js": "/js/partials/docs/top.js"
+    "/js/partials/docs/top.js": "/js/partials/docs/top.js",
+    "/images/docs-pdf-company-1.png": "/images/docs-pdf-company-1.png",
+    "/images/docs-pdf-company-2.png": "/images/docs-pdf-company-2.png"
 }
