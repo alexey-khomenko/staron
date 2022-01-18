@@ -1,2 +1,52 @@
+-
+  items = [
+    {
+      title: 'Exterior Wall Cladding',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Fabrication manual - EUROPE',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Interior Wall Cladding',
+      read: '404.html',
+      download: '404.html',
+    },
+  ];
 link(rel="stylesheet", href="css/page/docs-guide/content.css")
 section(class="docs-guide content")
+  div(class="text")
+    p
+      | Staron представляет собой непористый материал с однородной структурой без открытых швов, который предназначен
+      |
+      | для оформления интерьеров. Он отличается гладкой бесшовной рабочей поверхностью и практически не требует ухода
+      |
+      | благодаря высоким гигиеническим характеристикам.
+    p
+      | Staron представляет собой непористый материал с однородной структурой без открытых швов, который предназначен
+      |
+      | для оформления интерьеров.
+
+  div(class="titles")
+    span(class="title")
+      | Список справочников
+    a(href="404.html", class="button circuit download-all")
+      span
+        | Скачать все материалы
+      include ../../partials/svg/download
+
+  each item in items
+    div(class="item")
+      span(class="name")
+        = item.title
+      a(href=`${item.read}`, class="button transparent to-read")
+        span
+          | Читать PDF
+        include ../../partials/svg/pdf
+      a(href=`${item.download}`, class="button transparent to-download")
+        span
+          | Скачать PDF
+        include ../../partials/svg/download

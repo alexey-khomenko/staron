@@ -1,4 +1,3 @@
-- pdf = 'docs-pdf-products.html' === page ? 'docs-pdf-company.html' : 'docs-pdf-products.html'
 link(rel="stylesheet", href="css/partials/docs/bottom.css")
 section(class="docs bottom")
   div(class="info")
@@ -15,10 +14,7 @@ section(class="docs bottom")
       include ../../partials/svg/arrow-left
       span
         | Вернуться на главную
-    a(href=`${next}`, class="button transparent to-next")
+    a(href=`${next}`, class="button secondary to-next")
       span
         | Читать далее
       include ../../partials/svg/chevrone-right
-    a(href=`${pdf}`, class="button secondary to-pdf")
-      span
-        | Каталоги продукции PDF

@@ -1,5 +1,8 @@
 @import "././resources/styles/__/variables";
+@import "././resources/styles/partials/mixins/docs";
 
 .docs-certificates.content {
-
+  @include docs-text;
+  @include docs-titles;
+  @include docs-item;
 }

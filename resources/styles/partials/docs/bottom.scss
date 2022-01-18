@@ -105,7 +105,7 @@
 
     @media (max-width: $media-grid-sm) {
       margin-top: 40px;
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
 
     .to-home {
@@ -123,7 +123,6 @@
       @media (max-width: $media-grid-sm) {
         margin-top: 50px;
         width: 100%;
-        order: 3;
       }
 
       svg {
@@ -144,9 +143,7 @@
       }
 
       @media (max-width: $media-grid-sm) {
-        margin-bottom: 12px;
         width: 100%;
-        order: 1;
       }
 
       svg {
@@ -154,22 +151,6 @@
         width: 8px;
         height: 12px;
         margin-left: 15px;
-      }
-    }
-
-    .to-pdf {
-      margin-left: 20px;
-      width: 230px;
-      height: 52px;
-
-      @media (max-width: $media-grid-md) {
-        width: 226px;
-      }
-
-      @media (max-width: $media-grid-sm) {
-        margin-left: 0;
-        width: 100%;
-        order: 2;
       }
     }
   }

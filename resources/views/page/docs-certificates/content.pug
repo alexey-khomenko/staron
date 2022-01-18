@@ -1,2 +1,89 @@
+-
+  items = [
+    {
+      title: 'ISO 2018',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Экспертное заключение (СанПИН) STARON',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Сертификат пожарный ЛОТТЕ STARON',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'ISO 2019',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'ISO 2018',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Экспертное заключение (СанПИН) STARON',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Сертификат пожарный ЛОТТЕ STARON',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'ISO 2018',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Экспертное заключение (СанПИН) STARON',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'Сертификат пожарный ЛОТТЕ STARON',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'ISO 2019',
+      read: '404.html',
+      download: '404.html',
+    },
+  ];
 link(rel="stylesheet", href="css/page/docs-certificates/content.css")
 section(class="docs-certificates content")
+  div(class="text")
+    | Продукция Staron отличается экологичностью и получила отметку «Отлично» и знак НВ («Безопасный для здоровья
+    |
+    | строительный материал») от Корейской ассоциации по вопросам чистого воздуха, а также аккредитацию NSF в США.
+    |
+    | Это значит, что в ее составе гарантированно отсутствуют формальдегид, летучие органические соединения (ЛОС)
+    |
+    | и другие вещества, вызывающие «синдром больного здания».
+
+  div(class="titles")
+    span(class="title")
+      | Список сертификатов
+    a(href="404.html", class="button circuit download-all")
+      span
+        | Скачать все материалы
+      include ../../partials/svg/download
+
+  each item in items
+    div(class="item")
+      span(class="name")
+        = item.title
+      a(href=`${item.read}`, class="button transparent to-read")
+        span
+          | Читать PDF
+        include ../../partials/svg/pdf
+      a(href=`${item.download}`, class="button transparent to-download")
+        span
+          | Скачать PDF
+        include ../../partials/svg/download

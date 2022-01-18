@@ -112,7 +112,7 @@
 @media (max-width: 750.98px) {
   .docs.bottom .buttons {
     margin-top: 40px;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 .docs.bottom .buttons .to-home {
@@ -132,7 +132,6 @@
   .docs.bottom .buttons .to-home {
     margin-top: 50px;
     width: 100%;
-    order: 3;
   }
 }
 .docs.bottom .buttons .to-home svg {
@@ -153,9 +152,7 @@
 }
 @media (max-width: 750.98px) {
   .docs.bottom .buttons .to-next {
-    margin-bottom: 12px;
     width: 100%;
-    order: 1;
   }
 }
 .docs.bottom .buttons .to-next svg {
@@ -163,21 +160,4 @@
   width: 8px;
   height: 12px;
   margin-left: 15px;
-}
-.docs.bottom .buttons .to-pdf {
-  margin-left: 20px;
-  width: 230px;
-  height: 52px;
-}
-@media (max-width: 1262.98px) {
-  .docs.bottom .buttons .to-pdf {
-    width: 226px;
-  }
-}
-@media (max-width: 750.98px) {
-  .docs.bottom .buttons .to-pdf {
-    margin-left: 0;
-    width: 100%;
-    order: 2;
-  }
 }

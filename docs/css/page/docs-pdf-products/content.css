@@ -1,22 +1,45 @@
-.docs-pdf-products.content .title {
+.docs-pdf-products.content .text {
+  margin-bottom: 26px;
+  color: #000000;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 32px;
+}
+@media (max-width: 1262.98px) {
+  .docs-pdf-products.content .text {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .docs-pdf-products.content .text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
+.docs-pdf-products.content .text p {
+  margin: 0 0 8px;
+}
+.docs-pdf-products.content .titles {
   margin-bottom: 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 1262.98px) {
-  .docs-pdf-products.content .title {
+  .docs-pdf-products.content .titles {
     margin-bottom: 24px;
     flex-direction: column;
     align-items: stretch;
   }
 }
 @media (max-width: 750.98px) {
-  .docs-pdf-products.content .title {
+  .docs-pdf-products.content .titles {
     margin-bottom: 20px;
   }
 }
-.docs-pdf-products.content .text {
+.docs-pdf-products.content .title {
   color: #000000;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -24,14 +47,14 @@
   line-height: 36px;
 }
 @media (max-width: 1262.98px) {
-  .docs-pdf-products.content .text {
+  .docs-pdf-products.content .title {
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 30px;
   }
 }
 @media (max-width: 750.98px) {
-  .docs-pdf-products.content .text {
+  .docs-pdf-products.content .title {
     margin-bottom: 25px;
   }
 }
@@ -52,7 +75,7 @@
 }
 .docs-pdf-products.content .item {
   margin-bottom: 20px;
-  padding: 30px 28px;
+  padding: 22px 28px;
   background-color: #F8F8F8;
   display: flex;
   justify-content: flex-start;
@@ -69,14 +92,13 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   font-size: 17px;
-  line-height: 24px;
+  line-height: 22px;
 }
 @media (max-width: 1262.98px) {
   .docs-pdf-products.content .name {
     margin-bottom: 16px;
     flex-basis: 100%;
     font-size: 15px;
-    line-height: 22px;
   }
 }
 @media (max-width: 750.98px) {
@@ -86,6 +108,7 @@
 }
 .docs-pdf-products.content .to-read, .docs-pdf-products.content .to-download {
   height: 42px;
+  flex-shrink: 0;
   color: #313138;
   font-size: 15px;
 }
