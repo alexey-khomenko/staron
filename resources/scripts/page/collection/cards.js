@@ -8,15 +8,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const img0 = imagesObj.querySelector('.img-0 img');
     const img1 = imagesObj.querySelector('.img-1 img');
-    const img2 = imagesObj.querySelector('.img-2 img ');
+    const img2 = imagesObj.querySelector('.img-2 img');
     const imgBig = imagesObj.querySelector('.img-big img');
 
     const images = Array.from(card.querySelectorAll('.images li')).map((i) => (i.textContent).trim());
 
     img0.src = images[0];
-    img1.src = images[1];
-    img2.src = images[2];
     imgBig.src = images[0];
+
+    if (images.length < 3) {
+      img2.closest('.img-small').classList.add('hidden');
+    }
+    else {
+      img2.src = images[2];
+      img2.closest('.img-small').classList.remove('hidden');
+    }
+
+    if (images.length < 2) {
+      img1.closest('.img-small').classList.add('hidden');
+    }
+    else {
+      img1.src = images[1];
+      img1.closest('.img-small').classList.remove('hidden');
+    }
 
 
     const textsObj = document.querySelector('.modal-popup.collection_modal .texts');

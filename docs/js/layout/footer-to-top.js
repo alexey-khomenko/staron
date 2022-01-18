@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.footer-to-top .button')) return true;
 
-    document.querySelector('.header').scrollIntoView({behavior: 'smooth'});
+    document.querySelector('.main').scrollIntoView({behavior: 'smooth'});
   });
 
 });
