@@ -1,0 +1,134 @@
+.docs-default.content .text {
+  margin-bottom: 26px;
+  color: #000000;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  line-height: 30px;
+}
+@media (max-width: 1262.98px) {
+  .docs-default.content .text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
+.docs-default.content .text p {
+  margin: 0 0 8px;
+}
+.docs-default.content .titles {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1262.98px) {
+  .docs-default.content .titles {
+    margin-bottom: 24px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs-default.content .titles {
+    margin-bottom: 20px;
+  }
+}
+.docs-default.content .title {
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 1262.98px) {
+  .docs-default.content .title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs-default.content .title {
+    margin-bottom: 25px;
+  }
+}
+.docs-default.content .download-all {
+  min-width: 244px;
+  height: 52px;
+}
+@media (max-width: 750.98px) {
+  .docs-default.content .download-all {
+    height: 42px;
+  }
+}
+.docs-default.content .download-all svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+.docs-default.content .item {
+  margin-bottom: 20px;
+  padding: 22px 28px;
+  background-color: #F8F8F8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 1262.98px) {
+  .docs-default.content .item {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+}
+.docs-default.content .name {
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 22px;
+}
+@media (max-width: 1262.98px) {
+  .docs-default.content .name {
+    margin-bottom: 16px;
+    flex-basis: 100%;
+    font-size: 15px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs-default.content .name {
+    margin-bottom: 12px;
+  }
+}
+.docs-default.content .to-read, .docs-default.content .to-download {
+  height: 42px;
+  flex-shrink: 0;
+  color: #313138;
+  font-size: 15px;
+}
+@media (max-width: 750.98px) {
+  .docs-default.content .to-read, .docs-default.content .to-download {
+    width: auto;
+    flex-basis: 30%;
+    flex-grow: 1;
+  }
+}
+.docs-default.content .to-read svg, .docs-default.content .to-download svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+.docs-default.content .to-read {
+  margin-left: auto;
+  width: 130px;
+}
+@media (max-width: 1262.98px) {
+  .docs-default.content .to-read {
+    margin-left: 0;
+  }
+}
+.docs-default.content .to-download {
+  margin-left: 15px;
+  width: 140px;
+}

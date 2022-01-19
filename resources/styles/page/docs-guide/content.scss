@@ -1,8 +1,0 @@
-@import "././resources/styles/__/variables";
-@import "././resources/styles/partials/mixins/docs";
-
-.docs-guide.content {
-  @include docs-text;
-  @include docs-titles;
-  @include docs-item;
-}

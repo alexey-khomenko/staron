@@ -1,2 +1,116 @@
+-
+  items = [
+    {
+      title: 'MSDS - Staron & Sinkbowl',
+      read: '404.html',
+      download: '404.html',
+    },
+    {
+      title: 'MSDS - Tempest',
+      read: '404.html',
+      download: '404.html',
+    },
+  ];
 link(rel="stylesheet", href="css/page/docs-security/content.css")
-section(class="docs-security content")
+link(rel="stylesheet", href="css/partials/docs/content-default.css")
+section(class="docs-default content docs-security")
+  div(class="text")
+    p
+      | Ознакомьтесь с содержанием Технического паспорта безопасности материалов продукции Staron.
+    p
+      | Технические паспорта безопасности материалов составлены специалистами компании LOTTE CHEMICAL для обеспечения
+      | безопасности и удовлетворенности наших заказчиков.
+
+  div(class="titles")
+    span(class="title")
+      | Список паспортов
+    a(href="404.html", class="button circuit download-all")
+      span
+        | Скачать все материалы
+      include ../../partials/svg/download
+
+  each item in items
+    div(class="item")
+      span(class="name")
+        = item.title
+      a(href=`${item.read}`, class="button transparent to-read")
+        span
+          | Читать PDF
+        include ../../partials/svg/pdf
+      a(href=`${item.download}`, class="button transparent to-download")
+        span
+          | Скачать PDF
+        include ../../partials/svg/download
+
+  h2(class="h2")
+    | Наименование и состав компонентов
+
+  div(class="table-wrapper")
+    table(class="table")
+      thead
+        tr
+          th
+            | Химическое название
+          th
+            | Общепринятое слово и синоним
+          th
+            | Регистрационный номер CAS или идентификационный номер
+          th
+            | Содержание (%)
+      tbody
+        tr
+          td
+            | Poly MethylMetacrylate
+          td
+            | PMMA
+          td
+            | 9011-14-7
+          td
+            | 35~45
+        tr
+          td
+            | Aluminum Trihydrate
+          td
+            | ATH
+          td
+            | 21645-51-2
+          td
+            | 55~65
+        tr
+          td
+            | Pigment
+          td
+            | Pigment
+          td
+            | -
+          td
+            | -
+
+  h2(class="h2")
+    | Неотложные меры
+
+  div(class="grid")
+    div(class="card")
+      include ../../partials/svg/docs-security-1
+      div(class="card-title")
+        | При попадании в глаза
+      div(class="card-text")
+        | Промывайте глаза большим количеством воды или физиологического солевого раствора не менее 15 минут, после чего обратитесь за медицинской помощью.
+    div(class="card")
+      include ../../partials/svg/docs-security-2
+      div(class="card-title")
+        | В случае вдыхания
+      div(class="card-text")
+        | Немедленно выйдите на свежий воздух. В случае остановки дыхания проведите сердечно-легочную реанимацию и следуйте указаниям медработника.
+    div(class="card")
+      include ../../partials/svg/docs-security-3
+      div(class="card-title")
+        | В случае попадания на кожу
+      div(class="card-text")
+        | Несмотря на то что продукция не воздействует на кожу, начисто вытрите участок, на который она попала.
+    div(class="card")
+      include ../../partials/svg/docs-security-4
+      div(class="card-title")
+        | В случае проглатывания
+      div(class="card-text")
+        | В случае рвоты наклонитесь вперед и несколько раз промойте ротовую полость водой. Немедленно выполняйте указания медработника.

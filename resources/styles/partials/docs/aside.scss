@@ -11,6 +11,19 @@
   font-family: $font-family-1;
   font-style: normal;
   flex-grow: 1;
+  max-width: calc(100% - 338px - 60px);
+
+  @media (max-width: $media-grid-lg) {
+    max-width: calc(100% - 298px - 50px);
+  }
+
+  @media (max-width: $media-grid-md) {
+    max-width: calc(100% - 225px - 31px);
+  }
+
+  @media (max-width: $media-grid-sm) {
+    max-width: 100%;
+  }
 }
 
 .doc.middle .docs.aside  {

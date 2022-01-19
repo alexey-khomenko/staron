@@ -1,18 +1,13 @@
 @import "././resources/styles/__/variables";
 
-@mixin docs-text {
+.docs-default.content {
   .text {
     margin-bottom: 26px;
     color: $color-black;
     font-weight: 400;
     letter-spacing: 0.02em;
-    font-size: 17px;
-    line-height: 32px;
-
-    @media (max-width: $media-grid-md) {
-      font-size: 15px;
-      line-height: 30px;
-    }
+    font-size: 15px;
+    line-height: 30px;
 
     @media (max-width: $media-grid-md) {
       font-size: 14px;
@@ -23,9 +18,7 @@
       margin: 0 0 8px;
     }
   }
-}
 
-@mixin docs-titles {
   .titles {
     margin-bottom: 28px;
     display: flex;
@@ -76,9 +69,7 @@
       margin-left: 5px;
     }
   }
-}
 
-@mixin docs-item {
   .item {
     margin-bottom: 20px;
     padding: 22px 28px;

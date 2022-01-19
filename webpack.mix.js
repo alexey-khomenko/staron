@@ -73,13 +73,9 @@ const styles = [
   'page/contacts/middle',
   'page/contacts/bottom',
 
-  'page/docs-certificates/content',
   'page/docs-guarantee-commercial/content',
   'page/docs-guarantee-private/content',
-  'page/docs-guide/content',
-  'page/docs-passport/content',
   'page/docs-pdf-company/content',
-  'page/docs-pdf-products/content',
   'page/docs-security/content',
   'page/docs-sizes/content',
 
@@ -135,6 +131,9 @@ const styles = [
   'partials/docs/bottom',
   'partials/docs/modal',
   'partials/docs/top',
+
+  'partials/docs/content-default',
+  'partials/docs/content-guarantee',
 
   'partials/pages/breadcrumbs',
 ];
