@@ -42,6 +42,7 @@ const styles = [
 
   'layout/main',
 
+  'pages/3d',
   'pages/404',
   'pages/about_koros_and_lotte',
   'pages/cart',

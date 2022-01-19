@@ -43,18 +43,18 @@
     font-size: 22px;
   }
 }
-.modal-popup.application_success .close {
+.modal-popup.application_success .close:not(.button) {
   flex-shrink: 0;
   margin-left: 4px;
   color: #000000;
 }
 @media (pointer: coarse) {
-  .modal-popup.application_success .close:active {
+  .modal-popup.application_success .close:not(.button):active {
     color: #7C7C81;
   }
 }
 @media (hover: hover) {
-  .modal-popup.application_success .close:hover {
+  .modal-popup.application_success .close:not(.button):hover {
     color: #7C7C81;
   }
 }

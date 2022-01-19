@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     e.preventDefault();
 
-    if (!document.querySelector('#cart-agree:checked')) return true;
-
     const nameEl = document.querySelector('#cart-name');
     const telEl = document.querySelector('#cart-tel');
     const emailEl = document.querySelector('#cart-email');
@@ -63,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (error) return true;
+
+    if (!document.querySelector('#cart-agree:checked')) return true;
 
     const data = new FormData();
     data.set('name', name);

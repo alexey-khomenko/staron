@@ -11,3 +11,27 @@ block main
       },
     ];
   include ../partials/pages/breadcrumbs
+
+  link(rel="stylesheet", href="css/pages/3d.css")
+  div(class="container container-fixed visualisation-3d")
+    h1(class="h1")
+      | 3D Визуализатор
+    div(class="title")
+      div(class="title-left")
+        | Выберите Интерьер
+      div(class="title-right")
+        | Выберите цвет и просмотрите 3-х мерную визуализацию, чтобы увидеть, как продукция Staron выглядит в различных интерьерах и помещениях.
+
+    //- include
+    //- include
+
+    div(class="wrapper-3d")
+      img(alt="", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+    div(class="buttons")
+      a(href="index.html", class="button secondary to-home")
+        include ../partials/svg/arrow-left
+        span
+          | На главную страницу
+      a(href="product.html", class="button circuit to-product")
+        span
+          | Перейти к продукту

@@ -45,7 +45,7 @@
     }
   }
 
-  .close {
+  .close:not(.button) {
     flex-shrink: 0;
     margin-left: 4px;
     color: $color-black;

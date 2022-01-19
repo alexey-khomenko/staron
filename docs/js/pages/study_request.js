@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const email = emailEl.value.trim();
     const organization = organizationEl.value.trim();
 
-    if (!document.querySelector('#study_request-agree:checked')) return true;
 
     let error = false;
 
@@ -35,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (error) return true;
+
+    if (!document.querySelector('#study_request-agree:checked')) return true;
 
     const data = new FormData();
     data.set('name', name);
