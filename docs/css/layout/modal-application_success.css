@@ -1,6 +1,6 @@
-.modal-popup.study_request_modal {
+.modal-popup.application_success {
   display: none;
-  max-width: 480px;
+  max-width: 490px;
   width: 100%;
   max-height: 100%;
   overflow-y: auto;
@@ -9,26 +9,26 @@
   padding: 50px;
 }
 @media (max-width: 1262.98px) {
-  .modal-popup.study_request_modal {
+  .modal-popup.application_success {
     padding: 32px;
   }
 }
 @media (max-width: 750.98px) {
-  .modal-popup.study_request_modal {
+  .modal-popup.application_success {
     max-width: 360px;
     padding: 24px;
   }
 }
-.modal-popup.study_request_modal.opened {
+.modal-popup.application_success.opened {
   display: block;
 }
-.modal-popup.study_request_modal .head {
+.modal-popup.application_success .head {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 50px;
 }
-.modal-popup.study_request_modal .h4 {
+.modal-popup.application_success .h4 {
   margin: 0;
   font-family: "Proxima Nova", "Jost", sans-serif;
   font-style: normal;
@@ -38,27 +38,32 @@
   letter-spacing: 0.02em;
   color: #000000;
 }
-.modal-popup.study_request_modal .close {
+@media (max-width: 750.98px) {
+  .modal-popup.application_success .h4 {
+    font-size: 22px;
+  }
+}
+.modal-popup.application_success .close {
   flex-shrink: 0;
   margin-left: 4px;
   color: #000000;
 }
 @media (pointer: coarse) {
-  .modal-popup.study_request_modal .close:active {
+  .modal-popup.application_success .close:active {
     color: #7C7C81;
   }
 }
 @media (hover: hover) {
-  .modal-popup.study_request_modal .close:hover {
+  .modal-popup.application_success .close:hover {
     color: #7C7C81;
   }
 }
-.modal-popup.study_request_modal .body .button {
+.modal-popup.application_success .body .button {
   width: 218px;
   height: 52px;
 }
 @media (max-width: 750.98px) {
-  .modal-popup.study_request_modal .body .button {
+  .modal-popup.application_success .body .button {
     font-size: 15px;
     width: 144px;
     height: 42px;

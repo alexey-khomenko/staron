@@ -62,8 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const country = countryEl.value.trim();
     const message = messageEl.value.trim();
 
-    if (!document.querySelector('#application-agree:checked')) return true;
-
     let error = false;
 
     if (3 > name.length) {
@@ -95,6 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (error) return true;
 
+    if (!document.querySelector('#application-agree:checked')) return true;
+
     const data = new FormData();
     data.set('name', name);
     data.set('tel', tel);
@@ -114,6 +114,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     console.log('application form', results);
+
+    window.closeModal();
+    window.openModal('application_success');
   });
 
   document.addEventListener('focusin', function (e) {

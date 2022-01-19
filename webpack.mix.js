@@ -38,6 +38,7 @@ const styles = [
 
   'layout/modal',
   'layout/modal-application',
+  'layout/modal-application_success',
 
   'layout/main',
 
