@@ -1,1 +1,220 @@
-
+.docs-guarantee.content .links {
+  margin: 0 0 20px -36px;
+  display: flex;
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content .links {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+}
+.docs-guarantee.content .links span, .docs-guarantee.content .links a {
+  padding-top: 2px;
+  height: 48px;
+  margin-left: 36px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 24px;
+  line-height: 30px;
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content .links span, .docs-guarantee.content .links a {
+    height: 44px;
+    margin-left: 0;
+    font-size: 21px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs-guarantee.content .links span, .docs-guarantee.content .links a {
+    height: 40px;
+    font-size: 19px;
+  }
+}
+.docs-guarantee.content .links span {
+  color: #000000;
+  border-bottom: 2px solid #DD2929;
+}
+.docs-guarantee.content .links a {
+  text-decoration: none;
+  color: #7C7C81;
+  padding-bottom: 2px;
+}
+@media (hover: hover) {
+  .docs-guarantee.content .links a:hover {
+    color: #313138;
+  }
+}
+.docs-guarantee.content .links a:active {
+  color: #000000;
+}
+.docs-guarantee.content .info {
+  margin: 45px 0;
+  padding: 40px;
+  border: 2px solid #E0E0E1;
+  color: #000000;
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content .info {
+    margin: 40px 0;
+    padding: 30px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content .info {
+    margin: 30px 0;
+    padding: 25px;
+  }
+}
+.docs-guarantee.content .info svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+}
+.docs-guarantee.content .info div {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 32px;
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content .info div {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs-guarantee.content .info div {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+.docs-guarantee.content h2 {
+  margin: 45px 0 20px;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 21px;
+  line-height: 30px;
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content h2 {
+    margin-top: 40px;
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content h2 {
+    margin-top: 30px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+.docs-guarantee.content p {
+  margin: 0 0 16px;
+  color: #000000;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 32px;
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+.docs-guarantee.content ul {
+  margin: 0 0 -20px;
+  padding: 0;
+  display: block;
+  -moz-columns: 2;
+       columns: 2;
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content ul {
+    -moz-columns: 1;
+         columns: 1;
+  }
+}
+.docs-guarantee.content li {
+  display: inline-block;
+  padding: 0 0 0 26px;
+  margin: 0 0 20px;
+  position: relative;
+  color: #000000;
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  line-height: 28px;
+}
+@media (max-width: 750.98px) {
+  .docs-guarantee.content li {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+.docs-guarantee.content li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 3px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #27272B;
+  transform: rotate(45deg);
+}
+@media (max-width: 750.98px) {
+  .docs-guarantee.content li::before {
+    top: 7px;
+  }
+}
+.docs-guarantee.content dl {
+  margin: 45px 0;
+  padding: 40px;
+  background-color: #F8F8F8;
+  color: #000000;
+  display: grid;
+  grid-gap: 20px 15px;
+  grid-template-columns: 180px 1fr;
+  font-size: 17px;
+  line-height: 24px;
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content dl {
+    margin: 40px 0;
+    padding: 30px;
+    grid-template-columns: 1fr;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 750.98px) {
+  .docs-guarantee.content dl {
+    margin: 30px 0;
+    padding: 25px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.docs-guarantee.content dt {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.docs-guarantee.content dd {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 1262.98px) {
+  .docs-guarantee.content dd {
+    margin-top: -20px;
+  }
+}
