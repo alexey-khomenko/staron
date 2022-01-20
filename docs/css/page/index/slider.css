@@ -25,6 +25,7 @@
      object-fit: cover;
 }
 .index.slider .overlay {
+  pointer-events: none;
   position: absolute;
   z-index: 1;
   width: 1230px;
@@ -59,6 +60,9 @@
     top: 35px;
     bottom: 40px;
   }
+}
+.index.slider .overlay * {
+  pointer-events: auto;
 }
 .index.slider .sub-title {
   padding-left: 35px;

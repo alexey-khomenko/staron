@@ -57,6 +57,9 @@ const styles = [
   'pages/study_directions',
   'pages/study_request',
 
+  'page/3d/bottom',
+  'page/3d/top',
+
   'page/cart/order',
   'page/cart/info',
   'page/cart/modal',
@@ -161,6 +164,9 @@ const scripts = [
   'layout/modal-application',
 
   'pages/study_request',
+
+  'page/3d/bottom',
+  'page/3d/top',
 
   'page/cart/order',
   'page/cart/info',

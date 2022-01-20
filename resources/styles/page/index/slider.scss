@@ -28,6 +28,7 @@
   }
 
   .overlay {
+    pointer-events: none;
     position: absolute;
     z-index: 1;
     width: 1230px;
@@ -58,6 +59,10 @@
       padding-right: 0;
       top: 35px;
       bottom: 40px;
+    }
+
+    * {
+      pointer-events: auto;
     }
   }
 
