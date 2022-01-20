@@ -1,0 +1,54 @@
+@import "././resources/styles/__/variables";
+
+.visualisation-3d.top {
+  font-family: $font-family-1;
+  font-style: normal;
+
+  .cards {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex-shrink: 0;
+    width: 220px;
+
+    span{
+      margin-bottom: 10px;
+      display: block;
+      color: $color-gray-900;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 13px;
+      line-height: 18px;
+
+
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 160px;
+      filter: grayscale(100%);
+      background-color: darkseagreen;
+    }
+
+    &.active img {
+      filter: none;
+    }
+
+    @media (hover: hover) {
+      &:hover img {
+        filter: none;
+      }
+    }
+
+    &:active img {
+      filter: none;
+    }
+  }
+}
