@@ -1,8 +1,6 @@
 @import "././resources/styles/__/variables";
 
 .index.trend .right {
-  touch-action: none;
-
   .title {
     margin-bottom: 42px;
     font-family: $font-family-1;
@@ -266,6 +264,7 @@
   }
 
   .quantity-progress {
+    touch-action: none;
     position: relative;
     height: 24px;
     margin-bottom: 8px;

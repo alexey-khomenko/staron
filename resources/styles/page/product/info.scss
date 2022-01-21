@@ -325,6 +325,7 @@
   }
 
   .quantity-progress {
+    touch-action: none;
     position: relative;
     height: 24px;
     margin-bottom: 8px;
