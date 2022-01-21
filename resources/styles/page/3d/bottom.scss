@@ -138,7 +138,6 @@
     background-color: $color-white;
     box-shadow: 0 25px 25px rgba(0, 0, 0, .12);
     padding: 20px;
-    min-height: 180px;
   }
 
   .select:not(.active) .select-body {
@@ -147,5 +146,38 @@
 
   .select.active .select-body {
     display: block;
+  }
+
+  .tiles {
+    display: grid;
+    grid-gap: 7px;
+    grid-template-columns: repeat(5, 62px);
+
+  }
+
+  .tile {
+    border-radius: 4px;
+    height: 62px;
+    cursor: pointer;
+
+    &-gray {
+      background-color: #EDEDED;
+    }
+
+    &-sand {
+      background-color: #DBC898;
+    }
+
+    &-brown {
+      background-color: #A55319;
+    }
+
+    &-red {
+      background-color: #C41919;
+    }
+
+    &.active {
+      // todo
+    }
   }
 }

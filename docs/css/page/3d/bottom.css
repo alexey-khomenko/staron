@@ -125,11 +125,32 @@
   background-color: #FFFFFF;
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.12);
   padding: 20px;
-  min-height: 180px;
 }
 .visualisation-3d.bottom .select:not(.active) .select-body {
   display: none;
 }
 .visualisation-3d.bottom .select.active .select-body {
   display: block;
+}
+.visualisation-3d.bottom .tiles {
+  display: grid;
+  grid-gap: 7px;
+  grid-template-columns: repeat(5, 62px);
+}
+.visualisation-3d.bottom .tile {
+  border-radius: 4px;
+  height: 62px;
+  cursor: pointer;
+}
+.visualisation-3d.bottom .tile-gray {
+  background-color: #EDEDED;
+}
+.visualisation-3d.bottom .tile-sand {
+  background-color: #DBC898;
+}
+.visualisation-3d.bottom .tile-brown {
+  background-color: #A55319;
+}
+.visualisation-3d.bottom .tile-red {
+  background-color: #C41919;
 }
