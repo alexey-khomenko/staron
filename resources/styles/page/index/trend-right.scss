@@ -1,6 +1,7 @@
 @import "././resources/styles/__/variables";
 
 .index.trend .right {
+  touch-action: none;
 
   .title {
     margin-bottom: 42px;

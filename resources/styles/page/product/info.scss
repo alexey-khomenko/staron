@@ -1,6 +1,7 @@
 @import "././resources/styles/__/variables";
 
 .product.info {
+  touch-action: none;
   width: 536px;
   padding-bottom: 90px;
   font-family: $font-family-1;
