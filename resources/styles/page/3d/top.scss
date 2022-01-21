@@ -9,23 +9,57 @@
     overflow-y: hidden;
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
   }
 
   .card {
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     width: 220px;
 
-    span{
+    @media (max-width: $media-grid-lg) {
+      width: 194px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      align-items: center;
+      width: 132px;
+    }
+
+    &:not(:first-child) {
+      margin-left: 15px;
+
+      @media (max-width: $media-grid-md) {
+        margin-left: 10px;
+      }
+    }
+
+    &:not(.active) {
+      cursor: pointer;
+    }
+
+    span {
       margin-bottom: 10px;
       display: block;
       color: $color-gray-900;
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
+      text-align: center;
       font-size: 13px;
       line-height: 18px;
 
+      @media (max-width: $media-grid-md) {
+        font-size: 12px;
+      }
 
+      @media (max-width: $media-grid-sm) {
+        font-size: 11px;
+        line-height: 16px;
+      }
     }
 
     img {
@@ -34,7 +68,14 @@
       width: 100%;
       height: 160px;
       filter: grayscale(100%);
-      background-color: darkseagreen;
+
+      @media (max-width: $media-grid-lg) {
+        height: 140px;
+      }
+
+      @media (max-width: $media-grid-md) {
+        height: 96px;
+      }
     }
 
     &.active img {

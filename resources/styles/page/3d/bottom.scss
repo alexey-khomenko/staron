@@ -1,5 +1,60 @@
 @import "././resources/styles/__/variables";
 
 .visualisation-3d.bottom {
-  background-color: darkseagreen;
+  font-family: $font-family-1;
+  font-style: normal;
+  margin-bottom: 36px;
+
+  @media (max-width: $media-grid-md) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $media-grid-sm) {
+    margin-bottom: 40px;
+  }
+
+  .selects {
+    display: grid;
+    grid-gap: 10px 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: $media-grid-lg) {
+      grid-column-gap: 18px;
+    }
+
+    @media (max-width: $media-grid-md) {
+      grid-column-gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .select {
+    position: relative;
+    height: 56px;
+    border-bottom: 1px solid $color-black;
+
+    @media (max-width: $media-grid-md) {
+      height: 60px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      height: 54px;
+    }
+
+    &:last-child {
+      @media (max-width: $media-grid-md) {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+      }
+
+      @media (max-width: $media-grid-sm) {
+        grid-column-start: 1;
+        grid-column-end: span 1;
+      }
+    }
+  }
 }
