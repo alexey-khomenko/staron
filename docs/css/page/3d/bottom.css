@@ -35,6 +35,7 @@
   }
 }
 .visualisation-3d.bottom .select {
+  cursor: pointer;
   position: relative;
   height: 56px;
   border-bottom: 1px solid #000000;
@@ -60,4 +61,75 @@
     grid-column-start: 1;
     grid-column-end: span 1;
   }
+}
+.visualisation-3d.bottom .select svg {
+  pointer-events: none;
+  display: block;
+  width: 12px;
+  height: auto;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+.visualisation-3d.bottom .select.active svg {
+  transform: translateY(-50%);
+}
+.visualisation-3d.bottom .select-placeholder {
+  padding-right: 24px;
+  line-height: 56px;
+}
+@media (max-width: 1262.98px) {
+  .visualisation-3d.bottom .select-placeholder {
+    line-height: 60px;
+  }
+}
+@media (max-width: 750.98px) {
+  .visualisation-3d.bottom .select-placeholder {
+    line-height: 54px;
+  }
+}
+.visualisation-3d.bottom .select:not(.active) .select-placeholder {
+  color: #7C7C81;
+}
+@media (hover: hover) {
+  .visualisation-3d.bottom .select:not(.active):hover .select-placeholder {
+    color: #27272B;
+  }
+}
+.visualisation-3d.bottom .select:not(.active):active .select-placeholder {
+  color: #27272B;
+}
+.visualisation-3d.bottom .select:not(.active) .select-placeholder-opened {
+  display: none;
+}
+.visualisation-3d.bottom .select:not(.active) .select-placeholder-closed {
+  display: block;
+}
+.visualisation-3d.bottom .select.active .select-placeholder {
+  color: #DD2929;
+}
+.visualisation-3d.bottom .select.active .select-placeholder-opened {
+  display: block;
+}
+.visualisation-3d.bottom .select.active .select-placeholder-closed {
+  display: none;
+}
+.visualisation-3d.bottom .select-body {
+  margin-top: 1px;
+  cursor: default;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  min-height: 180px;
+}
+.visualisation-3d.bottom .select:not(.active) .select-body {
+  display: none;
+}
+.visualisation-3d.bottom .select.active .select-body {
+  display: block;
 }

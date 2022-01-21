@@ -33,6 +33,7 @@
   }
 
   .select {
+    cursor: pointer;
     position: relative;
     height: 56px;
     border-bottom: 1px solid $color-black;
@@ -56,5 +57,95 @@
         grid-column-end: span 1;
       }
     }
+
+    svg {
+      pointer-events: none;
+      display: block;
+      width: 12px;
+      height: auto;
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  .select.active svg {
+    transform: translateY(-50%);
+  }
+
+  .select-placeholder {
+    padding-right: 24px;
+
+    line-height: 56px;
+
+    @media (max-width: $media-grid-md) {
+      line-height: 60px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      line-height: 54px;
+    }
+  }
+
+  .select:not(.active) {
+
+    .select-placeholder {
+      color: $color-gray-500;
+    }
+
+    @media (hover: hover) {
+      &:hover .select-placeholder {
+        color: $color-gray-900;
+      }
+    }
+
+    &:active .select-placeholder {
+      color: $color-gray-900;
+    }
+
+    .select-placeholder-opened {
+      display: none;
+    }
+
+    .select-placeholder-closed {
+      display: block;
+    }
+  }
+
+  .select.active {
+
+    .select-placeholder {
+      color: $color-red-700;
+    }
+
+    .select-placeholder-opened {
+      display: block;
+    }
+
+    .select-placeholder-closed {
+      display: none;
+    }
+  }
+
+  .select-body {
+    margin-top: 1px;
+    cursor: default;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $color-white;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, .12);
+    padding: 20px;
+    min-height: 180px;
+  }
+
+  .select:not(.active) .select-body {
+    display: none;
+  }
+
+  .select.active .select-body {
+    display: block;
   }
 }
