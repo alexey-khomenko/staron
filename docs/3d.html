@@ -365,11 +365,11 @@
           <script src="js/page/3d/top.js"></script>
           <div class="visualisation-3d top">
             <div class="cards">
-              <div class="card" data-src-large="images/3d-interior-1.jpg" data-product-link="product.html"><span>Кухни</span><img alt="" src="images/3d-interior-1.jpg"></div>
-              <div class="card" data-src-large="images/3d-interior-2.jpg" data-product-link="product.html"><span>Офисы</span><img alt="" src="images/3d-interior-2.jpg"></div>
-              <div class="card" data-src-large="images/3d-interior-3.jpg" data-product-link="product.html"><span>Ванные комнаты</span><img alt="" src="images/3d-interior-3.jpg"></div>
-              <div class="card" data-src-large="images/3d-interior-4.jpg" data-product-link="product.html"><span>Облицовка стен</span><img alt="" src="images/3d-interior-4.jpg"></div>
-              <div class="card" data-src-large="images/3d-interior-5.jpg" data-product-link="product.html"><span>HORECA</span><img alt="" src="images/3d-interior-5.jpg"></div>
+              <div class="card" data-src-large="images/3d-interior-1.jpg" data-product-link="product.html" data-interior-type="1"><span>Кухни</span><img alt="" src="images/3d-interior-1.jpg"></div>
+              <div class="card" data-src-large="images/3d-interior-2.jpg" data-product-link="product.html" data-interior-type="2"><span>Офисы</span><img alt="" src="images/3d-interior-2.jpg"></div>
+              <div class="card" data-src-large="images/3d-interior-3.jpg" data-product-link="product.html" data-interior-type="3"><span>Ванные комнаты</span><img alt="" src="images/3d-interior-3.jpg"></div>
+              <div class="card" data-src-large="images/3d-interior-4.jpg" data-product-link="product.html" data-interior-type="4"><span>Облицовка стен</span><img alt="" src="images/3d-interior-4.jpg"></div>
+              <div class="card" data-src-large="images/3d-interior-5.jpg" data-product-link="product.html" data-interior-type="5"><span>HORECA</span><img alt="" src="images/3d-interior-5.jpg"></div>
             </div>
           </div>
           <div class="office h2">Офисы</div>
@@ -377,37 +377,81 @@
           <script src="js/page/3d/bottom.js"></script>
           <div class="visualisation-3d bottom">
             <div class="selects">
-              <div class="select select-color">
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
-                </svg>
-                <div class="select-placeholder select-placeholder-opened">Выберите цвет интерьера</div>
-                <div class="select-placeholder select-placeholder-closed">Выберите цвет интерьера</div>
+              <details class="select select-color">
+                <summary class="summary">
+                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
+                  </svg>
+                  <div class="select-placeholder">Выберите цвет интерьера</div>
+                  <div class="select-title hidden"></div>
+                </summary>
                 <div class="select-body">
-                  <div class="tiles">
-                    <div class="tile tile-gray"></div>
-                    <div class="tile tile-sand"></div>
-                    <div class="tile tile-brown"></div>
-                    <div class="tile tile-red"></div>
+                  <div class="colors hidden" data-interior-type="1">
+                    <div class="color" style="background-color: #EDEDED" data-src-large="images/3d-interior-1.jpg" data-title="Gray"></div>
+                    <div class="color" style="background-color: #DBC898" data-src-large="images/3d-interior-1.jpg" data-title="Yellow"></div>
+                    <div class="color" style="background-color: #A55319" data-src-large="images/3d-interior-1.jpg" data-title="Orange"></div>
+                    <div class="color" style="background-color: #C41919" data-src-large="images/3d-interior-1.jpg" data-title="Dark red"></div>
+                  </div>
+                  <div class="colors hidden" data-interior-type="2">
+                    <div class="color" style="background-color: #EDEDED" data-src-large="images/3d-interior-2.jpg" data-title="Gray"></div>
+                    <div class="color" style="background-color: #DBC898" data-src-large="images/3d-interior-2.jpg" data-title="Yellow"></div>
+                    <div class="color" style="background-color: #A55319" data-src-large="images/3d-interior-2.jpg" data-title="Orange"></div>
+                    <div class="color" style="background-color: #C41919" data-src-large="images/3d-interior-2.jpg" data-title="Dark red"></div>
+                  </div>
+                  <div class="colors hidden" data-interior-type="3">
+                    <div class="color" style="background-color: #EDEDED" data-src-large="images/3d-interior-3.jpg" data-title="Gray"></div>
+                    <div class="color" style="background-color: #DBC898" data-src-large="images/3d-interior-3.jpg" data-title="Yellow"></div>
+                    <div class="color" style="background-color: #A55319" data-src-large="images/3d-interior-3.jpg" data-title="Orange"></div>
+                    <div class="color" style="background-color: #C41919" data-src-large="images/3d-interior-3.jpg" data-title="Dark red"></div>
+                  </div>
+                  <div class="colors hidden" data-interior-type="4">
+                    <div class="color" style="background-color: #EDEDED" data-src-large="images/3d-interior-4.jpg" data-title="Gray"></div>
+                    <div class="color" style="background-color: #DBC898" data-src-large="images/3d-interior-4.jpg" data-title="Yellow"></div>
+                    <div class="color" style="background-color: #A55319" data-src-large="images/3d-interior-4.jpg" data-title="Orange"></div>
+                    <div class="color" style="background-color: #C41919" data-src-large="images/3d-interior-4.jpg" data-title="Dark red"></div>
+                  </div>
+                  <div class="colors hidden" data-interior-type="5">
+                    <div class="color" style="background-color: #EDEDED" data-src-large="images/3d-interior-5.jpg" data-title="Gray"></div>
+                    <div class="color" style="background-color: #DBC898" data-src-large="images/3d-interior-5.jpg" data-title="Yellow"></div>
+                    <div class="color" style="background-color: #A55319" data-src-large="images/3d-interior-5.jpg" data-title="Orange"></div>
+                    <div class="color" style="background-color: #C41919" data-src-large="images/3d-interior-5.jpg" data-title="Dark red"></div>
                   </div>
                 </div>
-              </div>
-              <div class="select select-collection">
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
-                </svg>
-                <div class="select-placeholder select-placeholder-opened">Выберите коллекцию</div>
-                <div class="select-placeholder select-placeholder-closed">Выберите коллекцию</div>
-                <div class="select-body"></div>
-              </div>
-              <div class="select select-product">
-                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
-                </svg>
-                <div class="select-placeholder select-placeholder-opened">Выберите модель и цвет камня</div>
-                <div class="select-placeholder select-placeholder-closed">Выберите модель и цвет камня</div>
-                <div class="select-body"></div>
-              </div>
+              </details>
+              <details class="select select-collection">
+                <summary class="summary disabled">
+                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
+                  </svg>
+                  <div class="select-placeholder">Выберите коллекцию</div>
+                  <div class="select-title hidden"></div>
+                </summary>
+                <div class="select-body">
+                  <div class="collections">
+                    <div class="collection">Supreme</div>
+                    <div class="collection">Pebble</div>
+                    <div class="collection">Tempest</div>
+                    <div class="collection">Sanded</div>
+                    <div class="collection">Aspen</div>
+                    <div class="collection">Solid</div>
+                    <div class="collection">Metallic</div>
+                    <div class="collection">Quarry</div>
+                    <div class="collection">Mosaic</div>
+                  </div>
+                </div>
+              </details>
+              <details class="select select-product">
+                <summary class="summary disabled">
+                  <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.928932 9.07151L8 2.00044L15.0711 9.07151" stroke="currentColor" stroke-width="2"></path>
+                  </svg>
+                  <div class="select-placeholder">Выберите модель и цвет камня</div>
+                  <div class="select-title hidden"></div>
+                </summary>
+                <div class="select-body">
+                  <div class="products"></div>
+                </div>
+              </details>
             </div>
           </div>
           <div class="wrapper-3d"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>

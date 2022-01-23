@@ -33,18 +33,7 @@
   }
 
   .select {
-    cursor: pointer;
     position: relative;
-    height: 56px;
-    border-bottom: 1px solid $color-black;
-
-    @media (max-width: $media-grid-md) {
-      height: 60px;
-    }
-
-    @media (max-width: $media-grid-sm) {
-      height: 54px;
-    }
 
     &:last-child {
       @media (max-width: $media-grid-md) {
@@ -56,6 +45,17 @@
         grid-column-start: 1;
         grid-column-end: span 1;
       }
+    }
+  }
+
+  .summary {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    border-bottom: 1px solid $color-black;
+
+    &.disabled {
+      cursor: not-allowed;
     }
 
     svg {
@@ -70,13 +70,15 @@
     }
   }
 
-  .select.active svg {
+  .select[open] .summary svg {
     transform: translateY(-50%);
   }
 
   .select-placeholder {
     padding-right: 24px;
-
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 17px;
     line-height: 56px;
 
     @media (max-width: $media-grid-md) {
@@ -88,43 +90,43 @@
     }
   }
 
-  .select:not(.active) {
+  .select:not([open]) {
 
     .select-placeholder {
       color: $color-gray-500;
     }
 
     @media (hover: hover) {
-      &:hover .select-placeholder {
+      .summary:not(.disabled):hover .select-placeholder {
         color: $color-gray-900;
       }
     }
 
-    &:active .select-placeholder {
+    .summary:not(.disabled):active .select-placeholder {
       color: $color-gray-900;
-    }
-
-    .select-placeholder-opened {
-      display: none;
-    }
-
-    .select-placeholder-closed {
-      display: block;
     }
   }
 
-  .select.active {
+  .select[open] {
 
     .select-placeholder {
       color: $color-red-700;
     }
+  }
 
-    .select-placeholder-opened {
-      display: block;
+  .select-title {
+    padding-right: 24px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 17px;
+    line-height: 56px;
+
+    @media (max-width: $media-grid-md) {
+      line-height: 60px;
     }
 
-    .select-placeholder-closed {
-      display: none;
+    @media (max-width: $media-grid-sm) {
+      line-height: 54px;
     }
   }
 
@@ -132,6 +134,7 @@
     margin-top: 1px;
     cursor: default;
     position: absolute;
+    z-index: 1;
     top: 100%;
     left: 0;
     right: 0;
@@ -140,44 +143,90 @@
     padding: 20px;
   }
 
-  .select:not(.active) .select-body {
-    display: none;
-  }
-
-  .select.active .select-body {
-    display: block;
-  }
-
-  .tiles {
+  .colors {
     display: grid;
     grid-gap: 7px;
-    grid-template-columns: repeat(5, 62px);
-
+    grid-template-columns: repeat(5, 1fr);
   }
 
-  .tile {
+  .color {
     border-radius: 4px;
-    height: 62px;
-    cursor: pointer;
+    height: 61px;
 
-    &-gray {
-      background-color: #EDEDED;
+    @media (max-width: $media-grid-lg) {
+      height: 53px;
     }
 
-    &-sand {
-      background-color: #DBC898;
+    @media (max-width: $media-grid-md) {
+      height: 55px;
     }
 
-    &-brown {
-      background-color: #A55319;
+    @media (max-width: $media-grid-sm) {
+      height: 50px;
     }
 
-    &-red {
-      background-color: #C41919;
+    &:not(.active) {
+      cursor: pointer;
     }
 
     &.active {
-      // todo
+      position: relative;
+
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-left-style: solid;
+        border-bottom-style: solid;
+        transform: rotate(-48deg) translate(-1px, -11px);
+      }
+
+      &::before {
+        z-index: 1;
+        width: 23px;
+        height: 11px;
+        border-left-width: 4px;
+        border-bottom-width: 4px;
+        border-color: #000000;
+
+      }
+
+      &::after {
+        z-index: 2;
+        width: 20px;
+        height: 10px;
+        border-left-width: 2px;
+        border-bottom-width: 2px;
+        border-color: #FFFFFF;
+      }
     }
+  }
+
+  .collections {
+    display: grid;
+    grid-gap: 10px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 5px;
+  }
+
+  .collection {
+    color: $color-black;
+    letter-spacing: 0.02em;
+    font-size: 15px;
+    line-height: 28px;
+
+    &:not(.active) {
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    &.active {
+      font-weight: 600;
+    }
+  }
+
+  .products {
+
   }
 }
