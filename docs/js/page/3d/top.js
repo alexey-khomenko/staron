@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (oldCard) oldCard.classList.remove('active');
 
     newCard.classList.add('active');
-    img3d.src = newCard.dataset.srcLarge;
 
+    img3d.src = newCard.dataset.srcLarge;
     prodLink.href = newCard.dataset.productLink;
   }
 

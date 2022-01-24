@@ -115,19 +115,52 @@
   }
 
   .select-title {
+    display: flex;
     padding-right: 24px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    font-size: 17px;
-    line-height: 56px;
+    height: 56px;
 
     @media (max-width: $media-grid-md) {
-      line-height: 60px;
+      height: 60px;
     }
 
     @media (max-width: $media-grid-sm) {
-      line-height: 54px;
+      height: 54px;
     }
+  }
+
+  .select-color .select-title, .select-product .select-title {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .select-title-color {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    border-radius: 4px;
+  }
+
+  .select-collection .select-title {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .select-title-text {
+    color: $color-gray-500;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .select-title-value {
+    color: $color-black;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 17px;
+    line-height: 24px;
   }
 
   .select-body {
@@ -143,26 +176,29 @@
     padding: 20px;
   }
 
-  .colors {
+  .colors, .products {
     display: grid;
     grid-gap: 7px;
     grid-template-columns: repeat(5, 1fr);
   }
 
-  .color {
+  .products {
+    @media (max-width: $media-grid-md) {
+      grid-template-columns: repeat(10, 1fr);
+    }
+
+    @media (max-width: $media-grid-sm) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .color, .product {
     border-radius: 4px;
+    width: 100%;
     height: 61px;
 
     @media (max-width: $media-grid-lg) {
       height: 53px;
-    }
-
-    @media (max-width: $media-grid-md) {
-      height: 55px;
-    }
-
-    @media (max-width: $media-grid-sm) {
-      height: 50px;
     }
 
     &:not(.active) {
@@ -203,6 +239,34 @@
     }
   }
 
+  .color {
+    @media (max-width: $media-grid-md) {
+      height: 55px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      height: 50px;
+    }
+  }
+
+  .product {
+    @media (max-width: $media-grid-md) {
+      height: 55px;
+    }
+
+    @media (max-width: $media-grid-sm) {
+      height: 50px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
   .collections {
     display: grid;
     grid-gap: 10px 20px;
@@ -224,9 +288,5 @@
     &.active {
       font-weight: 600;
     }
-  }
-
-  .products {
-
   }
 }

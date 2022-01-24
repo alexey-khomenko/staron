@@ -103,21 +103,49 @@
   color: #DD2929;
 }
 .visualisation-3d.bottom .select-title {
+  display: flex;
   padding-right: 24px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  font-size: 17px;
-  line-height: 56px;
+  height: 56px;
 }
 @media (max-width: 1262.98px) {
   .visualisation-3d.bottom .select-title {
-    line-height: 60px;
+    height: 60px;
   }
 }
 @media (max-width: 750.98px) {
   .visualisation-3d.bottom .select-title {
-    line-height: 54px;
+    height: 54px;
   }
+}
+.visualisation-3d.bottom .select-color .select-title, .visualisation-3d.bottom .select-product .select-title {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.visualisation-3d.bottom .select-title-color {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  border-radius: 4px;
+}
+.visualisation-3d.bottom .select-collection .select-title {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.visualisation-3d.bottom .select-title-text {
+  color: #7C7C81;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.visualisation-3d.bottom .select-title-value {
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 17px;
+  line-height: 24px;
 }
 .visualisation-3d.bottom .select-body {
   margin-top: 1px;
@@ -131,19 +159,61 @@
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.12);
   padding: 20px;
 }
-.visualisation-3d.bottom .colors {
+.visualisation-3d.bottom .colors, .visualisation-3d.bottom .products {
   display: grid;
   grid-gap: 7px;
   grid-template-columns: repeat(5, 1fr);
 }
-.visualisation-3d.bottom .color {
+@media (max-width: 1262.98px) {
+  .visualisation-3d.bottom .products {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+@media (max-width: 750.98px) {
+  .visualisation-3d.bottom .products {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.visualisation-3d.bottom .color, .visualisation-3d.bottom .product {
   border-radius: 4px;
+  width: 100%;
   height: 61px;
 }
 @media (max-width: 1422.98px) {
-  .visualisation-3d.bottom .color {
+  .visualisation-3d.bottom .color, .visualisation-3d.bottom .product {
     height: 53px;
   }
+}
+.visualisation-3d.bottom .color:not(.active), .visualisation-3d.bottom .product:not(.active) {
+  cursor: pointer;
+}
+.visualisation-3d.bottom .color.active, .visualisation-3d.bottom .product.active {
+  position: relative;
+}
+.visualisation-3d.bottom .color.active::before, .visualisation-3d.bottom .color.active::after, .visualisation-3d.bottom .product.active::before, .visualisation-3d.bottom .product.active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  transform: rotate(-48deg) translate(-1px, -11px);
+}
+.visualisation-3d.bottom .color.active::before, .visualisation-3d.bottom .product.active::before {
+  z-index: 1;
+  width: 23px;
+  height: 11px;
+  border-left-width: 4px;
+  border-bottom-width: 4px;
+  border-color: #000000;
+}
+.visualisation-3d.bottom .color.active::after, .visualisation-3d.bottom .product.active::after {
+  z-index: 2;
+  width: 20px;
+  height: 10px;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  border-color: #FFFFFF;
 }
 @media (max-width: 1262.98px) {
   .visualisation-3d.bottom .color {
@@ -155,36 +225,23 @@
     height: 50px;
   }
 }
-.visualisation-3d.bottom .color:not(.active) {
-  cursor: pointer;
+@media (max-width: 1262.98px) {
+  .visualisation-3d.bottom .product {
+    height: 55px;
+  }
 }
-.visualisation-3d.bottom .color.active {
-  position: relative;
+@media (max-width: 750.98px) {
+  .visualisation-3d.bottom .product {
+    height: 50px;
+  }
 }
-.visualisation-3d.bottom .color.active::before, .visualisation-3d.bottom .color.active::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-left-style: solid;
-  border-bottom-style: solid;
-  transform: rotate(-48deg) translate(-1px, -11px);
-}
-.visualisation-3d.bottom .color.active::before {
-  z-index: 1;
-  width: 23px;
-  height: 11px;
-  border-left-width: 4px;
-  border-bottom-width: 4px;
-  border-color: #000000;
-}
-.visualisation-3d.bottom .color.active::after {
-  z-index: 2;
-  width: 20px;
-  height: 10px;
-  border-left-width: 2px;
-  border-bottom-width: 2px;
-  border-color: #FFFFFF;
+.visualisation-3d.bottom .product img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
 }
 .visualisation-3d.bottom .collections {
   display: grid;
